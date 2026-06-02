@@ -60,7 +60,40 @@ img { max-width: 100%; display: block; }
 .project-page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 2rem 6rem;
+  padding: 0 2rem 3rem;
+}
+
+/* Lottie header — full viewport width, no side padding */
+.lottie-header {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  background: var(--color-dark);
+}
+.lottie-header svg {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Skills & Deliverables */
+.skills-deliverables {
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.skills-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .project-header {

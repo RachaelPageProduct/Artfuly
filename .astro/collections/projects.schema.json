@@ -33,6 +33,9 @@
     "headerImage": {
       "type": "string"
     },
+    "lottieFile": {
+      "type": "string"
+    },
     "skills": {
       "default": [],
       "type": "array",

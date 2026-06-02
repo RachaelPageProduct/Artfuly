@@ -39,31 +39,56 @@ const allWorkCategories = Object.keys(allSkillLinks);
 
 <BaseLayout title={`${p.title} — Rachael Page`} description={p.summaryText}>
 
+  <!-- Title + metadata — contained width -->
   <div class="project-page">
-
-    <!-- Header -->
     <div class="project-header">
       <h1>{p.title}</h1>
-
       <dl class="project-meta">
-        {p.role && <><dt>Role</dt><dd>{p.role}</dd></>}
-        {p.team && <><dt>Team</dt><dd>{p.team}</dd></>}
-        {p.date && <><dt>Date</dt><dd>{p.date}</dd></>}
-        {p.tools && <><dt>Tools</dt><dd>{p.tools}</dd></>}
+        {p.role && <><dt>My Role(s)</dt><dd>{p.role}</dd></>}
+        {p.team && <><dt>The Team</dt><dd>{p.team}</dd></>}
+        {p.date && <><dt>Date &amp; Tools</dt><dd>{p.date}{p.tools ? ` | ${p.tools}` : ''}</dd></>}
       </dl>
+    </div>
+  </div>
 
-      {p.skills.length > 0 && (
+  <!-- Lottie animation — full viewport width -->
+  {p.lottieFile && (
+    <div class="lottie-header" id="lottie-header">
+      <script define:vars={{ lottieFile: p.lottieFile }}>
+        document.addEventListener('DOMContentLoaded', () => {
+          if (typeof lottie !== 'undefined') {
+            lottie.loadAnimation({
+              container: document.getElementById('lottie-header'),
+              renderer: 'svg',
+              loop: true,
+              autoplay: true,
+              path: lottieFile,
+            });
+          }
+        });
+      </script>
+    </div>
+  )}
+
+  <!-- Fallback header image if no Lottie -->
+  {!p.lottieFile && p.headerImage && (
+    <div style="width:100%;max-height:520px;overflow:hidden;">
+      <img src={p.headerImage} alt={p.title} class="project-header-image" style="width:100%;max-height:520px;object-fit:cover;" />
+    </div>
+  )}
+
+  <!-- Skills pills + main content — back to contained width -->
+  <div class="project-page">
+
+    {p.skills.length > 0 && (
+      <div class="skills-deliverables">
+        <span class="skills-label">Skills &amp; Deliverables</span>
         <div class="skill-tags">
           {p.skills.map(s => (
             <a href={allSkillLinks[s] ?? '/work/all'} class="skill-tag">{s}</a>
           ))}
         </div>
-      )}
-    </div>
-
-    <!-- Header image -->
-    {p.headerImage && (
-      <img src={p.headerImage} alt={p.title} class="project-header-image" />
+      </div>
     )}
 
     <!-- Main prose content (Background, Goals, Process, Contribution) -->
@@ -180,6 +205,6 @@ const allWorkCategories = Object.keys(allSkillLinks);
       </div>
     )}
 
-  </div>
+  </div>{/* end second project-page container */}
 
 </BaseLayout>

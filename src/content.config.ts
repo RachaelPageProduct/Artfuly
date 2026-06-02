@@ -14,6 +14,7 @@ const projects = defineCollection({
     date: z.string().optional(),
     tools: z.string().optional(),
     headerImage: z.string().optional(),
+    lottieFile: z.string().optional(),
     skills: z.array(z.string()).default([]),
     impact: z.string().optional(),
     designTalkthroughUrl: z.string().optional(),

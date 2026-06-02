@@ -9,6 +9,7 @@ team: "Client: Terra Listens CEO, Development: Various"
 date: "2022–2024"
 tools: "Figma, Figjam, Video Calls, Slack, Vysor, Testflight"
 headerImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800c1383681d68d77f2acec_Terra%20player%20control.png"
+lottieFile: "/images/projects/terra-app/0.-IDPage-Cape-May.json"
 skills:
   - Native Apps
   - IA & Database Design
