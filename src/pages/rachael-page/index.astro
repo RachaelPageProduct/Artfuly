@@ -1,0 +1,297 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const iconGrid = [
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8ed19dbdf55932ac7f_Group%2063.svg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8e9e6e6725cbcf27f6_g10.svg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8e52f36b9a661200af_Layer_1.svg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8e4a11ec9bb6381ede_Vector.svg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8e11506bcbbe707689_Group%2064.svg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8f32fd5d4c89a97e16_Group%2062.svg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8e2732cfebd6d2d792_Group.svg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8e11506bcbbe707556_g2458.svg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8ea451576a5ce60851_layer1.svg',
+];
+
+const featuredProjects = [
+  {
+    title: 'TickLists App',
+    slug: 'ticklists-app',
+    description: 'PWA for permanent shared shopping lists with store-optimised ordering and daily routines.',
+    gif: '',
+    url: 'https://ticklists.com',
+  },
+  {
+    title: 'Terra Listens Native Apps',
+    slug: 'terra-app',
+    description: 'Smart garden microphone system — iOS & Android apps for birdsong streaming and live bird identification.',
+    gif: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68a5e7984df7a15a836e8c16_Animation%20full%20width%20terra%20app.gif',
+    url: '',
+  },
+  {
+    title: "McDonald's Monopoly Web-App",
+    slug: 'mcdonalds-monopoly-web-app',
+    description: 'Mobile-first game interface design for the McDonald\'s Monopoly promotion.',
+    gif: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68b708cebd505968fe886419_Showreel%20(2).gif',
+    url: '',
+  },
+];
+
+const workCategories = [
+  { label: 'Product Design', slug: 'product-design' },
+  { label: 'UX Design', slug: 'ux-design' },
+  { label: 'UI Design', slug: 'ui-design' },
+  { label: 'User Research & Testing', slug: 'user-research-testing' },
+  { label: 'Native Apps', slug: 'apps' },
+  { label: 'Progressive Web Apps', slug: 'responsive-websites' },
+  { label: 'Motion Design', slug: 'motion-design-animation' },
+  { label: 'IA & Database Design', slug: 'ia' },
+  { label: 'Strategy', slug: 'strategy' },
+  { label: 'Marketing', slug: 'marketing' },
+  { label: 'Conversion Funnels', slug: 'conversion-funnels' },
+  { label: 'SEO', slug: 'seo' },
+  { label: 'Development', slug: 'development' },
+  { label: 'Graphic Design', slug: 'graphic-design' },
+  { label: 'Teaching Design', slug: 'teaching-design' },
+  { label: 'Surface Pattern Design', slug: 'surface-pattern-design' },
+];
+
+const skills = {
+  'Software': ['Claude Code', 'Claude Design', 'Agentic AI (Claude)', 'Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'Adobe After Effects', 'DaVinci Resolve', 'Jitter.video', 'Discord & Midjourney', 'Webflow', 'V0.dev & Lovable & Replit', 'Asana', 'Online tools & plugins'],
+  'Knowledge': ['Product Design', 'UX Design', 'UI Design', 'User Research', 'User Testing', 'Project Management & hiring', 'Information Architectures', 'Marketing', 'Conversion Funnel Design', 'Product Strategy', 'Marketing Strategy', 'Graphic & Packaging Design', 'Responsive Development', 'Teaching Design'],
+  'Deliverables': ['Native App & Web-App Design', 'Motion Design', 'Mobile-first Design', 'Competitive Analysis', 'User Surveys', 'User Research/Testing/Analysis', 'Personas', 'Concept Ideation', 'User Flows & Journeys', 'Clickable Wireframes/Prototypes', 'SEO Research & Copywriting', 'Branding & Logos', 'HTML & CSS'],
+};
+
+const experience = [
+  {
+    dates: 'Current',
+    companies: 'Independent',
+    title: 'Designer & Developer',
+    description: 'Designing and building apps with Claude; marketing books and apps; surface pattern design for Spoonflower.',
+  },
+  {
+    dates: 'Jan 2022 – Dec 2024',
+    companies: 'Terra Listens, Career Foundry, Artfuly',
+    title: 'Product Designer & Design Educator',
+    description: 'Designed Terra Listens digital roadmap; taught UX & Product Design; wrote courses; held online events.',
+  },
+  {
+    dates: 'Sep 2021 – Dec 2022',
+    companies: 'KPMG & PWC, London',
+    title: 'Freelance UX Researcher & UI Designer',
+    description: 'Via Play Studio — user researcher for KPMG UK and PWC UK.',
+  },
+  {
+    dates: 'Jan 2012 – 2020',
+    companies: 'Artfuly, Online',
+    title: 'Founder, Head of UX & Product',
+    description: 'Global art marketplace enabling artists to market and sell artworks with door-to-door delivery.',
+  },
+  {
+    dates: 'Nov 2016 – Jul 2017',
+    companies: 'Amcor, Zurich',
+    title: 'Senior UX Consultant',
+    description: 'Redesigned Amcor.com products section — stakeholder interviews, user research, product database design, prototypes and visual design, via Tzu&Co.',
+  },
+  {
+    dates: 'Oct 2015 – Jun 2016',
+    companies: 'Sydney University, Australia',
+    title: 'Lead UX (Contract)',
+    description: 'User research and design for high-profile university project (student income $760M AUD in 2014).',
+  },
+  {
+    dates: '2004 – 2012',
+    companies: 'Several top Ad Agencies, Australia',
+    title: 'Senior UI/UX Designer (Contract)',
+    description: 'Mobile app, podium touchscreen, and responsive website design work.',
+  },
+];
+
+const testimonials = [
+  {
+    quote: 'Rachael has been my secret weapon when it comes to design. Her many years of professional work, her keen aesthetic sense, and her ability to put focus on what\'s important at the right time have made a tremendous difference. Thanks to Rachael, we have a valuable new app for the business that is a cornerstone to our success. I\'m lucky to have found someone who is both in my corner and able to help me express my vision to the world.',
+    name: 'Scott Whittle, Terra CEO',
+    location: 'Cape May, NJ, USA',
+  },
+  {
+    quote: 'Rachael reworked our existing B2B tool\'s UX and expanded on it. The services offered are complex and there were many legacy parameters to contend with. Rachael came up with a much improved flow, she is not afraid of questioning the status quo to get the best outcome for the user, and the outcome is a much more user friendly and scalable UX. I would happily employ Rachael again.',
+    name: 'Margaret Sliman, Inivio Manager',
+    location: 'Sydney, AU',
+  },
+  {
+    quote: 'Rachael is a very professional and capable UX Designer with a strong business and entrepreneurial mindset. When she worked onsite for my client she performed what she was asked to do, to a very high standard, and left the project in a much stronger condition than when she first joined. I can strongly recommend Rachael for any position that requires UI/IA wire-framing etc.',
+    name: 'Matthew Drake, Recruiter',
+    location: 'Sydney, AU',
+  },
+];
+
+const articles = [
+  { title: 'The Part of Product Design AI Still Can\'t Do', url: '/design-resources/the-part-of-product-design-ai-still-cant-do', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6a0fea4a5fbd6ec6e98a315f_Frame%20257.png' },
+  { title: 'ElevenLabs for Designers: Audio & Voice Tools for Your Creative Workflow', url: '/design-resources/elevenlabs-for-designers', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/69f1b2d1c3dbea81ca05b411_Frame%20255.png' },
+  { title: 'Book: How to create Wallpaper, Mural & Fabric designs', url: '/design-resources/book-how-to-create-wallpaper-mural-fabric-designs', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/696b7e8d41662fa6f43dcbe6_Frame%20251.png' },
+  { title: 'Creative Careers in Tech: An Expert\'s Advice', url: '/design-resources/creative-careers-in-tech-an-experts-advice', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/677fb5565fba5bc1df7ba7ef_Frame%20227.png' },
+];
+
+const photos = [
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d868fd2ab2d800246d4_414468_10151014071938013_1463281292_o_10151014071938013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d848fd2ab2d800245ce_460406_10151014242603013_1642727662_o_10151014242603013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d80cc21e18fb0a9f4d3_326350_10151241914848013_2077720857_o_10151241914848013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d8784bac5365298499c_374670_10150520822193013_667340872_n_10150520822193013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d840f32cbdeac6969af_417271_10150745929648013_533325313_n_10150745929648013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d80600ef75b777ba4eb_IMG_3206.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d824542971756680427_323735_10150382110303013_1446656773_o_10150382110303013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d87f88e4987f7b44358_421020_10151299612328013_1723782839_n_10151299612328013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d87f1f95ca3b06bf84c_10245440_10153931103538013_8054103958520022273_n_10153931103538013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d82a01f4a6e731dca68_335729_10150417509103013_301639931_o_10150417509103013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d818bd0c96dd942d391_999330_10151791901753013_873253178_n_10151791901753013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d818776f8c2cd1915b0_528264_10151390610838013_890388024_n_10151390610838013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/65b93053a14db0eb992aff6a_Bondi%20Beach.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d87021aa5fff6bab341_578309_10151581258638013_420003814_n_10151581258638013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d848021323f830c2db1_538304_10151504862193013_1950399280_n_10151504862193013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d8480a80d9bd918066e_10462838_10153610582903013_8257815589615175968_n_10153610582903013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d800bf0573ac319ab28_IMG_5873.JPG',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d820512a0d6c86912af_578676_10152160481053013_1135135443_n_10152160481053013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d86ce45a701ad0cc380_60719_10151526506108013_1216227483_n_10151526506108013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d83e93b282515a5dddd_461375_10150781196828013_698962731_o_10150781196828013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d843d5670b8f5364315_393186_10150492192133013_814509675_n_10150492192133013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d81194672c034f8c760_417194_10150753030438013_302955083_n_10150753030438013.jpg',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d8062eff65c135ed380_IMG_5822.JPG',
+  'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/67c86d8018c71b20ddf780ce_600550_10151733358183013_2014827066_n_10151733358183013.jpg',
+];
+---
+
+<BaseLayout title="Rachael Page — Product Designer" description="Product designer with 20+ years experience at tech startups and ad agencies. Currently building apps with AI.">
+
+  <!-- HERO -->
+  <section class="rp-hero">
+    <div class="rp-hero-inner">
+      <div class="rp-hero-left">
+        <h1 class="rp-hero-heading">Analytical<br/>+ Creative</h1>
+        <p class="rp-hero-bio">Graduate in Product Design Engineering with 20+ years at tech startups and ad agencies, creating products through user research and testing. Recently completed TickLists PWA app; previously Principal Designer for Terra Listens. Seeking new opportunities.</p>
+        <div class="rp-hero-actions">
+          <a href="mailto:artfulydesign@gmail.com?subject=Enquiry%20from%20your%20portfolio" class="btn btn-black">Email me</a>
+          <a href="https://www.linkedin.com/in/rachaelpage" target="_blank" rel="noopener" class="btn btn-white">LinkedIn</a>
+        </div>
+      </div>
+      <div class="rp-icon-grid">
+        {iconGrid.map(src => (
+          <img src={src} alt="" loading="lazy" class="rp-icon" />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="rp-page">
+
+    <!-- FEATURED WORK -->
+    <section class="rp-section" id="work">
+      <h2 class="rp-section-heading">Featured Work</h2>
+      <div class="rp-projects-grid">
+        {featuredProjects.map(proj => (
+          <a href={`/project/${proj.slug}`} class="rp-project-card">
+            {proj.gif && <img src={proj.gif} alt={proj.title} loading="lazy" class="rp-project-img" />}
+            <div class="rp-project-info">
+              <h3>{proj.title}</h3>
+              <p>{proj.description}</p>
+              <span class="rp-arrow">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Work category filters -->
+      <div class="rp-category-filters">
+        {workCategories.map(cat => (
+          <a href={`/work/${cat.slug}`} class="rp-cat-link">{cat.label}</a>
+        ))}
+        <a href="/work/all" class="rp-cat-link rp-cat-all">All Work →</a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="rp-section" id="skills">
+      <h2 class="rp-section-heading">Skills &amp; Experience</h2>
+      <div class="rp-skills-grid">
+        {Object.entries(skills).map(([heading, items]) => (
+          <div class="rp-skill-col">
+            <h3 class="rp-skill-heading">{heading}</h3>
+            <ul>
+              {items.map(item => <li>{item}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="rp-section" id="about">
+      <h2 class="rp-section-heading">Experience</h2>
+      <div class="rp-timeline">
+        {experience.map(job => (
+          <div class="rp-timeline-item">
+            <div class="rp-timeline-dates">{job.dates}</div>
+            <div class="rp-timeline-body">
+              <div class="rp-timeline-company">{job.companies}</div>
+              <div class="rp-timeline-title">{job.title}</div>
+              <p class="rp-timeline-desc">{job.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- QUALIFICATIONS -->
+    <section class="rp-section">
+      <h2 class="rp-section-heading">Qualifications</h2>
+      <ul class="rp-quals">
+        <li><strong>Award School</strong> — Australian Writers &amp; Art Directors</li>
+        <li><strong>Adobe Creative Suite</strong> — Hypermouse</li>
+        <li><strong>Bachelor of Engineering (Honours) in Product Design</strong> — Loughborough University, UK</li>
+      </ul>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="rp-section">
+      <h2 class="rp-section-heading">Testimonials</h2>
+      <div class="rp-testimonials">
+        {testimonials.map(t => (
+          <div class="rp-testimonial">
+            <div class="rp-stars">
+              {'★★★★★'}
+            </div>
+            <blockquote>"{t.quote}"</blockquote>
+            <cite>
+              <strong>{t.name}</strong><br/>
+              {t.location}
+            </cite>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- BOOKS & ARTICLES -->
+    <section class="rp-section">
+      <h2 class="rp-section-heading">Books &amp; Articles</h2>
+      <div class="rp-articles-grid">
+        {articles.map(a => (
+          <a href={a.url} class="rp-article-card">
+            <img src={a.image} alt={a.title} loading="lazy" />
+            <p>{a.title}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- PHOTOGRAPHY -->
+    <section class="rp-section">
+      <h2 class="rp-section-heading">Photography</h2>
+      <div class="rp-photo-grid">
+        {photos.map((src, i) => (
+          <img src={src} alt={`Photography ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+    </section>
+
+  </div><!-- end rp-page -->
+
+</BaseLayout>
