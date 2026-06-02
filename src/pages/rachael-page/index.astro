@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const iconGrid = [
+const toolIcons = [
   'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8ed19dbdf55932ac7f_Group%2063.svg',
   'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8e9e6e6725cbcf27f6_g10.svg',
   'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8e52f36b9a661200af_Layer_1.svg',
@@ -13,30 +13,6 @@ const iconGrid = [
   'https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6555ea8ea451576a5ce60851_layer1.svg',
 ];
 
-const featuredProjects = [
-  {
-    title: 'TickLists App',
-    slug: 'ticklists-app',
-    description: 'PWA for permanent shared shopping lists with store-optimised ordering and daily routines.',
-    gif: '',
-    url: 'https://ticklists.com',
-  },
-  {
-    title: 'Terra Listens Native Apps',
-    slug: 'terra-app',
-    description: 'Smart garden microphone system — iOS & Android apps for birdsong streaming and live bird identification.',
-    gif: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68a5e7984df7a15a836e8c16_Animation%20full%20width%20terra%20app.gif',
-    url: '',
-  },
-  {
-    title: "McDonald's Monopoly Web-App",
-    slug: 'mcdonalds-monopoly-web-app',
-    description: 'Mobile-first game interface design for the McDonald\'s Monopoly promotion.',
-    gif: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68b708cebd505968fe886419_Showreel%20(2).gif',
-    url: '',
-  },
-];
-
 const workCategories = [
   { label: 'Product Design', slug: 'product-design' },
   { label: 'UX Design', slug: 'ux-design' },
@@ -44,7 +20,7 @@ const workCategories = [
   { label: 'User Research & Testing', slug: 'user-research-testing' },
   { label: 'Native Apps', slug: 'apps' },
   { label: 'Progressive Web Apps', slug: 'responsive-websites' },
-  { label: 'Motion Design', slug: 'motion-design-animation' },
+  { label: 'Motion Design (Animation)', slug: 'motion-design-animation' },
   { label: 'IA & Database Design', slug: 'ia' },
   { label: 'Strategy', slug: 'strategy' },
   { label: 'Marketing', slug: 'marketing' },
@@ -63,73 +39,34 @@ const skills = {
 };
 
 const experience = [
-  {
-    dates: 'Current',
-    companies: 'Independent',
-    title: 'Designer & Developer',
-    description: 'Designing and building apps with Claude; marketing books and apps; surface pattern design for Spoonflower.',
-  },
-  {
-    dates: 'Jan 2022 – Dec 2024',
-    companies: 'Terra Listens, Career Foundry, Artfuly',
-    title: 'Product Designer & Design Educator',
-    description: 'Designed Terra Listens digital roadmap; taught UX & Product Design; wrote courses; held online events.',
-  },
-  {
-    dates: 'Sep 2021 – Dec 2022',
-    companies: 'KPMG & PWC, London',
-    title: 'Freelance UX Researcher & UI Designer',
-    description: 'Via Play Studio — user researcher for KPMG UK and PWC UK.',
-  },
-  {
-    dates: 'Jan 2012 – 2020',
-    companies: 'Artfuly, Online',
-    title: 'Founder, Head of UX & Product',
-    description: 'Global art marketplace enabling artists to market and sell artworks with door-to-door delivery.',
-  },
-  {
-    dates: 'Nov 2016 – Jul 2017',
-    companies: 'Amcor, Zurich',
-    title: 'Senior UX Consultant',
-    description: 'Redesigned Amcor.com products section — stakeholder interviews, user research, product database design, prototypes and visual design, via Tzu&Co.',
-  },
-  {
-    dates: 'Oct 2015 – Jun 2016',
-    companies: 'Sydney University, Australia',
-    title: 'Lead UX (Contract)',
-    description: 'User research and design for high-profile university project (student income $760M AUD in 2014).',
-  },
-  {
-    dates: '2004 – 2012',
-    companies: 'Several top Ad Agencies, Australia',
-    title: 'Senior UI/UX Designer (Contract)',
-    description: 'Mobile app, podium touchscreen, and responsive website design work.',
-  },
+  { dates: 'Current', companies: 'Independent', title: 'Seeking new opportunities', description: 'Designing and building apps with Claude; marketing books and apps; surface pattern design for Spoonflower.' },
+  { dates: 'Jan 2022 – Dec 2024', companies: 'Terra Listens, Career Foundry, Artfuly', title: 'Product Designer & Design Educator', description: 'Designed Terra Listens digital roadmap; taught UX & Product Design; wrote courses; held online events.' },
+  { dates: 'Sep 2021 – Dec 2022', companies: 'KPMG & PWC, London', title: 'Freelance UX Researcher & UI Designer', description: 'Via Play Studio — user researcher for KPMG UK and PWC UK.' },
+  { dates: 'Jan 2012 – 2020', companies: 'Artfuly, Online', title: 'Founder, Head of UX & Product', description: 'Global art marketplace enabling artists to market and sell artworks with door-to-door delivery.' },
+  { dates: 'Nov 2016 – Jul 2017', companies: 'Amcor, Zurich', title: 'Senior UX Consultant', description: 'Redesigned Amcor.com products section — stakeholder interviews, user research, product database design, prototypes and visual design, via Tzu&Co.' },
+  { dates: 'Oct 2015 – Jun 2016', companies: 'Sydney University, Australia', title: 'Lead UX (Contract)', description: 'User research and design for high-profile university project (student income $760M AUD in 2014).' },
+  { dates: '2004 – 2012', companies: 'Several top Ad Agencies, Australia', title: 'Senior UI/UX Designer (Contract)', description: 'Mobile app, podium touchscreen, and responsive website design work.' },
+];
+
+const uniquePoints = [
+  { heading: 'Diverse Expertise', text: 'I have a rare blend of product design, UX research, and leadership experience across industries, from startups to blue-chip brands.' },
+  { heading: 'Tech & Design Fusion', text: 'I combine technical knowledge with high-quality UX and visual design, building responsive digital products with HTML, CSS, Webflow and now Claude Code.' },
+  { heading: 'Business Acumen & Critical Thinking', text: 'Founding and managing my own startups and working with several other startups, highlights my end-to-end skills in product concept ideation, design, and execution.' },
+  { heading: 'Global Impact', text: 'My career spans multiple countries, industries, and remote roles, reflecting adaptability and global relevance.' },
+  { heading: 'Speed & Attention to detail', text: 'I continuously upgrade my wide skillset, and use agentic AI for optimum efficiency.' },
 ];
 
 const testimonials = [
-  {
-    quote: 'Rachael has been my secret weapon when it comes to design. Her many years of professional work, her keen aesthetic sense, and her ability to put focus on what\'s important at the right time have made a tremendous difference. Thanks to Rachael, we have a valuable new app for the business that is a cornerstone to our success. I\'m lucky to have found someone who is both in my corner and able to help me express my vision to the world.',
-    name: 'Scott Whittle, Terra CEO',
-    location: 'Cape May, NJ, USA',
-  },
-  {
-    quote: 'Rachael reworked our existing B2B tool\'s UX and expanded on it. The services offered are complex and there were many legacy parameters to contend with. Rachael came up with a much improved flow, she is not afraid of questioning the status quo to get the best outcome for the user, and the outcome is a much more user friendly and scalable UX. I would happily employ Rachael again.',
-    name: 'Margaret Sliman, Inivio Manager',
-    location: 'Sydney, AU',
-  },
-  {
-    quote: 'Rachael is a very professional and capable UX Designer with a strong business and entrepreneurial mindset. When she worked onsite for my client she performed what she was asked to do, to a very high standard, and left the project in a much stronger condition than when she first joined. I can strongly recommend Rachael for any position that requires UI/IA wire-framing etc.',
-    name: 'Matthew Drake, Recruiter',
-    location: 'Sydney, AU',
-  },
+  { quote: "Rachael has been my secret weapon when it comes to design. Her many years of professional work, her keen aesthetic sense, and her ability to put focus on what's important at the right time have made a tremendous difference. Thanks to Rachael, we have a valuable new app for the business that is a cornerstone to our success. I'm lucky to have found someone who is both in my corner and able to help me express my vision to the world.", name: 'Scott Whittle, Terra CEO', location: 'Cape May, NJ, USA' },
+  { quote: "Rachael reworked our existing B2B tool's UX and expanded on it. The services offered are complex and there were many legacy parameters to contend with. Rachael came up with a much improved flow, she is not afraid of questioning the status quo to get the best outcome for the user, and the outcome is a much more user friendly and scalable UX. I would happily employ Rachael again.", name: 'Margaret Sliman, Inivio Manager', location: 'Sydney, AU' },
+  { quote: "Rachael is a very professional and capable UX Designer with a strong business and entrepreneurial mindset. When she worked onsite for my client she performed what she was asked to do, to a very high standard, and left the project in a much stronger condition than when she first joined. I can strongly recommend Rachael for any position that requires UI/IA wire-framing etc.", name: 'Matthew Drake, Recruiter', location: 'Sydney, AU' },
 ];
 
 const articles = [
-  { title: 'The Part of Product Design AI Still Can\'t Do', url: '/design-resources/the-part-of-product-design-ai-still-cant-do', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6a0fea4a5fbd6ec6e98a315f_Frame%20257.png' },
+  { title: "The Part of Product Design AI Still Can't Do", url: '/design-resources/the-part-of-product-design-ai-still-cant-do', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6a0fea4a5fbd6ec6e98a315f_Frame%20257.png' },
   { title: 'ElevenLabs for Designers: Audio & Voice Tools for Your Creative Workflow', url: '/design-resources/elevenlabs-for-designers', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/69f1b2d1c3dbea81ca05b411_Frame%20255.png' },
   { title: 'Book: How to create Wallpaper, Mural & Fabric designs', url: '/design-resources/book-how-to-create-wallpaper-mural-fabric-designs', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/696b7e8d41662fa6f43dcbe6_Frame%20251.png' },
-  { title: 'Creative Careers in Tech: An Expert\'s Advice', url: '/design-resources/creative-careers-in-tech-an-experts-advice', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/677fb5565fba5bc1df7ba7ef_Frame%20227.png' },
+  { title: "Creative Careers in Tech: An Expert's Advice", url: '/design-resources/creative-careers-in-tech-an-experts-advice', image: 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/677fb5565fba5bc1df7ba7ef_Frame%20227.png' },
 ];
 
 const photos = [
@@ -162,76 +99,112 @@ const photos = [
 
 <BaseLayout title="Rachael Page — Product Designer" description="Product designer with 20+ years experience at tech startups and ad agencies. Currently building apps with AI.">
 
-  <!-- HERO -->
-  <section class="rp-hero">
+  <!-- 1. HERO — light teal bg, Rachael photo right, text left -->
+  <section class="rp-hero" style="background-color:#ceeaeb; background-image:url('https://cdn.prod.website-files.com/5f6c775604d3a81512995971/680a2b65f811643bd4251da9_Dreamwave-Photo%20extended.png'); background-position: right bottom; background-repeat: no-repeat; background-size: auto 100%; min-height:595px;">
     <div class="rp-hero-inner">
-      <div class="rp-hero-left">
-        <h1 class="rp-hero-heading">Analytical<br/>+ Creative</h1>
-        <p class="rp-hero-bio">Graduate in Product Design Engineering with 20+ years at tech startups and ad agencies, creating products through user research and testing. Recently completed TickLists PWA app; previously Principal Designer for Terra Listens. Seeking new opportunities.</p>
-        <div class="rp-hero-actions">
-          <a href="mailto:artfulydesign@gmail.com?subject=Enquiry%20from%20your%20portfolio" class="btn btn-black">Email me</a>
-          <a href="https://www.linkedin.com/in/rachaelpage" target="_blank" rel="noopener" class="btn btn-white">LinkedIn</a>
+      <h1 class="rp-heading-analytical">Analytical</h1>
+      <h1 class="rp-heading-creative">+ Creative</h1>
+    </div>
+  </section>
+
+  <!-- 2. TOOL ICONS STRIP -->
+  <section class="rp-icons-strip">
+    <div class="rp-icons-inner">
+      {toolIcons.map(src => <img src={src} alt="" loading="lazy" class="rp-tool-icon" />)}
+    </div>
+  </section>
+
+  <!-- 3. ABOUT / BIO -->
+  <section class="rp-about" id="about">
+    <div class="rp-about-inner">
+      <p class="rp-bio">I'm Rachael, a Product Design Engineering graduate, with over 20 years of experience at tech startups & ad agencies, creating & delivering successful products based on thorough user research & testing. Currently using Claude Code to design & build — fast!</p>
+      <p class="rp-bio">I recently completed my PWA app <a href="/project/ticklists-app" class="rp-inline-link">TickLists</a>, and before that was Principal Designer for <a href="/project/terra-app" class="rp-inline-link">Terra Listens</a>. Currently considering new opportunities — get in touch!</p>
+      <div class="rp-about-actions">
+        <a href="mailto:artfulydesign@gmail.com?subject=Enquiry%20from%20your%20portfolio" class="btn btn-black">Email me</a>
+        <a href="mailto:artfulydesign@gmail.com?subject=Enquiry%20from%20your%20portfolio" class="btn btn-white">Copy Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CLIENT LOGOS -->
+  <section class="rp-client-logos">
+    <img src="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6544e287b8bf3aa40ebdb875_logos.png" alt="Clients: ING, AMCOR, KPMG, PWC, Sydney University, Ogilvy and others" loading="lazy" class="rp-logos-img" />
+  </section>
+
+  <!-- 5. FEATURED WORK -->
+  <section class="rp-work" id="work">
+    <div class="rp-work-inner">
+      <div class="rp-work-header">
+        <h2 class="rp-work-heading">Featured Work</h2>
+        <p class="rp-work-subheading">...or select a category</p>
+        <div class="rp-cat-pills">
+          {workCategories.map(cat => (
+            <a href={`/work/${cat.slug}`} class="rp-cat-pill">{cat.label}</a>
+          ))}
+          <a href="/work/all" class="rp-cat-pill rp-cat-pill-all">All Work →</a>
         </div>
       </div>
-      <div class="rp-icon-grid">
-        {iconGrid.map(src => (
-          <img src={src} alt="" loading="lazy" class="rp-icon" />
-        ))}
+
+      <!-- Featured hero project: TickLists -->
+      <a href="/project/ticklists-app" class="rp-work-featured">
+        <div class="rp-work-featured-img">
+          <img src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/69cb52e15e1262503966edfa_Frame%204.png" alt="TickLists App" loading="lazy" />
+        </div>
+        <div class="rp-work-featured-info">
+          <h3>Ticklists App</h3>
+          <p>PWA (Progressive Web App) for shared repetitive shopping & routines. Gives items their own section in the list (Dairy, Fruit &amp; Veg etc.) so the list sorts itself into the right order. Never retype your list again.</p>
+          <span class="rp-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Other projects -->
+      <div class="rp-work-others-grid">
+        <a href="/project/terra-app" class="rp-work-card">
+          <img src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68a5e7984df7a15a836e8c16_Animation%20full%20width%20terra%20app.gif" alt="Terra Listens Native Apps" loading="lazy" />
+          <div class="rp-work-card-info">
+            <h3>Terra Listens Native Apps</h3>
+            <p>Streaming nature sounds from gardens & global birding hotspots. Identifies birds by birdsong via a smart-garden device.</p>
+            <span class="rp-arrow">→</span>
+          </div>
+        </a>
+        <a href="/project/mcdonalds-monopoly-web-app" class="rp-work-card">
+          <img src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68b708cebd505968fe886419_Showreel%20(2).gif" alt="McDonalds Monopoly Web-App" loading="lazy" />
+          <div class="rp-work-card-info">
+            <h3>McDonalds Monopoly Web-App</h3>
+            <p>Fun year-long project designing the mobile-first game interface for the McDonald's Monopoly promotion.</p>
+            <span class="rp-arrow">→</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
   <div class="rp-page">
 
-    <!-- FEATURED WORK -->
-    <section class="rp-section" id="work">
-      <h2 class="rp-section-heading">Featured Work</h2>
-      <div class="rp-projects-grid">
-        {featuredProjects.map(proj => (
-          <a href={`/project/${proj.slug}`} class="rp-project-card">
-            {proj.gif && <img src={proj.gif} alt={proj.title} loading="lazy" class="rp-project-img" />}
-            <div class="rp-project-info">
-              <h3>{proj.title}</h3>
-              <p>{proj.description}</p>
-              <span class="rp-arrow">→</span>
-            </div>
-          </a>
-        ))}
-      </div>
-
-      <!-- Work category filters -->
-      <div class="rp-category-filters">
-        {workCategories.map(cat => (
-          <a href={`/work/${cat.slug}`} class="rp-cat-link">{cat.label}</a>
-        ))}
-        <a href="/work/all" class="rp-cat-link rp-cat-all">All Work →</a>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
+    <!-- 6. SKILLS -->
     <section class="rp-section" id="skills">
-      <h2 class="rp-section-heading">Skills &amp; Experience</h2>
+      <h2 class="rp-section-heading">Skills</h2>
       <div class="rp-skills-grid">
         {Object.entries(skills).map(([heading, items]) => (
           <div class="rp-skill-col">
             <h3 class="rp-skill-heading">{heading}</h3>
-            <ul>
-              {items.map(item => <li>{item}</li>)}
-            </ul>
+            <ul>{items.map(item => <li>{item}</li>)}</ul>
           </div>
         ))}
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section class="rp-section" id="about">
+    <!-- 7. EXPERIENCE -->
+    <section class="rp-section">
       <h2 class="rp-section-heading">Experience</h2>
       <div class="rp-timeline">
         {experience.map(job => (
           <div class="rp-timeline-item">
-            <div class="rp-timeline-dates">{job.dates}</div>
+            <div class="rp-timeline-left">
+              <div class="rp-timeline-dates">{job.dates}</div>
+              <div class="rp-timeline-companies">{job.companies}</div>
+            </div>
             <div class="rp-timeline-body">
-              <div class="rp-timeline-company">{job.companies}</div>
               <div class="rp-timeline-title">{job.title}</div>
               <p class="rp-timeline-desc">{job.description}</p>
             </div>
@@ -240,38 +213,52 @@ const photos = [
       </div>
     </section>
 
-    <!-- QUALIFICATIONS -->
+    <!-- 8. QUALIFICATIONS -->
     <section class="rp-section">
       <h2 class="rp-section-heading">Qualifications</h2>
       <ul class="rp-quals">
-        <li><strong>Award School</strong> — Australian Writers &amp; Art Directors</li>
-        <li><strong>Adobe Creative Suite</strong> — Hypermouse</li>
-        <li><strong>Bachelor of Engineering (Honours) in Product Design</strong> — Loughborough University, UK</li>
+        <li><strong>Award School</strong><span>Australian Writers &amp; Art Directors</span></li>
+        <li><strong>Adobe Creative Suite</strong><span>Hypermouse</span></li>
+        <li><strong>Bachelor of Engineering (Honours) in Product Design</strong><span>Loughborough University, UK</span></li>
       </ul>
     </section>
 
-    <!-- TESTIMONIALS -->
+    <!-- 9. WHAT MAKES ME UNIQUE -->
+    <section class="rp-section rp-unique-section">
+      <div class="rp-unique-inner">
+        <div class="rp-unique-photo">
+          <img src="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/680a362825eac4ec06647a63_Dreamwave-Photo%20(1c)%20ful%20length%20v2.png" alt="Rachael Page" loading="lazy" />
+        </div>
+        <div class="rp-unique-content">
+          <h2 class="rp-section-heading">What makes me unique</h2>
+          <ul class="rp-unique-list">
+            {uniquePoints.map(p => (
+              <li><strong>{p.heading}:</strong> {p.text}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. TESTIMONIALS -->
     <section class="rp-section">
       <h2 class="rp-section-heading">Testimonials</h2>
+      <p class="rp-refs-note">References available on request</p>
       <div class="rp-testimonials">
         {testimonials.map(t => (
           <div class="rp-testimonial">
-            <div class="rp-stars">
-              {'★★★★★'}
-            </div>
+            <div class="rp-stars">★★★★★</div>
             <blockquote>"{t.quote}"</blockquote>
-            <cite>
-              <strong>{t.name}</strong><br/>
-              {t.location}
-            </cite>
+            <cite><strong>{t.name}</strong><br/>{t.location}</cite>
           </div>
         ))}
       </div>
     </section>
 
-    <!-- BOOKS & ARTICLES -->
+    <!-- 11. BOOKS & ARTICLES -->
     <section class="rp-section">
       <h2 class="rp-section-heading">Books &amp; Articles</h2>
+      <p class="rp-refs-note">Published Books and my Articles published here and on other websites</p>
       <div class="rp-articles-grid">
         {articles.map(a => (
           <a href={a.url} class="rp-article-card">
@@ -282,16 +269,14 @@ const photos = [
       </div>
     </section>
 
-    <!-- PHOTOGRAPHY -->
+    <!-- 12. PHOTOGRAPHY -->
     <section class="rp-section">
-      <h2 class="rp-section-heading">Photography</h2>
+      <h2 class="rp-section-heading">My photography &amp; me</h2>
       <div class="rp-photo-grid">
-        {photos.map((src, i) => (
-          <img src={src} alt={`Photography ${i + 1}`} loading="lazy" />
-        ))}
+        {photos.map((src, i) => <img src={src} alt="" loading="lazy" />)}
       </div>
     </section>
 
-  </div><!-- end rp-page -->
+  </div>
 
 </BaseLayout>
