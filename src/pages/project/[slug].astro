@@ -1,0 +1,185 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(p => ({ params: { slug: p.id } }));
+}
+
+const { slug } = Astro.params;
+const projects = await getCollection('projects');
+const entry = projects.find(p => p.id === slug);
+if (!entry) return Astro.redirect('/404');
+
+const { Content } = await render(entry);
+const p = entry.data;
+
+const allSkillLinks: Record<string, string> = {
+  'Native Apps': '/work/apps',
+  'IA & Database Design': '/work/ia',
+  'Marketing': '/work/marketing',
+  'Strategy': '/work/strategy',
+  'Teaching Design': '/work/teaching-design',
+  'UI Design': '/work/ui-design',
+  'UX Design': '/work/ux-design',
+  'Product Design': '/work/product-design',
+  'User Research & Testing': '/work/user-research-testing',
+  'Progressive Web Apps': '/work/responsive-websites',
+  'Motion Design': '/work/motion-design-animation',
+  'Conversion Funnels': '/work/conversion-funnels',
+  'SEO': '/work/seo',
+  'Development': '/work/development',
+  'Graphic Design': '/work/graphic-design',
+  'Surface Pattern Design': '/work/surface-pattern-design',
+};
+
+const allWorkCategories = Object.keys(allSkillLinks);
+---
+
+<BaseLayout title={`${p.title} — Rachael Page`} description={p.summaryText}>
+
+  <div class="project-page">
+
+    <!-- Header -->
+    <div class="project-header">
+      <h1>{p.title}</h1>
+
+      <dl class="project-meta">
+        {p.role && <><dt>Role</dt><dd>{p.role}</dd></>}
+        {p.team && <><dt>Team</dt><dd>{p.team}</dd></>}
+        {p.date && <><dt>Date</dt><dd>{p.date}</dd></>}
+        {p.tools && <><dt>Tools</dt><dd>{p.tools}</dd></>}
+      </dl>
+
+      {p.skills.length > 0 && (
+        <div class="skill-tags">
+          {p.skills.map(s => (
+            <a href={allSkillLinks[s] ?? '/work/all'} class="skill-tag">{s}</a>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <!-- Header image -->
+    {p.headerImage && (
+      <img src={p.headerImage} alt={p.title} class="project-header-image" />
+    )}
+
+    <!-- Main prose content (Background, Goals, Process, Contribution) -->
+    <div class="project-section">
+      <div class="prose">
+        <Content />
+      </div>
+    </div>
+
+    <!-- Impact -->
+    {p.impact && (
+      <div class="project-section">
+        <h2>Impact</h2>
+        <div class="impact-block">
+          <strong>Result</strong>
+          {p.impact}
+        </div>
+      </div>
+    )}
+
+    <!-- Design Talkthrough video -->
+    {p.designTalkthroughUrl && (
+      <div class="project-section">
+        <h2>Design Talkthrough</h2>
+        <div class="embed-container">
+          <iframe src={p.designTalkthroughUrl} height="480" allowfullscreen loading="lazy" />
+        </div>
+      </div>
+    )}
+
+    <!-- Clickable Prototype Embed -->
+    {p.prototypeEmbed && (
+      <div class="project-section">
+        <h2>Prototype</h2>
+        <div class="embed-container" set:html={p.prototypeEmbed} />
+      </div>
+    )}
+
+    <!-- Design Highlights -->
+    {p.designHighlights.length > 0 && (
+      <div class="project-section">
+        <h2>Design Highlights</h2>
+        <div class="highlights-grid">
+          {p.designHighlights.map(h => (
+            <div class="highlight-item">
+              {h.image && <img src={h.image} alt={h.title} loading="lazy" />}
+              <h3>{h.title}</h3>
+              {h.caption && <p>{h.caption}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Results gallery -->
+    {p.resultsGallery.length > 0 && (
+      <div class="project-section">
+        <h2>Results</h2>
+        <div class="highlights-grid">
+          {p.resultsGallery.map((img, i) => (
+            <img src={img} alt={`Result ${i + 1}`} loading="lazy" style="border-radius:6px;border:1px solid var(--color-border)" />
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Video walkthrough -->
+    {p.videoWalkthroughUrl && (
+      <div class="project-section">
+        <h2>Video Walkthrough</h2>
+        <div class="embed-container">
+          <iframe src={p.videoWalkthroughUrl} height="480" allowfullscreen loading="lazy" />
+        </div>
+      </div>
+    )}
+
+    <!-- Video embed (raw HTML e.g. Bunny) -->
+    {p.videoEmbed && (
+      <div class="project-section">
+        <div class="embed-container" set:html={p.videoEmbed} />
+      </div>
+    )}
+
+    <!-- Buttons -->
+    {p.buttons.length > 0 && (
+      <div class="btn-group">
+        {p.buttons.map(b => (
+          <a href={b.url} class={`btn btn-${b.style}`} target="_blank" rel="noopener">{b.label}</a>
+        ))}
+      </div>
+    )}
+
+    <!-- All work categories -->
+    <div class="project-section">
+      <h2>Browse Work</h2>
+      <div class="work-categories">
+        {allWorkCategories.map(cat => (
+          <a href={allSkillLinks[cat]} class="work-category-link">{cat}</a>
+        ))}
+        <a href="/work/all" class="work-category-link">All Work →</a>
+      </div>
+    </div>
+
+    <!-- Next project -->
+    {p.nextProject && (
+      <div class="next-project">
+        <div>
+          <div class="next-project-label">Next Project</div>
+          <div class="next-project-title">
+            <a href={`/project/${p.nextProject}`}>View Next →</a>
+          </div>
+        </div>
+        <span class="next-project-arrow">→</span>
+      </div>
+    )}
+
+  </div>
+
+</BaseLayout>

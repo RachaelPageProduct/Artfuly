@@ -1,0 +1,151 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: projects
+    label: Portfolio Projects
+    folder: src/content/projects
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Project Name", name: title, widget: string }
+      - { label: "Featured on Homepage?", name: featured, widget: boolean, default: false }
+      - { label: "Next Project (slug)", name: nextProject, widget: string, required: false, hint: "Slug of the next project, e.g. gmo" }
+      - label: "Half-Width Preview Image"
+        name: halfWidthImage
+        widget: image
+        required: false
+        hint: "Used on homepage and work grid. 450 x 300px"
+      - { label: "Homepage Summary Text", name: summaryText, widget: text, required: false }
+      - { label: "Role(s)", name: role, widget: string, required: false }
+      - { label: "Team", name: team, widget: string, required: false }
+      - { label: "Date", name: date, widget: string, required: false, hint: "e.g. 2022–2024" }
+      - { label: "Tools", name: tools, widget: string, required: false, hint: "e.g. Figma, Figjam, Slack" }
+      - label: "Showcase Page Header Image"
+        name: headerImage
+        widget: image
+        required: false
+        hint: "Full-width header. Max 1440 x 800px"
+      - label: "Skills / Work Categories"
+        name: skills
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - Native Apps
+          - IA & Database Design
+          - Marketing
+          - Strategy
+          - Teaching Design
+          - UI Design
+          - UX Design
+          - Product Design
+          - User Research & Testing
+          - Progressive Web Apps
+          - Motion Design
+          - Conversion Funnels
+          - SEO
+          - Development
+          - Graphic Design
+          - Surface Pattern Design
+      - label: "Introduction / Background / Goals"
+        name: body
+        widget: markdown
+        hint: "Main case study content. Use ## headings for Background, Goals, Process, My Contribution Highlights. Paste HTML embeds (Figma, iframes) directly — they work in markdown."
+      - { label: "Impact (stats / outcomes)", name: impact, widget: text, required: false }
+      - { label: "Design Talkthrough Video URL", name: designTalkthroughUrl, widget: string, required: false, hint: "Paste Bunny or YouTube embed URL" }
+      - label: "Clickable Prototype / Embed Code"
+        name: prototypeEmbed
+        widget: code
+        required: false
+        default_language: html
+        hint: "Paste raw iframe or embed code — Figma, PDF, Google Slides, etc."
+      - label: "Design Highlights"
+        name: designHighlights
+        widget: list
+        required: false
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - { label: "Image", name: image, widget: image, required: false }
+          - { label: "Caption", name: caption, widget: text, required: false }
+      - label: "Results Gallery"
+        name: resultsGallery
+        widget: list
+        required: false
+        field: { label: "Image", name: image, widget: image }
+      - { label: "Video Walkthrough URL", name: videoWalkthroughUrl, widget: string, required: false }
+      - label: "Video Embed Code (Bunny / custom player)"
+        name: videoEmbed
+        widget: code
+        required: false
+        default_language: html
+      - label: "Buttons"
+        name: buttons
+        widget: list
+        required: false
+        fields:
+          - { label: "Button Label", name: label, widget: string }
+          - { label: "URL", name: url, widget: string }
+          - label: "Style"
+            name: style
+            widget: select
+            options: [black, white]
+            default: black
+
+  - name: resources
+    label: Design Resources
+    folder: src/content/resources
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - label: "Category"
+        name: category
+        widget: select
+        options:
+          - Approach / Technique
+          - Book
+          - Article / List / Review
+          - Company
+          - Collection
+          - Platform
+          - Software
+          - Website
+      - label: "Tags"
+        name: tags
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - "#Free"
+          - "#Inspiration"
+          - "#Images"
+          - "#Icons"
+          - "#Colour"
+          - "#Fonts"
+          - "#Device-Mockups"
+          - "#Collaboration"
+          - "#General-Reading"
+          - "#Advanced-Reading"
+          - "#Design-Tools"
+          - "#UI-Design"
+          - "#UX"
+          - "#Web-Design"
+          - "#User-Research"
+          - "#Portfolio"
+      - { label: "Image / Thumbnail", name: image, widget: image, required: false }
+      - label: "Links"
+        name: links
+        widget: list
+        fields:
+          - { label: "Button Label", name: label, widget: string, hint: "e.g. To the website, Download, Learn" }
+          - { label: "URL", name: url, widget: string }
+      - { label: "Description", name: body, widget: markdown }
