@@ -99,7 +99,7 @@ const photos = [
 
 <BaseLayout title="Rachael Page — Product Designer" description="Product designer with 20+ years experience at tech startups and ad agencies. Currently building apps with AI.">
 
-  <!-- 1. HERO — light teal bg, Rachael photo right, text left -->
+  <!-- 1. HERO — light teal bg, Rachael photo right, text slides in -->
   <section class="rp-hero" style="background-color:#ceeaeb; background-image:url('https://cdn.prod.website-files.com/5f6c775604d3a81512995971/680a2b65f811643bd4251da9_Dreamwave-Photo%20extended.png'); background-position: right bottom; background-repeat: no-repeat; background-size: auto 100%; min-height:595px;">
     <div class="rp-hero-inner">
       <h1 class="rp-heading-analytical">Analytical</h1>
@@ -107,10 +107,14 @@ const photos = [
     </div>
   </section>
 
-  <!-- 2. TOOL ICONS STRIP -->
+  <!-- 2. TOOL ICONS MARQUEE -->
   <section class="rp-icons-strip">
-    <div class="rp-icons-inner">
-      {toolIcons.map(src => <img src={src} alt="" loading="lazy" class="rp-tool-icon" />)}
+    <div class="rp-marquee">
+      <div class="rp-marquee-track">
+        {toolIcons.map(src => <img src={src} alt="" class="rp-tool-icon" />)}
+        {toolIcons.map(src => <img src={src} alt="" class="rp-tool-icon" aria-hidden="true" />)}
+        {toolIcons.map(src => <img src={src} alt="" class="rp-tool-icon" aria-hidden="true" />)}
+      </div>
     </div>
   </section>
 
