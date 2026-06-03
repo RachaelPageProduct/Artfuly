@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79" height="79" viewBox="0 0 79 79">
+  <g id="Group_53" data-name="Group 53" transform="translate(-803 -6403)">
+    <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(803 6403)" fill="none" stroke="#000067" stroke-width="4">
+      <circle cx="39.5" cy="39.5" r="39.5" stroke="none"/>
+      <circle cx="39.5" cy="39.5" r="37.5" fill="none"/>
+    </g>
+    <path id="linkedin-round-line" d="M34.714,32.083h7.63v3.91h.118A8.452,8.452,0,0,1,50,32.083c8.056,0,9.549,5.023,9.549,11.563V56.94H51.585v-11.8c0-2.82-.047-6.421-4.147-6.421-4.147,0-4.786,3.057-4.786,6.232V56.94H34.69V32.083Zm-5.521-6.9a4.147,4.147,0,1,1-4.147-4.147A4.136,4.136,0,0,1,29.193,25.188Zm-8.293,6.9h8.293V56.94H20.9Z" transform="translate(803 6403.273)" fill="#000067" fill-rule="evenodd"/>
+  </g>
+</svg>

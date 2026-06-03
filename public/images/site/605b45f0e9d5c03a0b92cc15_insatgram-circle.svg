@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79" height="79" viewBox="0 0 79 79">
+  <g id="Group_55" data-name="Group 55" transform="translate(-1034 -6403)">
+    <g id="instagram-logo" transform="translate(1054.678 6423.886)">
+      <path id="Path_237" data-name="Path 237" d="M27.067,0H10.316A10.328,10.328,0,0,0,0,10.317V27.067A10.328,10.328,0,0,0,10.316,37.384H27.067A10.328,10.328,0,0,0,37.384,27.067V10.317A10.328,10.328,0,0,0,27.067,0Zm7,27.067a7.008,7.008,0,0,1-7,7H10.316a7.007,7.007,0,0,1-7-7V10.317a7.008,7.008,0,0,1,7-7H27.067a7.008,7.008,0,0,1,7,7V27.067Z" transform="translate(0)" fill="#000067"/>
+      <path id="Path_238" data-name="Path 238" d="M50.6,40.97A9.633,9.633,0,1,0,60.234,50.6,9.644,9.644,0,0,0,50.6,40.97Zm0,15.948A6.316,6.316,0,1,1,56.917,50.6,6.323,6.323,0,0,1,50.6,56.918Z" transform="translate(-31.909 -31.911)" fill="#000067"/>
+      <path id="Path_239" data-name="Path 239" d="M121.353,28.251a2.431,2.431,0,1,0,1.72.712A2.442,2.442,0,0,0,121.353,28.251Z" transform="translate(-92.625 -22.004)" fill="#000067"/>
+    </g>
+    <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(1034 6403)" fill="none" stroke="#000067" stroke-width="4">
+      <circle cx="39.5" cy="39.5" r="39.5" stroke="none"/>
+      <circle cx="39.5" cy="39.5" r="37.5" fill="none"/>
+    </g>
+  </g>
+</svg>
