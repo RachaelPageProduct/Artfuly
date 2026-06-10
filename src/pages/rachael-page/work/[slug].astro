@@ -1,24 +1,335 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-export function getStaticPaths() {
+// ── Category definitions ──────────────────────────────────────────
+const categories = [
+  { slug: 'all',                  label: 'All Work' },
+  { slug: 'product-design',       label: 'Product Design' },
+  { slug: 'ux-design',            label: 'UX Design' },
+  { slug: 'user-research-testing',label: 'User Research & Testing' },
+  { slug: 'ui-design',            label: 'UI Design' },
+  { slug: 'strategy',             label: 'Strategy' },
+  { slug: 'ia-database-design',   label: 'IA & Database Design' },
+  { slug: 'native-apps-pwas',     label: 'Native Apps & PWAs' },
+  { slug: 'marketing-seo',        label: 'Marketing & SEO' },
+  { slug: 'conversion-funnels',   label: 'Conversion Funnels' },
+  { slug: 'development',          label: 'Development' },
+  { slug: 'motion-design',        label: 'Motion Design' },
+  { slug: 'graphic-design',       label: 'Graphic Design' },
+];
+
+export async function getStaticPaths() {
   const slugs = [
     'all', 'product-design', 'ux-design', 'user-research-testing',
     'ui-design', 'strategy', 'ia-database-design', 'native-apps-pwas',
     'marketing-seo', 'conversion-funnels', 'development',
     'motion-design', 'graphic-design',
   ];
-  return slugs.map(slug => ({ params: { slug } }));
+  const projects = await getCollection('projects');
+  return slugs.map(slug => ({ params: { slug }, props: { allProjects: projects } }));
 }
 
 const { slug } = Astro.params;
-const title = slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+const { allProjects } = Astro.props;
+
+// ── Map old CMS category slugs → new nav slugs ───────────────────
+const catMap: Record<string, string> = {
+  'apps':                     'native-apps-pwas',
+  'pwa':                      'native-apps-pwas',
+  'ia':                       'ia-database-design',
+  'marketing':                'marketing-seo',
+  'seo':                      'marketing-seo',
+  'strategy':                 'strategy',
+  'ui-design':                'ui-design',
+  'ux-design':                'ux-design',
+  'product-design':           'product-design',
+  'development':              'development',
+  'conversion-funnels':       'conversion-funnels',
+  'graphic-design':           'graphic-design',
+  'motion-design':            'motion-design',
+  'motion-design-animation':  'motion-design',
+  'user-research':            'user-research-testing',
+  'user-research-testing':    'user-research-testing',
+  'responsive-websites':      'ux-design',
+  'teaching-design':          'development',
+  'surface-pattern-design':   'graphic-design',
+};
+
+// Display label for a raw CMS category slug
+const catLabel: Record<string, string> = {
+  'apps': 'Native Apps & PWAs', 'pwa': 'Native Apps & PWAs',
+  'ia': 'IA & Database Design', 'ia-database-design': 'IA & Database Design',
+  'marketing': 'Marketing & SEO', 'seo': 'Marketing & SEO', 'marketing-seo': 'Marketing & SEO',
+  'strategy': 'Strategy', 'ui-design': 'UI Design', 'ux-design': 'UX Design',
+  'product-design': 'Product Design', 'development': 'Development',
+  'conversion-funnels': 'Conversion Funnels', 'graphic-design': 'Graphic Design',
+  'motion-design': 'Motion Design', 'motion-design-animation': 'Motion Design',
+  'user-research': 'User Research & Testing', 'user-research-testing': 'User Research & Testing',
+  'responsive-websites': 'Responsive Websites', 'teaching-design': 'Development',
+  'surface-pattern-design': 'Graphic Design',
+};
+
+// ── Filter projects for current category ────────────────────────
+const projects = allProjects
+  .filter((p: any) => {
+    if (slug === 'all') return true;
+    const cats: string[] = p.data.workCategories ?? [];
+    return cats.some((c: string) => (catMap[c] ?? c) === slug);
+  })
+  .sort((a: any, b: any) => a.data.title.localeCompare(b.data.title));
+
+const pageCategory = categories.find(c => c.slug === slug);
+const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g, (c:string) => c.toUpperCase());
 ---
 
-<BaseLayout title={`${title} — Rachael Page`}>
-  <div style="max-width:800px;margin:6rem auto;padding:0 2rem;text-align:center;">
-    <h1 style="font-size:2rem;font-weight:700;color:#1a2a2c;margin-bottom:1rem;">{title}</h1>
-    <p style="color:#666;font-size:1rem;">Case studies coming soon.</p>
-    <a href="/rachael-page/" style="display:inline-block;margin-top:2rem;color:#3ba89c;font-weight:600;">← Back to portfolio</a>
-  </div>
+<BaseLayout title={`${pageTitle} — Rachael Page`} description={`Portfolio: ${pageTitle}`}>
+
+  <!-- PAGE HEADER -->
+  <section class="work-listing-header">
+    <div class="work-listing-header-inner">
+      <p class="work-listing-eyebrow">Portfolio</p>
+      <h1 class="work-listing-title">{pageTitle}</h1>
+      <p class="work-listing-count">{projects.length} case {projects.length === 1 ? 'study' : 'studies'}</p>
+    </div>
+  </section>
+
+  <!-- CATEGORY FILTER PILLS -->
+  <section class="work-filter-bar">
+    <div class="work-filter-inner">
+      {categories.map(cat => (
+        <a
+          href={`/rachael-page/work/${cat.slug}`}
+          class={`filter-pill ${cat.slug === slug ? 'filter-pill--active' : ''}`}
+        >{cat.label}</a>
+      ))}
+    </div>
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="work-grid-section">
+    <div class="work-grid">
+      {projects.map((p: any) => {
+        const d = p.data;
+        const cats: string[] = (d.workCategories ?? []).slice(0, 3);
+        return (
+          <a href={`/rachael-page/project/${d.slug}`} class="work-card">
+            <div class="work-card-image-wrap">
+              {d.halfWidthImage
+                ? <img src={d.halfWidthImage} alt={d.title} class="work-card-image" loading="lazy" />
+                : <div class="work-card-image-placeholder" />
+              }
+            </div>
+            <div class="work-card-body">
+              {cats.length > 0 && (
+                <div class="work-card-cats">
+                  {cats.map((c: string) => (
+                    <span class="work-card-cat">{catLabel[c] ?? c}</span>
+                  ))}
+                </div>
+              )}
+              <h2 class="work-card-title">{d.title}</h2>
+              {d.summary && <p class="work-card-summary">{d.summary}</p>}
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    {projects.length === 0 && (
+      <div class="work-empty">
+        <p>No case studies yet in this category.</p>
+        <a href="/rachael-page/work/all">View all work &rarr;</a>
+      </div>
+    )}
+  </section>
+
 </BaseLayout>
+
+<style>
+/* ── Header ── */
+.work-listing-header {
+  background: #000;
+  padding: 100px 48px 56px;
+}
+.work-listing-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.work-listing-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45) !important;
+  margin-bottom: 12px;
+}
+.work-listing-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #fff !important;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+.work-listing-count {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.4) !important;
+  margin: 0;
+}
+
+/* ── Filter bar ── */
+.work-filter-bar {
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 48px 24px;
+  position: sticky;
+  top: 42px; /* matches nav height */
+  z-index: 50;
+}
+.work-filter-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-pill {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 40px;
+  padding: 5px 14px;
+  text-decoration: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.filter-pill:hover {
+  color: #000;
+  background: #fff;
+  border-color: #fff;
+}
+.filter-pill--active {
+  color: #000 !important;
+  background: #fff;
+  border-color: #fff;
+}
+
+/* ── Grid ── */
+.work-grid-section {
+  background: #fff;
+  padding: 56px 48px 80px;
+}
+.work-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 28px;
+}
+@media (max-width: 900px) {
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 580px) {
+  .work-grid { grid-template-columns: 1fr; }
+  .work-listing-header,
+  .work-filter-bar,
+  .work-grid-section { padding-left: 20px; padding-right: 20px; }
+}
+
+/* ── Card ── */
+.work-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+.work-card-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+.work-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s;
+}
+.work-card:hover .work-card-image {
+  transform: scale(1.03);
+}
+.work-card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e8e8e8;
+}
+.work-card-body {
+  padding: 20px 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.work-card-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.work-card-cat {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888 !important;
+}
+.work-card-cat + .work-card-cat::before {
+  content: '\00B7';
+  margin-right: 6px;
+  color: #ccc;
+}
+.work-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #000 !important;
+  line-height: 1.3;
+  margin: 0;
+}
+.work-card-summary {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: #555 !important;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Empty state ── */
+.work-empty {
+  max-width: 400px;
+  margin: 80px auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.work-empty p { color: #666 !important; margin-bottom: 16px; }
+.work-empty a { color: #000; font-weight: 600; }
+</style>

@@ -290,6 +290,9 @@
   justify-content: center;
   padding: 12px 0 16px;
 }
+.copyright-footer {
+  font-size: 0.65rem !important;
+}
 @media screen and (max-width: 767px) {
   .section-12 {
     flex-direction: column !important;

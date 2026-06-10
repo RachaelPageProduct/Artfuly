@@ -1,10 +1,10 @@
 :root {
   --color-bg: #ffffff;
-  --color-text: #233030;
-  --color-text-muted: #9b9a9a;
+  --color-text: #000000;
+  --color-text-muted: #888888;
   --color-accent: #3ba89c;
   --color-accent-light: #ceeaeb;
-  --color-dark: #1a2a2c;
+  --color-dark: #000000;
   --color-border: #dddddd;
   --color-tag-bg: #f3f3f3;
   --font-heading: 'Montserrat', sans-serif;
@@ -47,7 +47,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -60,8 +60,8 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
 }
 /* Push page content below fixed nav */
-body > .site-nav-wrapper + * { padding-top: 57px; }
-.nav-content-offset { padding-top: 57px; }
+body > .site-nav-wrapper + * { padding-top: 42px; }
+.nav-content-offset { padding-top: 42px; }
 .nav-list {
   list-style: none;
   display: flex;
@@ -405,8 +405,8 @@ body > .site-nav-wrapper + * { padding-top: 57px; }
 /* Footer */
 .site-footer {
   text-align: center;
-  padding: 2rem;
-  font-size: 0.85rem;
+  padding: 1.5rem 2rem;
+  font-size: 0.65rem;
   color: var(--color-text-muted);
   border-top: 1px solid var(--color-border);
 }
@@ -945,3 +945,18 @@ body > .site-nav-wrapper + * { padding-top: 57px; }
   .spd-grid { grid-template-columns: repeat(2, 1fr); }
   .spd-mockups-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Force pure black text — override webflow.css charcoal values ── */
+body { color: #000000 !important; }
+h1, h2, h3, h4, h5, h6 { color: #000000 !important; }
+p, li { color: #000000 !important; }
+.r-body, .r-1-showcase-page, .r-work-next-project-title { color: #000000 !important; }
+/* Restore intentional colour exceptions */
+.r-body.grey, .r-body.bold-small-caps.grey { color: #888888 !important; }
+.next-project-title, .next-project-label, .browse-label, .browse-pill { color: inherit !important; }
+.dennis-title { color: #ffffff !important; }
+.contact-section h2, .contact-section p { color: #000000 !important; }
+/* Restore white text on dark backgrounds */
+.next-project-strip, .next-project-strip * { color: #fff !important; }
+.next-project-strip .browse-pill { color: #fff !important; border-color: rgba(255,255,255,0.5) !important; }
+.next-project-strip .browse-pill:hover { color: #000 !important; background: #fff !important; }

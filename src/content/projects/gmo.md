@@ -38,7 +38,7 @@ videoWalkthrough: ""
 toolVideoEmbed: ""
 button1: "Link to the petition page (German)"
 link1: |-
-  https://www.artfuly.click/los
+  https://weact.campact.de/petitions/neue-gentechnik-wahlfreiheit-sichern-risiken-vermeiden
 button2: "Leave me a tip for my public service"
 link2: |-
   https://artfuly.click/EUR-tips

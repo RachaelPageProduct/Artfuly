@@ -18,12 +18,13 @@ const nextProjectTitle = nextProjectEntry?.data?.title ?? d.nextProject ?? '';
 
 // Map CSV category slugs to display names
 const catLabels: Record<string, string> = {
-  'apps': 'Native Apps', 'ia': 'IA & Database Design', 'marketing': 'Marketing & SEO',
+  'apps': 'Native Apps & PWAs', 'ia': 'IA & Database Design', 'marketing': 'Marketing & SEO',
   'strategy': 'Strategy', 'teaching-design': 'Teaching Design', 'ui-design': 'UI Design',
   'ux-design': 'UX Design', 'product-design': 'Product Design', 'development': 'Development',
   'conversion-funnels': 'Conversion Funnels', 'graphic-design': 'Graphic Design',
-  'motion-design': 'Motion Design', 'pwa': 'Progressive Web Apps',
-  'user-research': 'User Research & Testing', 'seo': 'SEO',
+  'motion-design': 'Motion Design (Animation)', 'pwa': 'Native Apps & PWAs',
+  'user-research': 'User Research & Testing', 'seo': 'Marketing & SEO',
+  'all': 'All Work',
 };
 const catUrl: Record<string, string> = {
   'apps': 'native-apps-pwas', 'ia': 'ia-database-design', 'marketing': 'marketing-seo',
@@ -33,6 +34,21 @@ const catUrl: Record<string, string> = {
   'motion-design': 'motion-design', 'pwa': 'native-apps-pwas',
   'user-research': 'user-research-testing', 'seo': 'marketing-seo',
 };
+
+// Browse by category pills (bottom of page)
+const browseCategories = [
+  { label: 'All Work', slug: 'all' },
+  { label: 'Product Design', slug: 'product-design' },
+  { label: 'UX Design', slug: 'ux-design' },
+  { label: 'User Research & Testing', slug: 'user-research-testing' },
+  { label: 'UI Design', slug: 'ui-design' },
+  { label: 'Strategy', slug: 'strategy' },
+  { label: 'IA & Database Design', slug: 'ia-database-design' },
+  { label: 'Native Apps & PWAs', slug: 'native-apps-pwas' },
+  { label: 'Marketing & SEO', slug: 'marketing-seo' },
+  { label: 'Conversion Funnels', slug: 'conversion-funnels' },
+  { label: 'Development', slug: 'development' },
+];
 
 // Button helper — only render if both label and link exist
 const buttons = [
@@ -84,8 +100,17 @@ const buttons = [
       <div>
         <div id="lottie-animation" style="width:100%;height:auto;"></div>
         <script define:vars={{ lottieUrl: d.lottieUrl }}>
-          if (typeof lottie !== 'undefined') {
-            lottie.loadAnimation({ container: document.getElementById('lottie-animation'), renderer: 'svg', loop: true, autoplay: true, path: lottieUrl });
+          function initLottie() {
+            if (typeof lottie !== 'undefined') {
+              lottie.loadAnimation({ container: document.getElementById('lottie-animation'), renderer: 'svg', loop: true, autoplay: true, path: lottieUrl });
+            } else {
+              setTimeout(initLottie, 100);
+            }
+          }
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initLottie);
+          } else {
+            initLottie();
           }
         </script>
       </div>
@@ -205,23 +230,31 @@ const buttons = [
     </section>
   )}
 
-  <!-- NEXT PROJECT -->
-  {d.nextProject && (
-    <section class="next-project-strip">
+  <!-- NEXT PROJECT + BROWSE CATEGORIES -->
+  <section class="next-project-strip">
+    {d.nextProject && (
       <a href={`/rachael-page/project/${d.nextProject}`} class="next-project-link">
         <span class="next-project-label">Next project</span>
         <span class="next-project-title">{nextProjectTitle} →</span>
       </a>
-    </section>
-  )}
+    )}
+    <div class="browse-categories">
+      <span class="browse-label">…or select a category</span>
+      <div class="browse-pills">
+        {browseCategories.map(cat => (
+          <a href={`/rachael-page/work/${cat.slug}`} class="browse-pill">{cat.label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
 
 </BaseLayout>
 
 <style>
-/* ── Next project strip ── */
+/* ── Next project strip + browse ── */
 .next-project-strip {
-  background: #1a2a2c;
-  padding: 56px 48px;
+  background: #000;
+  padding: 56px 48px 48px;
 }
 .next-project-link {
   display: flex;
@@ -249,6 +282,49 @@ const buttons = [
   line-height: 1.2;
 }
 
+/* ── Browse categories ── */
+.browse-categories {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.browse-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  white-space: nowrap;
+  padding-top: 6px;
+  flex-shrink: 0;
+}
+.browse-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.browse-pill {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  border-radius: 40px;
+  padding: 6px 18px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.browse-pill:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  opacity: 1;
+}
+
 /* ── Dennis Snellenberg entrance effect ──────────────────
    Phase 1: Full-screen dark overlay with centred title
    Phase 2: Bottom edge curves upward into a dome at top
@@ -259,7 +335,7 @@ const buttons = [
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #1a2a2c;
+  background: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
