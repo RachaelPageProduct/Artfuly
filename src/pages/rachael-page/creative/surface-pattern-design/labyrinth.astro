@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const colourways = [
+  { name: 'Teal on White',      file: 'Classy_Geometrics_-_Teal_on_white.jpg' },
+  { name: 'Teal on Teal',       file: 'Classy_Geometrics_-_Teal_on_Teal.jpg' },
+  { name: 'Blue on Grey',       file: 'Classy_Geometrics_-_Blue_on_Grey.jpg' },
+  { name: 'Lilac',              file: 'Classy_Geometrics_-_Lilac.jpg' },
+  { name: 'Diagonal — Blue on White', file: 'Classy_Geometrics_Diagonal_-_Blue_on_White.jpg' },
+];
+
+const mockups = [
+  { file: 'mockups/Classy geom sofa mock up.png', caption: 'Upholstery fabric — sofa' },
+  { file: 'mockups/Lilac cushion.jpeg',           caption: 'Fabric — Lilac cushion' },
+  { file: 'mockups/Lilac roll.jpeg',              caption: 'Wallpaper roll — Lilac' },
+  { file: 'mockups/Lilac wall closeup.jpeg',      caption: 'Wallpaper — Lilac, close-up' },
+  { file: 'mockups/21415562.jpeg',                caption: 'In context — view 1' },
+  { file: 'mockups/21415562 (1).jpeg',            caption: 'In context — view 2' },
+];
+---
+
+<BaseLayout title="Labyrinth — Surface Pattern Collection by Rachael Page" description="A modern take on geometry to complement your mid-century modern interior designs. Available for upholstery fabric, wallpaper and home accessories licensing.">
+
+  <!-- COLLECTION HERO -->
+  <section class="spd-hero">
+    <div class="spd-hero-text">
+      <p class="spd-collection-label">Surface Pattern Collection</p>
+      <h1 class="spd-collection-name">Labyrinth</h1>
+      <p class="spd-collection-desc">
+        A modern take on geometry to complement your mid-century modern interior designs.
+      </p>
+      <div class="spd-meta">
+        <span>5 colourways</span>
+        <span>Straight repeat</span>
+        <span>Upholstery · Wallpaper · Home Accessories</span>
+      </div>
+      <a href="mailto:artfulydesign@gmail.com?subject=Licensing%20enquiry%20—%20Labyrinth" class="spd-cta">
+        Enquire about licensing
+      </a>
+    </div>
+    <div class="spd-hero-image">
+      <img src="/images/patterns/labyrinth/21268327.jpeg" alt="Labyrinth — geometric pattern in context" />
+    </div>
+  </section>
+
+  <!-- COLOURWAYS GRID -->
+  <section class="spd-colourways">
+    <div class="spd-colourways-inner">
+      <h2 class="spd-section-label">Colourways</h2>
+      <div class="spd-grid">
+        {colourways.map(c => (
+          <div class="spd-swatch">
+            <img src={`/images/patterns/labyrinth/${c.file}`} alt={`Labyrinth — ${c.name}`} loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCKUPS / IN CONTEXT -->
+  <section class="spd-mockups">
+    <div class="spd-mockups-inner">
+      <h2 class="spd-section-label">In Context</h2>
+      <div class="spd-mockups-grid">
+        {mockups.map(m => (
+          <figure class="spd-mockup-item">
+            <img src={`/images/patterns/labyrinth/${m.file}`} alt={m.caption} loading="lazy" />
+            <figcaption>{m.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LICENSING CTA -->
+  <section class="spd-licensing">
+    <div class="spd-licensing-inner">
+      <h2 class="spd-licensing-title">Interested in licensing this collection?</h2>
+    </div>
+  </section>
+
+  <!-- BACK TO ALL COLLECTIONS -->
+  <div class="spd-back">
+    <a href="/rachael-page/creative/surface-pattern-design/">← All Collections</a>
+  </div>
+
+</BaseLayout>

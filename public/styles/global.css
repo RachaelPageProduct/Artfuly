@@ -701,11 +701,7 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
 
 /* Testimonials */
 .rp-refs-note { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; }
-/* Books & Articles grid — adapts to 2, 3, or 4 featured articles */
-.rp-articles-grid { display: flex !important; flex-wrap: wrap; gap: 0; }
-.rp-articles-grid .collection-item-14 { flex: 1 1 calc(100% / var(--article-count, 4)); min-width: 200px; }
-@media (max-width: 900px) { .rp-articles-grid .collection-item-14 { flex: 1 1 50%; } }
-@media (max-width: 580px) { .rp-articles-grid .collection-item-14 { flex: 1 1 100%; } }
+/* Books & Articles grid — adapts columns to item count */
 
 /* Testimonial quote text: Barlow Condensed 18px — matches live Webflow site */
 .r-testimonials .r-block-quote { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; }
@@ -716,8 +712,10 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
 .rp-testimonial cite { font-size: 0.8rem; font-style: normal; }
 .rp-testimonial cite strong { display: block; font-weight: 700; }
 
-/* Books & Articles */
-.rp-articles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+/* Books & Articles — 3→3cols, 4→2cols, 5→3cols, 6→3cols (set via --article-cols in template) */
+.rp-articles-grid { display: grid !important; grid-template-columns: repeat(var(--article-cols, 3), 1fr); gap: 1.5rem; margin-left: 0 !important; margin-right: 0 !important; }
+.rp-articles-grid .w-col { width: auto !important; float: none !important; padding: 0 !important; }
+.rp-articles-grid::before, .rp-articles-grid::after { content: none !important; display: none !important; }
 .rp-article-card { display: block; color: var(--color-text); }
 .rp-article-card:hover { opacity: 0.8; }
 .rp-article-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; margin-bottom: 0.75rem; }
@@ -733,7 +731,7 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
   .rp-work-featured-img img { min-height: 250px; max-height: 350px; }
   .rp-unique-inner { grid-template-columns: 240px 1fr; gap: 2rem; }
   .rp-testimonials { grid-template-columns: 1fr; gap: 1rem; }
-  .rp-articles-grid { grid-template-columns: repeat(2, 1fr); }
+  .rp-articles-grid { grid-template-columns: repeat(2, 1fr); --article-cols: 2; }
 }
 @media (max-width: 768px) {
   .rp-work-others-grid { grid-template-columns: 1fr; }
@@ -748,7 +746,7 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
   .rp-work { padding: 2.5rem 1.5rem; }
   .rp-page { padding: 0 1rem 4rem; }
   .rp-skills-grid { grid-template-columns: 1fr; }
-  .rp-articles-grid { grid-template-columns: repeat(2, 1fr); }
+  .rp-articles-grid { grid-template-columns: 1fr; --article-cols: 1; }
   .rp-heading-analytical, .rp-heading-creative { font-size: 3rem; }
 }
 
@@ -774,16 +772,17 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
   letter-spacing: 0.12em;
   color: var(--color-accent);
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.125rem;
 }
 .spd-collection-name {
+  font-family: 'Parisienne', cursive;
   font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: 300;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.05;
-  color: var(--color-dark);
+  color: #048ba2 !important;
   margin-bottom: 1.5rem;
-  font-style: italic;
+  font-style: normal;
 }
 .spd-collection-desc {
   font-size: 1rem;
@@ -830,7 +829,7 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
   border-radius: 2px;
   transition: background 0.2s;
 }
-.spd-cta:hover { background: var(--color-accent); opacity: 1; }
+.spd-cta:hover { background: #048ba2; border-color: #048ba2; opacity: 1; }
 
 /* Section label */
 .spd-section-label {
@@ -919,6 +918,7 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
   font-style: italic;
+  color: #ffffff !important;
 }
 .spd-licensing p {
   font-size: 0.95rem;
@@ -930,7 +930,7 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
   background: transparent;
   border: 1px solid rgba(255,255,255,0.4);
 }
-.spd-licensing .spd-cta:hover { background: var(--color-accent); border-color: var(--color-accent); }
+.spd-licensing .spd-cta:hover { background: #048ba2; border-color: #048ba2; }
 
 /* Back link */
 .spd-back {

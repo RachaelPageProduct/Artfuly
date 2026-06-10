@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const colourways = [
+  { name: 'Original', file: '3600 x 3600 Dog wallpaper 1.png' },
+];
+
+const mockups = [
+  { file: 'mockup/Dog wallpaper mockup 1.jpeg', caption: 'Wallpaper — living room' },
+  { file: 'mockup/Dog wallpaper mockup 2.jpeg', caption: 'Wallpaper — room detail' },
+];
+---
+
+<BaseLayout title="Good Dogs — Surface Pattern Collection by Rachael Page" description="A joyful dog wallpaper and fabric collection. Profits from licensing go to Transform a Street Dog charity.">
+
+  <!-- COLLECTION HERO -->
+  <section class="spd-hero">
+    <div class="spd-hero-text">
+      <p class="spd-collection-label">Surface Pattern Collection</p>
+      <h1 class="spd-collection-name">Good Dogs</h1>
+      <p class="spd-collection-desc">
+        A playful pattern celebrating dogs — designed for walls, fabric, and accessories. <strong>Profits from licensing this collection go to <a href="https://transformastreetdog.org/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Transform a Street Dog</a></strong>, a charity rescuing and rehoming street dogs.
+      </p>
+      <div class="spd-meta">
+        <span>1 colourway</span>
+        <span>Straight repeat</span>
+        <span>Wallpaper · Fabric · Home Accessories</span>
+      </div>
+      <a href="mailto:artfulydesign@gmail.com?subject=Licensing%20enquiry%20—%20Good%20Dogs" class="spd-cta">
+        Enquire about licensing
+      </a>
+    </div>
+    <div class="spd-hero-image">
+      <img src="/images/patterns/good-dogs/mockup/Dog wallpaper mockup 1.jpeg" alt="Good Dogs — wallpaper in living room" />
+    </div>
+  </section>
+
+  <!-- CHARITY CALLOUT -->
+  <section class="spd-charity">
+    <div class="spd-charity-inner">
+      <p>🐾 <strong>This collection supports a cause.</strong> Profits from every licensing deal go directly to <a href="https://transformastreetdog.org/" target="_blank" rel="noopener">Transform a Street Dog</a> — a charity working to rescue, rehabilitate, and rehome street dogs.</p>
+    </div>
+  </section>
+
+  <!-- COLOURWAYS GRID -->
+  <section class="spd-colourways">
+    <div class="spd-colourways-inner">
+      <h2 class="spd-section-label">Colourways</h2>
+      <div class="spd-grid">
+        {colourways.map(c => (
+          <div class="spd-swatch">
+            <img src={`/images/patterns/good-dogs/${c.file}`} alt={`Good Dogs — ${c.name}`} loading="lazy" />
+            <p class="spd-swatch-name">{c.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCKUPS / IN CONTEXT -->
+  <section class="spd-mockups">
+    <div class="spd-mockups-inner">
+      <h2 class="spd-section-label">In Context</h2>
+      <div class="spd-mockups-grid">
+        {mockups.map(m => (
+          <figure class="spd-mockup-item">
+            <img src={`/images/patterns/good-dogs/${m.file}`} alt={m.caption} loading="lazy" />
+            <figcaption>{m.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LICENSING CTA -->
+  <section class="spd-licensing">
+    <div class="spd-licensing-inner">
+      <h2 class="spd-licensing-title">Interested in licensing this collection?</h2>
+    </div>
+  </section>
+
+  <!-- BACK TO ALL COLLECTIONS -->
+  <div class="spd-back">
+    <a href="/rachael-page/creative/surface-pattern-design/">← All Collections</a>
+  </div>
+
+</BaseLayout>
+
+<style>
+.spd-charity {
+  background: #f5f0e8;
+  padding: 1.25rem 2rem;
+}
+.spd-charity-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #1d1d1d;
+}
+.spd-charity-inner a {
+  color: #048ba2;
+}
+</style>

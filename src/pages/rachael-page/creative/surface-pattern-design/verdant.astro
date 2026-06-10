@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const colourways = [
+  { name: 'Artboard 4', file: 'Artboard 4.png' },
+  { name: 'Artboard 5', file: 'Artboard 5.png' },
+  { name: 'Artboard 6', file: 'Artboard 6.png' },
+  { name: 'Artboard 3 (variant)', file: 'Artboard 3 copy 2.png' },
+  { name: 'Colourway 5', file: '22236461.jpeg' },
+];
+
+const mockups = [
+  { file: 'mockups/22236461.jpeg',      caption: 'In context — colourway 1' },
+  { file: 'mockups/22236461 (1).jpeg',  caption: 'In context — colourway 1, detail' },
+  { file: 'mockups/22236462.jpeg',      caption: 'In context — colourway 2' },
+  { file: 'mockups/22236462 (1).jpeg',  caption: 'In context — colourway 2, view 2' },
+  { file: 'mockups/22236462 (2).jpeg',  caption: 'In context — colourway 2, view 3' },
+  { file: 'mockups/22236462 (3).jpeg',  caption: 'In context — colourway 2, view 4' },
+  { file: 'mockups/22236462 (4).jpeg',  caption: 'In context — colourway 2, view 5' },
+  { file: 'mockups/22236310 (1).jpeg',  caption: 'In context — colourway 2, view 6' },
+  { file: 'mockups/22236462 (6).jpeg',  caption: 'In context — colourway 2, view 7' },
+];
+---
+
+<BaseLayout title="Verdant — Surface Pattern Collection by Rachael Page" description="Nature & calm: minimal form with uneven brushwork. Forest greens, shaded greys and refined botanicals. Available for wallpaper, fabric and home accessories licensing.">
+
+  <!-- COLLECTION HERO -->
+  <section class="spd-hero">
+    <div class="spd-hero-text">
+      <p class="spd-collection-label">Surface Pattern Collection</p>
+      <h1 class="spd-collection-name">Verdant</h1>
+      <p class="spd-collection-desc">
+        Nature &amp; calm: Minimal form with uneven brushwork. Forest greens, shaded greys, &amp; refined botanicals to include quiet pattern that supports calm.
+      </p>
+      <div class="spd-meta">
+        <span>5 colourways</span>
+        <span>Allover repeat</span>
+        <span>Wallpaper · Fabric · Home Accessories</span>
+      </div>
+      <a href="mailto:artfulydesign@gmail.com?subject=Licensing%20enquiry%20—%20Verdant" class="spd-cta">
+        Enquire about licensing
+      </a>
+    </div>
+    <div class="spd-hero-image">
+      <img src="/images/patterns/verdant/mockups/22236462.jpeg" alt="Verdant — botanical wallpaper in context" />
+    </div>
+  </section>
+
+  <!-- COLOURWAYS GRID -->
+  <section class="spd-colourways">
+    <div class="spd-colourways-inner">
+      <h2 class="spd-section-label">Colourways</h2>
+      <div class="spd-grid">
+        {colourways.map(c => (
+          <div class="spd-swatch">
+            <img src={`/images/patterns/verdant/${c.file}`} alt={`Verdant — ${c.name}`} loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCKUPS / IN CONTEXT -->
+  <section class="spd-mockups">
+    <div class="spd-mockups-inner">
+      <h2 class="spd-section-label">In Context</h2>
+      <div class="spd-mockups-grid">
+        {mockups.map(m => (
+          <figure class="spd-mockup-item">
+            <img src={`/images/patterns/verdant/${m.file}`} alt={m.caption} loading="lazy" />
+            <figcaption>{m.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LICENSING CTA -->
+  <section class="spd-licensing">
+    <div class="spd-licensing-inner">
+      <h2 class="spd-licensing-title">Interested in licensing this collection?</h2>
+    </div>
+  </section>
+
+  <!-- BACK TO ALL COLLECTIONS -->
+  <div class="spd-back">
+    <a href="/rachael-page/creative/surface-pattern-design/">← All Collections</a>
+  </div>
+
+</BaseLayout>

@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const colourways = [
+  { name: 'Artboard 3', file: 'Artboard 3.png' },
+  { name: 'Artboard 4', file: 'Artboard 4 2.png' },
+];
+
+const mockups = [
+  { file: 'mockups/Bathroom mockup 1.jpeg',  caption: 'Wallpaper — Bathroom' },
+  { file: 'mockups/Bedroom mockup 1.jpeg',   caption: 'Wallpaper — Bedroom' },
+  { file: 'mockups/Dining room mockup 1.jpeg', caption: 'Wallpaper — Dining room' },
+  { file: 'mockups/Grasscloth roll.jpeg',    caption: 'Grasscloth wallpaper — roll' },
+  { file: 'mockups/Grasscloth wall.jpeg',    caption: 'Grasscloth wallpaper — wall' },
+  { file: 'mockups/Mockup cushion 1.jpeg',   caption: 'Fabric — Cushion' },
+];
+---
+
+<BaseLayout title="Pebble — Surface Pattern Collection by Rachael Page" description="Scattered organic shapes with an artisanal, handmade quality. Designed for grasscloth and smooth wallpaper — a quiet, textural pattern that works in any room.">
+
+  <!-- COLLECTION HERO -->
+  <section class="spd-hero">
+    <div class="spd-hero-text">
+      <p class="spd-collection-label">Surface Pattern Collection</p>
+      <h1 class="spd-collection-name">Pebble</h1>
+      <p class="spd-collection-desc">
+        Scattered organic shapes with an artisanal, handmade quality. Designed for grasscloth and smooth wallpaper — a quiet, textural pattern that works in any room.
+      </p>
+      <div class="spd-meta">
+        <span>2 colourways</span>
+        <span>Allover repeat</span>
+        <span>Wallpaper · Fabric · Home Accessories</span>
+      </div>
+      <a href="mailto:artfulydesign@gmail.com?subject=Licensing%20enquiry%20—%20Pebble" class="spd-cta">
+        Enquire about licensing
+      </a>
+    </div>
+    <div class="spd-hero-image">
+      <img src="/images/patterns/pebble/mockups/Bathroom mockup 1.jpeg" alt="Pebble — wallpaper in bathroom context" />
+    </div>
+  </section>
+
+  <!-- COLOURWAYS GRID -->
+  <section class="spd-colourways">
+    <div class="spd-colourways-inner">
+      <h2 class="spd-section-label">Colourways</h2>
+      <div class="spd-grid">
+        {colourways.map(c => (
+          <div class="spd-swatch">
+            <img src={`/images/patterns/pebble/${c.file}`} alt={`Pebble — ${c.name}`} loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCKUPS / IN CONTEXT -->
+  <section class="spd-mockups">
+    <div class="spd-mockups-inner">
+      <h2 class="spd-section-label">In Context</h2>
+      <div class="spd-mockups-grid">
+        {mockups.map(m => (
+          <figure class="spd-mockup-item">
+            <img src={`/images/patterns/pebble/${m.file}`} alt={m.caption} loading="lazy" />
+            <figcaption>{m.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LICENSING CTA -->
+  <section class="spd-licensing">
+    <div class="spd-licensing-inner">
+      <h2 class="spd-licensing-title">Interested in licensing this collection?</h2>
+    </div>
+  </section>
+
+  <!-- BACK TO ALL COLLECTIONS -->
+  <div class="spd-back">
+    <a href="/rachael-page/creative/surface-pattern-design/">← All Collections</a>
+  </div>
+
+</BaseLayout>

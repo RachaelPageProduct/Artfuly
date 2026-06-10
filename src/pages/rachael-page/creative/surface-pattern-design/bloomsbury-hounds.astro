@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const colourways = [
+  { name: 'Artboard 4',  file: 'Artboard 4.png'  },
+  { name: 'Artboard 5',  file: 'Artboard 5.png'  },
+  { name: 'Artboard 6',  file: 'Artboard 6.png'  },
+  { name: 'Artboard 7',  file: 'Artboard 7.png'  },
+  { name: 'Artboard 8',  file: 'Artboard 8.png'  },
+  { name: 'Artboard 9',  file: 'Artboard 9.png'  },
+];
+
+const mockups = [
+  { file: 'Mockups/Italian Green.jpeg',              caption: 'Wallpaper — Italian Green colourway' },
+  { file: 'Mockups/Italian red.jpeg',                caption: 'Wallpaper — Italian Red colourway' },
+  { file: 'Mockups/Mcokup silver whole wall.jpeg',   caption: 'Wallpaper — Silver metallic colourway' },
+  { file: 'Mockups/Mockup closeup roll.jpeg',        caption: 'Wallpaper roll close-up' },
+  { file: 'Mockups/Pink on Pink silver metalic.jpeg', caption: 'Wallpaper — Pink on pink, silver metallic' },
+  { file: 'Mockups/Small pattern blue.jpeg',         caption: 'Small pattern — Blue colourway' },
+  { file: 'Mockups/Tiny pattern blue.jpeg',          caption: 'Tiny pattern — Blue colourway' },
+];
+---
+
+<BaseLayout title="Bloomsbury Hounds — Surface Pattern Collection by Rachael Page" description="Elegant whippet silhouettes in a William Morris-inspired design. Refined, repeat-pattern wallpaper and fabric available for licensing.">
+
+  <!-- COLLECTION HERO -->
+  <section class="spd-hero">
+    <div class="spd-hero-text">
+      <p class="spd-collection-label">Surface Pattern Collection</p>
+      <h1 class="spd-collection-name">Bloomsbury Hounds</h1>
+      <p class="spd-collection-desc">
+        Heritage damask reimagined for the modern pet lover. Bloomsbury Hounds turns the classic fleur-de-lis silhouette into a paw print.
+      </p>
+      <div class="spd-meta">
+        <span>7 colourways</span>
+        <span>Straight repeat</span>
+        <span>Wallpaper · Fabric · Home Accessories</span>
+      </div>
+      <a href="mailto:artfulydesign@gmail.com?subject=Licensing%20enquiry%20—%20Bloomsbury%20Hounds" class="spd-cta">
+        Enquire about licensing
+      </a>
+    </div>
+    <div class="spd-hero-image">
+      <img src="/images/patterns/bloomsbury-hounds/Mockups/Tiny pattern blue.jpeg" alt="Bloomsbury Hounds tiny pattern — Blue colourway" />
+    </div>
+  </section>
+
+  <!-- COLOURWAYS GRID -->
+  <section class="spd-colourways">
+    <div class="spd-colourways-inner">
+      <h2 class="spd-section-label">Colourways</h2>
+      <div class="spd-grid">
+        {colourways.map(c => (
+          <div class="spd-swatch">
+            <img src={`/images/patterns/bloomsbury-hounds/${c.file}`} alt={`Bloomsbury Hounds — ${c.name}`} loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCKUPS / IN CONTEXT -->
+  <section class="spd-mockups">
+    <div class="spd-mockups-inner">
+      <h2 class="spd-section-label">In Context</h2>
+      <div class="spd-mockups-grid">
+        {mockups.map(m => (
+          <figure class="spd-mockup-item">
+            <img src={`/images/patterns/bloomsbury-hounds/${m.file}`} alt={m.caption} loading="lazy" />
+            <figcaption>{m.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LICENSING CTA -->
+  <section class="spd-licensing">
+    <div class="spd-licensing-inner">
+      <h2 class="spd-licensing-title">Interested in licensing this collection?</h2>
+    </div>
+  </section>
+
+  <!-- BACK TO ALL COLLECTIONS -->
+  <div class="spd-back">
+    <a href="/rachael-page/creative/surface-pattern-design/">← All Collections</a>
+  </div>
+
+</BaseLayout>
