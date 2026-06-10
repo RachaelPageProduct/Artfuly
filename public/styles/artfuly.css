@@ -3,8 +3,8 @@
    Fills gaps not covered by webflow.css
    =================================================== */
 
-/* Nav link size — 20% larger than webflow.css default (16px → 19px) */
-.navbar { font-size: 17px; font-weight: 500; }
+/* Nav link size — matches rachaelpage.com nav */
+.navbar { font-size: 14px; font-weight: 300; }
 
 /* Shared button styles — defined globally so layout components can use them */
 .tutor-btn {
@@ -64,8 +64,8 @@
 }
 #artfuly-nav-overlay .navbar {
   display: block !important;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 300;
   font-family: 'Montserrat', sans-serif;
   color: #233030;
   padding: 4px 0;
@@ -526,7 +526,6 @@ h3.left {
   color: #233030;
   margin: 0 0 12px;
   line-height: 1.4;
-  min-height: 2.8em;
   transition: color 0.15s;
 }
 .div-block-71 {
@@ -560,6 +559,8 @@ h3.left {
   font-size: 22px;
   font-weight: 700;
   color: #233030;
+  text-align: left !important;
+  grid-column: 1 / -1;
 }
 .div-block-73 {
   display: grid;
@@ -598,19 +599,24 @@ h3.left {
 }
 .button-courses {
   display: inline-block;
-  background: #000050;
+  background: #ee7c7b;
   color: #fff !important;
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 700;
   padding: 10px 22px;
-  border-radius: 4px;
+  border-radius: 30px;
   text-decoration: none;
   transition: background 0.15s;
   border: none;
   cursor: pointer;
 }
-.button-courses:hover { background: #1a2a6c; }
+.button-courses:hover { background: #e5605e; }
 @media screen and (max-width: 767px) {
   .div-block-73 { grid-template-columns: 1fr; }
+}
+/* Global mobile side padding — artfuly.com */
+@media screen and (max-width: 767px) {
+  .w-container, .w-layout-blockcontainer, section { padding-left: 10px !important; padding-right: 10px !important; }
+  .padding-global, .padding-global-2, .padding-global-3, .padding-global-4, .padding-global-5, .padding-global-6 { padding-left: 10px !important; padding-right: 10px !important; }
 }

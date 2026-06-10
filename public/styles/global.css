@@ -60,8 +60,8 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
 }
 /* Push page content below fixed nav */
-body > .site-nav-wrapper + * { padding-top: 50px; }
-.nav-content-offset { padding-top: 50px; }
+body > .site-nav-wrapper + * { padding-top: 35px; }
+.nav-content-offset { padding-top: 35px; }
 .nav-list {
   list-style: none;
   display: flex;
@@ -701,6 +701,14 @@ body > .site-nav-wrapper + * { padding-top: 50px; }
 
 /* Testimonials */
 .rp-refs-note { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; }
+/* Books & Articles grid — adapts to 2, 3, or 4 featured articles */
+.rp-articles-grid { display: flex !important; flex-wrap: wrap; gap: 0; }
+.rp-articles-grid .collection-item-14 { flex: 1 1 calc(100% / var(--article-count, 4)); min-width: 200px; }
+@media (max-width: 900px) { .rp-articles-grid .collection-item-14 { flex: 1 1 50%; } }
+@media (max-width: 580px) { .rp-articles-grid .collection-item-14 { flex: 1 1 100%; } }
+
+/* Testimonial quote text: Barlow Condensed 18px — matches live Webflow site */
+.r-testimonials .r-block-quote { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; }
 .rp-testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .rp-testimonial { background: #f7f7f7; border-radius: 8px; padding: 1.75rem; }
 .rp-stars { color: var(--color-accent); font-size: 1rem; margin-bottom: 0.75rem; letter-spacing: 3px; }
@@ -960,3 +968,11 @@ p, li { color: #000000 !important; }
 .next-project-strip, .next-project-strip * { color: #fff !important; }
 .next-project-strip .browse-pill { color: #fff !important; border-color: rgba(255,255,255,0.5) !important; }
 .next-project-strip .browse-pill:hover { color: #000 !important; background: #fff !important; }
+/* Pin full-length photo to bottom of its grid cell */
+.div-block-144 { display: flex !important; flex-direction: column; justify-content: flex-end; }
+.div-block-144 .image-51 { display: block; }
+/* Global mobile side padding — rachaelpage.com */
+@media screen and (max-width: 767px) {
+  .w-container, .w-layout-blockcontainer, section { padding-left: 10px !important; padding-right: 10px !important; }
+  .page-padding { padding-left: 10px !important; padding-right: 10px !important; }
+}

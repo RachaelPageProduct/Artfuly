@@ -4,7 +4,7 @@ slug: "mcdonalds-monopoly-mobile-site"
 featured: True
 nextProject: "terra-website"
 halfWidthImage: |-
-  /images/webflow-cdn/68b708cebd505968fe886419_Showreel (2).gif
+  /images/webflow-cdn/McDonalds thumb.gif
 summary: |-
   Complex UX Design for this Mobile-first game: the first year it went mobile in Australia
 role: "UX Designer"

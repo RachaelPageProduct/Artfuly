@@ -155,6 +155,18 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
       });
     }
 
+    // Active nav highlight — match current path to nav links
+    (() => {
+      const path = window.location.pathname.replace(/\/$/, '') || '/';
+      document.querySelectorAll('.navbar-3 .navbar.w-nav-link, #artfuly-nav-overlay .navbar.w-nav-link').forEach(a => {
+        const href = a.getAttribute('href')?.replace(/\/$/, '') || '';
+        if (href && href !== '#email-signup' && (path === href || path.startsWith(href + '/'))) {
+          a.style.color = '#048ba2';
+          a.style.fontWeight = '500';
+        }
+      });
+    })();
+
     const btn = document.getElementById('artfuly-hamburger');
     const overlay = document.getElementById('artfuly-nav-overlay');
     const overlayMenu = document.getElementById('artfuly-nav-overlay-menu');

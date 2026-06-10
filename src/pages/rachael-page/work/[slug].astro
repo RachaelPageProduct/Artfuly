@@ -121,13 +121,6 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
               }
             </div>
             <div class="work-card-body">
-              {cats.length > 0 && (
-                <div class="work-card-cats">
-                  {cats.map((c: string) => (
-                    <span class="work-card-cat">{catLabel[c] ?? c}</span>
-                  ))}
-                </div>
-              )}
               <h2 class="work-card-title">{d.title}</h2>
               {d.summary && <p class="work-card-summary">{d.summary}</p>}
             </div>
