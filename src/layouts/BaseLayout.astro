@@ -14,47 +14,75 @@ const { title, description = 'Rachael Page — Product Designer' } = Astro.props
   <meta name="description" content={description} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/global.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
+  <slot name="head" />
+  <!-- ShareThis -->
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6422bedbfbfd84001b9fc051&product=inline-share-buttons' async='async'></script>
+  <!-- Amplitude -->
+  <script type="text/javascript">
+    !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var r=0;r<y.length;r++)o(e,y[r],!0)};r.invoked=!0;var a=t.createElement("script");a.type="text/javascript",a.crossOrigin="anonymous",a.src="https://cdn.amplitude.com/libs/plugin-ga-events-forwarder-browser-0.4.2-min.js.gz",a.onload=function(){e.gaEventsForwarder&&e.gaEventsForwarder.plugin&&e.amplitude.add(e.gaEventsForwarder.plugin())};var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(a,u),u.parentNode.insertBefore(c,u);for(var p=function(){return this._q=[],this},d=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<d.length;l++)n(p,d[l]);r.Identify=p;for(var g=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(g,v[f]);r.Revenue=g;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],y=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+    amplitude.init('41704051c12b3b7ac2b4ba75350ad077');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRBHL7V');</script>
+  <!-- Kit.com email signup -->
+  <script async data-uid="ded77907e0" src="https://artfuly.ck.page/ded77907e0/index.js"></script>
+  <!-- Amplitude session replay -->
+  <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+  <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
+  <script>window.amplitude.add(window.sessionReplay.plugin({sampleRate:1}));window.amplitude.init('41704051c12b3b7ac2b4ba75350ad077',{"autocapture":{"elementInteractions":true}});</script>
 </head>
 <body>
-  <header>
+  <div class="site-nav-wrapper" id="site-nav-wrapper">
     <nav class="site-nav">
       <a href="/rachael-page/" class="logo">RP</a>
-      <ul class="nav-list">
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-list" id="nav-list">
 
         <li><a href="/rachael-page/#about">About</a></li>
 
-        <!-- Product Design dropdown -->
+        <!-- Technical Design dropdown -->
         <li class="nav-dropdown">
-          <a href="/work/all">Product Design <span class="nav-chevron">▾</span></a>
+          <a href="/rachael-page/work/all">Technical Design <span class="nav-chevron">▾</span></a>
           <ul class="nav-submenu">
-            <li><a href="/work/all">All Work</a></li>
-            <li><a href="/work/ux-design">UX &amp; Research</a></li>
-            <li><a href="/work/ui-design">UI Design</a></li>
-            <li><a href="/work/product-design">Strategy &amp; IA</a></li>
-            <li><a href="/work/apps">Native Apps &amp; PWAs</a></li>
-            <li><a href="/work/marketing">Marketing &amp; SEO</a></li>
-            <li><a href="/work/development">Development</a></li>
+            <li><a href="/rachael-page/work/all">All Work</a></li>
+            <li><a href="/rachael-page/work/product-design">Product Design</a></li>
+            <li><a href="/rachael-page/work/ux-design">UX Design</a></li>
+            <li><a href="/rachael-page/work/user-research-testing">User Research &amp; Testing</a></li>
+            <li><a href="/rachael-page/work/ui-design">UI Design</a></li>
+            <li><a href="/rachael-page/work/strategy">Strategy</a></li>
+            <li><a href="/rachael-page/work/ia-database-design">IA &amp; Database Design</a></li>
+            <li><a href="/rachael-page/work/native-apps-pwas">Native Apps &amp; PWAs</a></li>
+            <li><a href="/rachael-page/work/marketing-seo">Marketing &amp; SEO</a></li>
+            <li><a href="/rachael-page/work/conversion-funnels">Conversion Funnels</a></li>
+            <li><a href="/rachael-page/work/development">Development</a></li>
           </ul>
         </li>
 
-        <!-- Creative Work dropdown -->
+        <!-- Creative dropdown -->
         <li class="nav-dropdown">
-          <a href="/creative-work/surface-pattern-design/">Creative Work <span class="nav-chevron">▾</span></a>
+          <a href="/rachael-page/creative/surface-pattern-design/">Creative <span class="nav-chevron">▾</span></a>
           <ul class="nav-submenu">
-            <li class="nav-submenu-heading">Surface Pattern Design</li>
-            <li><a href="/creative-work/surface-pattern-design/">All Collections</a></li>
-            <li><a href="/creative-work/surface-pattern-design/alhambra-haven">Alhambra Haven</a></li>
-            <li class="nav-submenu-divider"></li>
-            <li><a href="/work/motion-design-animation">Motion Design</a></li>
-            <li><a href="/work/graphic-design">Graphic Design</a></li>
+            <li><a href="/rachael-page/creative/surface-pattern-design/">Surface Pattern Design</a></li>
+            <li><a href="/rachael-page/work/motion-design">Motion Design</a></li>
+            <li><a href="/rachael-page/work/graphic-design">Graphic Design</a></li>
           </ul>
         </li>
 
-        <li><a href="https://artfuly.com" target="_blank" rel="noopener">Teaching ↗</a></li>
-        <li><a href="/rachael-page/#contact">Contact</a></li>
+        <!-- Teaching dropdown -->
+        <li class="nav-dropdown">
+          <a href="/private-tutor-mentor" target="_blank" rel="noopener">Teaching <span class="nav-chevron">▾</span></a>
+          <ul class="nav-submenu">
+            <li><a href="/private-tutor-mentor" target="_blank" rel="noopener">1:1 Tutor / Mentor</a></li>
+            <li><a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener">Design Courses ↗</a></li>
+            <li><a href="/design-resources" target="_blank" rel="noopener">Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
 
         <li>
           <a href="https://www.linkedin.com/in/rachaelpage" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -64,21 +92,66 @@ const { title, description = 'Rachael Page — Product Designer' } = Astro.props
 
       </ul>
     </nav>
-  </header>
+  </div>
 
-  <slot />
+  <script>
+    // Nav opacity deepens on scroll
+    const wrapper = document.getElementById('site-nav-wrapper');
+    if (wrapper) {
+      window.addEventListener('scroll', () => {
+        wrapper.style.background = window.scrollY > 80
+          ? 'rgba(206,234,235,0.97)'
+          : 'rgba(206,234,235,0.82)';
+      }, { passive: true });
+    }
+
+    // Hamburger toggle
+    const hamburger = document.getElementById('nav-hamburger');
+    const navList = document.getElementById('nav-list');
+    if (hamburger && navList) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navList.classList.toggle('open');
+      });
+      // Close on outside click
+      document.addEventListener('click', e => {
+        if (!hamburger.contains(e.target) && !navList.contains(e.target)) {
+          hamburger.classList.remove('open');
+          navList.classList.remove('open');
+        }
+      });
+    }
+
+    // Dropdowns with delay so items are clickable
+    document.querySelectorAll('.nav-dropdown').forEach(item => {
+      const sub = item.querySelector('.nav-submenu');
+      if (!sub) return;
+      let timer;
+      item.addEventListener('mouseenter', () => { clearTimeout(timer); sub.style.display = 'block'; });
+      item.addEventListener('mouseleave', () => { timer = setTimeout(() => { sub.style.display = ''; }, 200); });
+      sub.addEventListener('mouseenter', () => clearTimeout(timer));
+      sub.addEventListener('mouseleave', () => { timer = setTimeout(() => { sub.style.display = ''; }, 200); });
+    });
+  </script>
+
+  <div class="nav-content-offset">
+    <slot />
+  </div>
 
   <section class="contact-section" id="contact">
     <h2>Get in Touch</h2>
-    <p>Open to freelance projects, product design roles, and collaborations.</p>
     <div class="contact-actions">
-      <a href="mailto:artfulydesign@gmail.com?subject=Enquiry%20from%20your%20portfolio" class="btn btn-white">Email Rachael</a>
-      <a href="/meeting" class="btn btn-white">Book a Meeting</a>
+      <a href="mailto:artfulydesign@gmail.com?subject=Enquiry%20from%20your%20portfolio" class="btn btn-dark" onclick="navigator.clipboard.writeText('artfulydesign@gmail.com')">Email me</a>
+      <a href="#" class="btn btn-outline" fs-copyclip-element="click" fs-copyclip-text="artfulydesign@gmail.com" onclick="navigator.clipboard.writeText('artfulydesign@gmail.com');this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Email',2000);return false;">Copy Email</a>
+      <a href="/meeting" class="btn btn-dark">Book a meeting</a>
     </div>
+    <a href="https://www.linkedin.com/in/rachaelpage" target="_blank" rel="noopener" aria-label="LinkedIn" class="contact-linkedin">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
   </section>
 
   <footer class="site-footer">
-    <p>© Rachael Page 2025</p>
+    <p>© Rachael Page 2026</p>
   </footer>
 </body>
 </html>

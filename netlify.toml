@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Rewrite: rachaelpage.com/* → serves /rachael-page/* content
+# URL stays as rachaelpage.com in the browser (status 200 = rewrite, not redirect)
+# Requires rachaelpage.com to be added as a domain alias on this Netlify site
+[[redirects]]
+  from = "https://rachaelpage.com/*"
+  to = "/rachael-page/:splat"
+  status = 200
+  force = true

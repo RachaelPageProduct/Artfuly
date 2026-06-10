@@ -1,0 +1,50 @@
+/* ===================================================
+   Artfuly.com — supplemental styles
+   Fills gaps not covered by webflow.css
+   =================================================== */
+
+/* Share buttons */
+.a-share-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+.a-share-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #3ba89c;
+  border-radius: 4px;
+  color: #3ba89c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.a-share-btn:hover {
+  background: #3ba89c;
+  color: #fff;
+}
+
+/* Rich text article body */
+.w-richtext h2, .w-richtext h3, .w-richtext h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #233030;
+}
+.w-richtext p {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1d1d1d;
+}
+.w-richtext strong { font-weight: 700; }
+.w-richtext em { font-style: italic; }
+.w-richtext a { color: #3ba89c; }
+
+/* Section-46 share bar */
+.section-46 .paragraph-grey {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 8px;
+}

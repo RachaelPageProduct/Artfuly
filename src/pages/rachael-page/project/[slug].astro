@@ -1,0 +1,316 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(p => ({ params: { slug: p.data.slug }, props: { project: p, allProjects: projects } }));
+}
+
+const { project, allProjects } = Astro.props;
+const d = project.data;
+
+// Look up next project title from slug
+const nextProjectEntry = d.nextProject
+  ? allProjects.find((p: any) => p.data.slug === d.nextProject)
+  : null;
+const nextProjectTitle = nextProjectEntry?.data?.title ?? d.nextProject ?? '';
+
+// Map CSV category slugs to display names
+const catLabels: Record<string, string> = {
+  'apps': 'Native Apps', 'ia': 'IA & Database Design', 'marketing': 'Marketing & SEO',
+  'strategy': 'Strategy', 'teaching-design': 'Teaching Design', 'ui-design': 'UI Design',
+  'ux-design': 'UX Design', 'product-design': 'Product Design', 'development': 'Development',
+  'conversion-funnels': 'Conversion Funnels', 'graphic-design': 'Graphic Design',
+  'motion-design': 'Motion Design', 'pwa': 'Progressive Web Apps',
+  'user-research': 'User Research & Testing', 'seo': 'SEO',
+};
+const catUrl: Record<string, string> = {
+  'apps': 'native-apps-pwas', 'ia': 'ia-database-design', 'marketing': 'marketing-seo',
+  'strategy': 'strategy', 'teaching-design': 'development', 'ui-design': 'ui-design',
+  'ux-design': 'ux-design', 'product-design': 'product-design', 'development': 'development',
+  'conversion-funnels': 'conversion-funnels', 'graphic-design': 'graphic-design',
+  'motion-design': 'motion-design', 'pwa': 'native-apps-pwas',
+  'user-research': 'user-research-testing', 'seo': 'marketing-seo',
+};
+
+// Button helper — only render if both label and link exist
+const buttons = [
+  { label: d.button1, href: d.link1, style: 'white-on-black' },
+  { label: d.button2, href: d.link2, style: 'black-on-white' },
+  { label: d.button3, href: d.link3, style: 'black-on-white' },
+  { label: d.button4, href: d.link4, style: 'black-on-white' },
+].filter(b => b.label && b.href);
+---
+
+<BaseLayout title={`${d.title} — Rachael Page`} description={d.summary}>
+  <link rel="stylesheet" href="/styles/webflow.css" slot="head" />
+
+  <!-- PAGE TRANSITION OVERLAY (Dennis Snellenberg effect) -->
+  <div class="dennis-overlay" id="dennisOverlay" aria-hidden="true">
+    <div class="dennis-title" id="dennisTitleText">{d.title}</div>
+  </div>
+
+  <!-- PROJECT TITLE -->
+  <section class="r-showcase-section">
+    <div class="w-layout-blockcontainer w-container">
+      <h1 class="r-1-showcase-page">{d.title}</h1>
+    </div>
+  </section>
+
+  <!-- ROLE / TEAM / DATE & TOOLS -->
+  {(d.role || d.team || d.date) && (
+    <section class="r-project-details">
+      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
+        <div class="div-block-102">
+          <div><div class="r-body bold-small-caps grey">MY Role(s)</div></div>
+          <div><div class="r-body bold-small-caps grey">the Team</div></div>
+          <div><div class="r-body bold-small-caps grey">Date &amp; tools</div></div>
+          <div><div class="r-body small" set:html={d.role?.replace(/\n/g,'<br>')} /></div>
+          <div><div class="r-body small" set:html={d.team?.replace(/\n/g,'<br>')} /></div>
+          <div>
+            <div class="r-body small">{d.date}</div>
+            <div class="r-body small">{d.tools}</div>
+          </div>
+        </div>
+        <div class="spacer _32"></div>
+      </div>
+    </section>
+  )}
+
+  <!-- LOTTIE / HEADER IMAGE -->
+  {d.lottieUrl && (
+    <section class="r-project-header-lottie">
+      <div>
+        <div id="lottie-animation" style="width:100%;height:auto;"></div>
+        <script define:vars={{ lottieUrl: d.lottieUrl }}>
+          if (typeof lottie !== 'undefined') {
+            lottie.loadAnimation({ container: document.getElementById('lottie-animation'), renderer: 'svg', loop: true, autoplay: true, path: lottieUrl });
+          }
+        </script>
+      </div>
+    </section>
+  )}
+  {!d.lottieUrl && d.headerImage && (
+    <section class="r-project-header-lottie">
+      <img src={d.headerImage} alt={d.title} style="width:100%;height:auto;display:block;" loading="lazy" />
+    </section>
+  )}
+
+  <!-- SKILLS & DELIVERABLES PILLS -->
+  {d.workCategories?.length > 0 && (
+    <section class="r-showcase-section">
+      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
+        <section class="r-pills">
+          <div class="div-block-156">
+            <div class="r-body bold-small-caps grey no-line">SKILLS &amp;<br/>DELIVERABLES</div>
+          </div>
+          <div class="w-layout-blockcontainer r-container-pills w-container">
+            <div class="w-dyn-items" role="list">
+              {d.workCategories.map((cat: string) => (
+                <div role="listitem" class="collection-item-12 w-dyn-item">
+                  <a href={`/work/${catUrl[cat] || cat}`} class="r-work-category-pill w-button">
+                    {catLabels[cat] || cat.replace(/-/g,' ').replace(/\b\w/g,(c:string)=>c.toUpperCase())}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  )}
+
+  <!-- INTRODUCTION -->
+  {d.introduction && (
+    <div class="w-layout-blockcontainer r-showcase-container w-container">
+      <div>
+        <div class="rich-text-block-5 w-richtext" set:html={d.introduction} />
+      </div>
+    </div>
+  )}
+
+  <!-- TOOL VIDEO EMBED (Bunny inline embed) -->
+  {d.toolVideoEmbed && (
+    <section class="section-77">
+      <div class="w-layout-blockcontainer r-showcase-container w-container">
+        <div class="div-block-153" set:html={d.toolVideoEmbed} />
+      </div>
+    </section>
+  )}
+
+  <!-- IMPACT -->
+  {d.impact && (
+    <section class="r-showcase-section">
+      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
+        <div><p>{d.impact}</p></div>
+      </div>
+    </section>
+  )}
+
+  <!-- DESIGN TALKTHROUGH VIDEO -->
+  {d.designTalkthrough && (
+    <section class="design-talkthrough">
+      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
+        <div><h2>Design Talkthrough</h2></div>
+        <div class="w-video w-embed">
+          <iframe src={d.designTalkthrough} style="width:100%;aspect-ratio:16/9;border:none;" allowfullscreen loading="lazy" />
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CLICKABLE PROTOTYPE EMBED -->
+  {d.prototypeEmbed && (
+    <section class="r-showcase-section">
+      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
+        <div class="rich-text-block-5 w-richtext" set:html={d.prototypeEmbed} />
+      </div>
+    </section>
+  )}
+
+  <!-- PROJECT IN DETAIL -->
+  {d.projectInDetail && (
+    <section class="r-showcase-section">
+      <div class="w-layout-blockcontainer r-showcase-container w-container">
+        <div class="rich-text-block-5 w-richtext" set:html={d.projectInDetail} />
+      </div>
+    </section>
+  )}
+
+  <!-- DESIGN HIGHLIGHTS -->
+  {d.designHighlights && (
+    <section class="r-showcase-section">
+      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
+        <div class="w-richtext" set:html={d.designHighlights} />
+      </div>
+    </section>
+  )}
+
+  <!-- BUTTONS -->
+  {buttons.length > 0 && (
+    <section class="r-buttons-to-detail">
+      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
+        <div class="div-block-154"><h2>Links &amp; More Info</h2></div>
+        <div class="div-block-106">
+          {buttons.map(b => (
+            <a href={b.href} target="_blank" rel="noopener"
+               class={b.style === 'white-on-black' ? 'r-button-white-on-black w-button' : 'r-button-black-on-white w-button'}>
+              {b.label}
+            </a>
+          ))}
+        </div>
+        <div class="spacer _16"></div>
+      </div>
+    </section>
+  )}
+
+  <!-- NEXT PROJECT -->
+  {d.nextProject && (
+    <section class="r-next-last-project">
+      <div class="page-padding-2">
+        <div class="container-large-3">
+          <div class="layout-12-column">
+            <div class="section-title">
+              <h2 class="r-next-project-txt">Next project</h2>
+            </div>
+            <div class="content-wrapper">
+              <a href={`/project/${d.nextProject}`} class="text-style-link is-next-project-link w-inline-block">
+                <h3 class="r-work-next-project-title">{nextProjectTitle} →</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+</BaseLayout>
+
+<style>
+/* ── Dennis Snellenberg entrance effect ──────────────────
+   Phase 1: Full-screen dark overlay with centred title
+   Phase 2: Bottom edge curves upward into a dome at top
+   Phase 3: Overlay disappears
+   ────────────────────────────────────────────────────── */
+
+.dennis-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #1a2a2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  /* Phase 1: hold for 400ms, then phase 2 arch (600ms), then phase 3 fade (200ms) */
+  animation: dennisArch 1.2s cubic-bezier(0.76, 0, 0.24, 1) 0.4s forwards;
+}
+
+.dennis-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 4vw, 52px);
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  max-width: 70vw;
+  line-height: 1.15;
+  animation: dennisTitleFade 1.6s ease forwards;
+}
+
+@keyframes dennisTitleFade {
+  0%   { opacity: 0; transform: translateY(10px); }
+  20%  { opacity: 1; transform: translateY(0); }
+  65%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/*
+  clip-path morphs from full rectangle to a dome/arch at the top.
+  Both states use identical point counts so CSS interpolates smoothly.
+  The arch is a semicircle centred at top-centre (50% 0%), r ≈ 55vw worth.
+  After archforming, opacity fades to 0.
+*/
+@keyframes dennisArch {
+  0% {
+    opacity: 1;
+    clip-path: polygon(
+      0% 0%, 100% 0%,
+      105% 100%, 103% 100%, 98% 100%, 89% 100%,
+      78% 100%, 64% 100%, 50% 100%, 36% 100%,
+      22% 100%, 11% 100%, 2% 100%, -3% 100%, -5% 100%
+    );
+  }
+  75% {
+    opacity: 1;
+    clip-path: polygon(
+      0% 0%, 100% 0%,
+      105%  0%,  103%  9%,  98% 17%,  89% 24%,
+       78% 30%,   64% 34%,  50% 35%,  36% 34%,
+       22% 30%,   11% 24%,   2% 17%,  -3%  9%,  -5%  0%
+    );
+  }
+  100% {
+    opacity: 0;
+    clip-path: polygon(
+      0% 0%, 100% 0%,
+      105%  0%,  103%  9%,  98% 17%,  89% 24%,
+       78% 30%,   64% 34%,  50% 35%,  36% 34%,
+       22% 30%,   11% 24%,   2% 17%,  -3%  9%,  -5%  0%
+    );
+  }
+}
+
+/* Remove from layout once done so it doesn't block interactions */
+.dennis-overlay.dennis-done {
+  display: none;
+}
+</style>
+
+<script>
+  // Remove overlay from DOM after animation completes (0.4s delay + 1.2s anim = 1.6s)
+  const overlay = document.getElementById('dennisOverlay');
+  if (overlay) {
+    setTimeout(() => overlay.classList.add('dennis-done'), 1650);
+  }
+</script>

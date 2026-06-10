@@ -1,0 +1,185 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+const { title, description = 'Artfuly — Design education by Rachael Page', ogImage } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  {description && <meta name="description" content={description} />}
+  {ogImage && <meta property="og:image" content={ogImage} />}
+  <meta property="og:title" content={title} />
+  {description && <meta property="og:description" content={description} />}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Barlow+Condensed:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/webflow.css" />
+  <link rel="stylesheet" href="/styles/artfuly.css" />
+  <slot name="head" />
+  <style></style>
+
+  <!-- ShareThis -->
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6422bedbfbfd84001b9fc051&product=inline-share-buttons' async='async'></script>
+  <!-- Amplitude -->
+  <script type="text/javascript">
+    !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var r=0;r<y.length;r++)o(e,y[r],!0)};r.invoked=!0;var a=t.createElement("script");a.type="text/javascript",a.crossOrigin="anonymous",a.src="https://cdn.amplitude.com/libs/plugin-ga-events-forwarder-browser-0.4.2-min.js.gz",a.onload=function(){e.gaEventsForwarder&&e.gaEventsForwarder.plugin&&e.amplitude.add(e.gaEventsForwarder.plugin())};var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(a,u),u.parentNode.insertBefore(c,u);for(var p=function(){return this._q=[],this},d=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<d.length;l++)n(p,d[l]);r.Identify=p;for(var g=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(g,v[f]);r.Revenue=g;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],y=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(e){return r._iq[e]={_q:[]},i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+    amplitude.init('41704051c12b3b7ac2b4ba75350ad077');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRBHL7V');</script>
+  <!-- Kit.com email signup -->
+  <script async data-uid="ded77907e0" src="https://artfuly.ck.page/ded77907e0/index.js"></script>
+  <!-- Amplitude session replay -->
+  <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+  <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
+  <script>window.amplitude.add(window.sessionReplay.plugin({sampleRate:1}));window.amplitude.init('41704051c12b3b7ac2b4ba75350ad077',{"autocapture":{"elementInteractions":true}});</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div data-animation="over-right" data-collapse="medium" role="banner" class="navbar-3 w-nav">
+    <div class="container-navbar w-container">
+      <a href="/" class="brand-3 w-nav-brand" aria-label="home">
+        <img src="/images/site/63089402c3ac2fd2d3c1f4d8_Artfuly-2022-round-logo.png" loading="lazy" width="Auto" height="Auto" alt="Artfuly logo" class="image-33" />
+      </a>
+      <nav role="navigation" class="nav-menu-3 w-nav-menu">
+        <a href="/private-tutor-mentor" class="navbar w-nav-link">1:1 Tutor / Mentor</a>
+        <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="navbar w-nav-link">Design Courses ↗</a>
+        <a href="/design-resources" class="navbar w-nav-link">Resources</a>
+        <div class="spacer _16"></div>
+        <a href="#email-signup" class="a-button-navy-on-teal-nav small-text w-nav-link">Design Principles by Email</a>
+      </nav>
+      <div class="menu-button-4 w-nav-button" aria-label="menu" role="button" tabindex="0" id="artfuly-hamburger">
+        <div class="icon-3 w-icon-nav-menu"></div>
+      </div>
+    </div>
+    <!-- Mobile overlay — direct child of w-nav so it can be full-width -->
+    <div id="artfuly-nav-overlay">
+      <nav role="navigation" class="nav-menu-3 w-nav-menu" id="artfuly-nav-overlay-menu">
+        <a href="/private-tutor-mentor" class="navbar w-nav-link">1:1 Tutor / Mentor</a>
+        <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="navbar w-nav-link">Design Courses ↗</a>
+        <a href="/design-resources" class="navbar w-nav-link">Resources</a>
+        <div class="spacer _16"></div>
+        <a href="#email-signup" class="a-button-navy-on-teal-nav small-text w-nav-link">Design Principles by Email</a>
+      </nav>
+    </div>
+  </div>
+
+  <slot />
+
+  <!-- CONTACT / PREFOOTER -->
+  <div class="homecontactsection">
+    <div class="homecontact-header">
+      <h6 class="heading-41">Discuss your learning goals</h6>
+      <a href="https://form.typeform.com/to/BKGZ5Rsn" target="_blank" rel="noopener" class="tutor-btn tutor-btn--coral">Book a time</a>
+    </div>
+    <div class="homecontact-body">
+      <h6 class="heading-40">...or ask a question</h6>
+      <div class="form-block w-form" id="homepage-form-block">
+        <form id="Homepage-Form" name="Homepage Form" class="form">
+          <input class="question-form-field w-input" maxlength="256" name="Message" placeholder="" type="text" id="Message-2">
+          <label for="Name-4" class="field-label-4">Your name</label>
+          <input class="form-field w-input" maxlength="256" name="Name" placeholder="" type="text" id="Name-4" required>
+          <label for="Email-4" class="field-label-5">Your e-mail address</label>
+          <input class="form-field w-input" maxlength="256" name="Email" placeholder="" type="email" id="Email-4" required>
+          <div class="a-div-right-align">
+            <input type="submit" class="a-button-navy-on-teal w-button" value="Send it!">
+          </div>
+        </form>
+        <div id="homepage-form-success" style="display:none; font-family:'Montserrat',sans-serif; font-size:16px; color:#233030; padding: 16px 0;">
+          <strong>Received!</strong><br>A reply will be with you shortly!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER — wave SVG overlaps prefooter via negative margin -->
+  <div class="section-11">
+    <a href="/" class="w-inline-block">
+      <img src="/images/site/63089402c3ac2fd2d3c1f4d8_Artfuly-2022-round-logo.png" loading="lazy" alt="Artfuly logo" class="image-11" />
+    </a>
+  </div>
+  <div class="section-12">
+    <div class="section-12__left">
+      <a href="https://www.artfuly.com/about" class="footer-links">About</a>
+      <a href="mailto:hi@artfuly.com?subject=Website%20enquiry" class="footer-links">Send an Email</a>
+    </div>
+    <div class="section-12__center">
+      <div class="section-12__icons">
+        <a href="https://www.youtube.com/@artfulydesign" target="_blank" rel="noopener" class="w-inline-block">
+          <img src="/images/site/65f2a9639a01f0c2245fe869_Youtube_icon.svg" loading="lazy" alt="Follow Artfuly on Youtube" class="image-12" />
+        </a>
+        <a href="https://www.linkedin.com/company/artfuly" target="_blank" rel="noopener" class="w-inline-block">
+          <img src="/images/site/65f2a8f59e6211e5ba585742_linkedin_icon.svg" loading="lazy" alt="Follow Artfuly on LinkedIn" class="image-12" />
+        </a>
+        <a href="https://artfuly.click/events" target="_blank" rel="noopener" class="w-inline-block">
+          <img src="/images/site/65f2a99f82a99319fee83be1_Eventbrite_icon.svg" loading="lazy" alt="Artfuly on Eventbrite" class="image-12" />
+        </a>
+      </div>
+    </div>
+    <div class="section-12__right">
+      <a href="https://www.artfuly.com/privacy-policy" class="footer-links">Privacy</a>
+      <a href="https://www.artfuly.com/impressum" class="footer-links">Impressum</a>
+    </div>
+  </div>
+  <div class="section-14">
+    <div class="container-1216 w-container">
+      <div class="div-block-151">
+        <div class="copyright-footer">© Artfuly 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Homepage contact form — inline success, no redirect
+    const contactForm = document.getElementById('Homepage-Form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(contactForm);
+        try {
+          await fetch('https://formspree.io/f/mkoabvyv', {
+            method: 'POST',
+            body: data,
+            headers: { Accept: 'application/json' },
+          });
+        } catch (_) {}
+        contactForm.style.display = 'none';
+        document.getElementById('homepage-form-success').style.display = 'block';
+      });
+    }
+
+    const btn = document.getElementById('artfuly-hamburger');
+    const overlay = document.getElementById('artfuly-nav-overlay');
+    const overlayMenu = document.getElementById('artfuly-nav-overlay-menu');
+    if (btn && overlay) {
+      btn.addEventListener('click', () => {
+        const open = overlay.style.display === 'block';
+        if (open) {
+          overlay.style.display = 'none';
+          overlayMenu.removeAttribute('data-nav-menu-open');
+          btn.classList.remove('w--open');
+        } else {
+          overlay.style.display = 'block';
+          overlayMenu.setAttribute('data-nav-menu-open', '');
+          btn.classList.add('w--open');
+        }
+      });
+      // Close on link click
+      overlay.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          overlay.style.display = 'none';
+          overlayMenu.removeAttribute('data-nav-menu-open');
+          btn.classList.remove('w--open');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,85 +1,49 @@
 ---
 title: "Terra Listens Native Apps"
-featured: true
+slug: "terra-app"
+featured: True
 nextProject: "gmo"
-halfWidthImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800c1383681d68d77f2acec_Terra%20player%20control.png"
-summaryText: "Principal Product Designer & PM for a smart garden birdsong streaming app — from MVP to Q3 2024 launch on iOS and Android."
-role: "Principal Product Designer, Product Manager, Design Educator"
-team: "Client: Terra Listens CEO, Development: Various"
-date: "2022–2024"
+halfWidthImage: |-
+  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68a5e7984df7a15a836e8c16_Animation%20full%20width%20terra%20app.gif
+summary: |-
+  Streaming nature sounds from gardens & global birding hotpots with live bird ID's
+role: |-
+  Principal Product Designer
+  Product Manager
+  Design Educator
+team: |-
+  Client: Terra Listens CEO
+  Development: Various
+date: "2022-2024"
 tools: "Figma, Figjam, Video Calls, Slack, Vysor, Testflight"
-headerImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800c1383681d68d77f2acec_Terra%20player%20control.png"
-lottieFile: "/images/projects/terra-app/0.-IDPage-Cape-May.json"
-skills:
-  - Native Apps
-  - IA & Database Design
-  - Marketing
-  - Strategy
-  - Teaching Design
-  - UI Design
-  - UX Design
-  - Product Design
-impact: "Investors received Terra Stations with functional native app connectivity, WiFi setup, and Bluetooth capabilities for streaming backyard birdsong with live identification features."
-buttons:
-  - label: "iOS App"
-    url: "https://terralistens.click/apple"
-    style: "black"
-  - label: "Android App"
-    url: "https://terralistens.click/play"
-    style: "white"
-designHighlights:
-  - title: "Sound Player Control"
-    image: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800c1383681d68d77f2acec_Terra%20player%20control.png"
-    caption: "I designed the Sound player function and animation. The functions around the edge are only relevant when a location is playing, so it was possible to minimise and simplify the interface controls. After 5 seconds of inactivity these collapse automatically, and a pulsing indicator shows the active playback state."
-  - title: "Design System"
-    image: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67ffa94fa3b1cd8af0ebcf70_Terra%20Design%20System%20Colors.png"
-    caption: "After the app style had been worked out, I created a design system file and linked it into all the figma design files we used in each phase."
-  - title: "Design System Components"
-    image: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800e42b45e31c2d985eed50_Terra%20compnents%20%20tiles.png"
-    caption: "I created layered components with elements that can be turned on or off and location image sets that could also be made visible as required for faster designing."
-  - title: "Illustrations for Users' Backyard Screen"
-    image: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67fe8970f54643ad95a34ff4_Backyard%208.png"
-    caption: "These illustrations are used as default headers in the users backyard screen and in the homepage tiles. I created 12 versions quickly in midjourney for the client to choose from."
-  - title: "App Store Copywriting, Icon Design & Optimisation"
-    image: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67fe43c61811cbe6503bd96b_App%20Store%20Copywriting.png"
-    caption: "The icon needs to look good in many places — on users' phone & tablet homescreen and throughout many marketing materials like this. I took screenshots of all the places the icon would be seen and placed my icon design within it to check readability."
-  - title: "Favicon (Browser)"
-    image: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67ffb63586b06777c2e6f0be_Terra%20Favicon%20in%20browser.png"
-    caption: ""
-  - title: "Creating Instructions in Figma for Developers"
-    image: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67ff81ec6508a2270c367868_Browser%20back%20button.png"
-    caption: "This is just one example of design elements I created in Figma to communicate design changes to the developers."
-  - title: "Radio Tag Card"
-    image: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800dfb70c78d4a348755341_Terra%20Radio%20Tag%20Card.png"
-    caption: "The Terra Station also picks up birds that are carrying a radio tag, and so a design was needed to make those detections distinct."
+headerImage: ""
+lottieUrl: |-
+  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68a74d48b6e6afda6127f9a0_0.-IDPage-Cape-May.json
+workCategories: ['apps', 'ia', 'marketing', 'strategy', 'teaching-design', 'ui-design', 'ux-design', 'product-design']
+introduction: |-
+  <h2 id="">Background</h2><p id="">Terra is a smart garden microphone system paired with companion apps that let bird-lovers stream, identify, and track bird activity 24/7 — both in their own backyard and at curated birding hotspots around the world. </p><p id="">The Terra Project had been successfully funded in a kickstarter. </p><p id="">The concept was an outdoor physical device called 'The Terra Station', that picks up sound streams and bird tags with an app to listen, setup and control the experience. </p><p id="">Whilst the physical Terra device (later named the 'Terra Station') was being developed, the scope and design and build of the app needed to happen too.</p><p id="">‍</p><h3 id="">The Live Terra Map</h3><p id="">The map below is a recording of the live bird identifications map, which is available on the Terra Listens website. This is possible since the product sendout in Q3 of 2024, now that many Terra devices are capturing sound data. I've included it here because it allows you to visualise the power of the data being collected and how it can be used to understand bird populations via accurate identifications by sound.</p><figure id="" class="w-richtext-figure-type-video w-richtext-align-fullwidth" style="padding-bottom:75%" data-rt-type="video" data-rt-align="fullwidth" data-rt-max-width="" data-rt-max-height="75%" data-rt-dimensions="640:480" data-page-url="https://youtu.be/7_75b24PEUk"><div id=""><iframe src="https://www.youtube.com/embed/7_75b24PEUk" title="The Terra Listens Map" scrolling="no" frameborder="0" allowfullscreen="true"></iframe></div></figure><p id="">‍</p><h2 id="">Goals</h2><p id="">Initially, the CEO of the Terra startup approached me to teach him how to use the design thinking process and figma to create an MVP app.</p><p id="">I taught him how to do user research, prototyping, user testing and creating a unique brand, using Typography, Colour, Hierarchy, Layout and Grids to finish up with a viable app.</p><p id="">After the first iteration, I took over as Principal Product Designer and took the app through many more iterations and feature updates - both designing and product managing the developers which I also helped to source. </p><p id="">This lead to a successful product launch in Q3 of 2024, and the Terra Listens business is now scaling and continuing with user research and product improvements.</p><p id=""> </p>
+impact: |-
+  IMPACT: The investors in the Terra Listens project have received their Terra Stations, can connect up the station to wifi using the native apps and bluetooth. They can now stream nature and birdsong from their backyards, whilst seeing live bird identifications.
+designTalkthrough: ""
+prototypeEmbed: ""
+projectInDetail: |-
+  <h2 id="">Process</h2><p id="">Once the 'teaching the CEO' phase was done, enough user research had been completed, that we needed to design and deliver the essential functionality so that customers receiving the Terra Stations could setup the device using the partner app and bluetooth. </p><p id="">Sourcing and managing competent developers was difficult and became a major crisis and risk to the launch which was averted via hard work and extended hours. </p><p id="">‍</p><h3 id="">My Contribution Highlights</h3><ul id=""><li id="">Scoping out new features with the CEO</li><li id="">UX &amp; UI design for new features for Ios &amp; Android apps and managed the build with developers to deliver it </li><li id=""><a id="" href="https://www.artfuly.com/project/terra-website" target="_blank">Designed new brand &amp; website</a> with conversion pages, SEO &amp; copywriting, and managed developers to deliver it</li><li id="">Digital production, hiring &amp; interviewing developers</li><li id="">Research &amp; implemented company software systems such as helpdesk software</li><li id="">Design of product packaging &amp; event materials</li><li id="">Created &amp; managed the feature roadmap across website, ios &amp; android apps and web app</li><li id="">Testing and giving feedback in Asana and other project systems</li><li id="">Regular work in progress meetings with the team</li><li id="">Using Midjourney to quickly create app illustrations and realistic product concept images</li><li id="">App store graphics, copywriting &amp; app store optimisation</li></ul>
+designHighlights: |-
+  <h2 id="">Design Highlights</h2><h3 id="">Sound Player Control</h3><p id="">I designed the Sound player function and animation. The functions around the edge are only relevant when a location is playing, so it was possible to minimise and simplify the interface controls. This player automatically collapses after 5 seconds and 'pulses' if sound is playing to show the user that it's active.</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" style="max-width:200px" data-rt-type="image" data-rt-align="center" data-rt-max-width="200px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800c1383681d68d77f2acec_Terra%20player%20control.png" width="auto" height="auto" loading="lazy"></div></figure><p id="">‍</p><h3 id="">Design System</h3><p id="">After the app style had been worked out, I created a design system file and linked it into all the figma design files we used in each phase. All new designs used the new global colour and typohgraphy styles that I set up to maintain consistency and ease of updating any style. </p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:1475px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1475px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67ffa94fa3b1cd8af0ebcf70_Terra%20Design%20System%20Colors.png" width="auto" height="auto" loading="lazy"></div></figure><p id="">‍</p><h3 id="">Design System Components</h3><p id="">I created layered components with elements that can be turned on or off and location image sets that could also be made visible as required for faster designing</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:894px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="894px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800e42b45e31c2d985eed50_Terra%20compnents%20%20tiles.png" width="auto" height="auto" loading="lazy"></div></figure><h3 id="">Illustrations for the users backyard screen</h3><p id="">These illustrations are used as default headers in the users backyard screen and in the homepage tiles - tile seen above. I created 12 versions quickly in midjourney for the client to choose from. </p><p id="">‍</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" data-rt-type="image" data-rt-align="center"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67fe8970f54643ad95a34ff4_Backyard%208.png" width="auto" height="auto" loading="lazy"></div></figure><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" data-rt-type="image" data-rt-align="center"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67fe8983366d1f660c8b5422_Backyard%201.png" width="auto" height="auto" loading="lazy"></div></figure><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" data-rt-type="image" data-rt-align="center"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67fe898e65a09bd568531753_Backyard%202.png" width="auto" height="auto" loading="lazy"></div></figure><p id="">‍</p><h3 id="">App Store Copywriting, Icon Design &amp; Optimisation</h3><p id="">The icon needs to look good in many places, one users phone &amp; tablet homescreen and throughout many marketing materials like this. I took screenshots of all the places the icon would be seen and placed my icon design within it to check readability.</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:2794px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="2794px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67fe43c61811cbe6503bd96b_App%20Store%20Copywriting.png" width="auto" height="auto" loading="lazy"></div></figure><p id="">‍</p><h3 id="">Favicon</h3><p id="">Favicon in browser</p><p id="">‍</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" data-rt-type="image" data-rt-align="center"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67ffb63586b06777c2e6f0be_Terra%20Favicon%20in%20browser.png" width="auto" height="auto" loading="lazy"></div></figure><p id="">Favicon with loading spinner</p><h4 id="">‍</h4><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" data-rt-type="image" data-rt-align="center"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67ffb6490a2b1beb5107c236_Terra%20favicon%20with%20spinner.png" width="auto" height="auto" loading="lazy"></div></figure><p id="">‍</p><p id="">‍</p><p id="">‍</p><h3 id="">Creating instructions in figma for the developers</h3><p id="">This is just one example of design elements I&nbsp;created in figma to communicate design changes to the developers</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:745px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="745px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67ff81ec6508a2270c367868_Browser%20back%20button.png" width="auto" height="auto" loading="lazy"></div></figure><h4 id="">Radio Tag Card</h4><p id="">The Terra Station also picks up birds that are carrying a radio tag, and so a design was needed to make those detections distinct.</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:1026px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1026px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800dfb70c78d4a348755341_Terra%20Radio%20Tag%20Card.png" width="auto" height="auto" loading="lazy"></div></figure>
+videoWalkthrough: ""
+toolVideoEmbed: |-
+  <div data-rt-embed-type='true'><div style="position:relative; padding-top:177.78%; height:0; overflow:hidden;">
+    <iframe src="https://iframe.mediadelivery.net/play/411197/66ac110d-64ea-49db-9068-774e77a966f5" style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="Terra app2">
+    </iframe>
+  </div></div>
+button1: ""
+link1: ""
+button2: "Ios App"
+link2: |-
+  https://terralistens.click/apple
+button3: "Android App"
+link3: |-
+  https://terralistens.click/play
+button4: ""
+link4: ""
 ---
-
-## Background
-
-Terra is a smart garden microphone system paired with companion apps that let bird-lovers stream, identify, and track bird activity 24/7 — both in their own backyard and at curated birding hotspots around the world.
-
-The project involved designing an outdoor device ("Terra Station") with accompanying apps during the physical device development phase.
-
-## Goals
-
-The initial objective involved teaching the CEO design thinking and Figma for MVP creation, covering user research, prototyping, testing, and brand development through typography, colour, hierarchy, layout, and grids.
-
-I later assumed the Principal Product Designer role, overseeing multiple iterations, feature updates, developer sourcing, and ultimately a successful Q3 2024 launch.
-
-## Process
-
-Development phase focused on essential connectivity functionality after user research completion, with developer sourcing and management presenting significant challenges around the launch timeline.
-
-## My Contribution Highlights
-
-- Scoping out new features with the CEO
-- UX/UI design for iOS & Android with developer collaboration
-- Brand and website design with conversion pages, SEO, and copywriting
-- Digital production and developer hiring/interviewing
-- Company software systems implementation (helpdesk software)
-- Product packaging and event materials design
-- Feature roadmap creation across website, iOS, Android, and web app
-- Testing and feedback management in Asana
-- Progress meetings facilitation
-- Midjourney usage for app illustrations and product concepts
-- App store graphics, copywriting, and optimisation

@@ -1,0 +1,46 @@
+---
+title: "Sydney University Web-App"
+slug: "sydney-university"
+featured: False
+nextProject: "mcdonalds-monopoly-mobile-site"
+halfWidthImage: |-
+  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68a5e1b1043765756347c467_Showreel-Grid-Mobile-%5Bremix%5D-2.gif
+summary: "Research & UX for the lead generation experience for $760 Million AUD per year"
+role: |-
+  UX Researcher
+  Business Analyst
+  Principal UX Designer
+team: |-
+  Project Manager (Part-time)
+  UI Designer
+  PhD Student
+date: "2015 - 2016"
+tools: "Axure"
+headerImage: |-
+  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/655f6e43b2c6a00e454f65fe_Syd%20uni%20large.png
+lottieUrl: ""
+workCategories: ['conversion-funnels', 'ia', 'user-research-testing', 'ux-design']
+introduction: |-
+  <h2 id="">Background</h2><p id="">In late 2015 Sydney Universities' website had been re-branded and relaunched on a new CMS, but had a very poor search experience which gave 1000's of results for any keyword. Students looking for courses were also lost and bewildered by terminology.</p><p id=""><em>Header image: part of the extensive documentation I created to fully understand the course offerings and career pathways so that this could also be communicated simply to students and returning students</em></p><h2 id="">Goals</h2><p id="">I was responsible for the experience strategy, user research, design and user testing for the responsive site. I lead the UX work, producing all major deliverables and presenting these to the client between December 2015 and June 2016. I worked alongside 4 others who were part-time on the project: a Project Manager, Business Analyst, Visual Designer and a PhD student who created career and course mapping. Desktop and mobile designs were delivered. The optimised user experience designs also defined a new Database design which I communicated to the IT team in detail.</p>
+impact: ""
+designTalkthrough: ""
+prototypeEmbed: ""
+projectInDetail: |-
+  <h2 id="">Process</h2><ul id=""><li id="">User Research</li><li id="">Concept Ideation based on research - creating features</li><li id="">Designing black &amp; white clickable prototypes for User Testing</li><li id="">User Testing - check value of features and usability</li><li id="">Refinement of prototypes</li><li id="">Ongoing stakeholder management &amp; meetings with 16 University departments</li><li id="">Handover of 140 page research document to management and wireframes to the UI designer</li></ul><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:2880px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="2880px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/680201c43449964e48d9953d_Syd%20Uni%20wireframes.png" width="auto" height="auto" loading="lazy"></div><figcaption id="">A tiny excerpt of the wireframes I created. Annotations for developers are to the right hand side, and mobile versions are set out further right. You can view the full wireframes from the'Wreframe prototype' button at the end of this project</figcaption></figure><h3 id="">Client Testimonial</h3><p id="">Rachael Page was employed as a contractor via Peoplebank to work for Sydney University from the 19th October 2015 to the 15th June 2016. During her time at the contract, she performed her work well and maintained good standards in all areas. The resulting user interviews, wireframes and user testing documents exceeded expectations and Sydney University were more than satisfied with the work. I don't hesitate to recommend Rachael for any future UX positions - <strong id="">Kunal Bansal, Project Manager, Sydney University</strong></p>
+designHighlights: |-
+  <h2 id="">Research Highlights</h2><p id="">The following are screenshots taken from the live site in 2025 to show how my UX research fed into the product concept I created and that this is still valid and in use 9 years after the UX work was completed.</p><h3 id="">Global Feature: Personalisation</h3><p id="">During my review of the current website, it became quickly apparent that internal terminology that was confusing to 14 year olds and prospective students was very confusing and illogical. There were many undefined terms in use and one symptom of this for example was that it absolutely depended on whether the student was domestic or international and the year they intended to start the course for so much of the information to be correct. </p><p id="">For example, international students pay much higher fees and have totally different options for study grants. </p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:1670px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1670px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800e7f4938d893e7d014ca9_Sydn%20uni%20personalisation%20for%20fees%2C%20grants%20etc.png" width="auto" height="auto" loading="lazy"></div></figure><h3 id="">Feature: Simplifying Admissions information</h3><p id="">Domestic admissions needs to show the local 'ATAR' score information</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" data-rt-type="image" data-rt-align="center"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800f382efff564ac387a33f_sydnuni%20domestic%20admissions.png" width="auto" height="auto" loading="lazy"></div></figure><h3 id="">International Admissions</h3><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" data-rt-type="image" data-rt-align="center"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800f40d37fa5cd3a350bae7_Sydn%20uni%20international.png" width="auto" height="auto" loading="lazy"></div></figure><p id="">For international students, they can select their local qualification to see the entry requirements for each course. </p><figure id="" class="w-richtext-figure-type-image w-richtext-align-center" data-rt-type="image" data-rt-align="center"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800f4241b61cc1a17d6e7fe_Sydn%20uni%20international%20-%20with%20qual%20dropdown.png" width="auto" height="auto" loading="lazy"></div></figure><h3 id="">Feature: Personalised Prospectus</h3><p id="">This is a screenshot of an individual course page on the live site taken in 2025. It shows how a potential student can save specific courses to their own personal prostpectus area. This is a feature I created based on my user research.</p><p id="">‍</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:2546px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="2546px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67ff7f3a1a737d90c5796fd0_Sydney%20Uni%20Personalised%20Prospecus.png" width="auto" height="auto" loading="lazy"></div></figure><p id="">After the course is saved as a 'favourite' in my wireframes I show how the student can view and printout their personalised prospectus and optionally share it with parents and careers advisors - however it looks like that part of the concept hasn't yet been built. </p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:2594px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="2594px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800df2e4e2ac7c971c10d0d_Syd%20uni%20saved%20courses.png" width="auto" height="auto" loading="lazy"></div></figure><h2 id="">Important Inclusions</h2><p id="">In my research I&nbsp;found that potential students were keen to know what university life was like, and so I included a section for this on each course page.</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:1926px" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1926px"><div id=""><img id="" alt="__wf_reserved_inherit" src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6800e9484694a80f733dd510_Syd%20uni%20student%20life.png" width="auto" height="auto" loading="lazy"></div></figure><p>‍</p><p id="">All of the above features came from my user research with potential and existing students, both domestic and international and also those wanting to do Masters and PhD courses. All the proof of this can be seen in my UX Research Document, linked below.</p>
+videoWalkthrough: ""
+toolVideoEmbed: ""
+button1: "Wireframe Prototype"
+link1: |-
+  https://j29r1h.axshare.com/#p=th_-_course_page__coursework_
+button2: "Research Document"
+link2: |-
+  https://5d521658-fcad-4f1d-af17-f2c89e2782f7.usrfiles.com/ugd/5d5216_707d118a5493421e8c62c3eebf786d87.pdf
+button3: "Process"
+link3: |-
+  https://iamadigitaldesigner.wixsite.com/pageportfolio/sydney-university
+button4: "A live page"
+link4: |-
+  https://www.sydney.edu.au/courses/courses/uc/bachelor-of-engineering-honours-aeronautical-engineering2.html
+---

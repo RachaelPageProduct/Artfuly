@@ -1,10 +1,876 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+import { getCollection } from 'astro:content';
+
+const featuredArticles = (await getCollection('articles', ({ data }) => data.featured === true && data.published !== false))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 6);
 ---
-<BaseLayout title="Rachael Page — Product Designer">
-  <div style="max-width:1100px;margin:4rem auto;padding:0 2rem;text-align:center;">
-    <h1 style="font-size:2.5rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:1rem;">Rachael Page</h1>
-    <p style="color:#555;margin-bottom:2rem;">Portfolio site — migration in progress.</p>
-    <a href="/project/terra-app" style="display:inline-block;background:#1d1d1d;color:#fff;padding:0.75rem 1.5rem;border-radius:4px;font-weight:600;">View Terra App case study →</a>
+
+<ArtfulyLayout
+  title="1:1 Tutor / Mentor — Artfuly"
+  description="Fast-track UX / product design or receive personalised entrepreneur mentorship from Rachael Page — 30 years of design experience."
+>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="tutor-progress-bar" id="tutorProgressBar"></div>
+
+  <!-- ═══════════════════════════════════════
+       HERO — full viewport, desk bg image
+  ═══════════════════════════════════════ -->
+  <section class="tutor-hero">
+    <div class="tutor-hero__overlay"></div>
+    <div class="tutor-hero__inner w-container">
+      <div class="tutor-hero__text">
+        <div class="tutor-hero__avatar tutor-reveal" style="--delay:0ms">
+          <img src="/images/site/rachael-headshot.png" alt="Rachael Page" loading="eager" />
+        </div>
+        <div class="tutor-hero__label tutor-reveal" style="--delay:80ms">1:1 TUTOR / MENTOR: Rachael Page</div>
+        <h1 class="tutor-hero__h1">
+          <span class="tutor-reveal" style="--delay:180ms">Fast-track your</span>
+          <span class="tutor-reveal" style="--delay:280ms">design career.</span>
+        </h1>
+        <p class="tutor-hero__sub tutor-reveal" style="--delay:380ms">
+          UX / product design tutoring &amp; personalised entrepreneur mentorship
+          from a designer with 30 years of real-world experience.
+        </p>
+        <ul class="tutor-hero__bullets">
+          <li class="tutor-reveal" style="--delay:480ms">Present yourself optimally online to land the best jobs</li>
+          <li class="tutor-reveal" style="--delay:540ms">Improve your Visual Design, UX/UI &amp; Graphic Design</li>
+          <li class="tutor-reveal" style="--delay:600ms">Build confidence, learn new skills, tools &amp; software</li>
+          <li class="tutor-reveal" style="--delay:660ms">Create a stunning portfolio that gets interviews</li>
+          <li class="tutor-reveal" style="--delay:720ms">Build a website or portfolio with Claude Code, Framer, Webflow or Wix without coding</li>
+          <li class="tutor-reveal" style="--delay:780ms">Design apps to launch on the app store or as a responsive web app</li>
+        </ul>
+        <div class="tutor-hero__ctas tutor-reveal" style="--delay:860ms">
+          <a href="/booking" class="tutor-btn tutor-btn--coral">Book a session</a>
+          <a href="/rachael-page/" target="_blank" rel="noopener" class="tutor-btn tutor-btn--outline">See my portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       MARQUEE STRIP
+  ═══════════════════════════════════════ -->
+  <div class="tutor-marquee" aria-hidden="true">
+    <div class="tutor-marquee__track">
+      <span>DESIGN TUTORING</span><span class="tutor-marquee__dot">·</span>
+      <span>UX / PRODUCT DESIGN</span><span class="tutor-marquee__dot">·</span>
+      <span>ENTREPRENEUR MENTORSHIP</span><span class="tutor-marquee__dot">·</span>
+      <span>VISUAL DESIGN</span><span class="tutor-marquee__dot">·</span>
+      <span>PORTFOLIO COACHING</span><span class="tutor-marquee__dot">·</span>
+      <span>30 YEARS EXPERIENCE</span><span class="tutor-marquee__dot">·</span>
+      <span>DESIGN TUTORING</span><span class="tutor-marquee__dot">·</span>
+      <span>UX / PRODUCT DESIGN</span><span class="tutor-marquee__dot">·</span>
+      <span>ENTREPRENEUR MENTORSHIP</span><span class="tutor-marquee__dot">·</span>
+      <span>VISUAL DESIGN</span><span class="tutor-marquee__dot">·</span>
+      <span>PORTFOLIO COACHING</span><span class="tutor-marquee__dot">·</span>
+      <span>30 YEARS EXPERIENCE</span><span class="tutor-marquee__dot">·</span>
+    </div>
   </div>
-</BaseLayout>
+
+  <!-- ═══════════════════════════════════════
+       WHO IT'S FOR
+  ═══════════════════════════════════════ -->
+  <section class="tutor-section tutor-section--light">
+    <div class="w-container">
+      <div class="tutor-section__label tutor-slide-up">Who it's for</div>
+      <div class="tutor-who__grid">
+        <div class="tutor-who__card tutor-slide-up" style="--delay:0ms">
+          <div class="tutor-who__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#048ba2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a9 9 0 0 1 18 0v2"/></svg>
+          </div>
+          <h3>UX / Product Designers</h3>
+          <p>Starting out, changing careers, or levelling up from junior to senior</p>
+        </div>
+        <div class="tutor-who__card tutor-slide-up" style="--delay:100ms">
+          <div class="tutor-who__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#048ba2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Developers &amp; Coders</h3>
+          <p>Learning design to build better products or transition into product roles</p>
+        </div>
+        <div class="tutor-who__card tutor-slide-up" style="--delay:200ms">
+          <div class="tutor-who__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#048ba2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Entrepreneurs &amp; Startup Teams</h3>
+          <p>Creating product concepts, apps, or startup branding without a design team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SCOTT WHITTLE TESTIMONIAL — hero quote
+  ═══════════════════════════════════════ -->
+  <section class="tutor-section tutor-quote-section">
+    <div class="w-container">
+    <div class="tutor-quote__inner">
+      <div class="tutor-quote__image tutor-slide-up" style="--delay:100ms">
+        <img
+          src="/images/site/645ba1cadedbd33e4d5f9562_Scott-terra-homepage.png"
+          alt="Scott Whittle's Terra app — 3 screens"
+          loading="lazy"
+          srcset="/images/site/645ba1cadedbd33e4d5f9562_Scott-terra-homepage-p-500.png 500w, /images/site/645ba1cadedbd33e4d5f9562_Scott-terra-homepage-p-800.png 800w, /images/site/645ba1cadedbd33e4d5f9562_Scott-terra-homepage-p-1080.png 1080w, /images/site/645ba1cadedbd33e4d5f9562_Scott-terra-homepage.png 2210w"
+          sizes="(max-width: 767px) 100vw, 50vw"
+        />
+      </div>
+      <div class="tutor-quote__content">
+        <div class="tutor-quote__tag tutor-slide-up">ENTREPRENEUR MENTORSHIP TESTIMONIAL</div>
+        <div class="tutor-quote__name-row tutor-slide-up" style="--delay:80ms">
+          <span class="tutor-quote__client">Scott Whittle</span>
+          <span class="tutor-quote__project">Terra app · Cape May NJ, USA · 2023</span>
+        </div>
+        <blockquote class="tutor-quote__text tutor-slide-up" style="--delay:160ms">
+          All the generalized knowledge in the world can't help you as much as a mentor with
+          decades of practical experience. Rachael can guide you through all the tricky
+          decisions in the design process, focussing on your project specifically: what's
+          critical, what's not, and what you haven't even thought of yet. The information
+          she provides is in a whole different category, and it's invaluable.
+        </blockquote>
+        <div class="tutor-quote__cta tutor-slide-up" style="--delay:280ms">
+          <a href="/student-successes/scott-whittle-and-terra/" class="tutor-btn tutor-btn--teal-outline">Read the Terra case study →</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       WHAT YOU GET — 2 numbered cards
+  ═══════════════════════════════════════ -->
+  <section class="tutor-section tutor-section--light">
+    <div class="w-container">
+      <div class="tutor-section__label tutor-slide-up">What to expect from your tutor</div>
+      <div class="tutor-services__grid">
+        <div class="tutor-services__card tutor-slide-up" style="--delay:0ms">
+          <div class="tutor-services__num">01</div>
+          <h3>1:1 Design Tutoring</h3>
+          <p>
+            Personalised sessions covering UX, UI, product design, visual design, portfolio building,
+            and no-code tools like Claude, Figma, Framer &amp; Webflow. Sessions are tailored entirely to your
+            goals — no generic curriculum.
+          </p>
+          <div class="tutor-services__actions">
+            <a href="/booking" class="tutor-btn tutor-btn--coral">Book free 30 mins</a>
+            <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="tutor-btn tutor-btn--ghost">View courses ↗</a>
+          </div>
+        </div>
+        <div class="tutor-services__card tutor-slide-up" style="--delay:120ms">
+          <div class="tutor-services__num">02</div>
+          <h3>1:1 Entrepreneur Mentorship</h3>
+          <p>
+            You have an idea — what now? I'll help you validate it, design the MVP,
+            build the right team, avoid costly mistakes, and get to market. Drawn from
+            30 years building and shipping real products.
+          </p>
+          <div class="tutor-services__actions">
+            <a href="/booking-mentorship" class="tutor-btn tutor-btn--coral">Find out more</a>
+            <a href="/booking-mentorship" class="tutor-btn tutor-btn--ghost">Book a 30 min chat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIALS GRID
+  ═══════════════════════════════════════ -->
+  <section class="tutor-section tutor-section--teal-light">
+    <div class="w-container">
+      <div class="tutor-section__label tutor-slide-up">Tutoring testimonials</div>
+      <p class="tutor-testimonials__sub tutor-slide-up" style="--delay:80ms">Make contact to join the waitlist for private sessions</p>
+      <div class="tutor-testimonials__grid">
+        <div class="tutor-testimonial tutor-slide-up" style="--delay:0ms">
+          <div class="tutor-testimonial__stars">
+            <img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" />
+          </div>
+          <p>"She is an incredible teacher. I was surprised by the level of empathy Rachael has with her students — it's obvious that she really enjoys teaching. Commencing my job search, I feel prepared and am indebted."</p>
+          <div class="tutor-testimonial__author">
+            <img src="/images/site/tutor-testimonial-eduardo.jpeg" alt="Eduardo Hernandez" loading="lazy" />
+            <div>
+              <strong>Eduardo Hernandez</strong>
+              <span>Mexico City, Mexico · 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="tutor-testimonial tutor-slide-up" style="--delay:100ms">
+          <div class="tutor-testimonial__stars">
+            <img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" />
+          </div>
+          <p>"Rachael patiently helped me to enhance my design skills and build a great folio. She went above and beyond to provide constructive feedback &amp; resources. She builds up your confidence."</p>
+          <div class="tutor-testimonial__author">
+            <img src="/images/site/tutor-testimonial-sanjana.jpeg" alt="Sanjana Bhat" loading="lazy" />
+            <div>
+              <strong>Sanjana Bhat</strong>
+              <span>New Jersey, USA · 2022</span>
+            </div>
+          </div>
+        </div>
+        <div class="tutor-testimonial tutor-slide-up" style="--delay:200ms">
+          <div class="tutor-testimonial__stars">
+            <img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" /><img src="/images/site/teal-star.svg" alt="" width="16" />
+          </div>
+          <p>"I couldn't have asked for a better teacher over the last few months — I'm extremely grateful for your support, encouragement and guidance throughout."</p>
+          <div class="tutor-testimonial__author">
+            <img src="/images/site/tutor-testimonial-joyce.jpeg" alt="Joyce Echevin" loading="lazy" />
+            <div>
+              <strong>Joyce Echevin</strong>
+              <span>London, UK · 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       MEET YOUR TUTOR
+  ═══════════════════════════════════════ -->
+  <section class="tutor-section tutor-section--dark tutor-meet">
+    <div class="w-container">
+      <div class="tutor-meet__inner">
+        <div class="tutor-meet__text tutor-slide-up">
+          <div class="tutor-section__label">Meet your tutor</div>
+          <h2>30 years of design.<br />All yours for an hour.</h2>
+          <p>
+            I've spent 20+ years designing products, leading teams, launching apps,
+            and running my own businesses. I've been where you are — and I know what
+            makes a great designer and a great product.
+          </p>
+          <p>
+            My sessions are direct, practical, and tailored entirely to you. No fluff,
+            no theory for theory's sake. Just the knowledge that will actually move
+            you forward.
+          </p>
+
+        </div>
+        <div class="tutor-meet__photo tutor-slide-up" style="--delay:120ms">
+          <div class="tutor-meet__circle">
+            <img src="/images/site/rachael-headshot.png" alt="Rachael Page" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PORTFOLIO LINK BANNER
+  ═══════════════════════════════════════ -->
+  <a href="/rachael-page/" class="tutor-folio-banner tutor-slide-up">
+    <span class="tutor-folio-banner__text">Want to see 30 years of design work?</span>
+    <span class="tutor-folio-banner__cta">View portfolio at rachaelpage.com →</span>
+  </a>
+
+  <!-- ═══════════════════════════════════════
+       TICKLISTS BRAG SECTION
+  ═══════════════════════════════════════ -->
+  <section class="tutor-ticklists-section">
+    <div class="w-container">
+    <div class="tutor-ticklists__inner">
+      <div class="tutor-ticklists__text tutor-slide-up">
+        <div class="tutor-ticklists__label">LAUNCHED SPRING 2026</div>
+        <h2 class="tutor-ticklists__heading">I also build apps.</h2>
+        <p class="tutor-ticklists__body">Ticklists is my own PWA — a smarter shopping list and routine app that keeps items permanently, sorts them into your store's aisle order, and syncs live with your household. Concepted, researched, designed, built &amp; shipped solo.</p>
+        <a href="https://ticklists.com" target="_blank" rel="noopener" class="tutor-btn tutor-btn--coral" style="display:inline-block;margin-top:8px;">Try Ticklists free →</a>
+      </div>
+      <div class="tutor-ticklists__video tutor-slide-up" style="--delay:150ms">
+        <video id="ticklists-hero-video" autoplay loop muted playsinline style="width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,0.18);"></video>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script>
+    (function(){
+      var video = document.getElementById('ticklists-hero-video');
+      if (!video) return;
+      var src = 'https://vz-b91d07c1-def.b-cdn.net/62572680-9750-4895-9924-bdb4a198028c/playlist.m3u8';
+      if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+        var hls = new Hls({ autoStartLoad: true, startLevel: -1 });
+        hls.loadSource(src);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() { video.play(); });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = src;
+        video.play();
+      }
+    })();
+  </script>
+
+  <!-- TOP DESIGN RESOURCES — featured: true = "Featured on Artfuly?" in CMS -->
+  <div class="section-50">
+    <div class="w-container">
+      <div><div class="spacer _96"></div><h2 class="navy-heading-40pt">Top Design Resources</h2></div>
+      <div>
+        <div class="w-dyn-list">
+          <div role="list" class="collection-list-9 w-dyn-items w-row">
+            {featuredArticles.map((article) => (
+              <div role="listitem" class="collection-item-11 w-dyn-item w-col w-col-4">
+                <a href={`/design-resources/${article.data.slug}/`} class="link-block-11 w-inline-block">
+                  <h3 class="homeresourceshead3">{article.data.title}</h3>
+                  <div class="div-block-71">
+                    <img alt="" loading="lazy" src={article.data.thumbnailImage || article.data.heroImage} class="image-36" />
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AWAY FROM THE RACE -->
+  <section class="aftr-section">
+    <video class="aftr-video" autoplay loop muted playsinline>
+      <source src="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/65b8dc00965457ed9e858550_IMG_6022-transcode.mp4" type="video/mp4">
+      <source src="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/65b8dc00965457ed9e858550_IMG_6022-transcode.webm" type="video/webm">
+    </video>
+    <div class="aftr-overlay"></div>
+    <div class="aftr-content w-container">
+      <h2 class="t-heading-larger">Away from the Race</h2>
+      <a href="https://www.artfuly.com/travel" class="tutor-btn tutor-btn--teal aftr-btn">Work from anywhere</a>
+    </div>
+  </section>
+
+  <!-- EMAIL CTA -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" slot="head"></script>
+  <script async data-uid="eb98b5a075" src="https://artfuly.ck.page/eb98b5a075/index.js" slot="head"></script>
+  <section class="section_cta8" id="email-signup">
+    <div class="padding-global-3">
+      <div class="container-large">
+        <div class="padding-section-large-3">
+          <div class="cta8_component">
+            <div class="cta8_content">
+              <div class="max-width-large">
+                <div class="margin-bottom margin-xsmall">
+                  <div class="margin-bottom margin-xsmall">
+                    <div class="a-des-insight-title">LEARN BY EMAIL (FREE)</div>
+                  </div>
+                  <h2 class="white h2insights">Design Principles</h2>
+                </div>
+                <p class="white right">Learn by watching me apply key design principles<br />1 email per week with videos &amp; free resources</p>
+                <p class="small-white-body">Unsubscribe anytime.</p>
+              </div>
+            </div>
+            <div class="html-embed-7 w-embed w-script">
+              <script async data-uid="eb98b5a075" src="https://artfuly.ck.page/eb98b5a075/index.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</ArtfulyLayout>
+
+<style>
+/* ─── Scroll progress bar ─────────────────────────────── */
+.tutor-progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: #84cacc;
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ─── Hero ────────────────────────────────────────────── */
+.tutor-hero {
+  position: relative;
+  background-image: url('/images/site/tutor-scott-desktop.png');
+  background-size: cover;
+  background-position: center 30%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0 80px;
+}
+.tutor-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(4,60,75,0.88) 0%, rgba(4,80,100,0.78) 100%);
+  z-index: 0;
+}
+.tutor-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+.tutor-hero__avatar {
+  margin-bottom: 28px;
+}
+.tutor-hero__avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid rgba(255,255,255,0.4);
+  display: block;
+  animation: heroPhotoIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s both;
+}
+@keyframes heroPhotoIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.tutor-hero__label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.tutor-hero__h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(36px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #fff;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tutor-hero__h1 span { display: block; }
+.tutor-hero__sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 28px;
+  max-width: 600px;
+}
+.tutor-hero__bullets {
+  list-style: none;
+  padding: 0; margin: 0 0 36px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.tutor-hero__bullets li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  padding-left: 20px;
+  position: relative;
+}
+.tutor-hero__bullets li::before {
+  content: '';
+  position: absolute; left: 0; top: 8px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+}
+.tutor-hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ─── Buttons ─────────────────────────────────────────── */
+.tutor-btn {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.18s;
+  cursor: pointer;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+.tutor-btn--coral   { background: #ee7c7b; color: #fff; }
+.tutor-btn--coral:hover { background: #e5605e; }
+.tutor-btn--outline { background: transparent; border-color: rgba(255,255,255,0.4); color: #fff; }
+.tutor-btn--outline:hover { border-color: #fff; }
+.tutor-btn--teal-outline { background: transparent; border-color: rgba(255,255,255,0.5); color: #fff; }
+.tutor-btn--teal-outline:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+.tutor-btn--ghost { background: transparent; border-color: #048ba2; color: #048ba2; }
+.tutor-btn--ghost:hover { background: #048ba2; color: #fff; border-color: #048ba2; }
+
+/* ─── Marquee ─────────────────────────────────────────── */
+.tutor-marquee {
+  background: #84cacc;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 14px 0;
+}
+.tutor-marquee__track {
+  display: inline-flex;
+  gap: 24px;
+  animation: marqueeLeft 28s linear infinite;
+}
+.tutor-marquee__track span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.tutor-marquee__dot { opacity: 0.5; }
+.tutor-marquee:hover .tutor-marquee__track { animation-play-state: paused; }
+@keyframes marqueeLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ─── Generic section ─────────────────────────────────── */
+.tutor-section { padding: 80px 0; }
+.tutor-section--light { background: #fff; }
+.tutor-section--dark  { background: #048ba2; }
+.tutor-section--teal-light { background: #ceeaeb; }
+.tutor-section__label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #048ba2;
+  margin-bottom: 40px;
+}
+.tutor-section--dark .tutor-section__label { color: rgba(255,255,255,0.65); }
+
+/* ─── Who it's for ────────────────────────────────────── */
+.tutor-who__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.tutor-who__card {
+  padding: 32px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tutor-who__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+.tutor-who__icon { font-size: 28px; margin-bottom: 14px; }
+.tutor-who__card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px; font-weight: 700;
+  color: #233030; margin: 0 0 10px;
+}
+.tutor-who__card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; line-height: 1.65; color: #555; margin: 0;
+}
+
+/* ─── Scott Whittle quote ─────────────────────────────── */
+.tutor-quote-section {
+  padding: 80px 0 80px;
+  background: #0c3340;
+}
+.tutor-quote__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 100%;
+}
+.tutor-quote__content { position: relative; z-index: 1; }
+.tutor-quote__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.tutor-quote__content::before {
+  content: '\201C';
+  font-family: 'Merriweather', serif;
+  font-size: 200px;
+  line-height: 1;
+  color: rgba(255,255,255,0.08);
+  position: absolute;
+  top: -30px; left: -30px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.tutor-quote__tag {
+  position: relative; z-index: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+.tutor-quote__name-row {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 32px;
+}
+.tutor-quote__client {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px; font-weight: 700; color: #fff;
+}
+.tutor-quote__project {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px; color: rgba(255,255,255,0.5);
+}
+.tutor-quote__text {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(11px, 1.5vw, 16px);
+  line-height: 1.7;
+  color: rgba(255,255,255,0.92) !important;
+  max-width: 800px;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 0 32px;
+  position: relative;
+  z-index: 1;
+}
+.tutor-quote__cta { position: relative; z-index: 1; }
+
+/* ─── Services / What you get ─────────────────────────── */
+.tutor-services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.tutor-services__card {
+  padding: 40px;
+  border-left: 4px solid #84cacc;
+  background: #f8fafa;
+  border-radius: 0 8px 8px 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tutor-services__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+}
+.tutor-services__num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px; font-weight: 800;
+  color: #e8f0f0; line-height: 1;
+  margin-bottom: 12px;
+}
+.tutor-services__card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px; font-weight: 700;
+  color: #233030; margin: 0 0 14px;
+}
+.tutor-services__card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px; line-height: 1.7; color: #555; margin: 0 0 24px;
+}
+.tutor-services__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ─── Testimonials ────────────────────────────────────── */
+.tutor-testimonials__sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; color: #84cacc; font-weight: 600;
+  margin-bottom: 40px; margin-top: -28px;
+}
+.tutor-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.tutor-testimonial {
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tutor-testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(59,168,156,0.12);
+}
+.tutor-testimonial__stars { display: flex; gap: 3px; }
+.tutor-testimonial__stars img { width: 16px !important; height: 16px !important; flex-shrink: 0; }
+.tutor-testimonial p {
+  font-family: 'Merriweather', serif;
+  font-size: 14px; line-height: 1.75; color: #233030;
+  flex: 1; margin: 0;
+  font-style: italic;
+}
+.tutor-testimonial__author { display: flex; gap: 12px; align-items: center; }
+.tutor-testimonial__author img {
+  width: 44px; height: 44px;
+  border-radius: 50%; object-fit: cover;
+}
+.tutor-testimonial__author strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px; font-weight: 700; color: #233030; display: block;
+}
+.tutor-testimonial__author span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px; color: #888; display: block;
+}
+
+/* ─── Meet your tutor ─────────────────────────────────── */
+.tutor-meet__inner {
+  display: grid;
+  grid-template-columns: 1fr 272px;
+  gap: 56px;
+  align-items: center;
+}
+.tutor-meet__text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 4vw, 44px); font-weight: 800;
+  color: #fff; line-height: 1.15; margin: 0 0 24px;
+}
+.tutor-meet__text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px; line-height: 1.75;
+  color: rgba(255,255,255,0.75); margin: 0 0 16px;
+}
+.tutor-meet__text .tutor-btn { margin-top: 8px; }
+.tutor-meet__circle {
+  width: 272px;
+  height: 272px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+.tutor-meet__circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: grayscale(10%);
+  transition: filter 0.3s;
+}
+.tutor-meet__circle:hover img { filter: grayscale(0%); }
+
+/* ─── Portfolio link banner ───────────────────────────── */
+.tutor-folio-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: #ee7c7b;
+  padding: 28px 40px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.tutor-folio-banner:hover { background: #e5605e; }
+
+/* ─── Ticklists brag section ─────────────────────── */
+.tutor-ticklists-section {
+  background: #f2f7f7;
+  padding: 80px 0;
+}
+.tutor-ticklists__inner {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 64px;
+  align-items: center;
+}
+.tutor-ticklists__label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #3ba89c;
+  margin-bottom: 12px;
+}
+.tutor-ticklists__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  color: #233030;
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+.tutor-ticklists__body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0 0 24px;
+  max-width: 480px;
+}
+@media screen and (max-width: 767px) {
+  .tutor-ticklists__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .tutor-ticklists__video { order: -1; }
+}
+.tutor-folio-banner__text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px; font-weight: 700; color: #fff;
+}
+.tutor-folio-banner__cta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.85);
+  letter-spacing: 0.3px;
+}
+
+/* ─── Scroll-triggered slide-up ───────────────────────── */
+.tutor-slide-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition-delay: var(--delay, 0ms);
+}
+.tutor-slide-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Hero stagger reveal ─────────────────────────────── */
+.tutor-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: tutorReveal 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: var(--delay, 0ms);
+}
+@keyframes tutorReveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media screen and (max-width: 991px) {
+  .tutor-hero { min-height: auto; padding: 80px 0 60px; }
+  .tutor-who__grid { grid-template-columns: 1fr; }
+  .tutor-services__grid { grid-template-columns: 1fr; }
+  .tutor-testimonials__grid { grid-template-columns: 1fr; }
+  .tutor-meet__inner { grid-template-columns: 1fr; }
+  .tutor-quote__inner { grid-template-columns: 1fr; }
+  .tutor-quote__image { display: none; }
+  .tutor-meet__circle { width: 220px; height: 220px; }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .tutor-who__grid { grid-template-columns: repeat(2, 1fr); }
+  .tutor-testimonials__grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+<script>
+  // Scroll progress bar
+  const progressBar = document.getElementById('tutorProgressBar');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (scrolled / total * 100) + '%';
+    }, { passive: true });
+  }
+
+  // Intersection Observer for scroll-triggered slide-ups
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.tutor-slide-up').forEach(el => observer.observe(el));
+</script>

@@ -1,0 +1,596 @@
+---
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="Book a 1:1 Entrepreneur Mentorship Session — Artfuly"
+  description="Book a 1:1 entrepreneur mentorship session with Rachael Page. First 30-minute intro call is free."
+>
+
+  <!-- TITLE HERO -->
+  <div class="articles-section-top">
+    <div class="a-container w-container">
+      <div class="a-des-insight-title" style="color:rgba(255,255,255,0.6); margin-bottom:12px; grid-area:1/1/2/5; text-align:left">ENTREPRENEUR MENTORSHIP</div>
+      <h1 class="h1-small-white" style="grid-area:2/1/3/5; padding-left:0">Book a session</h1>
+    </div>
+  </div>
+
+  <!-- HOW TO BOOK -->
+  <div class="booking-steps">
+    <div class="w-container">
+      <div class="booking-steps__list">
+        <div class="booking-steps__item">
+          <span class="booking-steps__num">1</span>
+          <span>Book a session time</span>
+        </div>
+        <div class="booking-steps__divider">→</div>
+        <div class="booking-steps__item">
+          <span class="booking-steps__num">2</span>
+          <span>Pay for the session immediately to confirm your booking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FREE INTRO NOTICE -->
+  <div class="booking-notice">
+    <div class="w-container">
+      <div class="booking-notice__inner">
+        <div class="booking-notice__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#048ba2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+        </div>
+        <p>
+          <strong>The first 30-minute intro call is free.</strong> We'll get to know each other, understand where your business is now, what's blocking you, and whether we're a good fit — no payment needed. Go ahead and book in without hitting any payment buttons.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <section class="booking-pricing">
+    <div class="w-container">
+      <h2 class="booking-pricing__heading">Entrepreneur Mentorship — Session Rates</h2>
+      <div class="booking-pricing__grid">
+
+        <div class="booking-pricing__card booking-pricing__card--featured">
+          <div class="booking-pricing__label">MOST POPULAR</div>
+          <div class="booking-pricing__duration">60 min</div>
+          <div class="booking-pricing__price">$280 <span class="booking-pricing__alts">/ €250 / £220</span></div>
+          <p>A focused strategy session on whatever is blocking you most — product direction, go-to-market, positioning, team, investors, or design.</p>
+          <ul>
+            <li>Personalised agenda</li>
+            <li>Session notes sent afterwards</li>
+            <li>Follow-up resources included</li>
+          </ul>
+          <a href="#payment" class="booking-pay-btn">Pay for 60-min session →</a>
+        </div>
+
+        <div class="booking-pricing__card">
+          <div class="booking-pricing__duration">90 min</div>
+          <div class="booking-pricing__price">$400 <span class="booking-pricing__alts">/ €360 / £320</span></div>
+          <p>Deep-dive sessions for bigger decisions: full product critique, pitch deck review, go-to-market strategy, or a pivotal moment that needs real thinking time.</p>
+          <ul>
+            <li>Best for complex problems</li>
+            <li>Detailed written follow-up</li>
+            <li>Recording available on request</li>
+          </ul>
+          <a href="#payment" class="booking-pay-btn">Pay for 90-min session →</a>
+        </div>
+
+        <div class="booking-pricing__card">
+          <div class="booking-pricing__duration">Monthly retainer</div>
+          <div class="booking-pricing__price">$1,000 <span class="booking-pricing__alts">/ €900 / £800</span></div>
+          <p>4 sessions per month — like having a senior advisor in your corner. Best for founders at a critical growth stage who need consistent, expert input.</p>
+          <ul>
+            <li>4 × 60-min sessions/month</li>
+            <li>Priority WhatsApp access</li>
+            <li>Async review between sessions</li>
+          </ul>
+          <a href="#payment" class="booking-pay-btn booking-pay-btn--coral">Start monthly retainer →</a>
+        </div>
+
+        <div class="booking-pricing__card booking-pricing__card--pack">
+          <div class="booking-pack__left">
+            <div class="booking-pricing__label">INTENSIVE</div>
+            <div class="booking-pricing__duration">Half-day intensive</div>
+            <div class="booking-pricing__price">$1,200 <span class="booking-pricing__alts">/ €1,100 / £950</span></div>
+            <p>3–4 hours of uninterrupted work together. Best for a product launch sprint, investor pitch preparation, a full business model review, or a critical pivot decision.</p>
+          </div>
+          <div class="booking-pack__right">
+            <ul>
+              <li>3–4 hrs focused work</li>
+              <li>Full written summary</li>
+              <li>Action plan delivered same day</li>
+              <li>Recording included</li>
+            </ul>
+            <a href="#payment" class="booking-pay-btn booking-pay-btn--coral">Book a half-day →</a>
+          </div>
+        </div>
+
+      </div>
+      <p class="booking-pricing__note" id="payment">Payment links will be added shortly. In the meantime, <a href="mailto:hi@artfuly.com?subject=Entrepreneur mentorship booking">email me to book</a> and I'll send a payment link directly.</p>
+
+    </div>
+  </section>
+
+  <!-- CALENDLY EMBED -->
+  <section class="booking-calendly">
+    <div class="w-container">
+      <h2 class="booking-calendly__heading">1. Book a time</h2>
+      <p class="booking-calendly__sub">A calendar should load below. If it doesn't load, <a href="https://calendly.com/rachael_page/60min" target="_blank" rel="noopener">click this link instead</a>.</p>
+
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/rachael_page/60min?hide_gdpr_banner=1&text_color=000050&primary_color=84cacc" style="min-width:320px;height:1000px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+
+      <div class="booking-calendly__notes">
+        <p>You'll see the online meeting link inside the calendar event after booking.</p>
+        <p>Monthly retainer sessions don't all need to be booked immediately — only the next one.</p>
+        <p>I'm in the European timezone, but the booking calendar above lets you book in your local timezone and puts the event into your calendar in your local time.</p>
+        <p>If you have any issues getting into the session, or there's any misunderstanding about start time, message me on WhatsApp: <a href="https://wa.me/491573391232" target="_blank" rel="noopener">+49 157 339 12321</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO EXPECT -->
+  <section class="booking-expect">
+    <div class="w-container">
+      <h2 class="booking-expect__heading">What to expect</h2>
+      <div class="booking-expect__grid">
+        <div class="booking-expect__item">
+          <div class="booking-expect__num">01</div>
+          <h3>Book a free 30-min intro</h3>
+          <p>We'll assess where you are, what's blocking you, and whether we're the right fit before any money changes hands.</p>
+        </div>
+        <div class="booking-expect__item">
+          <div class="booking-expect__num">02</div>
+          <h3>We agree a focus</h3>
+          <p>No generic frameworks. We identify the single highest-leverage thing to work on first, then build from there.</p>
+        </div>
+        <div class="booking-expect__item">
+          <div class="booking-expect__num">03</div>
+          <h3>Regular sessions, real progress</h3>
+          <p>Each session produces a concrete output — a decision made, a document drafted, a strategy confirmed. You leave with clarity and a next step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMS -->
+  <section class="booking-terms">
+    <div class="w-container">
+      <h2 class="booking-terms__heading">Terms &amp; How to cancel or postpone a session</h2>
+      <div class="booking-terms__body">
+        <p>Please pay for each session at the time of booking, and at least 24 hours in advance. Unpaid bookings may be removed from the calendar to make space for paid bookings.</p>
+        <div class="booking-terms__charges">
+          <div class="booking-terms__charge">
+            <span class="booking-terms__pct">75%</span>
+            <span>charged for a no-show</span>
+          </div>
+          <div class="booking-terms__charge">
+            <span class="booking-terms__pct">50%</span>
+            <span>charged for a cancellation within 12 hours of session time</span>
+          </div>
+          <div class="booking-terms__charge">
+            <span class="booking-terms__pct">25%</span>
+            <span>charged for a cancellation within 24 hours</span>
+          </div>
+        </div>
+        <p><strong>To reschedule or cancel:</strong> There are links inside the calendar invite that you'll receive after booking.</p>
+        <p><strong>Last-minute cancellations:</strong> WhatsApp is the best place to reach me — <a href="https://wa.me/491573391232" target="_blank" rel="noopener">+49 157 339 12321</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WISE -->
+  <section class="booking-wise-section">
+    <div class="w-container">
+      <div class="booking-wise">
+        <div class="booking-wise__text">
+          <h3>Wise bank for international transfers with very low fees</h3>
+          <p>If you're having regular sessions and would like to help a small business with lower transaction fees, you can send me Euros directly via Wise from many countries.</p>
+          <p>Here's my <a href="https://wise.com/invite/dic/rachaelp" target="_blank" rel="noopener">Wise affiliate link</a> where you'll get a free card or zero fees on the first transfer up to A$1,000 — and still very low fees after that (which I can cover, since it's lower than the payment buttons above).</p>
+        </div>
+        <iframe
+          title="fx"
+          src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=USD&targetCurrency=EUR&amount=250&ctaVariant=GET_STARTED&ctaLink=https%3A%2F%2Fwise.com%2Finvite%2Fdic%2Frachaelp"
+          height="490"
+          width="340"
+          frameborder="0"
+          allowtransparency="true"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK LINK -->
+  <div style="text-align:left; padding: 20px 0 60px;" class="w-container">
+    <a href="/private-tutor-mentor" class="booking-back">← Back to tutoring &amp; mentorship</a>
+  </div>
+
+</ArtfulyLayout>
+
+<style>
+/* ─── Free intro notice ───────────────────────────────── */
+.booking-notice {
+  background: #e8f6f7;
+  border-left: 4px solid #048ba2;
+  padding: 0;
+}
+.booking-notice__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 0;
+}
+.booking-notice__icon { flex-shrink: 0; padding-top: 2px; }
+.booking-notice p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #233030;
+  margin: 0;
+}
+.booking-notice strong { color: #048ba2; }
+
+/* ─── How to book steps ───────────────────────────────── */
+.booking-steps {
+  background: #233030;
+  padding: 20px 0;
+}
+.booking-steps__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.booking-steps__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+}
+.booking-steps__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #048ba2;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.booking-steps__divider {
+  color: #84cacc;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* ─── Pricing ─────────────────────────────────────────── */
+.booking-pricing {
+  padding: 72px 0 56px;
+  background: #fff;
+}
+.booking-pricing__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  color: #233030;
+  margin: 0 0 40px;
+  text-align: left;
+}
+.booking-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.booking-pricing__card {
+  padding: 36px 32px;
+  border: 1.5px solid #e0eded;
+  border-radius: 10px;
+  background: #fafefe;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.booking-pricing__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(4,139,162,0.1);
+}
+.booking-pricing__card--featured {
+  border-color: #048ba2;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(4,139,162,0.12);
+}
+.booking-pricing__card--pack {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+  align-items: center;
+}
+.booking-pack__left { display: flex; flex-direction: column; gap: 6px; }
+.booking-pack__left p { margin: 8px 0 0; font-size: 14px; line-height: 1.6; }
+.booking-pack__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.booking-pack__right ul { margin: 0; }
+.booking-pack__right .booking-pay-btn { align-self: flex-start; margin-top: 0; }
+.booking-pricing__label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #048ba2;
+  margin-bottom: 12px;
+}
+.booking-pricing__duration {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.booking-pricing__price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #233030;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.booking-pricing__price span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+}
+.booking-pricing__alts {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #888 !important;
+}
+.booking-pricing__card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #555;
+  margin: 0 0 16px;
+}
+.booking-pricing__card ul {
+  list-style: none;
+  padding: 0; margin: 0 0 auto;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.booking-pricing__card li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #233030;
+  padding-left: 18px;
+  position: relative;
+}
+.booking-pricing__card li::before {
+  content: '';
+  position: absolute; left: 0; top: 7px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #84cacc;
+}
+.booking-pricing__note {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #888;
+  text-align: left;
+  margin: 0;
+}
+.booking-pricing__note a {
+  color: #048ba2;
+  text-decoration: underline;
+}
+
+/* ─── Calendly embed ──────────────────────────────────── */
+.booking-calendly {
+  background: #f4fafa;
+  padding: 64px 0;
+}
+.booking-calendly__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  color: #233030;
+  margin: 0 0 12px;
+}
+.booking-calendly__sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.65;
+  margin: 0 0 36px;
+}
+.booking-calendly__notes {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: #fff;
+  border-left: 4px solid #84cacc;
+  border-radius: 0 8px 8px 0;
+}
+.booking-calendly__notes p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #444;
+  margin: 0 0 10px;
+}
+.booking-calendly__notes p:last-child { margin-bottom: 0; }
+.booking-calendly__notes a { color: #048ba2; }
+
+/* ─── What to expect ──────────────────────────────────── */
+.booking-expect {
+  padding: 72px 0;
+  background: #fff;
+}
+.booking-expect__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  color: #233030;
+  margin: 0 0 40px;
+}
+.booking-expect__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.booking-expect__num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #e8f0f0;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.booking-expect__item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #233030;
+  margin: 0 0 10px;
+}
+.booking-expect__item p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #555;
+  margin: 0;
+}
+
+/* ─── Wise converter ──────────────────────────────────── */
+.booking-wise-section {
+  background: #fff;
+  padding: 64px 0;
+  border-top: 1px solid #e0eded;
+}
+.booking-wise {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.booking-wise__text {
+  flex: 1;
+  min-width: 240px;
+}
+.booking-wise__text h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #233030;
+  margin: 0 0 12px;
+}
+.booking-wise__text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #555;
+  margin: 0;
+}
+
+/* ─── Pay button ──────────────────────────────────────── */
+.booking-pay-btn {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #048ba2;
+  border: 2px solid #048ba2;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.18s;
+  white-space: nowrap;
+}
+.booking-pay-btn:hover { background: #048ba2; color: #fff; }
+.booking-pay-btn--coral { border-color: #ee7c7b; color: #ee7c7b; }
+.booking-pay-btn--coral:hover { background: #ee7c7b; color: #fff; border-color: #ee7c7b; }
+
+/* ─── Terms ───────────────────────────────────────────── */
+.booking-terms {
+  background: #f4fafa;
+  padding: 64px 0;
+  border-top: 1px solid #e0eded;
+}
+.booking-terms__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 800;
+  color: #233030;
+  margin: 0 0 28px;
+}
+.booking-terms__body p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 0 20px;
+}
+.booking-terms__body a { color: #048ba2; }
+.booking-terms__charges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 8px 0 24px;
+  padding: 24px 28px;
+  background: #fff;
+  border-left: 4px solid #ee7c7b;
+  border-radius: 0 8px 8px 0;
+}
+.booking-terms__charge {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+.booking-terms__pct {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ee7c7b;
+  min-width: 48px;
+}
+
+/* ─── Back link ───────────────────────────────────────── */
+.booking-back {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #048ba2;
+  text-decoration: none;
+  font-weight: 600;
+}
+.booking-back:hover { text-decoration: underline; }
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media screen and (max-width: 767px) {
+  .booking-pricing__grid { grid-template-columns: 1fr; }
+  .booking-pricing__card--pack { grid-template-columns: 1fr; }
+  .booking-expect__grid { grid-template-columns: 1fr; gap: 28px; }
+}
+@media screen and (min-width: 640px) and (max-width: 991px) {
+  .booking-pricing__grid { grid-template-columns: repeat(2, 1fr); }
+  .booking-pricing__card--pack { grid-template-columns: 1fr 1fr; }
+}
+</style>

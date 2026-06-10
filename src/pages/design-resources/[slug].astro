@@ -1,0 +1,219 @@
+---
+import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(a => ({ params: { slug: a.data.slug }, props: { article: a } }));
+}
+
+const { article } = Astro.props;
+const d = article.data;
+const { Content } = await render(article);
+
+const displayDate = d.date
+  ? new Date(d.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  : '';
+
+const allArticles = await getCollection('articles');
+const relatedArticles = allArticles
+  .filter(a => a.data.slug !== d.slug)
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''))
+  .slice(0, 3);
+---
+
+<ArtfulyLayout title={`${d.title} | Artfuly`} description={d.description} ogImage={d.heroImage}>
+  <script async data-uid="b7b7a29039" src="https://artfuly.kit.com/b7b7a29039/index.js" slot="head"></script>
+
+  <!-- TITLE HERO -->
+  <div class="articles-section-top">
+    <div class="a-container w-container">
+      <h1 class="h1-small-white" style="grid-area:1/1/2/5">{d.title}</h1>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  {d.heroImage && (
+    <div class="section-47 section-47--has-btn">
+      <address style={`background-image:url("${d.heroImage}")`} class="div-with-collection-image">
+        <div class="gradient-div"></div>
+      </address>
+      <div class="article-hero-btn-wrap">
+        <button class="article-subscribe-btn" data-formkit-toggle="b7b7a29039">Subscribe</button>
+      </div>
+    </div>
+  )}
+
+  <!-- AUTHOR / DATE — overlaps bottom of hero image via top:-76px -->
+  <div class="section-48">
+    <div class="w-container">
+      <div class="w-layout-grid grid-14">
+        <a class="link-block-14 w-inline-block" href="/rachael-page/" style="grid-area:1/1/2/2; justify-self:center">
+          <div class="a-div-right-align">
+            <img
+              class="article-round-image"
+              src={d.authorImage ?? 'https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/657c47f547655d5eb1c9eede_me2019%20etch%20trasparent.png'}
+              width="60" height="60"
+              alt={d.authorName ?? 'Rachael Page'}
+              loading="lazy"
+            />
+          </div>
+        </a>
+        <div class="link-block-14" style="grid-area:1/2/2/3; place-self:center start">
+          <div class="a-div-left-align">
+            <div class="_16px-label">{d.authorName ?? 'Rachael Page'}</div>
+          </div>
+        </div>
+        <div class="link-block-14" style="grid-area:1/3/2/4; place-self:center start">
+          <div class="a-div-left-align">
+            <div class="_16px-label">{displayDate}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO HEADING + ARTICLE BODY -->
+  <div class="section-31">
+    <div class="a-4col-grid-container w-container">
+      {d.introHeading && (
+        <div style="grid-area:1/1/2/5">
+          <h2 class="h2-small-blue-blog">{d.introHeading}</h2>
+        </div>
+      )}
+      <div class="w-richtext" style="grid-area:2/1/3/5; align-self:start">
+        <Content />
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE CTA BUTTON -->
+  {d.ctaLink && (
+    <div class="article-cta-section">
+      <a href={d.ctaLink} target="_blank" rel="noopener" class="tutor-btn tutor-btn--coral article-cta-btn">
+        {d.ctaText || 'Find out more'}
+      </a>
+    </div>
+  )}
+
+  <!-- SHARE -->
+  <div class="section-46">
+    <div class="container-1214 w-container">
+      <div class="paragraph-grey">Share this on:</div>
+      <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+    </div>
+  </div>
+
+  <!-- MORE DESIGN RESOURCES -->
+  <section class="section_layout250">
+    <div class="padding-global-4">
+      <div class="container-large-2">
+        <div class="padding-section-large-4">
+          <div class="layout250_component">
+            <div class="margin-bottom margin-xxlarge">
+              <div class="max-width-large-2">
+                <h3 class="heading-76">More design resources</h3>
+              </div>
+            </div>
+            <div class="w-layout-grid layout250_list">
+              {relatedArticles.map(a => (
+                <a href={`/design-resources/${a.data.slug}/`} class="w-inline-block layout250_card">
+                  <div>
+                    {(a.data.thumbnailImage || a.data.heroImage) && (
+                      <img loading="lazy" alt={a.data.title} src={a.data.thumbnailImage || a.data.heroImage} class="layout250_image" />
+                    )}
+                    <div class="margin-bottom margin-xsmall">
+                      <h3 class="left">{a.data.title}</h3>
+                      <div class="layout250_item">
+                        {a.data.description && <p class="left">{a.data.description}</p>}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMAIL CTA — Kit.com form (Design Principles by Email) -->
+  <section class="section_cta8" id="Quick-Design-Lessons2">
+    <div class="padding-global-3">
+      <div class="container-large">
+        <div class="padding-section-large-3">
+          <div class="cta8_component">
+            <div class="cta8_content">
+              <div class="max-width-large">
+                <div class="margin-bottom margin-xsmall">
+                  <div class="margin-bottom margin-xsmall">
+                    <div class="a-des-insight-title">LEARN BY EMAIL (FREE)</div>
+                  </div>
+                  <h2 class="white h2insights">Design Principles</h2>
+                </div>
+                <p class="white right">Learn by watching me apply key design principles<br />1 email per week with videos &amp; free resources</p>
+                <p class="small-white-body"> Unsubscribe anytime.</p>
+              </div>
+            </div>
+            <div class="html-embed-7 w-embed w-script">
+              <script async data-uid="eb98b5a075" src="https://artfuly.ck.page/eb98b5a075/index.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES, FREE RESOURCES & VIDEO TUTORIALS -->
+  <section class="section-lead-magnets">
+    <div class="a-3col-container w-container">
+      <h3 class="heading-59-copy _70">Courses, Free Resources &amp; Video Tutorials</h3>
+    </div>
+    <div class="w-container">
+      <div class="div-block-73">
+        <div>
+          <div class="div-block-84">
+            <div class="div-block-74">
+              <img src="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/63f12acf69cfc0384d38cae8_Mask%20group-4.png" loading="lazy" width="300" alt="" class="image-37" />
+            </div>
+            <h4 class="heading-70">Visual Design<br />Principles Course</h4>
+            <div>
+              <div class="paragraph-middle-align">Learn to use Typography, Colour, Layout, Hierarchy, and Alignment to create stunning designs</div>
+              <div class="paragraph-middle-align"><strong>7 days free then $45/month</strong></div>
+              <div class="div-block-86">
+                <a href="https://artfuly.click/course" target="_blank" class="button-courses w-button">View the course</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="div-block-83">
+            <div class="div-block-74">
+              <img src="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/63f12aaa49b46c02c6a5feba_Mask%20group.png" loading="lazy" width="300" alt="" class="image-37" />
+            </div>
+            <h4 class="heading-70">Top 50+<br />UX &amp; UI Resources</h4>
+            <div>
+              <div class="paragraph-middle-align">Free images, icons, fonts, Illustrations, the best tutorials, books &amp; more!</div>
+              <div class="paragraph-middle-align"><strong>Filterable list</strong></div>
+            </div>
+            <a data-formkit-toggle="b7b7a29039" class="button-courses w-button" style="cursor:pointer">Get Resources</a>
+          </div>
+        </div>
+        <div>
+          <div class="div-block-85">
+            <div class="div-block-74">
+              <img src="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/6590467bcc289cdec005f86c_terra%20leadmag.png" loading="lazy" width="300" alt="" class="image-37" />
+            </div>
+            <h4 class="heading-70">Embed a clickable prototype into any page</h4>
+            <div>
+              <div class="paragraph-middle-align">Step-by-step guide to embedding a Figma prototype or any interactive element into a web page</div>
+            </div>
+            <a href="https://www.artfuly.com/design-resources/embed-a-figma-prototype-into-any-webpage" class="button-courses w-button">Send Video Tutorial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</ArtfulyLayout>
