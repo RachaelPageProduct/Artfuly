@@ -60,8 +60,8 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
 }
 /* Push page content below fixed nav */
-body > .site-nav-wrapper + * { padding-top: 42px; }
-.nav-content-offset { padding-top: 42px; }
+body > .site-nav-wrapper + * { padding-top: 50px; }
+.nav-content-offset { padding-top: 50px; }
 .nav-list {
   list-style: none;
   display: flex;

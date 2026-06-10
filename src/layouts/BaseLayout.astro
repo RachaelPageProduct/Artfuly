@@ -33,102 +33,95 @@ const { title, description = 'Rachael Page — Product Designer' } = Astro.props
   <script>window.amplitude.add(window.sessionReplay.plugin({sampleRate:1}));window.amplitude.init('41704051c12b3b7ac2b4ba75350ad077',{"autocapture":{"elementInteractions":true}});</script>
 </head>
 <body>
-  <div class="site-nav-wrapper" id="site-nav-wrapper">
-    <nav class="site-nav">
-      <a href="/rachael-page/" class="rp-logo">RP</a>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-list" id="nav-list">
 
-        <li><a href="/rachael-page/#about">About</a></li>
+  <style>
+    #rp-header { font-family: 'Montserrat', sans-serif; }
+    #rp-header > nav > a,
+    #rp-header > nav > ul > li > a { color: #000000; font-weight: 500; font-size: 17px; text-decoration: none; transition: color 0.15s; }
+    #rp-header > nav > a { font-weight: 700; font-size: 1.1rem; }
+    #rp-header > nav > ul > li > a:hover { opacity: 0.65; }
+    .rp-nav-sub { background: #fff; }
+    .rp-nav-sub a { color: #000000 !important; font-weight: 300; background: none; font-family: 'Montserrat', sans-serif; }
+    .rp-nav-sub a:hover { color: #3ba89c !important; opacity: 1; background: #f5f5f5; }
+    #rp-hamburger { color: #000000; }
+    @media (max-width: 900px) {
+      #rp-hamburger { display: flex !important; }
+      #rp-nav-list { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(206,234,235,0.97); flex-direction: column; align-items: flex-start; gap: 0; padding: 0.5rem 0 1rem; box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+      #rp-nav-list.rp-open { display: flex !important; }
+      #rp-nav-list > li { width: 100%; }
+      #rp-nav-list > li > a { display: block; padding: 0.65rem 2rem; color: #000000 !important; }
+      .rp-nav-sub { position: static !important; box-shadow: none; border: none; border-radius: 0; background: rgba(0,0,0,0.04); padding-left: 1rem; }
+    }
+  </style>
 
-        <!-- Technical Design dropdown -->
-        <li class="nav-dropdown">
-          <a href="/rachael-page/work/all">Technical Design <span class="nav-chevron">▾</span></a>
-          <ul class="nav-submenu">
-            <li><a href="/rachael-page/work/all">All Work</a></li>
-            <li><a href="/rachael-page/work/product-design">Product Design</a></li>
-            <li><a href="/rachael-page/work/ux-design">UX Design</a></li>
-            <li><a href="/rachael-page/work/user-research-testing">User Research &amp; Testing</a></li>
-            <li><a href="/rachael-page/work/ui-design">UI Design</a></li>
-            <li><a href="/rachael-page/work/strategy">Strategy</a></li>
-            <li><a href="/rachael-page/work/ia-database-design">IA &amp; Database Design</a></li>
-            <li><a href="/rachael-page/work/native-apps-pwas">Native Apps &amp; PWAs</a></li>
-            <li><a href="/rachael-page/work/marketing-seo">Marketing &amp; SEO</a></li>
-            <li><a href="/rachael-page/work/conversion-funnels">Conversion Funnels</a></li>
-            <li><a href="/rachael-page/work/development">Development</a></li>
+  <header id="rp-header" style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(206,234,235,0.82);border-bottom:1px solid transparent;transition:background 0.3s ease;">
+    <nav style="display:flex;align-items:center;justify-content:space-between;padding:0.65rem 2.5rem;width:100%;box-sizing:border-box;font-family:'Montserrat',sans-serif;font-size:15px;">
+      <a href="/rachael-page/" id="rp-nav-logo" style="font-weight:700;font-size:1.1rem;letter-spacing:-0.02em;color:inherit;text-decoration:none;">RP</a>
+      <button id="rp-hamburger" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:0.25rem;flex-direction:column;gap:5px;"><span style="display:block;width:24px;height:2px;background:currentColor;transition:transform 0.2s,opacity 0.2s;"></span><span style="display:block;width:24px;height:2px;background:currentColor;transition:transform 0.2s,opacity 0.2s;"></span><span style="display:block;width:24px;height:2px;background:currentColor;transition:transform 0.2s,opacity 0.2s;"></span></button>
+      <ul id="rp-nav-list" style="list-style:none;display:flex;gap:1.75rem;align-items:center;margin:0;padding:0;font-weight:300;color:#000;">
+        <li><a href="/rachael-page/#About" style="color:inherit;text-decoration:none;">About</a></li>
+        <li style="position:relative;" class="nav-dd">
+          <a href="/rachael-page/work/all" style="color:inherit;text-decoration:none;">Technical Design ▾</a>
+          <ul class="nav-sub rp-nav-sub" style="display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #ddd;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,0.08);min-width:210px;list-style:none;padding:0.5rem 0;z-index:200;">
+            <li><a href="/rachael-page/work/all" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">All Work</a></li>
+            <li><a href="/rachael-page/work/product-design" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Product Design</a></li>
+            <li><a href="/rachael-page/work/ux-design" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">UX Design</a></li>
+            <li><a href="/rachael-page/work/user-research-testing" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">User Research &amp; Testing</a></li>
+            <li><a href="/rachael-page/work/ui-design" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">UI Design</a></li>
+            <li><a href="/rachael-page/work/strategy" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Strategy</a></li>
+            <li><a href="/rachael-page/work/ia-database-design" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">IA &amp; Database Design</a></li>
+            <li><a href="/rachael-page/work/native-apps-pwas" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Native Apps &amp; PWAs</a></li>
+            <li><a href="/rachael-page/work/marketing-seo" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Marketing &amp; SEO</a></li>
+            <li><a href="/rachael-page/work/conversion-funnels" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Conversion Funnels</a></li>
+            <li><a href="/rachael-page/work/development" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Development</a></li>
           </ul>
         </li>
-
-        <!-- Creative dropdown -->
-        <li class="nav-dropdown">
-          <a href="/rachael-page/creative/surface-pattern-design/">Creative <span class="nav-chevron">▾</span></a>
-          <ul class="nav-submenu">
-            <li><a href="/rachael-page/creative/surface-pattern-design/">Surface Pattern Design</a></li>
-            <li><a href="/rachael-page/work/motion-design">Motion Design</a></li>
-            <li><a href="/rachael-page/work/graphic-design">Graphic Design</a></li>
+        <li style="position:relative;" class="nav-dd">
+          <a href="/rachael-page/creative/surface-pattern-design/" style="color:inherit;text-decoration:none;">Creative ▾</a>
+          <ul class="nav-sub rp-nav-sub" style="display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #ddd;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,0.08);min-width:220px;list-style:none;padding:0.5rem 0;z-index:200;">
+            <li><a href="/rachael-page/creative/surface-pattern-design/" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Surface Pattern Design</a></li>
+            <li><a href="/rachael-page/work/motion-design" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Motion Design</a></li>
+            <li><a href="/rachael-page/work/graphic-design" style="display:block;padding:0.5rem 1.25rem;color:#000000;text-decoration:none;font-size:0.85rem;">Graphic Design</a></li>
           </ul>
         </li>
-
-        <!-- Teaching dropdown -->
-        <li class="nav-dropdown">
-          <a href="/private-tutor-mentor" target="_blank" rel="noopener">Teaching <span class="nav-chevron">▾</span></a>
-          <ul class="nav-submenu">
-            <li><a href="/private-tutor-mentor" target="_blank" rel="noopener">1:1 Tutor / Mentor</a></li>
-            <li><a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener">Design Courses ↗</a></li>
-            <li><a href="/design-resources" target="_blank" rel="noopener">Resources</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact">Contact</a></li>
-
-        <li>
-          <a href="https://www.linkedin.com/in/rachaelpage" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-        </li>
-
+        <li><a href="/private-tutor-mentor" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Teaching ↗</a></li>
+        <li><a href="/rachael-page/#contact" style="color:inherit;text-decoration:none;">Contact</a></li>
+        <li style="display:flex;align-items:center;"><a href="https://www.linkedin.com/in/rachaelpage" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:#000000;text-decoration:none;display:flex;align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
       </ul>
     </nav>
-  </div>
+  </header>
 
   <script>
     // Nav opacity deepens on scroll
-    const wrapper = document.getElementById('site-nav-wrapper');
-    if (wrapper) {
+    const rpHeader = document.getElementById('rp-header');
+    if (rpHeader) {
       window.addEventListener('scroll', () => {
-        wrapper.style.background = window.scrollY > 80
+        rpHeader.style.background = window.scrollY > 80
           ? 'rgba(206,234,235,0.97)'
           : 'rgba(206,234,235,0.82)';
       }, { passive: true });
     }
 
     // Hamburger toggle
-    const hamburger = document.getElementById('nav-hamburger');
-    const navList = document.getElementById('nav-list');
-    if (hamburger && navList) {
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navList.classList.toggle('open');
-      });
-      // Close on outside click
+    const rpHamburger = document.getElementById('rp-hamburger');
+    const rpNavList = document.getElementById('rp-nav-list');
+    if (rpHamburger && rpNavList) {
+      rpHamburger.addEventListener('click', () => rpNavList.classList.toggle('rp-open'));
       document.addEventListener('click', e => {
-        if (!hamburger.contains(e.target) && !navList.contains(e.target)) {
-          hamburger.classList.remove('open');
-          navList.classList.remove('open');
-        }
+        if (!rpHamburger.contains(e.target) && !rpNavList.contains(e.target))
+          rpNavList.classList.remove('rp-open');
       });
     }
 
     // Dropdowns with delay so items are clickable
-    document.querySelectorAll('.nav-dropdown').forEach(item => {
-      const sub = item.querySelector('.nav-submenu');
+    document.querySelectorAll('.nav-dd').forEach(item => {
+      const sub = item.querySelector('.nav-sub');
       if (!sub) return;
       let timer;
       item.addEventListener('mouseenter', () => { clearTimeout(timer); sub.style.display = 'block'; });
-      item.addEventListener('mouseleave', () => { timer = setTimeout(() => { sub.style.display = ''; }, 200); });
+      item.addEventListener('mouseleave', () => { timer = setTimeout(() => sub.style.display = '', 200); });
       sub.addEventListener('mouseenter', () => clearTimeout(timer));
-      sub.addEventListener('mouseleave', () => { timer = setTimeout(() => { sub.style.display = ''; }, 200); });
+      sub.addEventListener('mouseleave', () => { timer = setTimeout(() => sub.style.display = '', 200); });
     });
   </script>
 
