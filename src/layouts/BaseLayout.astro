@@ -15,9 +15,9 @@ const { title, description = 'Rachael Page — Product Designer' } = Astro.props
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <slot name="head" />
   <link rel="stylesheet" href="/styles/global.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
-  <slot name="head" />
   <!-- ShareThis -->
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6422bedbfbfd84001b9fc051&product=inline-share-buttons' async='async'></script>
   <!-- Amplitude -->
@@ -27,8 +27,6 @@ const { title, description = 'Rachael Page — Product Designer' } = Astro.props
   </script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRBHL7V');</script>
-  <!-- Kit.com email signup -->
-  <script async data-uid="ded77907e0" src="https://artfuly.ck.page/ded77907e0/index.js"></script>
   <!-- Amplitude session replay -->
   <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
   <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
@@ -37,7 +35,7 @@ const { title, description = 'Rachael Page — Product Designer' } = Astro.props
 <body>
   <div class="site-nav-wrapper" id="site-nav-wrapper">
     <nav class="site-nav">
-      <a href="/rachael-page/" class="logo">RP</a>
+      <a href="/rachael-page/" class="rp-logo">RP</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>

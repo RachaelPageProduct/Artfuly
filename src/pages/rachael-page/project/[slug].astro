@@ -207,27 +207,48 @@ const buttons = [
 
   <!-- NEXT PROJECT -->
   {d.nextProject && (
-    <section class="r-next-last-project">
-      <div class="page-padding-2">
-        <div class="container-large-3">
-          <div class="layout-12-column">
-            <div class="section-title">
-              <h2 class="r-next-project-txt">Next project</h2>
-            </div>
-            <div class="content-wrapper">
-              <a href={`/project/${d.nextProject}`} class="text-style-link is-next-project-link w-inline-block">
-                <h3 class="r-work-next-project-title">{nextProjectTitle} →</h3>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="next-project-strip">
+      <a href={`/rachael-page/project/${d.nextProject}`} class="next-project-link">
+        <span class="next-project-label">Next project</span>
+        <span class="next-project-title">{nextProjectTitle} →</span>
+      </a>
     </section>
   )}
 
 </BaseLayout>
 
 <style>
+/* ── Next project strip ── */
+.next-project-strip {
+  background: #1a2a2c;
+  padding: 56px 48px;
+}
+.next-project-link {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  text-decoration: none;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.next-project-link:hover { opacity: 0.8; }
+.next-project-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  white-space: nowrap;
+}
+.next-project-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
 /* ── Dennis Snellenberg entrance effect ──────────────────
    Phase 1: Full-screen dark overlay with centred title
    Phase 2: Bottom edge curves upward into a dome at top
