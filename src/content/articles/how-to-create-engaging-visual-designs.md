@@ -4,8 +4,8 @@ slug: "how-to-create-engaging-visual-designs"
 date: "2024-05-30"
 description: "How to create exciting and engaging designs with assets (Images, animations etc)"
 introHeading: "How to create exciting and engaging designs with assets (Images, animations etc)"
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6658686399eff4e64e6f3d1d_Mask%20group-1.png"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6658686b7d0f7b1d1c8c2d2f_Mask%20group.png"
+heroImage: "/images/webflow-cdn/6658686399eff4e64e6f3d1d_Mask group-1.png"
+thumbnailImage: "/images/webflow-cdn/6658686b7d0f7b1d1c8c2d2f_Mask group.png"
 published: true
 featured: false
 featuredPortfolio: false

@@ -4,8 +4,8 @@ slug: "the-importance-of-hand-sketched-wireframes"
 date: "2025-05-05"
 description: "Don't skip learning & using this crucial skill as part of the Design Thinking process..."
 introHeading: "Don't skip learning & using this crucial skill as part of the Design Thinking process..."
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68186da83a4a53d8df028040_pexels-picjumbo-com-55570-196645-1.png"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/68186daa7599ba28d0952d76_pexels-picjumbo-com-55570-196645.png"
+heroImage: "/images/webflow-cdn/68186da83a4a53d8df028040_pexels-picjumbo-com-55570-196645-1.png"
+thumbnailImage: "/images/webflow-cdn/68186daa7599ba28d0952d76_pexels-picjumbo-com-55570-196645.png"
 published: true
 featured: false
 featuredPortfolio: false

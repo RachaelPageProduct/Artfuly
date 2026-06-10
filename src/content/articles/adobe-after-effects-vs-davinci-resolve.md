@@ -4,8 +4,8 @@ slug: "adobe-after-effects-vs-davinci-resolve"
 date: "2025-01-08"
 description: "Davinci Resolve is free software that Hollywood studios use, but it's best for feature length movies whereas After Effects is better for creating online animations."
 introHeading: "Davinci Resolve is free software that Hollywood studios use, but it's best for feature length movies whereas After Effects is better for creating online animations."
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/677ea263abc3babd392334ea_Frame%20220.png"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/677ea268ac67dfba94ad7134_Frame%20219.png"
+heroImage: "/images/webflow-cdn/677ea263abc3babd392334ea_Frame 220.png"
+thumbnailImage: "/images/webflow-cdn/677ea268ac67dfba94ad7134_Frame 219.png"
 published: true
 featured: false
 featuredPortfolio: false

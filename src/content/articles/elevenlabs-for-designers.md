@@ -1,11 +1,11 @@
 ---
-title: "ElevenLabs for Designers: Audio & Voice Tools for Your Creative Workflow"
+title: "ElevenLabs: Audio & Voice Tools for Your Creative Workflow"
 slug: "elevenlabs-for-designers"
 date: "2026-04-29"
 description: "How ElevenLabs fits into a design workflow — from AI voiceovers and music generation to accessibility and global localisation."
 introHeading: "How ElevenLabs fits into a design workflow — from AI voiceovers and music generation to accessibility and global localisation."
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/69f1b2c9a0c403f3156b9144_Frame%20256.png"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/69f1b2d1c3dbea81ca05b411_Frame%20255.png"
+heroImage: "/images/webflow-cdn/69f1b2c9a0c403f3156b9144_Frame 256.png"
+thumbnailImage: "/images/articles/elevenlabs-thumb.png"
 published: true
 featured: true
 featuredPortfolio: true

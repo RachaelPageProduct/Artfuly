@@ -23,6 +23,8 @@
 }
 .tutor-btn--coral { background: #ee7c7b; color: #fff; }
 .tutor-btn--coral:hover { background: #e5605e; }
+.tutor-btn--ghost { background: transparent; border: 2px solid #048ba2; color: #048ba2; }
+.tutor-btn--ghost:hover { background: #048ba2; color: #fff; }
 .article-cta-section {
   padding: 0 0 48px;
   display: flex;
@@ -492,7 +494,7 @@ h3.left {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(24px, 3.5vw, 40px);
   font-weight: 700;
-  color: #000050;
+  color: #233030;
   margin: 0 0 40px;
 }
 .collection-list-9.w-row {
@@ -517,10 +519,11 @@ h3.left {
 .homeresourceshead3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
   color: #233030;
   margin: 0 0 12px;
   line-height: 1.4;
+  min-height: 2.8em;
   transition: color 0.15s;
 }
 .div-block-71 {

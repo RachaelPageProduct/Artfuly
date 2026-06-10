@@ -1,0 +1,393 @@
+---
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="About Artfuly — Rachael Page, UX & Product Design Tutor"
+  description="Artfuly is run by Rachael Page — 30 years of professional UX and product design experience, based near Berlin."
+>
+
+<style>
+  /* ── Hero ── */
+  .about-hero {
+    background: #048ba2;
+    padding: 96px 24px 80px;
+    text-align: center;
+  }
+  .about-hero__eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    margin: 0 0 20px;
+  }
+  .about-hero__h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 16px;
+    line-height: 1.15;
+  }
+  .about-hero__sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 400;
+    color: rgba(255,255,255,0.72);
+    margin: 0 auto;
+    max-width: 640px;
+    line-height: 1.6;
+  }
+
+  /* ── Intro strip ── */
+  .about-intro {
+    background-color: var(--a-mid-grey);
+    background-image:
+      linear-gradient(rgba(230,255,255,0.88), rgba(230,255,255,0.88)),
+      url(/images/webflow-cdn/5f91b822b2735eec2a828fe6_pexels-mentatdgt-1311518.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 24px;
+  }
+  .about-intro__inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .about-intro p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #233030;
+    margin: 0 0 20px;
+  }
+  .about-intro p:last-child { margin-bottom: 0; }
+  .about-intro__infinite {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #3ba89c;
+    margin-top: 28px !important;
+  }
+
+  /* ── Bio section ── */
+  .about-bio {
+    background: #fff;
+    padding: 80px 24px;
+  }
+  .about-bio__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .about-bio__label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #3ba89c;
+    margin: 0 0 12px;
+  }
+  .about-bio__h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: #233030;
+    margin: 0 0 28px;
+    line-height: 1.2;
+  }
+  .about-bio__text p {
+    font-family: 'Merriweather', serif;
+    font-size: 0.97rem;
+    line-height: 1.85;
+    color: #333;
+    margin: 0 0 18px;
+  }
+  .about-bio__text p:last-child { margin-bottom: 0; }
+
+  /* Expertise pills — matching rachaelpage.com style */
+  .about-bio__expertise-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin: 36px 0 14px;
+  }
+  .about-bio__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .about-bio__tag {
+    background-color: #ceeaeb;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    outline: 1px solid #fff;
+    margin: 2px 6px 2px 0;
+    padding: 2px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #233030;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Image side */
+  .about-bio__image-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about-bio__img {
+    width: 80%;
+    max-width: 340px;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
+    margin: 0 auto;
+  }
+  .about-bio__links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* ── Credits ── */
+  .about-credits {
+    background: #f7f7f7;
+    padding: 40px 24px;
+    border-top: 1px solid #e0e0e0;
+  }
+  .about-credits__inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .about-credits__h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin: 0 0 10px;
+  }
+  .about-credits__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .about-credits__list li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: #aaa;
+    line-height: 1.7;
+  }
+
+  /* ── Terms of Use ── */
+  .about-terms {
+    background: #fff;
+    padding: 64px 24px 96px;
+    border-top: 1px solid #eee;
+  }
+  .about-terms__inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .about-terms__h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 800;
+    color: #233030;
+    margin: 0 0 8px;
+  }
+  .about-terms__date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin: 0 0 36px;
+  }
+  .about-terms h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #233030;
+    margin: 32px 0 10px;
+    border-top: 1px solid #eee;
+    padding-top: 24px;
+  }
+  .about-terms h3:first-of-type { border-top: none; padding-top: 0; }
+  .about-terms p,
+  .about-terms li {
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: #555;
+    margin: 0 0 14px;
+  }
+  .about-terms ul { padding-left: 24px; }
+  .about-terms strong { color: #333; }
+  .about-terms a { color: #3ba89c; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .about-bio__inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .about-bio__image-col { order: -1; }
+    .about-bio__img { width: 60%; max-width: 220px; }
+  }
+</style>
+
+<!-- HERO -->
+<section class="about-hero">
+  <p class="about-hero__eyebrow">About Artfuly</p>
+  <h1 class="about-hero__h1">Teaching UX &amp; Product Design</h1>
+  <p class="about-hero__sub">to Design Students, Bootcampers, UX &amp; Product Designers, Developers &amp; Entrepreneurs</p>
+</section>
+
+<!-- INTRO -->
+<section class="about-intro">
+  <div class="about-intro__inner">
+    <p>Artfuly.com is run by Rachael Page who has 30+ years professional experience in design and a degree in Product Design.</p>
+    <p>Lessons are held online in video calls using Skype or the platform of your choice. Screen-sharing is often necessary during interactive lessons.</p>
+    <p>In the first 25 minute session — which is free — you can get to know the tutor and explain your goals. If you then commit to some sessions, a session plan will be made for you and personalised sessions targeted to your current level and desired outcomes will be prepared and delivered, usually once or twice weekly.</p>
+    <p class="about-intro__infinite">There are infinite possibilities!</p>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="about-bio">
+  <div class="about-bio__inner">
+
+    <div class="about-bio__text-col">
+      <p class="about-bio__label">Your tutor</p>
+      <h2 class="about-bio__h2">Rachael Page</h2>
+      <div class="about-bio__text">
+        <p>I'm a UX/Product Designer based near Berlin, working freelance &amp; remote only / location independent.</p>
+        <p>I graduated from Loughborough University in the UK with a Product Design degree in 1996, and since then I've worked as a Programmer, Business Analyst, Graphic Artist, Graphic Designer, Web Designer, Senior UX Designer/Consultant and Entrepreneur.</p>
+        <p>Currently I mix my time between Product Design contracts for blue-chip companies, building my design education site here, tutoring for Career Foundry and private students.</p>
+        <p>Between 2005–2015 I worked for many top ad agencies in Australia — you can check out my full experience on <a href="https://www.linkedin.com/in/rachaelpage" target="_blank" rel="noopener" style="color:#3ba89c;">LinkedIn</a>.</p>
+      </div>
+
+      <p class="about-bio__expertise-label">Areas of Expertise</p>
+      <div class="about-bio__tags">
+        <span class="about-bio__tag">Visual Design</span>
+        <span class="about-bio__tag">UX Design</span>
+        <span class="about-bio__tag">User Research</span>
+        <span class="about-bio__tag">User Testing</span>
+        <span class="about-bio__tag">Product Strategy</span>
+        <span class="about-bio__tag">Marketing Strategy</span>
+        <span class="about-bio__tag">SEO</span>
+        <span class="about-bio__tag">Design Tutoring</span>
+        <span class="about-bio__tag">Responsive Development</span>
+        <span class="about-bio__tag">Webflow</span>
+        <span class="about-bio__tag">Figma</span>
+        <span class="about-bio__tag">Adobe XD</span>
+        <span class="about-bio__tag">Photoshop</span>
+        <span class="about-bio__tag">Illustrator</span>
+        <span class="about-bio__tag">InDesign</span>
+      </div>
+
+      <div class="about-bio__links" style="margin-top:36px;">
+        <a href="/booking" class="tutor-btn tutor-btn--coral">1:1 Design Tutoring</a>
+        <a href="/booking-mentorship" class="tutor-btn tutor-btn--ghost">1:1 Entrepreneur Mentorship</a>
+      </div>
+    </div>
+
+    <div class="about-bio__image-col">
+      <img
+        src="/images/site/rachael-headshot.png"
+        alt="Rachael Page — UX & Product Design Tutor"
+        class="about-bio__img"
+      />
+    </div>
+
+  </div>
+</section>
+
+<!-- CREDITS -->
+<section class="about-credits">
+  <div class="about-credits__inner">
+    <h3 class="about-credits__h3">Image Credits</h3>
+    <ul class="about-credits__list">
+      <li>Mentatdgt, Singapore — image of 'Two women chatting' used on the pre-footer</li>
+      <li>Fauzels — image 'Women using computers' used on the about page</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TERMS OF USE -->
+<section class="about-terms">
+  <div class="about-terms__inner">
+    <h2 class="about-terms__h2">Terms of Use</h2>
+    <p class="about-terms__date">Last updated: October 14, 2020</p>
+    <p>Please read these terms and conditions carefully before using our Service.</p>
+
+    <h3>Interpretation and Definitions</h3>
+    <p><strong>Interpretation:</strong> The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+    <p><strong>Definitions:</strong> For the purposes of these Terms and Conditions:</p>
+    <ul>
+      <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+      <li><strong>Country</strong> refers to: Brandenburg, Germany</li>
+      <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Artfuly.</li>
+      <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+      <li><strong>Service</strong> refers to the Website.</li>
+      <li><strong>Terms and Conditions</strong> (also referred to as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.</li>
+      <li><strong>Third-party Social Media Service</strong> means any services or content provided by a third-party that may be displayed, included or made available by the Service.</li>
+      <li><strong>Website</strong> refers to Artfuly, accessible from <a href="https://www.artfuly.com">www.artfuly.com</a></li>
+      <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service.</li>
+    </ul>
+
+    <h3>Acknowledgment</h3>
+    <p>These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.</p>
+    <p>Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service. By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.</p>
+    <p>You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service. Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Please read our <a href="/privacy">Privacy Policy</a> carefully before using our Service.</p>
+
+    <h3>Links to Other Websites</h3>
+    <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company. The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.</p>
+
+    <h3>Termination</h3>
+    <p>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions. Upon termination, Your right to use the Service will cease immediately.</p>
+
+    <h3>Limitation of Liability</h3>
+    <p>Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of these Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.</p>
+    <p>To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever, even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.</p>
+
+    <h3>"AS IS" and "AS AVAILABLE" Disclaimer</h3>
+    <p>The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service.</p>
+
+    <h3>Governing Law</h3>
+    <p>The laws of Brandenburg, Germany, excluding its conflicts of law rules, shall govern these Terms and Your use of the Service.</p>
+
+    <h3>Disputes Resolution</h3>
+    <p>If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.</p>
+
+    <h3>For European Union (EU) Users</h3>
+    <p>If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident.</p>
+
+    <h3>Severability and Waiver</h3>
+    <p><strong>Severability:</strong> If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</p>
+    <p><strong>Waiver:</strong> The failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter.</p>
+
+    <h3>Changes to These Terms and Conditions</h3>
+    <p>We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms.</p>
+
+    <h3>Contact Us</h3>
+    <p>If you have any questions about these Terms and Conditions, you can contact us by email: <a href="mailto:artfulydesign@gmail.com">artfulydesign@gmail.com</a></p>
+  </div>
+</section>
+
+</ArtfulyLayout>

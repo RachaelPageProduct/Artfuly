@@ -1,0 +1,353 @@
+---
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="Privacy Notice — Artfuly"
+  description="How Artfuly collects, uses and protects your personal information."
+>
+
+<style>
+  .legal-hero {
+    background: #048ba2;
+    padding: 72px 24px 56px;
+    text-align: center;
+  }
+  .legal-hero__eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    margin: 0 0 16px;
+  }
+  .legal-hero__h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 12px;
+  }
+  .legal-hero__date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+  }
+
+  .legal-body {
+    background: #fff;
+    padding: 64px 24px 96px;
+  }
+  .legal-body__inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  /* TOC */
+  .legal-toc {
+    background: #e6f7f7;
+    border-left: 4px solid #3ba89c;
+    border-radius: 0 8px 8px 0;
+    padding: 28px 32px;
+    margin-bottom: 56px;
+  }
+  .legal-toc__label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3ba89c;
+    margin: 0 0 14px;
+  }
+  .legal-toc ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .legal-toc li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #233030;
+    line-height: 2;
+  }
+  .legal-toc a { color: #3ba89c; text-decoration: none; }
+  .legal-toc a:hover { text-decoration: underline; }
+
+  /* Intro */
+  .legal-intro {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 48px;
+  }
+  .legal-intro p { margin: 0 0 18px; }
+
+  /* Sections */
+  .legal-section {
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+  .legal-section__h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #233030;
+    margin: 0 0 6px;
+  }
+  .legal-section__short {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: #3ba89c;
+    margin: 0 0 20px;
+    font-weight: 600;
+  }
+  .legal-section p,
+  .legal-section li {
+    font-family: 'Merriweather', serif;
+    font-size: 0.92rem;
+    line-height: 1.9;
+    color: #444;
+  }
+  .legal-section p { margin: 0 0 16px; }
+  .legal-section ul,
+  .legal-section ol { padding-left: 24px; margin: 0 0 16px; }
+  .legal-section li { margin-bottom: 8px; }
+  .legal-section strong { color: #233030; }
+  .legal-section a { color: #3ba89c; }
+
+  /* CCPA table */
+  .ccpa-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    margin: 20px 0;
+    overflow-x: auto;
+    display: block;
+  }
+  .ccpa-table th {
+    background: #048ba2;
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .ccpa-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    vertical-align: top;
+  }
+  .ccpa-table tr:nth-child(even) td { background: #f7fafa; }
+  .ccpa-yes { color: #3ba89c; font-weight: 700; }
+  .ccpa-no  { color: #aaa; }
+
+  /* Contact callout */
+  .legal-contact {
+    background: #e6f7f7;
+    border-radius: 8px;
+    padding: 32px;
+    margin-top: 48px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .legal-contact__h3 {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #233030;
+    margin: 0 0 10px;
+  }
+  .legal-contact p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.7;
+  }
+  .legal-contact a { color: #3ba89c; }
+</style>
+
+<!-- HERO -->
+<section class="legal-hero">
+  <p class="legal-hero__eyebrow">Legal</p>
+  <h1 class="legal-hero__h1">Privacy Notice</h1>
+  <p class="legal-hero__date">Last updated October 21, 2020</p>
+</section>
+
+<div class="legal-body">
+  <div class="legal-body__inner">
+
+    <!-- INTRO -->
+    <div class="legal-intro">
+      <p>Thank you for choosing to be part of our community at Artfuly ("Company", "we", "us", "our"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at <a href="mailto:artfulydesign@gmail.com" style="color:#3ba89c;">artfulydesign@gmail.com</a>.</p>
+      <p>When you visit our website <a href="https://www.artfuly.com" style="color:#3ba89c;">www.artfuly.com</a> (the "Website"), and more generally, use any of our services (the "Services"), we appreciate that you are trusting us with your personal information. We take your privacy very seriously. In this privacy notice, we seek to explain to you in the clearest way possible what information we collect, how we use it and what rights you have in relation to it.</p>
+      <p>This privacy notice applies to all information collected through our Services, as well as any related services, sales, marketing or events. Please read this privacy notice carefully as it will help you understand what we do with the information that we collect.</p>
+    </div>
+
+    <!-- TOC -->
+    <div class="legal-toc">
+      <p class="legal-toc__label">Table of Contents</p>
+      <ol>
+        <li><a href="#s1">What information do we collect?</a></li>
+        <li><a href="#s2">How do we use your information?</a></li>
+        <li><a href="#s3">Will your information be shared with anyone?</a></li>
+        <li><a href="#s4">Do we use cookies and other tracking technologies?</a></li>
+        <li><a href="#s5">Do we use Google Maps?</a></li>
+        <li><a href="#s6">How long do we keep your information?</a></li>
+        <li><a href="#s7">How do we keep your information safe?</a></li>
+        <li><a href="#s8">Do we collect information from minors?</a></li>
+        <li><a href="#s9">What are your privacy rights?</a></li>
+        <li><a href="#s10">Controls for Do-Not-Track features</a></li>
+        <li><a href="#s11">Do California residents have specific privacy rights?</a></li>
+        <li><a href="#s12">Do we make updates to this notice?</a></li>
+        <li><a href="#s13">How can you contact us about this notice?</a></li>
+        <li><a href="#s14">How can you review, update or delete the data we collect from you?</a></li>
+      </ol>
+    </div>
+
+    <!-- S1 -->
+    <section class="legal-section" id="s1">
+      <h2 class="legal-section__h2">1. What information do we collect?</h2>
+      <p class="legal-section__short">In short: We collect personal information that you provide to us.</p>
+      <p>We collect personal information that you voluntarily provide to us when you register on the Website, express an interest in obtaining information about us or our products and Services, when you participate in activities on the Website or otherwise when you contact us.</p>
+      <p><strong>Personal Information Provided by You.</strong> We collect names; phone numbers; email addresses; mailing addresses; job titles; usernames; passwords; contact preferences; contact or authentication data; billing addresses; debit/credit card numbers; and other similar information. All personal information that you provide to us must be true, complete and accurate, and you must notify us of any changes.</p>
+      <p><strong>Information automatically collected.</strong> We automatically collect certain information when you visit, use or navigate the Website — such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, and information about how and when you use our Website. This information is primarily needed to maintain the security and operation of our Website, and for our internal analytics and reporting purposes. Like many businesses, we also collect information through cookies and similar technologies.</p>
+      <p>The information we collect includes <strong>Log and Usage Data</strong>, <strong>Device Data</strong>, and <strong>Location Data</strong>. Location data tells us your approximate location based on your IP address; you can opt out by disabling Location settings on your device.</p>
+    </section>
+
+    <!-- S2 -->
+    <section class="legal-section" id="s2">
+      <h2 class="legal-section__h2">2. How do we use your information?</h2>
+      <p class="legal-section__short">In short: We process your information for purposes based on legitimate business interests, the fulfilment of our contract with you, compliance with our legal obligations, and/or your consent.</p>
+      <p>We use the information we collect or receive to facilitate account creation, post testimonials, request feedback, manage user accounts, send administrative information, protect our Services, respond to legal requests, fulfil orders, deliver services, respond to user enquiries, and send marketing communications (where you have opted in). We may also use information to deliver targeted advertising and for internal analytics and improvement purposes.</p>
+    </section>
+
+    <!-- S3 -->
+    <section class="legal-section" id="s3">
+      <h2 class="legal-section__h2">3. Will your information be shared with anyone?</h2>
+      <p class="legal-section__short">In short: We only share information with your consent, to comply with laws, to provide you with services, to protect your rights, or to fulfil business obligations.</p>
+      <p>We may process or share your data based on: Consent, Legitimate Interests, Performance of a Contract, Legal Obligations, or Vital Interests. We may also share data in connection with Business Transfers, with Affiliates, or with Business Partners for specific products or promotions.</p>
+    </section>
+
+    <!-- S4 -->
+    <section class="legal-section" id="s4">
+      <h2 class="legal-section__h2">4. Do we use cookies and other tracking technologies?</h2>
+      <p class="legal-section__short">In short: We may use cookies and other tracking technologies to collect and store your information.</p>
+      <p>We may use cookies and similar tracking technologies (like web beacons and pixels) to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice.</p>
+    </section>
+
+    <!-- S5 -->
+    <section class="legal-section" id="s5">
+      <h2 class="legal-section__h2">5. Do we use Google Maps?</h2>
+      <p class="legal-section__short">In short: Yes, we use Google Maps for the purpose of providing better service.</p>
+      <p>This Website uses Google Maps APIs which is subject to <a href="https://cloud.google.com/maps-platform/terms" target="_blank" rel="noopener">Google's Terms of Service</a>. To find out more about Google's Privacy Policy, please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">this link</a>.</p>
+    </section>
+
+    <!-- S6 -->
+    <section class="legal-section" id="s6">
+      <h2 class="legal-section__h2">6. How long do we keep your information?</h2>
+      <p class="legal-section__short">In short: We keep your information for as long as necessary to fulfil the purposes outlined in this privacy notice unless otherwise required by law.</p>
+      <p>We will only keep your personal information for as long as it is necessary for the purposes set out in this privacy notice, unless a longer retention period is required or permitted by law. When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymise such information, or securely store it and isolate it from any further processing until deletion is possible.</p>
+    </section>
+
+    <!-- S7 -->
+    <section class="legal-section" id="s7">
+      <h2 class="legal-section__h2">7. How do we keep your information safe?</h2>
+      <p class="legal-section__short">In short: We aim to protect your personal information through a system of organisational and technical security measures.</p>
+      <p>We have implemented appropriate technical and organisational security measures designed to protect the security of any personal information we process. However, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise that hackers or cybercriminals will not be able to defeat our security. Transmission of personal information to and from our Website is at your own risk. You should only access the Website within a secure environment.</p>
+    </section>
+
+    <!-- S8 -->
+    <section class="legal-section" id="s8">
+      <h2 class="legal-section__h2">8. Do we collect information from minors?</h2>
+      <p class="legal-section__short">In short: We do not knowingly collect data from or market to children under 18 years of age.</p>
+      <p>We do not knowingly solicit data from or market to children under 18 years of age. By using the Website, you represent that you are at least 18, or that you are the parent or guardian of a minor and consent to such minor's use of the Website. If you become aware of any data we may have collected from children under age 18, please contact us at <a href="mailto:artfulydesign@gmail.com">artfulydesign@gmail.com</a>.</p>
+    </section>
+
+    <!-- S9 -->
+    <section class="legal-section" id="s9">
+      <h2 class="legal-section__h2">9. What are your privacy rights?</h2>
+      <p class="legal-section__short">In short: In some regions, such as the European Economic Area, you have rights that allow you greater access to and control over your personal information.</p>
+      <p>In some regions (like the European Economic Area), you have certain rights under applicable data protection laws. These may include the right to request access and obtain a copy of your personal information, to request rectification or erasure, to restrict processing, and if applicable, to data portability. To make such a request, please use the contact details provided below.</p>
+      <p>If you are a resident in the European Economic Area and believe we are unlawfully processing your personal information, you also have the right to complain to your local data protection supervisory authority. Contact details are available at <a href="http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" target="_blank" rel="noopener">this link</a>.</p>
+      <p><strong>Account Information:</strong> To review, update or terminate your account, please contact us using the contact information provided. Upon request to terminate, we will deactivate or delete your account and information from our active databases, though we may retain some information in our files to prevent fraud or comply with legal requirements.</p>
+      <p><strong>Cookies:</strong> Most web browsers accept cookies by default. You can usually choose to set your browser to remove or reject cookies, though this could affect certain features of our Website.</p>
+      <p><strong>Opting out of email marketing:</strong> You can unsubscribe from our marketing email list at any time by clicking the unsubscribe link in any email we send, or by contacting us directly.</p>
+    </section>
+
+    <!-- S10 -->
+    <section class="legal-section" id="s10">
+      <h2 class="legal-section__h2">10. Controls for Do-Not-Track features</h2>
+      <p>Most web browsers and some mobile operating systems include a Do-Not-Track ("DNT") feature or setting. At this stage no uniform technology standard for recognising and implementing DNT signals has been finalised. As such, we do not currently respond to DNT browser signals. If a standard for online tracking is adopted that we must follow in the future, we will inform you in a revised version of this privacy notice.</p>
+    </section>
+
+    <!-- S11 -->
+    <section class="legal-section" id="s11">
+      <h2 class="legal-section__h2">11. Do California residents have specific privacy rights?</h2>
+      <p class="legal-section__short">In short: Yes, if you are a resident of California, you are granted specific rights regarding access to your personal information.</p>
+      <p>California Civil Code Section 1798.83 ("Shine The Light" law) permits California residents to request, once a year and free of charge, information about personal information disclosed to third parties for direct marketing purposes. If you are a California resident and would like to make such a request, please contact us using the details below.</p>
+
+      <p><strong>What categories of personal information do we collect?</strong></p>
+      <table class="ccpa-table">
+        <thead>
+          <tr><th>Category</th><th>Examples</th><th>Collected</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>A. Identifiers</td><td>Name, email, IP address, account name</td><td class="ccpa-yes">YES</td></tr>
+          <tr><td>B. Personal information (CA Customer Records)</td><td>Name, contact, education, employment, financial info</td><td class="ccpa-yes">YES</td></tr>
+          <tr><td>C. Protected classification characteristics</td><td>Gender and date of birth</td><td class="ccpa-yes">YES</td></tr>
+          <tr><td>D. Commercial information</td><td>Transaction information, purchase history</td><td class="ccpa-yes">YES</td></tr>
+          <tr><td>E. Biometric information</td><td>Fingerprints and voiceprints</td><td class="ccpa-no">NO</td></tr>
+          <tr><td>F. Internet / network activity</td><td>Browsing history, interactions with websites</td><td class="ccpa-yes">YES</td></tr>
+          <tr><td>G. Geolocation data</td><td>Device location</td><td class="ccpa-yes">YES</td></tr>
+          <tr><td>H. Audio, electronic, visual information</td><td>Images, audio or video recordings</td><td class="ccpa-no">NO</td></tr>
+          <tr><td>I. Professional / employment information</td><td>Job title, work history, qualifications</td><td class="ccpa-yes">YES</td></tr>
+          <tr><td>J. Education information</td><td>Student records</td><td class="ccpa-no">NO</td></tr>
+          <tr><td>K. Inferences from personal information</td><td>Profile of individual's preferences</td><td class="ccpa-yes">YES</td></tr>
+        </tbody>
+      </table>
+
+      <p>Rachael Page has not disclosed or sold any personal information to third parties for a business or commercial purpose in the preceding 12 months, and will not sell personal information belonging to website visitors, users and other consumers.</p>
+      <p>To exercise your rights under CCPA, you can contact us by email at <a href="mailto:artfulydesign@gmail.com">artfulydesign@gmail.com</a>.</p>
+    </section>
+
+    <!-- S12 -->
+    <section class="legal-section" id="s12">
+      <h2 class="legal-section__h2">12. Do we make updates to this notice?</h2>
+      <p class="legal-section__short">In short: Yes, we will update this notice as necessary to stay compliant with relevant laws.</p>
+      <p>We may update this privacy notice from time to time. The updated version will be effective as soon as it is accessible. If we make material changes, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this privacy notice frequently.</p>
+    </section>
+
+    <!-- S13 -->
+    <section class="legal-section" id="s13">
+      <h2 class="legal-section__h2">13. How can you contact us about this notice?</h2>
+      <p>If you have questions or comments about this notice, you may email us at <a href="mailto:artfulydesign@gmail.com">artfulydesign@gmail.com</a> or by post to:</p>
+      <p><strong>Rachael Page</strong><br/>Körnerstraße 16<br/>15370 Petershagen-Eggersdorf<br/>Brandenburg, Germany</p>
+    </section>
+
+    <!-- S14 -->
+    <section class="legal-section" id="s14">
+      <h2 class="legal-section__h2">14. How can you review, update or delete the data we collect from you?</h2>
+      <p>Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please contact us. We will respond to your request within 30 days.</p>
+    </section>
+
+    <!-- CONTACT CALLOUT -->
+    <div class="legal-contact">
+      <h3 class="legal-contact__h3">Contact us</h3>
+      <p>Email: <a href="mailto:artfulydesign@gmail.com">artfulydesign@gmail.com</a><br/>
+      Rachael Page, Körnerstraße 16, 15370 Petershagen-Eggersdorf, Brandenburg, Germany</p>
+    </div>
+
+  </div>
+</div>
+
+</ArtfulyLayout>

@@ -1,0 +1,184 @@
+---
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="Impressum — Artfuly"
+  description="Pflichtangaben gemäß § 5 TMG — Legal notice for Artfuly.com."
+>
+
+<style>
+  .impressum-hero {
+    background: #048ba2;
+    padding: 72px 24px 56px;
+    text-align: center;
+  }
+  .impressum-hero__eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    margin: 0 0 16px;
+  }
+  .impressum-hero__h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 12px;
+  }
+  .impressum-hero__sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+  }
+
+  .impressum-body {
+    background: #fff;
+    padding: 64px 24px 96px;
+  }
+  .impressum-body__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* Contact card */
+  .impressum-card {
+    background: #e6f7f7;
+    border-left: 4px solid #3ba89c;
+    border-radius: 0 8px 8px 0;
+    padding: 32px 36px;
+    margin-bottom: 56px;
+  }
+  .impressum-card__label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3ba89c;
+    margin: 0 0 16px;
+  }
+  .impressum-card__name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #233030;
+    margin: 0 0 12px;
+  }
+  .impressum-card__details {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 2;
+    margin: 0;
+  }
+  .impressum-card__details a { color: #3ba89c; }
+
+  /* Sections */
+  .impressum-section {
+    border-top: 1px solid #eee;
+    padding-top: 36px;
+    margin-bottom: 36px;
+  }
+  .impressum-section__h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #233030;
+    margin: 0 0 14px;
+  }
+  .impressum-section p {
+    font-family: 'Merriweather', serif;
+    font-size: 0.92rem;
+    line-height: 1.9;
+    color: #555;
+    margin: 0 0 14px;
+  }
+  .impressum-section p:last-child { margin-bottom: 0; }
+
+  .impressum-attribution {
+    margin-top: 56px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: #aaa;
+  }
+</style>
+
+<!-- HERO -->
+<section class="impressum-hero">
+  <p class="impressum-hero__eyebrow">Legal</p>
+  <h1 class="impressum-hero__h1">Impressum</h1>
+  <p class="impressum-hero__sub">Details according to § 5 TMG</p>
+</section>
+
+<div class="impressum-body">
+  <div class="impressum-body__inner">
+
+    <!-- CONTACT CARD -->
+    <div class="impressum-card">
+      <p class="impressum-card__label">Angaben gemäß § 5 TMG</p>
+      <p class="impressum-card__name">Rachael Page</p>
+      <p class="impressum-card__details">
+        Körnerstraße 16<br/>
+        15370 Petershagen-Eggersdorf<br/>
+        Brandenburg, Germany<br/><br/>
+        <strong>Represented by:</strong> Rachael Page<br/>
+        <strong>Telephone:</strong> +4915733912321<br/>
+        <strong>Email:</strong> <a href="mailto:artfulydesign@gmail.com">artfulydesign@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- Responsible for content -->
+    <section class="impressum-section">
+      <h2 class="impressum-section__h2">Responsible for content according to § 55 para. 2 RStV</h2>
+      <p>Rachael Page, Körnerstraße 16, 15370 Petershagen-Eggersdorf, Brandenburg, Germany</p>
+    </section>
+
+    <!-- Liability for contents -->
+    <section class="impressum-section">
+      <h2 class="impressum-section__h2">Liability for contents</h2>
+      <p>The contents of our pages have been created with the utmost care. However, we cannot guarantee the accuracy, completeness or timeliness of the content. As a service provider we are responsible for our own content on these pages in accordance with general law pursuant to § 7(1) TMG. According to §§ 8–10 TMG, however, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances pointing to illegal activity. Obligations to remove or block the use of information under general law remain unaffected by this. However, liability in this respect is only possible from the point in time at which a concrete infringement of the law becomes known. Upon becoming aware of such violations, we will remove the relevant content immediately.</p>
+    </section>
+
+    <!-- Liability for links -->
+    <section class="impressum-section">
+      <h2 class="impressum-section__h2">Liability for links</h2>
+      <p>Our offer contains links to external websites of third parties on whose content we have no influence. Therefore we cannot accept any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not apparent at the time of linking. A permanent content control of the linked pages is not reasonable without concrete evidence of an infringement. Upon becoming aware of legal violations, we will remove such links immediately.</p>
+    </section>
+
+    <!-- Copyright -->
+    <section class="impressum-section">
+      <h2 class="impressum-section__h2">Copyright</h2>
+      <p>The content and works on these pages created by the site operator are subject to German copyright law. The reproduction, editing, distribution and any kind of use outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of these pages are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.</p>
+    </section>
+
+    <!-- Data protection -->
+    <section class="impressum-section">
+      <h2 class="impressum-section__h2">Data protection</h2>
+      <p>The use of our website is generally possible without providing personal data. As far as personal data (e.g. name, address or email address) is collected on our pages, this is always, where possible, on a voluntary basis. These data will not be passed on to third parties without your express consent. Please note that data transmission over the internet (e.g. communication by e-mail) can have security gaps. Complete protection of data against access by third parties is not possible. The use of contact data published within the framework of the impressum obligation by third parties for the purpose of sending unsolicited advertising and information material is hereby explicitly prohibited. The operators of the pages expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as through spam emails.</p>
+    </section>
+
+    <!-- Google Analytics -->
+    <section class="impressum-section">
+      <h2 class="impressum-section__h2">Google Analytics</h2>
+      <p>This website uses Google Analytics, a web analytics service provided by Google, Inc. ("Google"). Google Analytics uses so-called "cookies", which are text files placed on your computer, to help the website analyse how users use the site. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will not associate your IP address with any other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website. By using this website, you consent to the processing of data about you by Google in the manner and for the purposes set out above.</p>
+    </section>
+
+    <!-- Google AdSense -->
+    <section class="impressum-section">
+      <h2 class="impressum-section__h2">Google AdSense</h2>
+      <p>This website uses Google AdSense, a web advertising service provided by Google Inc, USA ("Google"). Google AdSense uses so-called "cookies" (text files), which are stored on your computer and which enable an analysis of your use of the website. Google AdSense also uses so-called "web beacons" (small invisible graphics) to collect information. Through the use of the web beacon, simple actions such as visitor traffic to the website can be recorded and collected. The information generated by the cookie and/or web beacon about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website in relation to the advertisements, compiling reports on website activity and advertisements for website operators and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will not associate your IP address with any other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website. By using this website, you consent to the processing of data about you by Google in the manner and for the purposes set out above.</p>
+    </section>
+
+    <p class="impressum-attribution">Impressum from Impressum Generator der Kanzlei Hasselbach, Bonn.</p>
+
+  </div>
+</div>
+
+</ArtfulyLayout>

@@ -4,7 +4,7 @@ slug: "amcor-products"
 featured: False
 nextProject: ""
 halfWidthImage: |-
-  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/678288f06a800be58eb32093_Frame%209.png
+  /images/webflow-cdn/678288f06a800be58eb32093_Frame 9.png
 summary: "Re-design the product selection experience for a multi-national packaging company"
 role: |-
   UX Researcher

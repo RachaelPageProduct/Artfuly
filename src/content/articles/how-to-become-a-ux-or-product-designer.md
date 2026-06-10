@@ -4,8 +4,8 @@ slug: "how-to-become-a-ux-or-product-designer"
 date: "2023-08-22"
 description: "Are you fascinated by the interaction between humans and technology? Do you often find yourself critiquing the user experience of apps and websites? If the answer is yes, then you might just be cut out to become a UX (User Experience) or Product Designer."
 introHeading: "Are you fascinated by the interaction between humans and technology? Do you often find yourself critiquing the user experience of apps and websites? If the answer is yes, then you might just be cut out to become a UX (User Experience) or Product Designer."
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/64e45c4cc7ac8cf0237d5914_Absolute_Reality_v16_Product_Designer_of_the_future_1.jpg"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/64e45c94d3ec364cbf8f53ac_product%20designer%20future.png"
+heroImage: "/images/webflow-cdn/64e45c4cc7ac8cf0237d5914_Absolute_Reality_v16_Product_Designer_of_the_future_1.jpg"
+thumbnailImage: "/images/webflow-cdn/64e45c94d3ec364cbf8f53ac_product designer future.png"
 published: true
 featured: true
 featuredPortfolio: false

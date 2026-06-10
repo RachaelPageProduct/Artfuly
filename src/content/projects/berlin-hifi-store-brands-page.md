@@ -4,7 +4,7 @@ slug: "berlin-hifi-store-brands-page"
 featured: False
 nextProject: "mcdonalds-monopoly-mobile-site"
 halfWidthImage: |-
-  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6554c6f308ee3b85a5203980_Hifi%20brand%20page%20small.png
+  /images/webflow-cdn/6554c6f308ee3b85a5203980_Hifi brand page small.png
 summary: "SEO research lead to a brand page UI design"
 role: |-
   UX Designer
@@ -13,7 +13,7 @@ team: "Client"
 date: "2019"
 tools: "Figma"
 headerImage: |-
-  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/655f6fa87a38f2573262932e_HiFi%20large.png
+  /images/webflow-cdn/655f6fa87a38f2573262932e_HiFi large.png
 lottieUrl: ""
 workCategories: ['seo', 'ui-design']
 introduction: ""

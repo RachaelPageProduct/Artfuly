@@ -4,8 +4,8 @@ slug: "optimised-portfolio-for-ux-product-designer"
 date: "2023-08-21"
 description: "Save yourself hours by downloading these figma wireframes, and gain clarity with content guidelines for your new design portfolio"
 introHeading: "Save yourself hours by downloading these figma wireframes, and gain clarity with content guidelines for your new design portfolio"
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/64e352d55b87657042253e8a_Screenshot%202023-08-21%20at%2014.04.25.png"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/64e4a07b6190627ca9e9cc48_folio%20thumb.png"
+heroImage: "/images/webflow-cdn/64e352d55b87657042253e8a_Screenshot 2023-08-21 at 14.04.25.png"
+thumbnailImage: "/images/webflow-cdn/64e4a07b6190627ca9e9cc48_folio thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

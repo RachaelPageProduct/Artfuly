@@ -4,8 +4,8 @@ slug: "learn-to-be-a-user-experience-designer"
 date: "2021-07-02"
 description: "Learn to be a UX Designer and create your online folio during the course!"
 introHeading: "Learn to be a UX Designer and create your online folio during the course!"
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/639f5329450d4f48a14c16c3_faizur-rehman-dJpupM4LiS4-unsplash%20copy.jpg"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/639f4cf63eccf94b4246f72c_Mask%20group-1.png"
+heroImage: "/images/webflow-cdn/639f5329450d4f48a14c16c3_faizur-rehman-dJpupM4LiS4-unsplash copy.jpg"
+thumbnailImage: "/images/webflow-cdn/639f4cf63eccf94b4246f72c_Mask group-1.png"
 published: true
 featured: false
 featuredPortfolio: false

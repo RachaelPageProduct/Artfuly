@@ -4,7 +4,7 @@ slug: "terra-website"
 featured: False
 nextProject: "timesheet-app-cleaners"
 halfWidthImage: |-
-  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/655f65379623a3f15a2623c0_Terra%20website%20small%20for%20HP.png
+  /images/webflow-cdn/655f65379623a3f15a2623c0_Terra website small for HP.png
 summary: "SEO & conversion focussed website for this smart-home garden microphone for bird-lovers"
 role: |-
   SEO Consultant
@@ -17,7 +17,7 @@ team: |-
 date: "2023"
 tools: "Semrush (SEO), Figma, Adobe Suite, Webflow"
 headerImage: |-
-  https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/655f637d40de048ead1387cd_Terra%20website%20large.png
+  /images/webflow-cdn/655f637d40de048ead1387cd_Terra website large.png
 lottieUrl: ""
 workCategories: ['ui-design', 'responsive-websites', 'strategy', 'seo', 'marketing', 'ia', 'conversion-funnels']
 introduction: "<p><strong>Website redesign</strong> for <strong>SEO</strong> with all <strong>copywriting</strong>. I updated the <strong>brand</strong> to match the new app, created a new <strong>IA</strong> and created <strong>conversion funnels</strong> to work in conjunction with the app.</p>"

@@ -4,8 +4,8 @@ slug: "best-portfolio-builders"
 date: "2023-04-18"
 description: "Compare to find the best website builder to create a beautiful portfolio based on YOUR needs and skill levels."
 introHeading: "Compare to find the best website builder to create a beautiful portfolio based on YOUR needs and skill levels."
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/643e4dd34ff9fafcfc33a7d1_Screenshot%202023-04-18%20at%2009.13.39.png"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/643e4b428b508e3246dde2de_best%20folio%20thumb.png"
+heroImage: "/images/webflow-cdn/643e4dd34ff9fafcfc33a7d1_Screenshot 2023-04-18 at 09.13.39.png"
+thumbnailImage: "/images/webflow-cdn/643e4b428b508e3246dde2de_best folio thumb.png"
 published: true
 featured: true
 featuredPortfolio: false

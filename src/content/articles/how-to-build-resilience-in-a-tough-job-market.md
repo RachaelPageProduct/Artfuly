@@ -4,8 +4,8 @@ slug: "how-to-build-resilience-in-a-tough-job-market"
 date: "2025-06-04"
 description: "Linkedin is drowning in posts from people who have been out of work for months and seem to be banging their heads on a brick wall. Do you keep doing the same thing and expecting a different result?"
 introHeading: "Linkedin is drowning in posts from people who have been out of work for months and seem to be banging their heads on a brick wall. Do you keep doing the same thing and expecting a different result?"
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/683ff94ac75b6dc5527ce398_Frame%20250.png"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/683ff9512bbcb3e64de5198d_Frame%20249.png"
+heroImage: "/images/webflow-cdn/683ff94ac75b6dc5527ce398_Frame 250.png"
+thumbnailImage: "/images/webflow-cdn/683ff9512bbcb3e64de5198d_Frame 249.png"
 published: true
 featured: false
 featuredPortfolio: false

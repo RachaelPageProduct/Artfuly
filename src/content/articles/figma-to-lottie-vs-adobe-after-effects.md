@@ -4,8 +4,8 @@ slug: "figma-to-lottie-vs-adobe-after-effects"
 date: "2025-01-11"
 description: "Subtle and simple animations are a great way to get your portfolio noticed."
 introHeading: "Subtle and simple animations are a great way to get your portfolio noticed."
-heroImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/678248241a02cf16c05f7cf8_Frame%20234.png"
-thumbnailImage: "https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/67824822245b1082c0ea6b16_Frame%20233.png"
+heroImage: "/images/webflow-cdn/678248241a02cf16c05f7cf8_Frame 234.png"
+thumbnailImage: "/images/webflow-cdn/67824822245b1082c0ea6b16_Frame 233.png"
 published: true
 featured: false
 featuredPortfolio: false
