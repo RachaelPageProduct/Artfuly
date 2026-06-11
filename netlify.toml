@@ -9,6 +9,13 @@
   status = 301
   force = true
 
+# Redirect www.rachaelpage.com → rachaelpage.com (canonical)
+[[redirects]]
+  from = "https://www.rachaelpage.com/*"
+  to = "https://rachaelpage.com/:splat"
+  status = 301
+  force = true
+
 # Serve static assets directly on rachaelpage.com (must come BEFORE the catch-all below)
 # Without these, force=true on the catch-all rewrites /_astro/*.css → 404 → unstyled page
 [[redirects]]
@@ -32,7 +39,7 @@
   status = 200
 
 # Internal links use /rachael-page/... paths (correct for artfuly.com).
-# On rachaelpage.com, strip the prefix so the URL stays clean (rachaelpage.com/work/all not rachaelpage.com/rachael-page/work/all).
+# On rachaelpage.com, strip the prefix so the URL stays clean.
 [[redirects]]
   from = "https://rachaelpage.com/rachael-page/*"
   to = "https://rachaelpage.com/:splat"
@@ -41,7 +48,6 @@
 
 # Rewrite: rachaelpage.com/* → serves /rachael-page/* content
 # URL stays as rachaelpage.com in the browser (status 200 = rewrite, not redirect)
-# Requires rachaelpage.com to be added as a domain alias on this Netlify site
 [[redirects]]
   from = "https://rachaelpage.com/*"
   to = "/rachael-page/:splat"
