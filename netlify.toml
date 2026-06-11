@@ -38,6 +38,18 @@
   to = "/admin/:splat"
   status = 200
 
+# Paths that exist at the site root and are linked from rachaelpage.com pages.
+# Must come BEFORE the catch-all below, otherwise they'd be rewritten to /rachael-page/...
+[[redirects]]
+  from = "https://rachaelpage.com/design-resources/*"
+  to = "/design-resources/:splat"
+  status = 200
+
+[[redirects]]
+  from = "https://rachaelpage.com/meeting"
+  to = "/meeting"
+  status = 200
+
 # Internal links use /rachael-page/... paths (correct for artfuly.com).
 # On rachaelpage.com, strip the prefix so the URL stays clean.
 [[redirects]]
