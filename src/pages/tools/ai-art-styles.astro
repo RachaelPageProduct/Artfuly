@@ -1,0 +1,559 @@
+---
+import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="Art Styles for AI Prompts — 130 Styles Reference · Artfuly"
+  description="130 art styles grouped by movement — use as prompts for Midjourney, DALL·E, Firefly and other AI image generation tools. Click any card to copy the style name."
+>
+
+  <!-- HERO -->
+  <div class="articles-section-top">
+    <div class="a-container w-container">
+      <div class="a-des-insight-title" style="color:rgba(255,255,255,0.6); margin-bottom:12px; grid-area:1/1/2/5; text-align:left">FREE TOOL</div>
+      <h1 class="h1-small-white" style="grid-area:2/1/3/5; padding-left:0">Art Styles for AI Prompts</h1>
+    </div>
+  </div>
+
+  <!-- TOOL INTRO -->
+  <div class="ast-intro">
+    <p>130 styles grouped by movement — use as prompts for Midjourney, DALL·E, Firefly and other image generation tools.</p>
+    <span class="ast-hint">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 6h4M6 4v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Hover a card to see a description &amp; Examples link · click Copy to grab the style name
+    </span>
+  </div>
+
+  <!-- CARDS -->
+  <div class="ast-content" id="app"></div>
+
+  <div id="toast"></div>
+
+</ArtfulyLayout>
+
+<style is:global>
+  /* ── Intro ──────────────────────────────────────── */
+  .ast-intro {
+    max-width: 700px;
+    margin: 2rem auto 0;
+    padding: 0 2rem 2rem;
+    text-align: center;
+  }
+  .ast-intro p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .ast-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #e6f6f6;
+    color: #1a9ea0;
+    border-radius: 100px;
+    padding: 0.3rem 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Content container ──────────────────────────── */
+  .ast-content {
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem 4rem;
+  }
+
+  /* ── Group section ──────────────────────────────── */
+  .group { margin-bottom: 1.5rem; }
+  .group-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .group-line { flex: 1; height: 1px; background: #e2dfda; }
+  .group-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #888;
+    white-space: nowrap;
+  }
+  .group-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6f6f6;
+    color: #1a9ea0;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    margin-left: 0.4rem;
+  }
+
+  /* ── Grid ───────────────────────────────────────── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+  @media (max-width: 1200px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 560px)  {
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .ast-content { padding: 0 0.75rem 4rem; }
+    .ast-intro { padding: 0 1rem 1.5rem; }
+  }
+
+  /* ── Card ───────────────────────────────────────── */
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07), 0 0 1px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    padding: 0 !important;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(0,0,0,0.12), 0 0 1px rgba(0,0,0,0.05);
+    opacity: 1;
+  }
+  .card-img {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* 4:3 ratio — gives child elements a real height to resolve against */
+    overflow: hidden;
+    background: #f0eeea;
+  }
+  .card-img-fallback {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+  .card-img img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.4s ease;
+  }
+  .card:hover .card-img img { transform: scale(1.06) !important; }
+
+  .card-body {
+    padding: 0.45rem 0.6rem 0.45rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+  }
+  .card-text { flex: 1; min-width: 0; overflow: hidden; }
+  .card-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-origin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    color: #888;
+    margin-top: 0.15rem;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Copy button */
+  .copy-btn {
+    flex-shrink: 0;
+    background: none;
+    border: 1.5px solid #e2dfda;
+    border-radius: 5px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    transition: opacity 0.18s, color 0.15s, border-color 0.15s, background 0.15s;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .card:hover .copy-btn { opacity: 1; }
+  .copy-btn:hover { color: #1a9ea0; border-color: #1a9ea0; background: #e6f6f6; }
+  .copy-btn.copied { color: #22863a; border-color: #c0e8c8; background: #eafaf0; opacity: 1; }
+
+  /* Examples button */
+  .examples-btn {
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    z-index: 10;
+    background: rgba(255,255,255,0.92);
+    color: #0d253f;
+    border-radius: 6px;
+    padding: 0.28rem 0.65rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: opacity 0.18s, background 0.15s, color 0.15s;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+  }
+  .card:hover .examples-btn { opacity: 1; }
+  .examples-btn:hover { background: #1a9ea0; color: #fff; opacity: 1; }
+
+  /* Description overlay */
+  .card-desc {
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(13,37,63,0.88);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 0.7rem 0.7rem;
+    opacity: 0;
+    transition: opacity 0.22s ease;
+    pointer-events: none;
+    border-radius: 10px 10px 0 0;
+  }
+  .card:hover .card-desc { opacity: 1; }
+  .card-desc p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+  }
+
+  /* Toast */
+  #toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(0.6rem);
+    background: #0d253f;
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+    z-index: 9999;
+    white-space: nowrap;
+  }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+
+<script>
+const groups = [
+  {
+    title: "Classical & Historical Painting",
+    items: [
+      { name: "Renaissance", origin: "Italian & Northern European, 15th–16th C.", description: "Balanced composition, naturalistic anatomy, linear perspective and idealised beauty — da Vinci, Raphael, Michelangelo.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/500px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg", fallback: "linear-gradient(150deg,#7c5c3a,#c49a6c,#3d2b1a)" },
+      { name: "Neoclassicism", origin: "European, Late 18th Century", description: "Inspired by ancient Greece and Rome — clean lines, restrained emotion, heroic subjects and marble-like figures.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Jacques-Louis_David_-_Oath_of_the_Horatii_-_Google_Art_Project.jpg/500px-Jacques-Louis_David_-_Oath_of_the_Horatii_-_Google_Art_Project.jpg", fallback: "linear-gradient(150deg,#c8b89a,#e8dece,#8a7a6a)" },
+      { name: "Romanticism", origin: "European, Late 18th–19th Century", description: "Dramatic emotion, sublime landscapes, stormy skies and heroic or tragic subjects — Turner, Delacroix, Friedrich.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg/500px-Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg", fallback: "linear-gradient(150deg,#1a2a4a,#4a6a9a,#8a4a2a)" },
+      { name: "Baroque", origin: "European, 17th Century", description: "Ornate detail, dramatic chiaroscuro light, grandeur and emotional intensity.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Girl_with_a_Pearl_Earring.jpg/500px-Girl_with_a_Pearl_Earring.jpg", fallback: "linear-gradient(150deg,#3d1a08,#8b4010,#2c0e06)" },
+      { name: "Rococo", origin: "French, 18th Century", description: "Pastel colours, intricate ornamental detail and playful, lighthearted themes.", img: "https://images.metmuseum.org/CRDImages/ep/web-large/DP-411-01.jpg", fallback: "linear-gradient(150deg,#c084a0,#e8b4c8,#9a4e6e)" },
+      { name: "Realism", origin: "French, Mid-19th Century", description: "Truthful, unembellished depiction of everyday subjects and working life.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Gustave_Courbet_-_Bonjour_Monsieur_Courbet_-_Mus%C3%A9e_Fabre.jpg/500px-Gustave_Courbet_-_Bonjour_Monsieur_Courbet_-_Mus%C3%A9e_Fabre.jpg", fallback: "linear-gradient(150deg,#2d3748,#4a5568,#1a202c)" },
+      { name: "Impressionism", origin: "French, 1860s–1880s", description: "Loose, visible brushstrokes capturing light, atmosphere and fleeting moments.", img: "https://images.metmuseum.org/CRDImages/ep/web-large/DT1928.jpg", fallback: "linear-gradient(150deg,#2d6a4f,#52b788,#95d5b2)" },
+      { name: "Post-Impressionism", origin: "French, 1880s–1900s", description: "Bold personal colour, geometric structure and expressive mark-making beyond Impressionism — Cézanne, Van Gogh, Gauguin.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/500px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg", fallback: "linear-gradient(150deg,#f4a300,#e05c00,#1a3a6a)" },
+      { name: "Pointillism", origin: "French, 1880s–1890s", description: "Tiny dots of pure colour that blend optically into forms when viewed from a distance.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Georges_Seurat_045.jpg/500px-Georges_Seurat_045.jpg", fallback: "linear-gradient(150deg,#1565c0,#42a5f5,#e3f2fd)" },
+      { name: "Symbolism", origin: "European, 1880s–1900s", description: "Mystical, allegorical imagery with rich colour and dreamlike figures — Moreau, Redon, Klimt.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/500px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg", fallback: "linear-gradient(150deg,#4a1a6a,#9a4ac8,#d4a017)" },
+      { name: "Pre-Raphaelite", origin: "British, 1848–1900s", description: "Vivid jewel-like colour, medieval subjects, highly detailed natural settings and idealised figures.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/John_William_Waterhouse_-_The_Lady_of_Shalott_-_Google_Art_Project_edit.jpg/500px-John_William_Waterhouse_-_The_Lady_of_Shalott_-_Google_Art_Project_edit.jpg", fallback: "linear-gradient(150deg,#1b4332,#6a3a7a,#c8a050)" },
+      { name: "Mannerism", origin: "Italian, 16th Century", description: "Exaggerated elongated figures, complex poses and artificial colour — a self-conscious refinement of Renaissance ideals.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Parmigianino_-_Madonna_and_Child_with_Angels%2C_known_as_the_Madonna_with_the_Long_Neck.jpg/500px-Parmigianino_-_Madonna_and_Child_with_Angels%2C_known_as_the_Madonna_with_the_Long_Neck.jpg", fallback: "linear-gradient(150deg,#5a3a7a,#9a7a4a,#2a3a6a)" },
+      { name: "Illuminated Manuscript", origin: "European, 5th–15th Century", description: "Hand-lettered texts decorated with miniature paintings, gold leaf, ornate borders and vivid pigments.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/KellsFol034rChiRhoMonogram.jpg/500px-KellsFol034rChiRhoMonogram.jpg", fallback: "linear-gradient(150deg,#6a3a00,#c8a000,#1a4a2a)" }
+    ]
+  },
+  {
+    title: "Modern Western Movements",
+    items: [
+      { name: "Expressionism", origin: "Northern European, Early 20th C.", description: "Emotional rawness over physical reality — distorted forms, vivid colour, psychological intensity.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Franz_Marc_-_The_Foxes_-_Google_Art_Project.jpg/500px-Franz_Marc_-_The_Foxes_-_Google_Art_Project.jpg", fallback: "linear-gradient(150deg,#c0392b,#e74c3c,#7b241c)" },
+      { name: "Fauvism", origin: "French, 1905–1910", description: "Wild, non-naturalistic colour used expressively — flat forms, bold outlines and pure pigment straight from the tube.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Matisse-Woman-with-a-Hat.jpg/500px-Matisse-Woman-with-a-Hat.jpg", fallback: "linear-gradient(150deg,#e63900,#f4c700,#0077cc)" },
+      { name: "Cubism", origin: "European, Early 20th Century", description: "Fragmented geometric forms showing multiple simultaneous viewpoints.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Cubist_Still_Life_with_Guitar%2C_by_Jan_Matulka.jpg/500px-Cubist_Still_Life_with_Guitar%2C_by_Jan_Matulka.jpg", fallback: "linear-gradient(150deg,#5d4037,#8d6e63,#3e2723)" },
+      { name: "Futurism", origin: "Italian, 1900s–1910s", description: "Speed, technology and the kinetic energy of the modern industrial world.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Fortunato_Depero%2C_The_New_Babel%2C_1930.jpg/500px-Fortunato_Depero%2C_The_New_Babel%2C_1930.jpg", fallback: "linear-gradient(150deg,#f39c12,#e74c3c,#8e44ad)" },
+      { name: "Dada", origin: "European, 1916–1920s", description: "Anti-art chaos — collage, photomontage, found objects, absurdist humour and deliberate randomness.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Francis_Picabia%2C_Dada_Movement%2C_Dada%2C_Number_5%2C_15_May_1919.jpg/500px-Francis_Picabia%2C_Dada_Movement%2C_Dada%2C_Number_5%2C_15_May_1919.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#e63946,#f4d03f)" },
+      { name: "Surrealism", origin: "European, 1920s–1950s", description: "The unconscious mind — dreamlike, impossible and psychologically unsettling imagery.", img: "https://images.unsplash.com/photo-1643529231242-7e52ab2f2207?w=600&auto=format&fit=crop", fallback: "linear-gradient(150deg,#1a0a2e,#6a1bca,#00bcd4)" },
+      { name: "Abstract Expressionism", origin: "American, 1940s–1950s", description: "Spontaneous, subconscious creation — gestural marks, colour field painting, raw energy.", img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Blue_Poles_%28Jackson_Pollock_painting%29.jpg/500px-Blue_Poles_%28Jackson_Pollock_painting%29.jpg", fallback: "linear-gradient(150deg,#1a1a2e,#0f3460,#533483)" },
+      { name: "De Stijl", origin: "Dutch, 1917–1931", description: "Strict geometry using only primary colours, black, white and horizontal/vertical lines — Mondrian.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg/500px-Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg", fallback: "linear-gradient(150deg,#d90429,#f4d03f,#1565c0)" },
+      { name: "Constructivism", origin: "Soviet, 1915–1940s", description: "Bold diagonal compositions, primary colours, industrial forms and graphic typography — art in service of society.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Beat_the_Whites_with_the_Red_Wedge.jpg/500px-Beat_the_Whites_with_the_Red_Wedge.jpg", fallback: "linear-gradient(150deg,#c0392b,#1d1d1d,#f4d03f)" },
+      { name: "Suprematism", origin: "Russian, 1913–1920s", description: "Pure geometric abstraction — circles, squares and crosses floating in white space, pioneered by Malevich.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Suprematism_by_Malevich_%281915%2C_GRM%29.jpg/500px-Suprematism_by_Malevich_%281915%2C_GRM%29.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#c0392b,#f5f5f5)" },
+      { name: "New Objectivity", origin: "German, 1920s", description: "Coolly precise realism as a reaction against Expressionism — unflinching social critique and sharp psychological portraiture.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/The_Gymnast%2C_by_George_Grosz.jpg/500px-The_Gymnast%2C_by_George_Grosz.jpg", fallback: "linear-gradient(150deg,#3a3a3a,#7a6a5a,#c8b8a0)" },
+      { name: "Color Field Painting", origin: "American, 1950s–1960s", description: "Large expanses of flat, stained colour with no gesture or figure — pure optical and emotional immersion.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Untitled_%281979%29_-_Sam_Francis_%281923-1994%29_%2832101105498%29.jpg/500px-Untitled_%281979%29_-_Sam_Francis_%281923-1994%29_%2832101105498%29.jpg", fallback: "linear-gradient(150deg,#c0392b,#1565c0,#f4d03f)" }
+    ]
+  },
+  {
+    title: "Design Movements",
+    items: [
+      { name: "Art Nouveau", origin: "European, Late 19th Century", description: "Organic forms, sinuous flowing lines and intricate floral ornamentation.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Alfons_Mucha_-_1896_-_Biscuits_Champagne-Lef%C3%A8vre-Utile.jpg/500px-Alfons_Mucha_-_1896_-_Biscuits_Champagne-Lef%C3%A8vre-Utile.jpg", fallback: "linear-gradient(150deg,#1b4332,#40916c,#d4a373)" },
+      { name: "Art Deco", origin: "Global, 1920s–1930s", description: "Geometric shapes, bold symmetry and luxurious materials — gold, glass, lacquer.", img: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/Tamara_de_Lempicka%2C_Autoportrait_%28Tamara_in_a_Green_Bugatti%29.jpeg/500px-Tamara_de_Lempicka%2C_Autoportrait_%28Tamara_in_a_Green_Bugatti%29.jpeg", fallback: "linear-gradient(150deg,#1a1a1a,#c9a96e,#2d2d2d)" },
+      { name: "Bauhaus", origin: "German, 1919–1933", description: "Form follows function — art, architecture and industrial design unified.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Die_Zwitscher-Maschine_%28Twittering_Machine%29%2C_1922_-_Paul_Klee.jpg/500px-Die_Zwitscher-Maschine_%28Twittering_Machine%29%2C_1922_-_Paul_Klee.jpg", fallback: "linear-gradient(150deg,#e63946,#457b9d,#1d3557)" },
+      { name: "Minimalism", origin: "American, 1960s", description: "Absolute simplicity — clean lines, empty space, and the fewest possible elements.", img: "https://images.unsplash.com/photo-1720788218863-232c4ca77673?w=600&auto=format&fit=crop", fallback: "linear-gradient(150deg,#c8c8c4,#e8e6e0,#a8a8a4)" },
+      { name: "William Morris Style", origin: "British, 19th Century", description: "Arts & Crafts — intricate hand-drawn floral and natural patterns in wallpapers and textiles.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Morris_Strawberry_Thief_1883.jpg/500px-Morris_Strawberry_Thief_1883.jpg", fallback: "linear-gradient(150deg,#1b4332,#2d6a4f,#95d5b2)" },
+      { name: "Chinoiserie", origin: "European, 18th Century", description: "Western romanticisation of Chinese aesthetics — pagodas, dragons and exotic flora.", img: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsb2ZmaWNlNF9pbGx1c3RyYXRpb25fc29saWRfdG9pbGVfd2FsbHBhcGVyX3dpdGhfYmlyZHNfYV85ZjFlMmQ5Zi0yZTNlLTQ0MDgtOWM1MS02ODFmYzBmNDJlNGZfMS5qcGc.jpg", fallback: "linear-gradient(150deg,#003566,#ffd166,#ef233c)" },
+      { name: "Swiss / International Style", origin: "Swiss & German, 1950s–1970s", description: "Grid-based layout, sans-serif typography, objective photography and mathematical precision — the foundation of modern graphic design.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Josef_M%C3%BCller-Brockmann_1957.jpg/500px-Josef_M%C3%BCller-Brockmann_1957.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#c8c8c8,#e63946)" },
+      { name: "Memphis Design", origin: "Italian, 1981–1988", description: "Playful clashing patterns, bold primary and pastel colours, squiggles and geometric shapes — a deliberately anti-minimalist design provocation.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Carlton_Bookcase%2C_by_Ettore_Sottsass%2C_1981%2C_wood_veneer_and_plastic_laminate%2C_Inv._FNAC_1980%2C_Mus%C3%A9e_des_Arts_D%C3%A9coratifs%2C_Paris_%2801%29.png/500px-Carlton_Bookcase%2C_by_Ettore_Sottsass%2C_1981%2C_wood_veneer_and_plastic_laminate%2C_Inv._FNAC_1980%2C_Mus%C3%A9e_des_Arts_D%C3%A9coratifs%2C_Paris_%2801%29.png", fallback: "linear-gradient(150deg,#e63946,#f4d03f,#3a86ff)" },
+      { name: "Psychedelic / Acid Design", origin: "Global, 1960s–present", description: "Distorted lettering, vibrating colour combinations, organic forms and visual excess — graphic design inspired by altered states.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Psychedelic_eye.jpg/500px-Psychedelic_eye.jpg", fallback: "linear-gradient(150deg,#9b5de5,#f15bb5,#fee440)" }
+    ]
+  },
+  {
+    title: "Pop, Street & Contemporary",
+    items: [
+      { name: "Pop Art", origin: "UK & US, 1950s–1960s", description: "Advertising, mass media and consumer culture elevated to fine art.", img: "", fallback: "linear-gradient(150deg,#d90429,#ffbe0b,#3a86ff)" },
+      { name: "Op Art", origin: "Global, 1960s", description: "Geometric patterns engineered to create optical illusions of movement, vibration or depth.", img: "", fallback: "linear-gradient(150deg,#1d1d1d,#ffffff,#1d1d1d)" },
+      { name: "Hyperrealism", origin: "Global, 1970s–present", description: "Painting indistinguishable from high-resolution photography — extreme detail, precise lighting and flawless surface.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Chuck_Close_Self_Portrait.jpg/500px-Chuck_Close_Self_Portrait.jpg", fallback: "linear-gradient(150deg,#3a3a3a,#8a8a8a,#d4d4d4)" },
+      { name: "Neo-Expressionism", origin: "Global, 1980s", description: "Raw, aggressive brushwork with vivid colour and figurative subjects — 1980s revival of emotional painting.", img: "", fallback: "linear-gradient(150deg,#8b0000,#ff6600,#1a1a6a)" },
+      { name: "Graffiti", origin: "Urban, 1960s–present", description: "Spray-painted art on public surfaces — lettering, characters and large-scale murals.", img: "https://upload.wikimedia.org/wikipedia/en/3/3f/Banksy-ps2.jpg", fallback: "linear-gradient(150deg,#212529,#e63946,#ffb703)" },
+      { name: "Trompe-l'œil", origin: "European, Renaissance onwards", description: "Hyperrealistic painting that tricks the eye into seeing three-dimensional space.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Flucht_vor_der_Kritik%2C_Pere_Borrell_del_Caso_-_9626.jpg/500px-Flucht_vor_der_Kritik%2C_Pere_Borrell_del_Caso_-_9626.jpg", fallback: "linear-gradient(150deg,#3d3d3d,#6c757d,#2b2b2b)" },
+      { name: "Outsider Art / Art Brut", origin: "Global, 20th Century–present", description: "Self-taught, unfiltered expression outside mainstream art — intense, obsessive and deeply personal mark-making.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Jean_Dubuffet_-_Le_Metafisyx_1950.jpg/500px-Jean_Dubuffet_-_Le_Metafisyx_1950.jpg", fallback: "linear-gradient(150deg,#2a1a0a,#8a5a2a,#4a0a0a)" },
+      { name: "Psychedelic Art", origin: "Global, 1960s–present", description: "Swirling kaleidoscopic colour, surreal forms and visual distortions — inspired by altered states of consciousness.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Psychedelic_poster_1967.jpg/500px-Psychedelic_poster_1967.jpg", fallback: "linear-gradient(150deg,#7b00d4,#ff00aa,#00d4aa)" },
+      { name: "Kiri-e Engraving Hybrids", origin: "Contemporary Japanese", description: "Kirie combined with engraving or embossing — 3D textures, often digitally enhanced.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Paper-cut_with_stupa.jpg/500px-Paper-cut_with_stupa.jpg", fallback: "linear-gradient(150deg,#2d2d2d,#555,#1a1a1a)" }
+    ]
+  },
+  {
+    title: "Illustration & Drawing",
+    items: [
+      { name: "Watercolour", origin: "Global — Traditional Medium", description: "Translucent colour washes on paper — soft bleeding edges, visible texture and a delicate handmade quality.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Albrecht_D%C3%BCrer_-_Young_Hare%2C_1502_-_Google_Art_Project.jpg/500px-Albrecht_D%C3%BCrer_-_Young_Hare%2C_1502_-_Google_Art_Project.jpg", fallback: "linear-gradient(150deg,#a8d8ea,#e8b4c8,#d4f0c0)" },
+      { name: "Gouache", origin: "Global — Traditional Medium", description: "Opaque water-based paint with rich flat colour and a matte finish — popular for illustration and animation design.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gouache.jpg/500px-Gouache.jpg", fallback: "linear-gradient(150deg,#e87040,#f4c060,#4080c0)" },
+      { name: "Pen & Ink", origin: "Global — Traditional Medium", description: "Fine lines, hatching and crosshatching to build tone — precise, high-contrast and ideal for editorial or botanical illustration.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Albrecht_D%C3%BCrer_-_Melencolia_I_-_Google_Art_Project_%28_AGDdr3EHmNGyA%29.jpg/500px-Albrecht_D%C3%BCrer_-_Melencolia_I_-_Google_Art_Project_%28_AGDdr3EHmNGyA%29.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#5a5a5a,#c8c8c8)" },
+      { name: "Charcoal", origin: "Global — Traditional Medium", description: "Soft powdery marks with rich blacks and blended tones — expressive, gestural and atmospheric.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Edgar_Degas_-_Ballet_Rehearsal_-_Google_Art_Project.jpg/500px-Edgar_Degas_-_Ballet_Rehearsal_-_Google_Art_Project.jpg", fallback: "linear-gradient(150deg,#1a1a1a,#4a4a4a,#8a8a8a)" },
+      { name: "Linocut / Woodblock Print", origin: "Global — Printmaking", description: "Bold graphic forms carved and printed — flat areas of colour, visible texture and strong outlines.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tsunami_by_hokusai_19th_century.jpg/500px-Tsunami_by_hokusai_19th_century.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#8b4010,#e8d8b8)" },
+      { name: "Storybook Illustration", origin: "Global — Narrative Art", description: "Warm, whimsical and narrative — textured brushwork, expressive characters and cosy atmospheric scenes.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Arthur-Rackham-The-Piper-at-the-Gates-of-Dawn.jpg/500px-Arthur-Rackham-The-Piper-at-the-Gates-of-Dawn.jpg", fallback: "linear-gradient(150deg,#7a4a9a,#f4a260,#6ab04c)" },
+      { name: "Editorial Illustration", origin: "Global — Publishing Art", description: "Conceptual, graphic and idea-driven — used in magazines and publications to visualise complex themes.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Norman_Rockwell_-_Triple_Self-Portrait.jpg/500px-Norman_Rockwell_-_Triple_Self-Portrait.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#e63946,#f4d03f)" },
+      { name: "Comic Book Art", origin: "US & Global, 20th Century–present", description: "Bold outlines, Ben-Day dot shading, dynamic action poses and vivid colour — superhero and graphic novel aesthetic.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Action_Comics_1.jpg/500px-Action_Comics_1.jpg", fallback: "linear-gradient(150deg,#d90429,#ffbe0b,#1565c0)" },
+      { name: "Concept Art", origin: "Film & Games Industry, 20th C.–present", description: "Exploratory design for games, film and animation — world-building imagery that balances imagination with plausibility.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Star_Wars_concept_art.jpg/500px-Star_Wars_concept_art.jpg", fallback: "linear-gradient(150deg,#0d253f,#1a9ea0,#3a3a5a)" }
+    ]
+  },
+  {
+    title: "Printmaking",
+    items: [
+      { name: "Etching", origin: "European, 16th Century–present", description: "Fine lines bitten into a metal plate with acid — intricate detail, rich hatching and a distinctive velvety texture.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Soldier_and_his_Wife.jpg/500px-The_Soldier_and_his_Wife.jpg", fallback: "linear-gradient(150deg,#3a3020,#7a6a50,#c8b890)" },
+      { name: "Engraving", origin: "European, 15th Century–present", description: "Lines cut directly into a metal plate with a burin — precision, tonal range and a formal elegance used for portraits and maps.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Albrecht_D%C3%BCrer_-_Melencolia_I_-_Google_Art_Project_%28_AGDdr3EHmNGyA%29.jpg/500px-Albrecht_D%C3%BCrer_-_Melencolia_I_-_Google_Art_Project_%28_AGDdr3EHmNGyA%29.jpg", fallback: "linear-gradient(150deg,#2a2a2a,#6a5a4a,#aaa090)" },
+      { name: "Lithography", origin: "European, Late 18th Century–present", description: "Drawing with greasy crayon on limestone — smooth tonal gradients, a painterly quality and ideal for bold poster work.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Toulouse-Lautrec_-_Moulin_Rouge_-_La_Goulue_%281891%2C_grand_format%29.jpg/500px-Toulouse-Lautrec_-_Moulin_Rouge_-_La_Goulue_%281891%2C_grand_format%29.jpg", fallback: "linear-gradient(150deg,#4a3a2a,#8a7a6a,#c8b8a8)" },
+      { name: "Screen Print / Silkscreen", origin: "Global, Early 20th Century–present", description: "Flat vibrant colour pushed through a mesh stencil — Pop Art's preferred medium, used by Warhol and modern poster makers.", img: "", fallback: "linear-gradient(150deg,#e63946,#f4d03f,#1565c0)" },
+      { name: "Risograph", origin: "Digital Print, 1980s–present", description: "Layered soy-ink spot colours on paper — deliberate misregistration, grain texture and a distinctive limited-palette indie print aesthetic.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Risograph_printing.jpg/500px-Risograph_printing.jpg", fallback: "linear-gradient(150deg,#e8a020,#e83060,#20a0c8)" },
+      { name: "Mezzotint", origin: "European, 17th–18th Century", description: "Worked from dark to light on a roughened plate — velvety blacks, soft tonal gradations and a painterly, atmospheric quality.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/John_Martin_-_The_Great_Day_of_His_Wrath_-_Google_Art_Project.jpg/500px-John_Martin_-_The_Great_Day_of_His_Wrath_-_Google_Art_Project.jpg", fallback: "linear-gradient(150deg,#1a1a1a,#3a3a3a,#8a7a6a)" }
+    ]
+  },
+  {
+    title: "Digital & 3D",
+    items: [
+      { name: "Pixel Art", origin: "Digital, 1970s–present", description: "Low-resolution sprites and scenes built grid by grid — retro gaming aesthetic with deliberate pixelation.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Johnmadden.jpg/500px-Johnmadden.jpg", fallback: "linear-gradient(150deg,#1a1a4a,#0096c7,#f4d03f)" },
+      { name: "Voxel Art", origin: "Digital, 1990s–present", description: "3D pixel art using cubes as building blocks — blocky, charming and reminiscent of Minecraft.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Voxel_1.jpg/500px-Voxel_1.jpg", fallback: "linear-gradient(150deg,#2d6a4f,#52b788,#1565c0)" },
+      { name: "Low Poly 3D", origin: "Digital, 2000s–present", description: "Geometric 3D models with visible flat-shaded polygons — clean, modern and slightly abstract.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Low_poly_fox.png/500px-Low_poly_fox.png", fallback: "linear-gradient(150deg,#457b9d,#a8dadc,#f4a261)" },
+      { name: "Isometric Illustration", origin: "Digital Design, 1980s–present", description: "Precise 45° axonometric 3D view — popular for app icons, maps, architecture diagrams and game environments.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Isometric.svg/500px-Isometric.svg.png", fallback: "linear-gradient(150deg,#1d3557,#457b9d,#a8dadc)" },
+      { name: "Flat Design", origin: "Digital, 2010s–present", description: "Minimal, shadow-free vector shapes with clean colours — the visual language of modern UI and icon design.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/500px-Windows_logo_-_2012.svg.png", fallback: "linear-gradient(150deg,#0096c7,#f4c700,#e63946)" },
+      { name: "3D Render / CGI", origin: "Digital, 1980s–present", description: "Photorealistic computer-generated imagery with ray-traced lighting, reflections and depth of field.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Blender3D_VoxelPT_interior.jpg/500px-Blender3D_VoxelPT_interior.jpg", fallback: "linear-gradient(150deg,#0d253f,#1a5a8a,#4ab8c0)" },
+      { name: "Glitch Art", origin: "Digital, 2000s–present", description: "Digital corruption aesthetics — scan lines, colour channel displacement, pixel fragmentation and data moshing.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Mezzotint_effect_%281%29.jpg/500px-Mezzotint_effect_%281%29.jpg", fallback: "linear-gradient(150deg,#000000,#ff00cc,#00ffcc)" },
+      { name: "Fractal Art", origin: "Digital, 1980s–present", description: "Mathematically generated self-similar patterns at infinite scales — kaleidoscopic, endlessly recursive and alien-organic.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mandel_zoom_00_mandelbrot_set.jpg/500px-Mandel_zoom_00_mandelbrot_set.jpg", fallback: "linear-gradient(150deg,#000030,#4400aa,#00ccff)" },
+      { name: "ASCII Art", origin: "Digital, 1960s–present", description: "Images constructed from typed characters — text-as-image from early computing, nostalgic and conceptually raw.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/ASCII_full.svg/500px-ASCII_full.svg.png", fallback: "linear-gradient(150deg,#1d1d1d,#00ff41,#1d1d1d)" },
+      { name: "Vector Illustration", origin: "Digital, 1980s–present", description: "Crisp scalable artwork built from mathematical paths — clean shapes, flat colour and precision used in logos, icons and editorial art.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Vector_graphics_butterfly.svg/500px-Vector_graphics_butterfly.svg.png", fallback: "linear-gradient(150deg,#ff6b35,#f7c59f,#efefef)" }
+    ]
+  },
+  {
+    title: "Photography & Cinematic",
+    items: [
+      { name: "Photorealism", origin: "Global, 1960s–present", description: "Indistinguishable from a photograph — accurate lighting, depth of field and surface detail.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Close_Chuck_1968.jpg/500px-Close_Chuck_1968.jpg", fallback: "linear-gradient(150deg,#3a3a3a,#7a7a7a,#c8c8c8)" },
+      { name: "Film Noir", origin: "Hollywood, 1940s–1950s", description: "High-contrast black and white, dramatic shadows, rain-slick streets and moody 1940s detective atmosphere.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Double_Indemnity_%281944_film_trailer%29.jpg/500px-Double_Indemnity_%281944_film_trailer%29.jpg", fallback: "linear-gradient(150deg,#1a1a1a,#4a4a4a,#8a8a6a)" },
+      { name: "Cinematic", origin: "Film — Global", description: "Anamorphic widescreen framing, golden-hour light, shallow depth of field and epic compositional scale.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2001_A_Space_Odyssey%2C_1968.png/500px-2001_A_Space_Odyssey%2C_1968.png", fallback: "linear-gradient(150deg,#1a0a00,#5a3010,#c0a050)" },
+      { name: "Documentary Photography", origin: "Global, 20th Century–present", description: "Raw, candid and truthful — street-level observation with natural light and unposed subjects.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Lange-MigrantMother02.jpg/500px-Lange-MigrantMother02.jpg", fallback: "linear-gradient(150deg,#2a2a2a,#6a6a5a,#aaaaaa)" },
+      { name: "Daguerreotype / Tintype", origin: "Photography, 1839–Late 19th C.", description: "Early photographic processes — sepia tones, shallow depth of field, vignetting and the soft texture of antique silver or iron plates.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Portrait_of_a_Daguerreotypist%2C_1845_%28with_Frame%29.jpg/500px-Portrait_of_a_Daguerreotypist%2C_1845_%28with_Frame%29.jpg", fallback: "linear-gradient(150deg,#4a3a20,#8a7a50,#c8b880)" },
+      { name: "Double Exposure", origin: "Photography — Global", description: "Two images merged into one negative — silhouettes filled with landscapes, portraits overlaid with nature for a dreamlike surreal effect.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Portrait_Photographer_double_exposure.jpg/500px-Portrait_Photographer_double_exposure.jpg", fallback: "linear-gradient(150deg,#1a1a2a,#4a6a8a,#c8d8e8)" },
+      { name: "Lomography / Film Photography", origin: "Photography, 1990s–present", description: "Analogue film aesthetics — light leaks, grain, vignettes and saturated colour from toy cameras and expired stock.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Lomo_LC-A%2B_test.jpg/500px-Lomo_LC-A%2B_test.jpg", fallback: "linear-gradient(150deg,#8a3a00,#c86020,#e8d0a0)" }
+    ]
+  },
+  {
+    title: "Contemporary Aesthetics",
+    items: [
+      { name: "Cyberpunk", origin: "Sci-fi genre, 1980s–present", description: "Neon-drenched rain-soaked urban dystopia — holographic signage, cybernetic bodies and high-tech low-life.", img: "", fallback: "linear-gradient(150deg,#0d0d2a,#ff00aa,#00ccff)" },
+      { name: "Steampunk", origin: "Sci-fi genre, 1980s–present", description: "Victorian era reimagined with brass gears, steam engines and retro-futurist mechanical contraptions.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Steampunk_goggles_and_hat.jpg/500px-Steampunk_goggles_and_hat.jpg", fallback: "linear-gradient(150deg,#3a1a00,#8b5a00,#c8a060)" },
+      { name: "Vaporwave / Synthwave", origin: "Internet culture, 2010s", description: "Pastel pinks and purples, retro 80s computers, Greco-Roman statues and nostalgic digital aesthetics.", img: "", fallback: "linear-gradient(150deg,#7b00d4,#ff80c0,#00d4ff)" },
+      { name: "Retrofuturism", origin: "Global, mid-20th Century", description: "The future as imagined in the past — atomic-age optimism, chrome rockets, flying cars and space-age design.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Amazing_stories_191801.jpg/500px-Amazing_stories_191801.jpg", fallback: "linear-gradient(150deg,#c8a000,#e06000,#005090)" },
+      { name: "Cottagecore", origin: "Internet aesthetic, 2010s", description: "Romanticised rural life — wildflower meadows, soft natural light, linen fabrics and hand-thrown pottery.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Cottage_garden_Sissinghurst.jpg/500px-Cottage_garden_Sissinghurst.jpg", fallback: "linear-gradient(150deg,#6ab04c,#d4a373,#f0e8d0)" },
+      { name: "Dark Academia", origin: "Internet aesthetic, 2010s", description: "Gothic architecture, candlelight, ancient books and scholarly melancholy in deep browns and blacks.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Long_Room_Interior_Trinity_College_Dublin%2C_Ireland_-_Diliff.jpg/500px-Long_Room_Interior_Trinity_College_Dublin%2C_Ireland_-_Diliff.jpg", fallback: "linear-gradient(150deg,#1a1200,#4a3800,#8a7a5a)" },
+      { name: "Solarpunk", origin: "Sci-fi genre, 2010s–present", description: "Optimistic eco-future — lush greenery growing through solar-powered cities, warm natural materials and community.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Green_roof_City_Hall_Chicago.jpg/500px-Green_roof_City_Hall_Chicago.jpg", fallback: "linear-gradient(150deg,#2d6a4f,#f4c700,#f4a261)" },
+      { name: "Fantasy Art", origin: "Global — Genre Art", description: "Epic invented worlds — dragons, magic, ancient ruins and sweeping landscapes lit with supernatural drama.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Maxfield_Parrish_-_Daybreak.jpg/500px-Maxfield_Parrish_-_Daybreak.jpg", fallback: "linear-gradient(150deg,#1a0a3a,#6a1bca,#c08040)" },
+      { name: "Afrofuturism", origin: "Global, 1990s–present", description: "African and African diaspora culture merged with science fiction — vibrant colour, futuristic technology and reclaimed cosmic mythology.", img: "", fallback: "linear-gradient(150deg,#1a0a3a,#c87000,#006a40)" },
+      { name: "Lowbrow / Pop Surrealism", origin: "American, 1990s–present", description: "Underground art blending cartoon imagery, kitschy nostalgia and dark Surrealist themes — tattoo flash, hot rods and pin-ups meet fine art.", img: "", fallback: "linear-gradient(150deg,#1d1d1d,#c0392b,#f4d03f)" },
+      { name: "Superflat", origin: "Japanese, 2000s–present", description: "Takashi Murakami's flattened anime-derived aesthetic — hyper-cute imagery, zero depth, commercial gloss and consumer culture critique.", img: "", fallback: "linear-gradient(150deg,#ff80c0,#fff080,#80c0ff)" },
+      { name: "Science Fiction Art", origin: "Global, Early 20th C.–present", description: "Pulp and hard sci-fi imagery — chrome spacecraft, alien landscapes, space opera battles and utopian/dystopian visions of the future.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Amazing_Stories_Volume_01_Number_01.jpg/500px-Amazing_Stories_Volume_01_Number_01.jpg", fallback: "linear-gradient(150deg,#0d0d2a,#1a4a6a,#0096c7)" }
+    ]
+  },
+  {
+    title: "Anime & Manga",
+    items: [
+      { name: "Anime", origin: "Japanese Animation", description: "Large expressive eyes, stylised proportions, vibrant colour and dynamic action — the global visual language of Japanese animation.", img: "", fallback: "linear-gradient(150deg,#e63946,#f4d03f,#1565c0)" },
+      { name: "Studio Ghibli", origin: "Japanese Animation, 1985–present", description: "Painterly animation with soft naturalistic colour, pastoral warmth, whimsy and hand-crafted texture.", img: "", fallback: "linear-gradient(150deg,#2d6a4f,#74c69d,#a8d8f0)" },
+      { name: "Chibi", origin: "Japanese Illustration", description: "Super-deformed cartoon characters with oversized heads and tiny bodies — cute, expressive and playful.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Super_deformed_figures.jpg/500px-Super_deformed_figures.jpg", fallback: "linear-gradient(150deg,#ff80c0,#ffe080,#80c0ff)" },
+      { name: "Shōnen Manga", origin: "Japanese Comics", description: "High-energy action manga — bold linework, speed lines, intense expressions and fighting sequences.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Hokusai_Manga.jpg/500px-Hokusai_Manga.jpg", fallback: "linear-gradient(150deg,#e63946,#1d1d1d,#f4d03f)" },
+      { name: "Shōjo Manga", origin: "Japanese Comics", description: "Romantic manga with delicate linework, floral backgrounds, sparkles and emotional close-ups.", img: "", fallback: "linear-gradient(150deg,#e8b4c8,#f4d0e0,#c084a0)" },
+      { name: "Mecha", origin: "Japanese, 1970s–present", description: "Giant robot designs with heavy armour, complex mechanical detail and dynamic battle poses — Gundam, Evangelion and Super Robot aesthetics.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Maschinenmensch.jpg/500px-Maschinenmensch.jpg", fallback: "linear-gradient(150deg,#1d1d3a,#4a6090,#c0a040)" },
+      { name: "Webtoon", origin: "South Korean Digital Comics, 2000s–present", description: "Vertical-scroll digital comics with clean linework, vivid colour and a contemporary Korean illustration sensibility.", img: "", fallback: "linear-gradient(150deg,#4a2a7a,#e87060,#f0c060)" }
+    ]
+  },
+  {
+    title: "Architecture",
+    items: [
+      { name: "Gothic Architecture", origin: "European, 12th–16th Century", description: "Pointed arches, ribbed vaults, flying buttresses and soaring stained-glass windows.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cath%C3%A9drale_Notre-Dame_de_Chartres.jpg/500px-Cath%C3%A9drale_Notre-Dame_de_Chartres.jpg", fallback: "linear-gradient(150deg,#1c2833,#4a6274,#7f8c8d)" },
+      { name: "Gothic Revival", origin: "European & American, 18th–19th C.", description: "Medieval Gothic architecture reborn — pointed arches, decorative stonework, stained glass.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg/500px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg", fallback: "linear-gradient(150deg,#1c2833,#2e4057,#5d7a8c)" },
+      { name: "Brutalism", origin: "Global, 1950s–1970s", description: "Exposed raw concrete, monolithic geometric forms and an honest display of structural materials.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Barbican_Arts_Centre_-_geograph.org.uk_-_881754.jpg/500px-Barbican_Arts_Centre_-_geograph.org.uk_-_881754.jpg", fallback: "linear-gradient(150deg,#3a3a3a,#6a6a6a,#9a9a9a)" },
+      { name: "Deconstructivist Architecture", origin: "Global, 1980s–present", description: "Fragmented, non-rectilinear shapes that appear to defy gravity — Gehry, Hadid, Libeskind — dramatic sculptural forms.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Guggenheim_Bilbao_PDX.jpg/500px-Guggenheim_Bilbao_PDX.jpg", fallback: "linear-gradient(150deg,#2a2a4a,#7a6a8a,#c0b0d0)" },
+      { name: "Modernist Architecture", origin: "Global, Early–Mid 20th Century", description: "Form follows function — steel, glass and concrete, flat roofs, open floor plans and the rejection of ornament.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Barcelona_pavilion.jpg/500px-Barcelona_pavilion.jpg", fallback: "linear-gradient(150deg,#2a3a4a,#6a8a9a,#c0d0d8)" }
+    ]
+  },
+  {
+    title: "Japanese Traditional Arts",
+    items: [
+      { name: "Ukiyo-e", origin: "Japanese, Edo Period", description: "Woodblock prints and paintings — kabuki actors, seascapes, landscapes and bold flat colour.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tsunami_by_hokusai_19th_century.jpg/500px-Tsunami_by_hokusai_19th_century.jpg", fallback: "linear-gradient(150deg,#023e8a,#0096c7,#ade8f4)" },
+      { name: "Kirie (切り絵)", origin: "Japanese Paper Cutting", description: "Intricate designs cut into a single sheet — precise symmetry, nature and traditional themes.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Paper-cut_with_stupa.jpg/500px-Paper-cut_with_stupa.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#444,#1d1d1d)" },
+      { name: "Origami", origin: "Japanese Paper Folding", description: "Paper folded into 2D and 3D sculptural subjects — from cranes to complex geometric forms.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Cranes_made_by_Origami_paper.jpg/500px-Cranes_made_by_Origami_paper.jpg", fallback: "linear-gradient(150deg,#e8e8e8,#ccc,#aaa)" },
+      { name: "Chigiri-e (ちぎり絵)", origin: "Japanese Torn Paper Collage", description: "Hand-torn washi paper layered to create impressionistic landscapes, flowers and animals.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Washi%28Sugihara_paper%29.JPG/500px-Washi%28Sugihara_paper%29.JPG", fallback: "linear-gradient(150deg,#ffe8cc,#f4a261,#e76f51)" },
+      { name: "Kintsugi (金継ぎ)", origin: "Japanese Ceramic Repair", description: "Broken pottery repaired with gold lacquer — imperfections celebrated as part of the object's story.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ky%C5%ABsu_-_broken_lid-top_PNr%C2%B01256.jpg/500px-Ky%C5%ABsu_-_broken_lid-top_PNr%C2%B01256.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#8b6914,#d4a017)" },
+      { name: "Edo Kiriko (江戸切子)", origin: "Japanese Cut Glass", description: "Geometric patterns cut into glass — symmetrical cultural motifs that refract light brilliantly.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Edokiriko.jpg/500px-Edokiriko.jpg", fallback: "linear-gradient(150deg,#023e8a,#90e0ef,#caf0f8)" },
+      { name: "Sashiko (刺し子)", origin: "Japanese Embroidery", description: "Running-stitch geometric patterns on indigo-dyed fabric — functional, decorative and meditative.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/MET_RT792C.jpg/500px-MET_RT792C.jpg", fallback: "linear-gradient(150deg,#1c3f5e,#2f6690,#a3cef1)" },
+      { name: "Shikishi (色紙)", origin: "Japanese Decorative Paper", description: "Painted or cut-paper art on a square board — calligraphy, seasonal scenes and poetry.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Hyakuninisshu_089.jpg/500px-Hyakuninisshu_089.jpg", fallback: "linear-gradient(150deg,#fde8d8,#f4a261,#e76f51)" },
+      { name: "Kamikiri (紙切り)", origin: "Japanese Performance Art", description: "Paper cut into shapes live during storytelling — spontaneous animals and comic figures.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Paper-cut_with_stupa.jpg/500px-Paper-cut_with_stupa.jpg", fallback: "linear-gradient(150deg,#ffe0e6,#ffaac0,#e05080)" },
+      { name: "Raden Kirigami (螺鈿 切り紙)", origin: "Japanese Decorative Inlay", description: "Kirigami combined with mother-of-pearl or lacquer for iridescent, layered decorative crafts.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Raden_kirigami.jpg/500px-Raden_kirigami.jpg", fallback: "linear-gradient(150deg,#1b1b2f,#6a4c93,#e0aaff)" },
+      { name: "Washi Paper Lanterns (和紙の提灯)", origin: "Japanese Functional Art", description: "Kirie or torn-paper techniques on washi for glowing lanterns — bamboo, cherry blossom motifs.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Washi%28Sugihara_paper%29.JPG/500px-Washi%28Sugihara_paper%29.JPG", fallback: "linear-gradient(150deg,#1d1d1d,#9d0208,#f48c06)" }
+    ]
+  },
+  {
+    title: "World & Cultural Art",
+    items: [
+      { name: "Ancient Egyptian Art", origin: "Egypt, 3000–30 BC", description: "Highly formalised hieratic style — profile figures, hieroglyphics, bold flat colour and symbolic scale to indicate importance.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Maler_der_Grabkammer_des_Nacht_001.jpg/500px-Maler_der_Grabkammer_des_Nacht_001.jpg", fallback: "linear-gradient(150deg,#8a6a00,#c8a000,#2a1a00)" },
+      { name: "Ancient Greek Art", origin: "Greece, 700–31 BC", description: "Idealised human form in marble sculpture and red-figure pottery — harmonious proportion, mythological scenes and classical beauty.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Exekias_Group_E_amphora_Achilles_Ajax_Louvre_F133.jpg/500px-Exekias_Group_E_amphora_Achilles_Ajax_Louvre_F133.jpg", fallback: "linear-gradient(150deg,#c8b880,#8a7a50,#3a3020)" },
+      { name: "Norse / Viking Art", origin: "Scandinavia, 8th–11th Century", description: "Interlaced animal forms, knotwork and stylised serpents — carved on wood, metal and stone with fierce, energetic dynamism.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Oseberg_ship_head_post.jpg/500px-Oseberg_ship_head_post.jpg", fallback: "linear-gradient(150deg,#2a3a1a,#6a7a5a,#c8b880)" },
+      { name: "Byzantine Art", origin: "Eastern Roman Empire, 4th–15th C.", description: "Flat iconic figures on gold backgrounds — rigid hieratic style, glowing mosaic colours and spiritual authority.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_%28Ravenna%29.jpg/500px-Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_%28Ravenna%29.jpg", fallback: "linear-gradient(150deg,#6a3a00,#c8a000,#1a1a6a)" },
+      { name: "Celtic Art", origin: "Celtic Europe, Iron Age–Medieval", description: "Intricate interlaced knotwork, spirals and zoomorphic patterns from illuminated manuscripts and metalwork.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/KellsFol034rChiRhoMonogram.jpg/500px-KellsFol034rChiRhoMonogram.jpg", fallback: "linear-gradient(150deg,#1b4332,#c8a000,#1a1a4a)" },
+      { name: "Persian Miniature", origin: "Persian & Islamic, 13th–17th C.", description: "Tiny detailed paintings with flat perspective, jewel-bright colour and intricate patterned backgrounds.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Persian_miniature_%281%29.jpg/500px-Persian_miniature_%281%29.jpg", fallback: "linear-gradient(150deg,#1a4a6a,#c8a000,#8a1a2a)" },
+      { name: "Sumi-e / Chinese Ink Painting", origin: "East Asian — China, Japan, Korea", description: "Expressive brushwork with black ink on rice paper — negative space, economy of line and Zen philosophy.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Immortal_in_Splashed_Ink.jpg/500px-Immortal_in_Splashed_Ink.jpg", fallback: "linear-gradient(150deg,#1d1d1d,#5a5a5a,#c8c8c8)" },
+      { name: "Mughal Painting", origin: "Indian Subcontinent, 16th–19th C.", description: "Detailed Indo-Persian miniature painting — vibrant pigments, complex courtly scenes and botanical precision.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Jahangir_preferring_a_Sufi_sheikh_to_kings.jpg/500px-Jahangir_preferring_a_Sufi_sheikh_to_kings.jpg", fallback: "linear-gradient(150deg,#6a1a00,#c87000,#1a4a6a)" },
+      { name: "African Art / Tribal", origin: "Sub-Saharan Africa — Ancient–present", description: "Bold geometric patterns, stylised masks and figures — symbolic form over photographic likeness.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Maske_Songye.JPG/500px-Maske_Songye.JPG", fallback: "linear-gradient(150deg,#3a1a00,#8b4010,#c8a000)" },
+      { name: "Aboriginal Art", origin: "Australia — Ancient–present", description: "Dot painting and X-ray style — earthy pigments, Dreamtime stories and repeated symbolic patterns.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Namatjira_Albert_1902-1959_Haasts_Bluff.jpg/500px-Namatjira_Albert_1902-1959_Haasts_Bluff.jpg", fallback: "linear-gradient(150deg,#5a1a00,#c85000,#f0a000)" },
+      { name: "Aztec / Mesoamerican", origin: "Mesoamerica, Pre-Columbian", description: "Bold geometric and zoomorphic motifs, turquoise and terracotta palette, ritual symbolism and calendar patterns.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stone_of_the_Sun_in_National_Museum_of_Anthropology%2C_Mexico_City.jpg/500px-Stone_of_the_Sun_in_National_Museum_of_Anthropology%2C_Mexico_City.jpg", fallback: "linear-gradient(150deg,#3a1a00,#2a6a4a,#c87000)" },
+      { name: "Arabesque", origin: "Islamic Decorative Art", description: "Intricate flowing patterns of interlaced lines — floral and geometric motifs in perfect symmetry.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flickr_-_jemasmith_-_Umayyad_Mosque%2C_Damascus%2C_Detail..jpg/500px-Flickr_-_jemasmith_-_Umayyad_Mosque%2C_Damascus%2C_Detail..jpg", fallback: "linear-gradient(150deg,#1b4332,#40916c,#d4a373)" },
+      { name: "Calligraphy", origin: "Global — Chinese, Arabic, Western", description: "Decorative writing as visual art — stylised strokes and brushwork across cultures.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ibn_al-Bawwab_-_Qur%CA%BEan_f._278v-279r.jpg/500px-Ibn_al-Bawwab_-_Qur%CA%BEan_f._278v-279r.jpg", fallback: "linear-gradient(150deg,#2c2c2c,#555,#1d1d1d)" },
+      { name: "Mosaic", origin: "Ancient Roman & Byzantine", description: "Arranged fragments of glass, stone or tile assembled into pictorial or decorative patterns.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/MosaicEpiphany-of-Dionysus.jpg/500px-MosaicEpiphany-of-Dionysus.jpg", fallback: "linear-gradient(150deg,#6a1bca,#1976d2,#f57f17)" },
+      { name: "Pottery", origin: "Global — Ancient Origins", description: "Clay shaped and fired into functional or sculptural vessels — one of humanity's oldest art forms.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Hon%27ami_Koetsu_Fujisan_1.jpg/500px-Hon%27ami_Koetsu_Fujisan_1.jpg", fallback: "linear-gradient(150deg,#5c3317,#a0522d,#d2691e)" },
+      { name: "Stained Glass", origin: "Medieval European, 10th C.–present", description: "Luminous coloured glass outlined in lead — jewel-like light transmission, bold shapes and Gothic or Art Nouveau motifs.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Chartres_RosetteNord_121_DSC08241.jpg/500px-Chartres_RosetteNord_121_DSC08241.jpg", fallback: "linear-gradient(150deg,#1a006a,#c80000,#c8a000)" },
+      { name: "Batik", origin: "Indonesian, Ancient–present", description: "Wax-resist textile dyeing — intricate organic patterns in deep indigo, rust and natural dyes.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Batik_Trusmi_Cirebon_%2823%29.jpg/500px-Batik_Trusmi_Cirebon_%2823%29.jpg", fallback: "linear-gradient(150deg,#1a3a6a,#8b4010,#f0d0a0)" },
+      { name: "Thangka Painting", origin: "Tibetan & Himalayan, 7th C.–present", description: "Devotional scroll paintings of Buddhist deities — precise iconography, gold outlining, jewel pigments and symbolic mandala geometry.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Buddha_Vairocana_-_Google_Art_Project.jpg/500px-Buddha_Vairocana_-_Google_Art_Project.jpg", fallback: "linear-gradient(150deg,#8a3a00,#c87000,#1a2a6a)" },
+      { name: "Indigenous / Native American Art", origin: "North America — Ancient–present", description: "Geometric patterns, animal totems and earth-pigment colours — beadwork, pottery and symbolic imagery from diverse tribal traditions.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Hopi_Katsina_doll_%28Tithu%29_%28detail%29.jpg/500px-Hopi_Katsina_doll_%28Tithu%29_%28detail%29.jpg", fallback: "linear-gradient(150deg,#5a2a00,#c87000,#4a1a00)" },
+      { name: "Polynesian / Pacific Art", origin: "Pacific Islands — Ancient–present", description: "Tā moko tattooing, tapa cloth patterns and carved tiki figures — bold symmetrical designs drawn from nature and ancestor worship.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Polynesian_tattoo.jpg/500px-Polynesian_tattoo.jpg", fallback: "linear-gradient(150deg,#1a3a2a,#2a6a4a,#c8a050)" }
+    ]
+  }
+];
+
+const app = document.getElementById('app');
+
+groups.forEach(group => {
+  const section = document.createElement('section');
+  section.className = 'group';
+
+  const header = document.createElement('div');
+  header.className = 'group-header';
+  header.innerHTML = `
+    <div class="group-line"></div>
+    <span class="group-title">${group.title}<span class="group-count">${group.items.length}</span></span>
+    <div class="group-line"></div>`;
+  section.appendChild(header);
+
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+
+  group.items.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    const imgHtml = item.img ? `<img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.style.display='none'">` : '';
+    const searchUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(item.name + ' art style examples')}`;
+    card.innerHTML = `
+      <div class="card-img">
+        <div class="card-img-fallback" style="background:${item.fallback}"></div>
+        ${imgHtml}
+        <a class="examples-btn" href="${searchUrl}" target="_blank" rel="noopener">
+          <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><circle cx="3.8" cy="3.8" r="3" stroke="currentColor" stroke-width="1.2"/><line x1="5.9" y1="5.9" x2="8.2" y2="8.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Examples
+        </a>
+        <div class="card-desc"><p>${item.description}</p></div>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          <div class="card-name">${item.name}</div>
+          <div class="card-origin">${item.origin}</div>
+        </div>
+        <button class="copy-btn" data-name="${item.name}">Copy</button>
+      </div>`;
+    grid.appendChild(card);
+  });
+
+  section.appendChild(grid);
+  app.appendChild(section);
+});
+
+const toast = document.getElementById('toast');
+let toastTimer;
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.copy-btn');
+  if (!btn) return;
+  const name = btn.dataset.name;
+  const doCopy = () => {
+    btn.textContent = '✓ Copied';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1800);
+    toast.textContent = `"${name}" copied`;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+  };
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(name).then(doCopy).catch(() => fallbackCopy(name, doCopy));
+  } else {
+    fallbackCopy(name, doCopy);
+  }
+});
+
+function fallbackCopy(text, cb) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  Object.assign(ta.style, { position:'fixed', opacity:'0', top:'0', left:'0' });
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>

@@ -31,6 +31,14 @@
   to = "/admin/:splat"
   status = 200
 
+# Internal links use /rachael-page/... paths (correct for artfuly.com).
+# On rachaelpage.com, serve these directly to avoid double-prefixing.
+[[redirects]]
+  from = "https://rachaelpage.com/rachael-page/*"
+  to = "/rachael-page/:splat"
+  status = 200
+  force = true
+
 # Rewrite: rachaelpage.com/* → serves /rachael-page/* content
 # URL stays as rachaelpage.com in the browser (status 200 = rewrite, not redirect)
 # Requires rachaelpage.com to be added as a domain alias on this Netlify site

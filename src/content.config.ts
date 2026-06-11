@@ -87,4 +87,20 @@ const studentSuccesses = defineCollection({
   }),
 });
 
-export const collections = { projects, resources, articles, studentSuccesses };
+const travel = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/travel' }),
+  schema: z.object({
+    title: z.string(),
+    slug: z.string(),
+    date: z.string().optional(),
+    description: z.string().optional(),
+    heroImage: z.string().optional(),
+    thumbnailImage: z.string().optional(),
+    introHeading: z.string().optional(),
+    published: z.boolean().default(false),
+    titleTag: z.string().optional(),
+    metaDescription: z.string().optional(),
+  }),
+});
+
+export const collections = { projects, resources, articles, studentSuccesses, travel };

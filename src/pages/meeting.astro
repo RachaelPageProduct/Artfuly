@@ -2,10 +2,38 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Book a Meeting — Rachael Page">
-  <div style="max-width:600px;margin:8rem auto;padding:0 2rem;text-align:center;font-family:'Montserrat',sans-serif;">
-    <h1 style="font-size:2rem;font-weight:700;color:#000;margin-bottom:1rem;">Book a Meeting</h1>
-    <p style="color:#666;font-size:1rem;margin-bottom:2rem;">Calendar booking coming soon. In the meantime, drop me an email.</p>
-    <a href="mailto:artfulydesign@gmail.com?subject=Meeting%20request" style="display:inline-block;padding:0.85rem 2.5rem;background:#000;color:#fff;border-radius:100px;font-size:0.9rem;font-weight:600;text-decoration:none;">Email Rachael</a>
+<BaseLayout title="Book a Meeting — Rachael Page" description="Book a 60-minute meeting with Rachael Page, product designer.">
+  <div class="meeting-page">
+    <h1>Book a meeting</h1>
+    <p class="meeting-sub">A calendar should load below — if it doesn't, <a href="https://calendly.com/rachael_page/60min" target="_blank" rel="noopener">click here to open it directly</a>.</p>
+
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/rachael_page/60min" style="min-width:320px;height:1100px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly inline widget end -->
   </div>
 </BaseLayout>
+
+<style>
+  .meeting-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+  }
+  .meeting-page h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    color: #000;
+  }
+  .meeting-sub {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  .meeting-sub a {
+    color: #000;
+    text-decoration: underline;
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import SPDCollectionNav from '../../../../components/SPDCollectionNav.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
 const colourways = [
@@ -19,7 +20,7 @@ const mockups = [
       <p class="spd-collection-label">Surface Pattern Collection</p>
       <h1 class="spd-collection-name">Good Dogs</h1>
       <p class="spd-collection-desc">
-        A playful pattern celebrating dogs — designed for walls, fabric, and accessories. <strong>Profits from licensing this collection go to <a href="https://transformastreetdog.org/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Transform a Street Dog</a></strong>, a charity rescuing and rehoming street dogs.
+        A playful pattern celebrating dogs — designed for walls, fabric, and accessories. <strong>Profits from licensing this collection go to <a href="https://transformastreetdog.org/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Transform a Street Dog</a></strong>, a charity rescuing and rehoming dogs in Ukraine.
       </p>
       <div class="spd-meta">
         <span>1 colourway</span>
@@ -38,7 +39,7 @@ const mockups = [
   <!-- CHARITY CALLOUT -->
   <section class="spd-charity">
     <div class="spd-charity-inner">
-      <p>🐾 <strong>This collection supports a cause.</strong> Profits from every licensing deal go directly to <a href="https://transformastreetdog.org/" target="_blank" rel="noopener">Transform a Street Dog</a> — a charity working to rescue, rehabilitate, and rehome street dogs.</p>
+      <p>🐾 <strong>This collection supports a cause.</strong> Profits from every licensing deal go directly to <a href="https://transformastreetdog.org/" target="_blank" rel="noopener">Transform a Street Dog</a> — a charity working to rescue, rehabilitate, and re-home dogs in Ukraine.</p>
     </div>
   </section>
 
@@ -72,17 +73,15 @@ const mockups = [
     </div>
   </section>
 
+  <!-- COLLECTION NAV -->
+  <SPDCollectionNav nextSlug="alhambra-haven" nextName="Alhambra Haven" />
+
   <!-- LICENSING CTA -->
   <section class="spd-licensing">
     <div class="spd-licensing-inner">
       <h2 class="spd-licensing-title">Interested in licensing this collection?</h2>
     </div>
   </section>
-
-  <!-- BACK TO ALL COLLECTIONS -->
-  <div class="spd-back">
-    <a href="/rachael-page/creative/surface-pattern-design/">← All Collections</a>
-  </div>
 
 </BaseLayout>
 

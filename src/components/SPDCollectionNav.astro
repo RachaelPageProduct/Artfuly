@@ -1,0 +1,11 @@
+---
+interface Props {
+  nextSlug: string;
+  nextName: string;
+}
+const { nextSlug, nextName } = Astro.props;
+---
+<nav class="spd-collection-nav">
+  <a href="/rachael-page/creative/surface-pattern-design/">← All Collections</a>
+  <a class="spd-nav-next" href={`/rachael-page/creative/surface-pattern-design/${nextSlug}/`}>Next: {nextName} →</a>
+</nav>

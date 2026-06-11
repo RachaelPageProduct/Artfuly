@@ -396,6 +396,7 @@ h3.left {
 }
 .white { color: #fff !important; }
 .white.right { font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 1.7; text-align: right; }
+@media (max-width: 768px) { .white.right { text-align: center; } }
 .small-white-body { color: rgba(255,255,255,0.7); font-size: 13px; font-family: 'Montserrat', sans-serif; }
 .h2insights { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 700; margin: 0 0 12px; }
 .a-des-insight-title { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: rgba(255,255,255,0.7); text-transform: uppercase; }

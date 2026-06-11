@@ -33,6 +33,9 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
   </script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRBHL7V');</script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNHJCFV2NH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QNHJCFV2NH');</script>
   <!-- Kit.com email signup -->
   <script async data-uid="ded77907e0" src="https://artfuly.ck.page/ded77907e0/index.js"></script>
   <!-- Amplitude session replay -->
@@ -50,8 +53,9 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
       </a>
       <nav role="navigation" class="nav-menu-3 w-nav-menu">
         <a href="/private-tutor-mentor" class="navbar w-nav-link">1:1 Tutor / Mentor</a>
-        <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="navbar w-nav-link">Design Courses ↗</a>
         <a href="/design-resources" class="navbar w-nav-link">Resources</a>
+        <a href="/tools" class="navbar w-nav-link">Tools</a>
+        <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="navbar w-nav-link">Design Courses ↗</a>
         <div class="spacer _16"></div>
         <a href="#email-signup" class="a-button-navy-on-teal-nav small-text w-nav-link">Design Principles by Email</a>
       </nav>
@@ -63,8 +67,9 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
     <div id="artfuly-nav-overlay">
       <nav role="navigation" class="nav-menu-3 w-nav-menu" id="artfuly-nav-overlay-menu">
         <a href="/private-tutor-mentor" class="navbar w-nav-link">1:1 Tutor / Mentor</a>
-        <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="navbar w-nav-link">Design Courses ↗</a>
         <a href="/design-resources" class="navbar w-nav-link">Resources</a>
+        <a href="/tools" class="navbar w-nav-link">Tools</a>
+        <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="navbar w-nav-link">Design Courses ↗</a>
         <div class="spacer _16"></div>
         <a href="#email-signup" class="a-button-navy-on-teal-nav small-text w-nav-link">Design Principles by Email</a>
       </nav>
@@ -135,6 +140,18 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
       </div>
     </div>
   </div>
+
+  <script>
+    // If #email-signup doesn't exist on this page, redirect to homepage section
+    document.querySelectorAll('a[href="#email-signup"]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        if (!document.getElementById('email-signup')) {
+          e.preventDefault();
+          window.location.href = '/#email-signup';
+        }
+      });
+    });
+  </script>
 
   <script>
     // Homepage contact form — inline success, no redirect

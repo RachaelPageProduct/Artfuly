@@ -1,4 +1,5 @@
 ---
+import SPDCollectionNav from '../../../../components/SPDCollectionNav.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
 const colourways = [
@@ -72,16 +73,14 @@ const mockups = [
     </div>
   </section>
 
+  <!-- COLLECTION NAV -->
+  <SPDCollectionNav nextSlug="pebble" nextName="Pebble" />
+
   <!-- LICENSING CTA -->
   <section class="spd-licensing">
     <div class="spd-licensing-inner">
       <h2 class="spd-licensing-title">Interested in licensing this collection?</h2>
     </div>
   </section>
-
-  <!-- BACK TO ALL COLLECTIONS -->
-  <div class="spd-back">
-    <a href="/rachael-page/creative/surface-pattern-design/">← All Collections</a>
-  </div>
 
 </BaseLayout>

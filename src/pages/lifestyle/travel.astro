@@ -1,14 +1,22 @@
 ---
 import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allArticles = await getCollection('travel');
+const sorted = allArticles
+  .filter(a => a.data.published)
+  .sort((a, b) => {
+    if (!a.data.date && !b.data.date) return 0;
+    if (!a.data.date) return 1;
+    if (!b.data.date) return -1;
+    return b.data.date.localeCompare(a.data.date);
+  });
 ---
 
 <ArtfulyLayout
   title="Travel — Away from the Race | Artfuly"
   description="How to work from anywhere. Rachael Page on location independence, digital nomad life, and working remotely across Europe."
 >
-
-  <!-- Webflow shared CSS for content styling -->
-  <link href="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/css/artfuly.webflow.shared.791454ec3.min.css" rel="stylesheet" type="text/css" crossorigin="anonymous" />
 
   <!-- HERO: background video -->
   <section class="travel-hero">
@@ -23,29 +31,30 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
     </div>
   </section>
 
-  <!-- BIO + FORM -->
+  <!-- BIO + FORM — exact Webflow class/w-node structure so CSS grid fires correctly -->
   <section class="section-60">
     <div class="w-layout-blockcontainer container-1240 w-container">
-      <div id="w-node-bio-image" class="div-block-126">
+      <div id="w-node-_9aaadddb-250d-e049-27e4-c763ed3d7169-c2eeca10" class="div-block-126">
         <img
           src="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/65b8dcf0608be0bc9c489d4e_Untitled.jpg"
           loading="lazy"
-          alt="Rachael Page"
-          class="image-46"
+          id="w-node-_55ebac6c-510d-88aa-b95e-b3a2dbe46c9c-c2eeca10"
           sizes="(max-width: 479px) 48vw, (max-width: 767px) 49vw, (max-width: 991px) 356px, 462px"
+          alt="Rachael Page"
           srcset="https://cdn.prod.website-files.com/5f6c775604d3a81512995971/65b8dcf0608be0bc9c489d4e_Untitled-p-500.jpg 500w, https://cdn.prod.website-files.com/5f6c775604d3a81512995971/65b8dcf0608be0bc9c489d4e_Untitled.jpg 720w"
+          class="image-46"
         />
       </div>
-      <div id="w-node-bio-text">
-        <h3 class="t-h3">Do you want to work from anywhere?<br /></h3>
+      <div id="w-node-_801ceaf6-0714-420b-d101-c3dd7df0b08f-c2eeca10">
+        <h3 id="w-node-fcc12e2e-77d0-565e-9b2c-434413bde437-c2eeca10" class="t-h3">Do you want to work from anywhere?<br /></h3>
         <h4 class="t-h4">Hi, I'm Rachael and in 2016 I evolved...</h4>
-        <div class="t-paragraph">
+        <div id="w-node-_15c0ad17-6902-c94c-fd04-e9ce485b403a-c2eeca10" class="t-paragraph">
           <p>In late 2016 I bought a van for myself and my cat, to work independent of any set location, working remotely and renting a place for the winter, or travelling to a warmer climate.</p>
           <p>So far I've spent 7 years working from anywhere - sometimes from a temporary home. I've found various ways to be location independent, and I blog about it here in an effort to help others break free.</p>
           <p><strong>Receive updates when I publish a new article:</strong></p>
         </div>
       </div>
-      <div id="w-node-form-placeholder">
+      <div id="w-node-a178448b-35b8-c8cb-db4c-af98fa1532e1-c2eeca10">
         <!-- TODO: replace with Kit.com embed -->
         <div class="travel-form-placeholder">
           <p>Email sign-up form coming soon</p>
@@ -57,63 +66,35 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
   <!-- ARTICLES -->
   <section class="section-61">
     <div class="w-layout-blockcontainer container-1241 w-container">
-      <div>
-        <h2 class="heading-86"><strong class="t-h2">How to Work from Anywhere</strong></h2>
+      <div id="w-node-a2914861-2d1d-0e8f-88ca-7755f1e39608-c2eeca10">
+        <h2 id="w-node-_4d9a8892-b4f7-0b81-daee-d2c56301f289-c2eeca10" class="heading-86"><strong class="t-h2">How to Work from Anywhere</strong></h2>
         <h2 class="t-h5"><strong>#LocationIndependent #DigitalNomad #Make Money from anywhere</strong></h2>
       </div>
-      <div>
-        <div class="w-dyn-list">
-          <div role="list" class="w-dyn-items w-row">
-
-            <div role="listitem" class="w-dyn-item w-col w-col-4">
-              <span class="w-inline-block">
-                <img loading="lazy" alt="Living with No Address"
-                  src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6984434c59ccddb1acd8de18_Water%20house-p-500.webp"
-                  srcset="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6984434c59ccddb1acd8de18_Water%20house-p-500.webp 500w, https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6984434c59ccddb1acd8de18_Water%20house-p-800.webp 800w"
-                  sizes="(max-width: 479px) 44vw, (max-width: 767px) 46vw, 140px"
-                />
-                <h3 class="t-h3">Living with No Address</h3>
-              </span>
-            </div>
-
-            <div role="listitem" class="w-dyn-item w-col w-col-4">
-              <span class="w-inline-block">
-                <img loading="lazy" alt="What it's really like in Germany for an immigrant or expat"
-                  src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6824376dcef1c6f1ae58d395_Frame%20243.png"
-                />
-                <h3 class="t-h3">What it's really like in Germany for an immigrant or expat</h3>
-              </span>
-            </div>
-
-            <div role="listitem" class="w-dyn-item w-col w-col-4">
-              <span class="w-inline-block">
-                <img loading="lazy" alt="How to buy a property with cash &amp; no mortgage &amp; be free"
-                  src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6718c17dca8c1ca6341830e1_Screenshot%202024-10-23%20at%2011.27.09-p-500.png"
-                  srcset="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6718c17dca8c1ca6341830e1_Screenshot%202024-10-23%20at%2011.27.09-p-500.png 500w, https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/6718c17dca8c1ca6341830e1_Screenshot%202024-10-23%20at%2011.27.09-p-800.png 800w"
-                  sizes="(max-width: 479px) 44vw, (max-width: 767px) 46vw, 140px"
-                />
-                <h3 class="t-h3">How to buy a property with cash &amp; no mortgage &amp; be free</h3>
-              </span>
-            </div>
-
-            <div role="listitem" class="w-dyn-item w-col w-col-4">
-              <span class="w-inline-block">
-                <img loading="lazy" alt="Remote Working from Cefalù, Sicily"
-                  src="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/65b680ae7b861e9ce1a4796d_Cefalu%20thumb-p-500.jpg"
-                  srcset="https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/65b680ae7b861e9ce1a4796d_Cefalu%20thumb-p-500.jpg 500w, https://cdn.prod.website-files.com/5f6c7756eae6eb60a54c6c38/65b680ae7b861e9ce1a4796d_Cefalu%20thumb-p-800.jpg 800w"
-                  sizes="(max-width: 479px) 44vw, (max-width: 767px) 46vw, 140px"
-                />
-                <h3 class="t-h3">Remote Working from Cefalù, Sicily</h3>
-              </span>
-            </div>
-
-          </div>
-        </div>
+      <div id="w-node-_904553c2-e74d-4cee-fc67-0fb3621e4f94-c2eeca10" style="grid-column: 1 / -1;">
+        <ul class="t-article-grid">
+          {sorted.map(a => {
+            const d = a.data;
+            const img = d.thumbnailImage || d.heroImage || null;
+            return (
+              <li class="t-article-card">
+                <a href={`/travel/${d.slug}/`} class="t-article-card__link">
+                  {img && <img src={img} alt={d.title} class="t-article-card__img" loading="lazy" />}
+                  {!img && <div class="t-article-card__img t-article-card__img--placeholder"></div>}
+                  <div class="t-article-card__body">
+                    <h3 class="t-article-card__title">{d.title}</h3>
+                    {d.description && <p class="t-article-card__desc">{d.description}</p>}
+                    <span class="t-article-card__cta">Read article →</span>
+                  </div>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- INSTAGRAM PLACEHOLDER -->
+  <!-- INSTAGRAM -->
   <section class="section-63" style="padding: 3rem 0 1rem;">
     <div class="w-layout-blockcontainer w-container">
       <h2 class="heading-86"><strong class="t-h2">Instagram — What's happening now</strong></h2>
@@ -122,9 +103,6 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
   <section class="section-62" style="padding: 1rem 0 4rem;">
     <div class="w-layout-blockcontainer w-container">
       <!-- TODO: replace with Behold (behold.so) Instagram widget -->
-      <!-- 1. Sign up at behold.so, connect your Instagram account -->
-      <!-- 2. Create a widget and copy the embed code -->
-      <!-- 3. Replace this placeholder with the <behold-widget feed-id="..."> tag -->
       <div class="travel-instagram-placeholder">
         <p>Instagram feed — connect via <a href="https://behold.so" target="_blank" rel="noopener">Behold</a></p>
       </div>
@@ -212,4 +190,66 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
 .travel-instagram-placeholder a {
   color: #048ba2;
 }
+
+.t-article-grid {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.t-article-card { display: flex; }
+.t-article-card__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e0eded;
+  transition: box-shadow 0.18s;
+  width: 100%;
+}
+.t-article-card__link:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.10); opacity: 1; }
+.t-article-card__img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+.t-article-card__img--placeholder { background: #e0eded; height: 180px; }
+.t-article-card__body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.t-article-card__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #233030;
+  margin: 0;
+  line-height: 1.35;
+}
+.t-article-card__link:hover .t-article-card__title { color: #3ba89c; }
+.t-article-card__desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+.t-article-card__cta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #3ba89c;
+  margin-top: 4px;
+}
+@media (max-width: 991px) { .t-article-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 767px) { .t-article-grid { grid-template-columns: 1fr; } }
 </style>
