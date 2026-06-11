@@ -4,8 +4,8 @@ slug: "not-getting-interviews-ux-product-design"
 date: "2023-04-24"
 description: "As Product or UX Designers, we are designing an experience, a thing which happens between the temples of our target customer - this can't be communicated by flat images of UI design in postcard-sized boxes"
 introHeading: "As Product or UX Designers, we are designing an experience, a thing which happens between the temples of our target customer - this can't be communicated by flat images of UI design in postcard-sized boxes"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64e4af5d7413a3b9710d8e81_DreamShaper_v6_a_female_product_designer_at_a_laptop_surrounde_0%20copy.jpg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64e4ae8a6be0619f071aeba8_why%20not%20interviews.png"
+heroImage: "/images/webflow-cdn/not-getting-interviews-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/not-getting-interviews-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

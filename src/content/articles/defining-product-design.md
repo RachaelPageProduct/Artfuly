@@ -4,8 +4,8 @@ slug: "defining-product-design"
 date: "2024-03-14"
 description: "Digital product design plays a crucial role in shaping the way people interact with technology"
 introHeading: "Digital product design plays a crucial role in shaping the way people interact with technology"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65f2e5df8025472e9237ec52_Default_Prompt_1_Photorealistic_ImageDigital_Product_Design_A_1.jpg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65f2e5df8025472e9237ec52_Default_Prompt_1_Photorealistic_ImageDigital_Product_Design_A_1.jpg"
+heroImage: "/images/webflow-cdn/defining-product-design-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/defining-product-design-hero.jpg"
 published: true
 featured: false
 featuredPortfolio: false

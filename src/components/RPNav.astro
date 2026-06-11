@@ -114,8 +114,8 @@
     if (!sub) return;
     let timer;
     item.addEventListener('mouseenter', () => { clearTimeout(timer); sub.style.display = 'block'; });
-    item.addEventListener('mouseleave', () => { timer = setTimeout(() => sub.style.display = '', 200); });
+    item.addEventListener('mouseleave', () => { timer = setTimeout(() => sub.style.display = 'none', 200); });
     sub.addEventListener('mouseenter', () => clearTimeout(timer));
-    sub.addEventListener('mouseleave', () => { timer = setTimeout(() => sub.style.display = '', 200); });
+    sub.addEventListener('mouseleave', () => { timer = setTimeout(() => sub.style.display = 'none', 200); });
   });
 </script>

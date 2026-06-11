@@ -4,8 +4,8 @@ slug: "designing-the-ideal-user-experience"
 date: "2023-04-24"
 description: "As Product or UX Designers, we are designing an experience, a thing which happens between the temples of our target customer. We should start off with blue-sky thinking to design a truly ground-breaking experience."
 introHeading: "As Product or UX Designers, we are designing an experience, a thing which happens between the temples of our target customer. We should start off with blue-sky thinking to design a truly ground-breaking experience."
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64463636e4e012ffe2b48ea5_ux%20thinking.jpg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/644636061c65a36277ad0cb1_ux%20thinking.png"
+heroImage: "/images/webflow-cdn/ux-thinking-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/ux-thinking-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

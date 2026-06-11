@@ -4,8 +4,8 @@ slug: "designer-salary"
 date: "2023-04-26"
 description: "A UI/UX designer salary is the same as talking about a Product Designer salary because they're usually interchangeable job specs"
 introHeading: "A UI/UX designer salary is the same as talking about a Product Designer salary because they're usually interchangeable job specs"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/644929d753ef66fc96c77a30_domenico-loia-hGV2TfOh0ns-unsplash.jpg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/644929d34a39430067306fb3_salary.png"
+heroImage: "/images/webflow-cdn/designer-salary-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/designer-salary-thumb.png"
 published: false
 featured: true
 featuredPortfolio: false

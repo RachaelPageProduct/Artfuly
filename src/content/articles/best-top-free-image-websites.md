@@ -4,8 +4,8 @@ slug: "best-top-free-image-websites"
 date: "2023-06-27"
 description: "As UX or Product Designers, whilst designing we often need a quick placeholder image which conveys the meaning of the page for user testing purposes even though it may well be replaced later by the marketing team."
 introHeading: "As UX or Product Designers, whilst designing we often need a quick placeholder image which conveys the meaning of the page for user testing purposes even though it may well be replaced later by the marketing team."
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/649a8d8138c13a6b95b6edf6_Main%20artfuly%20blog%20top%20image%20sites%20copy.jpeg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/649a8c85263cf1e100936a21_Thumb%20artfuly%20blog%20top%20free%20image%20sites.png"
+heroImage: "/images/webflow-cdn/free-image-sites-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/free-image-sites-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

@@ -4,8 +4,8 @@ slug: "how-to-get-organic-seo-traffic-fast"
 date: "2021-06-28"
 description: "Acquire a strong domain name with built in SEO to quickly gain SEO traction and leads"
 introHeading: "Acquire a strong domain name with built in SEO to quickly gain SEO traction and leads"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/60d997f8b7f3fe1bc5a6d9ab_Artboard%20%E2%80%93%2011.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/60d9988ecf553d631eca1b19_Artboard%20%E2%80%93%2011.png"
+heroImage: "/images/webflow-cdn/seo-traffic-hero.png"
+thumbnailImage: "/images/webflow-cdn/seo-traffic-thumb.png"
 published: false
 featured: false
 featuredPortfolio: false

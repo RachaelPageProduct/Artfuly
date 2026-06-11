@@ -4,8 +4,8 @@ slug: "exceptional-product-design-ux-portfolios"
 date: "2024-02-01"
 description: "Portfolio homepages and case study pages: the GOOD and the BAD"
 introHeading: "Portfolio homepages and case study pages: the GOOD and the BAD"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65bb953eaed0115e8eadd84c_Mask%20group-1.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65bb95474de62280d4a5e851_Mask%20group.png"
+heroImage: "/images/webflow-cdn/portfolios-hero.png"
+thumbnailImage: "/images/webflow-cdn/portfolios-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

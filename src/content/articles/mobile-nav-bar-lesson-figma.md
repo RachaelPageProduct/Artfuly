@@ -4,8 +4,8 @@ slug: "mobile-nav-bar-lesson-figma"
 date: "2023-09-01"
 description: "Save time and grab this pre-built mobile nav-bar component. Build using the new figma variants - you can replace text, icons and colours as you need to, and the file includes detailed instructions so you can learn to do this yourself easily."
 introHeading: "Save time and grab this pre-built mobile nav-bar component. Build using the new figma variants - you can replace text, icons and colours as you need to, and the file includes detailed instructions so you can learn to do this yourself easily."
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64f1ae3b4d3c9690e9571cd3_Phone%20on%20blue%20header.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64f1ae375dfecc2bdcd4012e_Phone%20on%20blue%20Thumb.png"
+heroImage: "/images/webflow-cdn/mobile-nav-hero.png"
+thumbnailImage: "/images/webflow-cdn/mobile-nav-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

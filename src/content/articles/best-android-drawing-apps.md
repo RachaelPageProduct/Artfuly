@@ -4,8 +4,8 @@ slug: "best-android-drawing-apps"
 date: "2023-01-02"
 description: "The best android drawing apps for graphic design, UI Design & Product Design and artwork in 2023"
 introHeading: "The best android drawing apps for graphic design, UI Design & Product Design and artwork in 2023"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/639f510fe9b474926d33c7d6_loow-invernissi-bT10uVCKZlA-unsplash.jpg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/639f4cc57670a11a073ef456_Mask%20group-3.png"
+heroImage: "/images/webflow-cdn/android-drawing-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/android-drawing-thumb.png"
 published: false
 featured: false
 featuredPortfolio: false

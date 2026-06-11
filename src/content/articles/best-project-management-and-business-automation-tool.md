@@ -4,8 +4,8 @@ slug: "best-project-management-and-business-automation-tool"
 date: "2021-07-28"
 description: "An overview of how Asana is used for individual freelance task management, small business team and project management and process automation"
 introHeading: "An overview of how Asana is used for individual freelance task management, small business team and project management and process automation"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/61012ab5ac028add3be22e2a_Artboard%20%E2%80%93%2029.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/61012a8f7eb6bbe33d00f8a6_Asana%20blog.png"
+heroImage: "/images/webflow-cdn/project-management-hero.png"
+thumbnailImage: "/images/webflow-cdn/project-management-thumb.png"
 published: false
 featured: false
 featuredPortfolio: false

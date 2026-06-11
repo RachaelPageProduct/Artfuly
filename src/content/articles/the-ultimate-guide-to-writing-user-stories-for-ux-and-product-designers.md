@@ -4,8 +4,8 @@ slug: "the-ultimate-guide-to-writing-user-stories-for-ux-and-product-designers"
 date: "2024-01-22"
 description: "A user story is a simple statement that can be used at various points in the design thinking process"
 introHeading: "A user story is a simple statement that can be used at various points in the design thinking process"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65ae7adb68f18aadcd3d0c60_user%20stories%20main.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65ae69971febf13351bd67fa_user%20stories%20thumb.png"
+heroImage: "/images/webflow-cdn/user-stories-hero.png"
+thumbnailImage: "/images/webflow-cdn/user-stories-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

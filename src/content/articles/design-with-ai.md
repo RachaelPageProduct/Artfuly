@@ -4,8 +4,8 @@ slug: "design-with-ai"
 date: "2022-12-17"
 description: "AI is a tool which we can use to enhance our design efforts!"
 introHeading: "AI is a tool which we can use to enhance our design efforts!"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/641739c721beab474dd7de29_dragon.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/639f4c3f406f2fa65aa5f0ab_Mask%20group-5.png"
+heroImage: "/images/webflow-cdn/design-with-ai-hero.png"
+thumbnailImage: "/images/webflow-cdn/design-with-ai-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

@@ -4,8 +4,8 @@ slug: "colours-palettes-ux-product-design"
 date: "2024-02-14"
 description: "The mystery of how to choose colours in digital design is unravelled here by the use of some basic principles, tools & tricks"
 introHeading: "The mystery of how to choose colours in digital design is unravelled here by the use of some basic principles, tools & tricks"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65cc8496b9fb6b0036da0cfd_Screenshot%202024-02-14%20at%2010.14.53.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65cc8496b9fb6b0036da0cfd_Screenshot%202024-02-14%20at%2010.14.53.png"
+heroImage: "/images/webflow-cdn/colour-palettes-hero.png"
+thumbnailImage: "/images/webflow-cdn/colour-palettes-hero.png"
 published: true
 featured: false
 featuredPortfolio: false

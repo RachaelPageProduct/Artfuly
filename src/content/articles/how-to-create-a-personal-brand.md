@@ -4,8 +4,8 @@ slug: "how-to-create-a-personal-brand"
 date: "2021-08-19"
 description: "I interviewed personal brand expert Abigail K to find out what exactly is a personal brand, and how do you go about creating a successful one."
 introHeading: "I interviewed personal brand expert Abigail K to find out what exactly is a personal brand, and how do you go about creating a successful one."
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/611e1fbd851525cb60a83900_abigailpc.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/611e1fe12c744015c7bd7f05_abigailpc%20copy.png"
+heroImage: "/images/webflow-cdn/personal-brand-hero.png"
+thumbnailImage: "/images/webflow-cdn/personal-brand-thumb.png"
 published: false
 featured: false
 featuredPortfolio: false

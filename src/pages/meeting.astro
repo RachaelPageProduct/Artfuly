@@ -3,7 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Book a Meeting — Rachael Page" description="Book a 60-minute meeting with Rachael Page, product designer.">
-  <div class="meeting-page">
+  <div class="meeting-hero">
+    <div class="meeting-page">
     <h1>Book a meeting</h1>
     <p class="meeting-sub">A calendar should load below — if it doesn't, <a href="https://calendly.com/rachael_page/60min" target="_blank" rel="noopener">click here to open it directly</a>.</p>
 
@@ -12,9 +13,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <!-- Calendly inline widget end -->
   </div>
+  </div>
 </BaseLayout>
 
 <style>
+  .meeting-hero {
+    background-color: #ceeaeb;
+    min-height: 100vh;
+    padding: 1px 0;
+  }
   .meeting-page {
     max-width: 900px;
     margin: 0 auto;
@@ -29,7 +36,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .meeting-sub {
     font-size: 0.95rem;
-    color: #666;
+    color: #444;
     margin-bottom: 2rem;
   }
   .meeting-sub a {

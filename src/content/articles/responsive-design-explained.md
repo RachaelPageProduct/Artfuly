@@ -4,8 +4,8 @@ slug: "responsive-design-explained"
 date: "2024-01-29"
 description: "As a product, UX or web designer, it's important for you to know this tricky concept"
 introHeading: "As a product, UX or web designer, it's important for you to know this tricky concept"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65b79e427b3550caa2855cf7_Responsive%20design%20YT%20thumb.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/65b7a363959f003560624b16_responsive%20design%20article.png"
+heroImage: "/images/webflow-cdn/responsive-design-hero.png"
+thumbnailImage: "/images/webflow-cdn/responsive-design-thumb.png"
 published: true
 featured: true
 featuredPortfolio: false

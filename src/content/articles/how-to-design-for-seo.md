@@ -4,8 +4,8 @@ slug: "how-to-design-for-seo"
 date: "2021-07-29"
 description: "SEO appears to be a complex thing, but here I break it down into a simple process to follow"
 introHeading: "SEO appears to be a complex thing, but here I break it down into a simple process to follow"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64e4a4caefd6af1facc67f9f_Absolute_Reality_v16_how_to_become_a_UX_or_Product_Designer_1.jpg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64e4a54c3f593880458b4c02_design%20for%20seo%20thumb.png"
+heroImage: "/images/webflow-cdn/design-for-seo-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/design-for-seo-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

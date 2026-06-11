@@ -4,8 +4,8 @@ slug: "hot-location-independent-domains-for-sale"
 date: "2021-06-30"
 description: "The location independent working lifestyle is on the rise!"
 introHeading: "The location independent working lifestyle is on the rise!"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/60dca1a1f9e2c71308ed2251_Artboard%20%E2%80%93%2018.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/60dca1bc6fe6020e9bf92cb1_Artboard%20%E2%80%93%2018.png"
+heroImage: "/images/webflow-cdn/domains-for-sale-hero.png"
+thumbnailImage: "/images/webflow-cdn/domains-for-sale-thumb.png"
 published: false
 featured: false
 featuredPortfolio: false

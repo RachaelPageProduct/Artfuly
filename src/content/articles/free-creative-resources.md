@@ -4,8 +4,8 @@ slug: "free-creative-resources"
 date: "2021-06-21"
 description: "Millions of free and licence to use photos, fonts, illustrations"
 introHeading: "Millions of free and licence to use photos, fonts, illustrations"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64e4a8113f593880458f24cd_creative%20resources.jpg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/64e4a7e9af242533993df4bf_creative%20resources%20thumb.png"
+heroImage: "/images/webflow-cdn/free-creative-resources-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/free-creative-resources-thumb.png"
 published: true
 featured: false
 featuredPortfolio: false

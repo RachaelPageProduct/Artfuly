@@ -7,6 +7,8 @@ thumbnailImage: "/images/webflow-cdn/696b7e8d41662fa6f43dcbe6_Frame 251.png"
 published: true
 featured: false
 featuredPortfolio: true
+description: "Fun, creative work you can do from anywhere — and a real way to earn income on your own terms."
+introHeading: "Fun, creative work you can do from anywhere — and a real way to earn income on your own terms."
 ---
 
 <h3>Looking for more income on your own terms?</h3><p>This book helps you quickly create surface pattern designs a.k.a. fabrics, wallpapers, murals and other similar products if you already have design skills. </p><p>If you're looking for a side-hustle, and extra income stream, or even a full-time income job, this is fun work that's client-free, boss-free, doesn't require a commute and lets you work only the hours you want to, when you want to. </p><p></p><h3>Handbook: How to create Wallpaper, Mural &amp; Fabric designs for Spoonflower</h3><p>€9.99</p><p><strong>Get started fast and refer to this handbook when you need help &amp; guidance.</strong></p><p><em>Epub format which reflows.</em></p><p></p><div data-rt-embed-type='true'><script src="https://artfuly.kit.com/commerce.js" async defer></script>

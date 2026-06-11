@@ -4,8 +4,8 @@ slug: "how-to-create-a-business-startup-website"
 date: "2020-12-15"
 description: "How to create, procure or update a website and other digital assets for your business or business idea with advice on digital marketing and local SEO approaches."
 introHeading: "How to create, procure or update a website and other digital assets for your business or business idea with advice on digital marketing and local SEO approaches."
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/60d18d15dbffc09094834366_Artboard%20%E2%80%93%209.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/60d18d15dbffc09094834366_Artboard%20%E2%80%93%209.png"
+heroImage: "/images/webflow-cdn/startup-website-hero.png"
+thumbnailImage: "/images/webflow-cdn/startup-website-hero.png"
 published: false
 featured: false
 featuredPortfolio: false

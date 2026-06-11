@@ -4,8 +4,8 @@ slug: "webdesign-trends-2020"
 date: "2020-12-18"
 description: "Post summary... Post summary... Post summary... Post summary... Post summary... Post summary... Post summary..."
 introHeading: "Post summary... Post summary... Post summary... Post summary... Post summary... Post summary... Post summary..."
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/5fd5174b2a8c8ae93a9d68d3_low-code-no-code-1280w.jpg"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/5fd5174b2a8c8ae93a9d68d3_low-code-no-code-1280w.jpg"
+heroImage: "/images/webflow-cdn/webdesign-trends-hero.jpg"
+thumbnailImage: "/images/webflow-cdn/webdesign-trends-hero.jpg"
 published: false
 featured: false
 featuredPortfolio: false

@@ -4,8 +4,8 @@ slug: "top-ux-resources"
 date: "2021-08-23"
 description: "Over 50 resources for UX students which will be useful throughout your career"
 introHeading: "Over 50 resources for UX students which will be useful throughout your career"
-heroImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/639f53853c2d587ba087ad7a_Screenshot%202022-12-18%20at%2012.02.30.png"
-thumbnailImage: "https://uploads-ssl.webflow.com/5f6c7756eae6eb60a54c6c38/639f4cdd7670a1220d3ef7a2_Mask%20group.png"
+heroImage: "/images/webflow-cdn/top-ux-resources-hero.png"
+thumbnailImage: "/images/webflow-cdn/top-ux-resources-thumb.png"
 published: false
 featured: true
 featuredPortfolio: false
