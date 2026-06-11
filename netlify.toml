@@ -9,6 +9,28 @@
   status = 301
   force = true
 
+# Serve static assets directly on rachaelpage.com (must come BEFORE the catch-all below)
+# Without these, force=true on the catch-all rewrites /_astro/*.css → 404 → unstyled page
+[[redirects]]
+  from = "https://rachaelpage.com/_astro/*"
+  to = "/_astro/:splat"
+  status = 200
+
+[[redirects]]
+  from = "https://rachaelpage.com/styles/*"
+  to = "/styles/:splat"
+  status = 200
+
+[[redirects]]
+  from = "https://rachaelpage.com/images/*"
+  to = "/images/:splat"
+  status = 200
+
+[[redirects]]
+  from = "https://rachaelpage.com/admin/*"
+  to = "/admin/:splat"
+  status = 200
+
 # Rewrite: rachaelpage.com/* → serves /rachael-page/* content
 # URL stays as rachaelpage.com in the browser (status 200 = rewrite, not redirect)
 # Requires rachaelpage.com to be added as a domain alias on this Netlify site
