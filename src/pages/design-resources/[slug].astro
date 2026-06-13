@@ -24,6 +24,26 @@ const relatedArticles = allArticles
 
 <ArtfulyLayout title={`${d.title} | Artfuly`} description={d.description} ogImage={d.heroImage}>
   <script async data-uid="b7b7a29039" src="https://artfuly.kit.com/b7b7a29039/index.js" slot="head"></script>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": d.title,
+    "description": d.description,
+    "image": d.heroImage ? `https://artfuly.com${d.heroImage}` : undefined,
+    "datePublished": d.date,
+    "dateModified": d.date,
+    "url": `https://artfuly.com/design-resources/${d.slug}/`,
+    "author": {
+      "@type": "Person",
+      "name": "Rachael Page",
+      "url": "https://rachaelpage.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Artfuly",
+      "url": "https://artfuly.com"
+    }
+  })} />
 
   <!-- TITLE HERO -->
   <div class="articles-section-top">

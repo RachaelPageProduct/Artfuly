@@ -22,6 +22,18 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
   <link rel="stylesheet" href="/styles/webflow.css" />
   <link rel="stylesheet" href="/styles/artfuly.css" />
   <slot name="head" />
+  <script type="application/ld+json">{JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rachael Page",
+    "jobTitle": "Product Designer & Design Educator",
+    "url": "https://artfuly.com",
+    "sameAs": [
+      "https://rachaelpage.com",
+      "https://www.linkedin.com/in/rachaelpage",
+      "https://www.amazon.com/author/rachael-page"
+    ]
+  })}</script>
   <style></style>
 
   <!-- ShareThis -->
