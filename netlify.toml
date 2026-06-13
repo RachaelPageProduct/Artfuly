@@ -2,10 +2,45 @@
   command = "npm run build"
   publish = "dist"
 
+# Old Webflow artfuly.com work category slugs that changed — must come before catch-all
+[[redirects]]
+  from = "/work/motion-design-animation"
+  to = "/rachael-page/work/motion-design"
+  status = 301
+
+[[redirects]]
+  from = "/work/responsive-websites"
+  to = "/rachael-page/work/ux-design"
+  status = 301
+
+[[redirects]]
+  from = "/work/surface-pattern-design"
+  to = "/rachael-page/work/graphic-design"
+  status = 301
+
+# Old Webflow artfuly.com /work/* paths → new /rachael-page/work/* locations
+[[redirects]]
+  from = "/work/*"
+  to = "/rachael-page/work/:splat"
+  status = 301
+
+# Old Webflow artfuly.com /project/* paths → new /rachael-page/project/* locations
+[[redirects]]
+  from = "/project/*"
+  to = "/rachael-page/project/:splat"
+  status = 301
+
 # Permanent redirect: old /private-tutor-mentor page merged into homepage
 [[redirects]]
   from = "/private-tutor-mentor"
   to = "/"
+  status = 301
+  force = true
+
+# Redirect www.artfuly.com → artfuly.com (canonical)
+[[redirects]]
+  from = "https://www.artfuly.com/*"
+  to = "https://artfuly.com/:splat"
   status = 301
   force = true
 

@@ -22,8 +22,10 @@ const catLabels: Record<string, string> = {
   'strategy': 'Strategy', 'teaching-design': 'Teaching Design', 'ui-design': 'UI Design',
   'ux-design': 'UX Design', 'product-design': 'Product Design', 'development': 'Development',
   'conversion-funnels': 'Conversion Funnels', 'graphic-design': 'Graphic Design',
-  'motion-design': 'Motion Design (Animation)', 'pwa': 'Native Apps & PWAs',
-  'user-research': 'User Research & Testing', 'seo': 'Marketing & SEO',
+  'motion-design': 'Motion Design', 'motion-design-animation': 'Motion Design',
+  'pwa': 'Native Apps & PWAs', 'user-research': 'User Research & Testing',
+  'user-research-testing': 'User Research & Testing', 'seo': 'Marketing & SEO',
+  'responsive-websites': 'UX Design', 'surface-pattern-design': 'Graphic Design',
   'all': 'All Work',
 };
 const catUrl: Record<string, string> = {
@@ -31,8 +33,10 @@ const catUrl: Record<string, string> = {
   'strategy': 'strategy', 'teaching-design': 'development', 'ui-design': 'ui-design',
   'ux-design': 'ux-design', 'product-design': 'product-design', 'development': 'development',
   'conversion-funnels': 'conversion-funnels', 'graphic-design': 'graphic-design',
-  'motion-design': 'motion-design', 'pwa': 'native-apps-pwas',
-  'user-research': 'user-research-testing', 'seo': 'marketing-seo',
+  'motion-design': 'motion-design', 'motion-design-animation': 'motion-design',
+  'pwa': 'native-apps-pwas', 'user-research': 'user-research-testing',
+  'user-research-testing': 'user-research-testing', 'seo': 'marketing-seo',
+  'responsive-websites': 'ux-design', 'surface-pattern-design': 'graphic-design',
 };
 
 // Browse by category pills (bottom of page)
@@ -134,7 +138,7 @@ const buttons = [
             <div class="w-dyn-items" role="list">
               {d.workCategories.map((cat: string) => (
                 <div role="listitem" class="collection-item-12 w-dyn-item">
-                  <a href={`/work/${catUrl[cat] || cat}`} class="r-work-category-pill w-button">
+                  <a href={`/rachael-page/work/${catUrl[cat] || cat}`} class="r-work-category-pill w-button">
                     {catLabels[cat] || cat.replace(/-/g,' ').replace(/\b\w/g,(c:string)=>c.toUpperCase())}
                   </a>
                 </div>
