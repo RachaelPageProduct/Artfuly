@@ -1,5 +1,6 @@
 ---
 title: "How to create engaging visual designs"
+category: "Design Craft"
 slug: "how-to-create-engaging-visual-designs"
 date: "2024-05-30"
 description: "How to create exciting and engaging designs with assets (Images, animations etc)"

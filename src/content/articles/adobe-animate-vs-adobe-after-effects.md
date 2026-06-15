@@ -1,5 +1,6 @@
 ---
 title: "Adobe Animate vs. Adobe After Effects vs Jitter"
+category: "Tools & Software"
 slug: "adobe-animate-vs-adobe-after-effects"
 date: "2025-01-08"
 description: "When you need to create web animations, there are many possible tools and it's important to use the right one for your requirements"

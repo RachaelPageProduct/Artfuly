@@ -1,23 +1,30 @@
 ---
-import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+import ArtfulyLayout from '../../../layouts/ArtfulyLayout.astro';
 import { getCollection } from 'astro:content';
-import ResourcePills from '../../components/ResourcePills.astro';
-import ArticleGrid from '../../components/ArticleGrid.astro';
-import BookPromo from '../../components/BookPromo.astro';
+import ResourcePills from '../../../components/ResourcePills.astro';
+import ArticleGrid from '../../../components/ArticleGrid.astro';
+import { RESOURCE_CATEGORIES } from '../../../data/resourceCategories';
+import BookPromo from '../../../components/BookPromo.astro';
 
+export async function getStaticPaths() {
+  return RESOURCE_CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { cat: c } }));
+}
+
+const { cat } = Astro.props;
 const allArticles = await getCollection('articles');
-// Only show published articles; sort newest first
-const sorted = allArticles.filter(a => a.data.published).sort((a, b) => {
-  if (!a.data.date && !b.data.date) return 0;
-  if (!a.data.date) return 1;
-  if (!b.data.date) return -1;
-  return b.data.date.localeCompare(a.data.date);
-});
+const sorted = allArticles
+  .filter(a => a.data.published && a.data.category === cat.label)
+  .sort((a, b) => {
+    if (!a.data.date && !b.data.date) return 0;
+    if (!a.data.date) return 1;
+    if (!b.data.date) return -1;
+    return b.data.date.localeCompare(a.data.date);
+  });
 ---
 
 <ArtfulyLayout
-  title="Design Resources — Artfuly"
-  description="Free articles, guides and resources for product designers and UX professionals."
+  title={`${cat.label} — Design Resources — Artfuly`}
+  description={`${cat.label} — free articles, guides and resources for product designers and UX professionals.`}
 >
 
   <!-- HERO -->
@@ -29,7 +36,7 @@ const sorted = allArticles.filter(a => a.data.published).sort((a, b) => {
   </div>
 
   <!-- CATEGORY FILTER PILLS -->
-  <ResourcePills active="all" />
+  <ResourcePills active={cat.slug} />
 
   <!-- ARTICLE GRID -->
   <ArticleGrid articles={sorted} />

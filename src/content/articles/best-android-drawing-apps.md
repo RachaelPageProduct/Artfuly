@@ -1,5 +1,6 @@
 ---
 title: "Best Drawing Apps for Android"
+category: "Tools & Software"
 slug: "best-android-drawing-apps"
 date: "2023-01-02"
 description: "The best android drawing apps for graphic design, UI Design & Product Design and artwork in 2023"

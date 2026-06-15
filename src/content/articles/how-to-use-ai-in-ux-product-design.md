@@ -1,5 +1,6 @@
 ---
 title: "How to use AI in UX & Product Design"
+category: "AI"
 slug: "how-to-use-ai-in-ux-product-design"
 published: false
 featured: false

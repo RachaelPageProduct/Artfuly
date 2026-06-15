@@ -1,5 +1,6 @@
 ---
 title: "A list of Exceptional Portfolios: Product Design & UX"
+category: "Portfolios"
 slug: "exceptional-product-design-ux-portfolios"
 date: "2024-02-01"
 description: "Portfolio homepages and case study pages: the GOOD and the BAD"

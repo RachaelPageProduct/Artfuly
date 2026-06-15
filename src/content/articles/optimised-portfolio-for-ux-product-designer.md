@@ -1,5 +1,6 @@
 ---
 title: "Figma Design Portfolio Template for UX, UI & Product Designers"
+category: "Portfolios"
 slug: "optimised-portfolio-for-ux-product-designer"
 date: "2023-08-21"
 description: "Save yourself hours by downloading these figma wireframes, and gain clarity with content guidelines for your new design portfolio"

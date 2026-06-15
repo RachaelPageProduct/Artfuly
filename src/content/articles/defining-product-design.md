@@ -1,5 +1,6 @@
 ---
 title: "What is Digital Product Design?"
+category: "Design Craft"
 slug: "defining-product-design"
 date: "2024-03-14"
 description: "Digital product design plays a crucial role in shaping the way people interact with technology"

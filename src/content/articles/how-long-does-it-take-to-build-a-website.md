@@ -1,5 +1,6 @@
 ---
 title: "How long does it take to build a website"
+category: "Tools & Software"
 slug: "how-long-does-it-take-to-build-a-website"
 published: false
 featured: false

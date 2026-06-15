@@ -1,5 +1,6 @@
 ---
 title: "Books for UX & Product Designers"
+category: "Design Craft"
 slug: "books-for-ux-product-designers"
 date: "2024-02-05"
 published: false

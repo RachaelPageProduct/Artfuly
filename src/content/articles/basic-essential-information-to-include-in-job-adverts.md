@@ -1,5 +1,6 @@
 ---
 title: "Basic Essential information to include in job adverts"
+category: "Careers & Hiring"
 slug: "basic-essential-information-to-include-in-job-adverts"
 date: "2025-05-13"
 description: "Much of the current angst surrounding job applications is completely avoidable with effective communication. Start the conversation with these essentials and avoid being inundated with applications"

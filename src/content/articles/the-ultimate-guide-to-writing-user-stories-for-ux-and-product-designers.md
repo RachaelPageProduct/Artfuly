@@ -1,5 +1,6 @@
 ---
 title: "The Ultimate Guide to Writing User Stories for UX and Product Designers"
+category: "Design Craft"
 slug: "the-ultimate-guide-to-writing-user-stories-for-ux-and-product-designers"
 date: "2024-01-22"
 description: "A user story is a simple statement that can be used at various points in the design thinking process"

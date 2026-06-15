@@ -1,5 +1,6 @@
 ---
 title: "The Best Top Free Image Websites for UX & Product Designers"
+category: "Tools & Software"
 slug: "best-top-free-image-websites"
 date: "2023-06-27"
 description: "As UX or Product Designers, whilst designing we often need a quick placeholder image which conveys the meaning of the page for user testing purposes even though it may well be replaced later by the marketing team."

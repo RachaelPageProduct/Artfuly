@@ -1,5 +1,6 @@
 ---
 title: "Why good UX isn't measured in clicks"
+category: "Design Craft"
 slug: "good-ux-isnt-measured-in-clicks"
 date: "2025-01-09"
 description: "Sometimes clients, or people who think they know about UX will claim that less clicks = good UX, but this is an oversimplification and an assumption that just doesn't stand the test of logic."

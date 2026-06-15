@@ -1,5 +1,6 @@
 ---
 title: "Best Portfolio Builders for UX, UI & Product Designers"
+category: "Portfolios"
 slug: "best-portfolio-builders"
 date: "2023-04-18"
 description: "Compare to find the best website builder to create a beautiful portfolio based on YOUR needs and skill levels."

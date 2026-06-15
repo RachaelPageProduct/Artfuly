@@ -1,5 +1,6 @@
 ---
 title: "Real Designers Spotlight"
+category: "Careers & Hiring"
 slug: "real-designers-spotlight"
 date: "2024-02-08"
 description: "Martin Cooper - Inventor of the mobile phone"

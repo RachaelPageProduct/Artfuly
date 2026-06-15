@@ -1,5 +1,6 @@
 ---
 title: "UX Designer Salary / Product Designer Salary"
+category: "Careers & Hiring"
 slug: "designer-salary"
 date: "2023-04-26"
 description: "A UI/UX designer salary is the same as talking about a Product Designer salary because they're usually interchangeable job specs"

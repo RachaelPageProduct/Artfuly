@@ -1,5 +1,6 @@
 ---
 title: "50+ Top UX & UI Resources"
+category: "Tools & Software"
 slug: "top-ux-resources"
 date: "2021-08-23"
 description: "Over 50 resources for UX students which will be useful throughout your career"

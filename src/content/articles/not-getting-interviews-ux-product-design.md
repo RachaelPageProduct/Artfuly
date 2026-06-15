@@ -1,5 +1,6 @@
 ---
 title: "Why you're not getting interviews & job offers in UX & Product Design"
+category: "Careers & Hiring"
 slug: "not-getting-interviews-ux-product-design"
 date: "2023-04-24"
 description: "As Product or UX Designers, we are designing an experience, a thing which happens between the temples of our target customer - this can't be communicated by flat images of UI design in postcard-sized boxes"

@@ -1,5 +1,6 @@
 ---
 title: "Free creative resources"
+category: "Tools & Software"
 slug: "free-creative-resources"
 date: "2021-06-21"
 description: "Millions of free and licence to use photos, fonts, illustrations"

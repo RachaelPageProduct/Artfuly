@@ -1,5 +1,6 @@
 ---
 title: "How to Become a UX, UI or Product Designer"
+category: "Careers & Hiring"
 slug: "how-to-become-a-ux-or-product-designer"
 date: "2023-08-22"
 description: "Are you fascinated by the interaction between humans and technology? Do you often find yourself critiquing the user experience of apps and websites? If the answer is yes, then you might just be cut out to become a UX (User Experience) or Product Designer."

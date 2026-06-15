@@ -65,8 +65,12 @@ metaDescription:
 - [x] Wave white-strip fix: `min-height: 350px` on `.section-11`
 - [x] Email CTA text: right-aligned on desktop (`.white.right` in artfuly.css)
 - [x] "Send Video Tutorial" button text on lead magnets section
+- [x] Design Resources pills — 6-category filter (Careers & Hiring · Portfolios · Tools & Software · Design Craft · AI · SEO & Marketing). `category` frontmatter on all 54 articles; page-based routes at `/design-resources/category/[slug]/`; shared `ResourcePills.astro` + `ArticleGrid.astro`; category list in `src/data/resourceCategories.ts`
 
 ## What's still to do
+- [ ] Rebrandly — brand the remaining Top Resources links next month (free plan = 25 new links/mo; quota used up this period, resets ~20 Jun): **Claude Design**, OBS Studio, Blobbb, Convert Case, Ultimate Google Font Pairings, Colour Theory article, Patagonia Action Works, Catchafire, + 5 books (Design of Everyday Things, Don't Make Me Think, Sprint, Lean UX, Field Guide to HCD). Then repoint those URLs in `src/data/topResources.ts`.
+- [x] Top Resources tool — rebuild the old Webflow "Top UX Resources" natively as a filterable directory at root `/top-ux-resources` (preserve URL for SEO), featured as a card in `/tools`. Uses the scaffolded `resources` content collection. Curate the 62 live entries (prune 4× Adobe XD, Sketch, dead links, pirated free-PDF book links → ~45) and swap in affiliate links (see memory `reference-affiliate-links`)
+- [x] Spoonflower book promo section — on `/design-resources` + `/tools`: book cover + "client-free, commute-free, work-from-anywhere" angle, linking to **`https://artfuly.click/book-spoonflower`** (branded short link → Amazon Kindle / KDP) — NOT the Kit epub (KDP chosen to protect distribution / DRM)
 - [ ] Verify footer gap / wave overlap looks correct on live browser (last change: section-12 margin-top: -120px — user hadn't confirmed yet)
 - [ ] `/private-tutor-mentor` — redirect to artfuly.com (same content, SEO redirect only, no page needed)
 - [ ] `/booking` and `/booking-mentorship` pages (Stripe payment links needed)

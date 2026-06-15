@@ -1,5 +1,6 @@
 ---
 title: "Interactive prototype embed"
+category: "Portfolios"
 slug: "how-to-embed-a-clickable-prototype-into-a-web-page"
 date: "2022-09-05"
 description: "How to embed a clikckable interactive prototype into a web page for your folio!"

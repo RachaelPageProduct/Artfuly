@@ -1,0 +1,52 @@
+---
+import { RESOURCE_CATEGORIES } from '../data/resourceCategories';
+
+interface Props {
+  active?: string; // 'all' or a category slug
+}
+const { active = 'all' } = Astro.props;
+---
+
+<nav class="dr-pills" aria-label="Filter resources by category">
+  <div class="w-container">
+    <div class="dr-pills-row">
+      <a href="/design-resources/" class:list={['dr-pill', { 'dr-pill--active': active === 'all' }]}>All</a>
+      {RESOURCE_CATEGORIES.map((c) => (
+        <a
+          href={`/design-resources/category/${c.slug}/`}
+          class:list={['dr-pill', { 'dr-pill--active': active === c.slug }]}
+        >{c.label}</a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<style>
+  .dr-pills { background: #fff; padding: 30px 0 6px; }
+  .dr-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+  .dr-pill {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #048ba2;
+    background: #fff;
+    border: 1.5px solid #b8e0e3;
+    border-radius: 40px;
+    padding: 7px 16px;
+    text-decoration: none;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .dr-pill:hover { background: #e6f4f4; border-color: #3ba89c; }
+  .dr-pill--active { color: #fff; background: #048ba2; border-color: #048ba2; }
+  @media screen and (max-width: 600px) {
+    .dr-pills-row { justify-content: flex-start; }
+  }
+</style>

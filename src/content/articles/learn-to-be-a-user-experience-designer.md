@@ -1,5 +1,6 @@
 ---
 title: "10% off - Career Foundry UX Course"
+category: "Careers & Hiring"
 slug: "learn-to-be-a-user-experience-designer"
 date: "2021-07-02"
 description: "Learn to be a UX Designer and create your online folio during the course!"

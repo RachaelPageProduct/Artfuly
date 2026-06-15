@@ -1,5 +1,6 @@
 ---
 title: "How to design for SEO"
+category: "SEO & Marketing"
 slug: "how-to-design-for-seo"
 date: "2021-07-29"
 description: "SEO appears to be a complex thing, but here I break it down into a simple process to follow"

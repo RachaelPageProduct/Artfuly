@@ -1,5 +1,6 @@
 ---
 title: "How much does it cost to build a website"
+category: "Tools & Software"
 slug: "how-much-does-it-cost-to-build-a-website"
 date: "2021-01-28"
 published: false

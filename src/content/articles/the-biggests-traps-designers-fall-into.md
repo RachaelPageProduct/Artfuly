@@ -1,5 +1,6 @@
 ---
 title: "The biggest traps Designers fall into"
+category: "Design Craft"
 slug: "the-biggests-traps-designers-fall-into"
 date: "2025-04-16"
 description: "This short read will inform you of designer/artist traps and how to recognise and avoid them"

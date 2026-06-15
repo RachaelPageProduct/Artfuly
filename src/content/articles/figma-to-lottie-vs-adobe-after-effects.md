@@ -1,5 +1,6 @@
 ---
 title: "Figma to Lottie vs. Adobe After Effects"
+category: "Tools & Software"
 slug: "figma-to-lottie-vs-adobe-after-effects"
 date: "2025-01-11"
 description: "Subtle and simple animations are a great way to get your portfolio noticed."

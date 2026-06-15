@@ -1,5 +1,6 @@
 ---
 title: "Hot location independent domains for sale!"
+category: "SEO & Marketing"
 slug: "hot-location-independent-domains-for-sale"
 date: "2021-06-30"
 description: "The location independent working lifestyle is on the rise!"

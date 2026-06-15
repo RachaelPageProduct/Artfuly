@@ -1,0 +1,86 @@
+---
+interface Props {
+  articles?: any[];
+}
+const { articles = [] } = Astro.props;
+---
+
+<section class="dr-listing-section">
+  <div class="w-container">
+    {articles.length === 0 ? (
+      <p class="dr-empty">No articles in this category yet.</p>
+    ) : (
+      <ul class="dr-listing-grid">
+        {articles.map((a) => {
+          const d = a.data;
+          const img = d.thumbnailImage || d.heroImage || null;
+          const displayDate = d.date
+            ? new Date(d.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+            : '';
+          return (
+            <li class="dr-listing-card">
+              <a href={`/design-resources/${d.slug}/`} class="dr-listing-card__link">
+                {img && <img src={img} alt={d.title} class="dr-listing-card__img" loading="lazy" />}
+                {!img && <div class="dr-listing-card__img dr-listing-card__img--placeholder"></div>}
+                <div class="dr-listing-card__body">
+                  {displayDate && <p class="dr-listing-card__date">{displayDate}</p>}
+                  <h2 class="dr-listing-card__title">{d.title}</h2>
+                  {d.description && <p class="dr-listing-card__desc">{d.description}</p>}
+                  <span class="dr-listing-card__cta">Read article →</span>
+                </div>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+  </div>
+</section>
+
+<style>
+  .dr-listing-section { background: #fff; padding: 32px 0 80px; }
+  .dr-listing-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .dr-listing-card { display: flex; }
+  .dr-listing-card__link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e0eded;
+    transition: box-shadow 0.18s;
+  }
+  .dr-listing-card__link:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.10); }
+  .dr-listing-card__img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+  .dr-listing-card__img--placeholder { background: linear-gradient(135deg, #e6f4f4 0%, #c8e8e8 100%); }
+  .dr-listing-card__body { padding: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .dr-listing-card__date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 600; letter-spacing: 1px;
+    color: #888; text-transform: uppercase; margin: 0;
+  }
+  .dr-listing-card__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; font-weight: 700; color: #233030; margin: 0; line-height: 1.35;
+  }
+  .dr-listing-card__link:hover .dr-listing-card__title { color: #3ba89c; }
+  .dr-listing-card__desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; color: #555; line-height: 1.6; margin: 0; flex: 1;
+  }
+  .dr-listing-card__cta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; font-weight: 700; color: #3ba89c; margin-top: 4px;
+  }
+  .dr-empty { font-family: 'Montserrat', sans-serif; color: #555; text-align: center; padding: 60px 0; }
+  @media screen and (max-width: 767px) { .dr-listing-grid { grid-template-columns: 1fr; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) { .dr-listing-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>

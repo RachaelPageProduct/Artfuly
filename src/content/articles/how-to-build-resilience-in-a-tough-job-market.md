@@ -1,5 +1,6 @@
 ---
 title: "How to build resilience in a tough job market"
+category: "Careers & Hiring"
 slug: "how-to-build-resilience-in-a-tough-job-market"
 date: "2025-06-04"
 description: "Linkedin is drowning in posts from people who have been out of work for months and seem to be banging their heads on a brick wall. Do you keep doing the same thing and expecting a different result?"

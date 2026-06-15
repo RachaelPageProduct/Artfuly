@@ -1,0 +1,79 @@
+---
+// Spoonflower book promo — funnels the design audience to Rachael's KDP book.
+// Link is the branded short link → Amazon Kindle (KDP), per the "protect distribution" decision.
+---
+
+<section class="book-promo">
+  <div class="w-container">
+    <div class="book-promo__card">
+      <div class="book-promo__media">
+        <img
+          src="/images/webflow-cdn/696b7e8d41662fa6f43dcbe6_Frame 251.png"
+          alt="How to Create Wallpaper, Mural & Fabric Designs for Spoonflower — book cover"
+          loading="lazy"
+        />
+      </div>
+      <div class="book-promo__body">
+        <p class="book-promo__eyebrow">Earn from your design skills</p>
+        <h2 class="book-promo__title">Client-free, commute-free work — from anywhere</h2>
+        <p class="book-promo__text">
+          Learn to create and sell surface pattern designs — wallpaper, murals and fabric — on Spoonflower.
+          Fun, creative work with no clients, no boss and no commute. Work the hours you want, from wherever you are.
+        </p>
+        <p class="book-promo__meta">Kindle ebook&nbsp;·&nbsp;€9.99</p>
+        <a class="book-promo__cta" href="https://artfuly.click/book-spoonflower" target="_blank" rel="noopener">
+          Get the book&nbsp;→
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .book-promo { background: #fff; padding: 8px 0 72px; }
+  .book-promo__card {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    max-width: 960px;
+    margin: 0 auto;
+    background: #f1f9f9;
+    border: 1px solid #d6ebec;
+    border-radius: 12px;
+    padding: 36px 44px;
+  }
+  .book-promo__media { flex: 0 0 190px; }
+  .book-promo__media img { width: 100%; height: auto; display: block; }
+  .book-promo__body { flex: 1; min-width: 0; }
+  .book-promo__eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: #048ba2; margin: 0 0 8px;
+  }
+  .book-promo__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px; font-weight: 800; line-height: 1.25; color: #233030; margin: 0 0 12px;
+  }
+  .book-promo__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px; line-height: 1.6; color: #444; margin: 0 0 14px; max-width: 56ch;
+  }
+  .book-promo__meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; font-weight: 700; color: #048ba2; margin: 0 0 18px;
+  }
+  .book-promo__cta {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; font-weight: 700;
+    color: #fff; background: #048ba2;
+    border-radius: 40px; padding: 12px 26px; text-decoration: none;
+    transition: background 0.15s;
+  }
+  .book-promo__cta:hover { background: #036f81; color: #fff; }
+  @media screen and (max-width: 720px) {
+    .book-promo__card { flex-direction: column; text-align: center; gap: 24px; padding: 30px 22px; }
+    .book-promo__media { flex-basis: auto; max-width: 170px; }
+    .book-promo__text { max-width: none; }
+  }
+</style>

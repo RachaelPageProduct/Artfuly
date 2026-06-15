@@ -1,5 +1,6 @@
 ---
 title: "Designing the ideal User Experience"
+category: "Design Craft"
 slug: "designing-the-ideal-user-experience"
 date: "2023-04-24"
 description: "As Product or UX Designers, we are designing an experience, a thing which happens between the temples of our target customer. We should start off with blue-sky thinking to design a truly ground-breaking experience."

@@ -1,5 +1,6 @@
 ---
 title: "How to get the most survey replies for the least cost"
+category: "Design Craft"
 slug: "how-to-get-the-most-survey-replies-for-the-least-cost"
 date: "2025-03-11"
 description: "You want to do User Research, to include a survey: How do you encourage responses without paying a fortune to a user research company, and avoid paying for each participant?"

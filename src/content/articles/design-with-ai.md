@@ -1,5 +1,6 @@
 ---
 title: "Harness the power of AI for your design work"
+category: "AI"
 slug: "design-with-ai"
 date: "2022-12-17"
 description: "AI is a tool which we can use to enhance our design efforts!"

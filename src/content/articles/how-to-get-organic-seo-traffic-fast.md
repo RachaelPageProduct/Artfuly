@@ -1,5 +1,6 @@
 ---
 title: "How to get organic SEO traffic - Fast!"
+category: "SEO & Marketing"
 slug: "how-to-get-organic-seo-traffic-fast"
 date: "2021-06-28"
 description: "Acquire a strong domain name with built in SEO to quickly gain SEO traction and leads"

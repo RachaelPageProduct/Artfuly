@@ -1,5 +1,6 @@
 ---
 title: "How to create a portfolio to suit everyone"
+category: "Portfolios"
 slug: "how-to-create-a-portfolio-to-suit-everyone"
 date: "2025-01-09"
 description: "For designers it's an age-old problem that every man and his dog will give you conflicting advice on how your portfolio should be - here I set out the solution to be all things to all people"

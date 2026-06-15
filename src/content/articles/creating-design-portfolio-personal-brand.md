@@ -1,5 +1,6 @@
 ---
 title: "Creating a new design portfolio personal brand"
+category: "Portfolios"
 slug: "creating-design-portfolio-personal-brand"
 date: "2025-01-13"
 description: "'To have a good idea, you need to generate a lot of bad ideas first'"

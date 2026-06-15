@@ -1,5 +1,6 @@
 ---
 title: "How to put Animations into your design portfolio"
+category: "Portfolios"
 slug: "jitter-vs-figma-to-lottie-files"
 date: "2025-01-11"
 description: "Creating animations of UI for demonstration purposes on a marketing website, or for your own portfolio is technically much easier than it used to be."

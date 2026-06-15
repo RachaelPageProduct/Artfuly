@@ -1,5 +1,6 @@
 ---
 title: "Pre-built Mobile Nav Bar & Lesson (Figma)"
+category: "Design Craft"
 slug: "mobile-nav-bar-lesson-figma"
 date: "2023-09-01"
 description: "Save time and grab this pre-built mobile nav-bar component. Build using the new figma variants - you can replace text, icons and colours as you need to, and the file includes detailed instructions so you can learn to do this yourself easily."

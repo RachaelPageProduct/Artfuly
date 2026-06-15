@@ -1,5 +1,6 @@
 ---
 title: "Responsive Design Explained on a live webpage & video tutorial"
+category: "Design Craft"
 slug: "responsive-design-explained"
 date: "2024-01-29"
 description: "As a product, UX or web designer, it's important for you to know this tricky concept"

@@ -1,5 +1,6 @@
 ---
 title: "Best UI Kits in Figma"
+category: "Tools & Software"
 slug: "best-ui-kits-in-figma"
 date: "2022-09-14"
 description: "Being a successful designer is all about workflow optimisation to save time"

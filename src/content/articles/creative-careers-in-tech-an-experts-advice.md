@@ -1,5 +1,6 @@
 ---
 title: "Creative Careers in Tech: An Expert’s Advice [for Career Foundry]"
+category: "Careers & Hiring"
 slug: "creative-careers-in-tech-an-experts-advice"
 date: "2024-03-25"
 description: "What it's like to have a creative tech career, qualities required and how to pick a tech career path based on your own personal traits"

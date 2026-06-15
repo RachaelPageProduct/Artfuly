@@ -1,5 +1,6 @@
 ---
 title: "How to deflect 'Design Challenges'"
+category: "Careers & Hiring"
 slug: "how-to-deflect-design-challenges"
 date: "2025-01-09"
 description: "Junior designers beware, this unethical recruiting practice is insidious"

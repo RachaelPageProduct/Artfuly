@@ -1,5 +1,6 @@
 ---
 title: "Best project management and business automation tool"
+category: "Tools & Software"
 slug: "best-project-management-and-business-automation-tool"
 date: "2021-07-28"
 description: "An overview of how Asana is used for individual freelance task management, small business team and project management and process automation"

@@ -1,5 +1,6 @@
 ---
 title: "How to create a business or startup website"
+category: "Tools & Software"
 slug: "how-to-create-a-business-startup-website"
 date: "2020-12-15"
 description: "How to create, procure or update a website and other digital assets for your business or business idea with advice on digital marketing and local SEO approaches."

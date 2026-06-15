@@ -1,5 +1,6 @@
 ---
 title: "Webdesign trends 2021"
+category: "Design Craft"
 slug: "webdesign-trends-2020"
 date: "2020-12-18"
 description: "Post summary... Post summary... Post summary... Post summary... Post summary... Post summary... Post summary..."

@@ -1,0 +1,173 @@
+---
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+import BookPromo from '../components/BookPromo.astro';
+import { TOOL_CATEGORIES, TOOL_RESOURCES } from '../data/topResources';
+
+const resources = [...TOOL_RESOURCES].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<ArtfulyLayout
+  title="Top UX & UI Resources — Artfuly"
+  description="A hand-picked directory of the best design tools, fonts, images, colour, inspiration and learning resources for UX, UI & product designers."
+>
+
+  <!-- HERO -->
+  <div class="articles-section-top">
+    <div class="a-container w-container">
+      <div class="a-des-insight-title" style="color:rgba(255,255,255,0.6); margin-bottom:12px; grid-area:1/1/2/5; text-align:left">FREE RESOURCES</div>
+      <h1 class="h1-small-white" style="grid-area:2/1/3/5; padding-left:0">Top UX &amp; UI Resources</h1>
+    </div>
+  </div>
+
+  <!-- INTRO + DISCLOSURE -->
+  <section class="tr-intro">
+    <div class="w-container">
+      <p class="tr-intro__text">My hand-picked toolkit for designers — the tools, fonts, images, colour pickers, inspiration and learning I actually use and recommend. Filter by what you need.</p>
+      <p class="tr-disclosure">Some links are affiliate or branded links — they help support Artfuly at no extra cost to you.</p>
+    </div>
+  </section>
+
+  <!-- FILTER PILLS -->
+  <nav class="tr-pills" aria-label="Filter resources by category">
+    <div class="w-container">
+      <div class="tr-pills-row">
+        <button type="button" class="tr-pill tr-pill--active" data-filter="all">All</button>
+        {TOOL_CATEGORIES.map((c) => (
+          <button type="button" class="tr-pill" data-filter={c.slug}>{c.label}</button>
+        ))}
+      </div>
+    </div>
+  </nav>
+
+  <!-- RESOURCE GRID -->
+  <section class="tr-section">
+    <div class="w-container">
+      <ul class="tr-grid">
+        {resources.map((r) => {
+          const catLabel = TOOL_CATEGORIES.find((c) => c.slug === r.cat)?.label ?? '';
+          return (
+            <li class="tr-card" data-cat={r.cat}>
+              <a class="tr-card__link" href={r.url} target="_blank" rel="noopener">
+                <div class="tr-card__head">
+                  <h2 class="tr-card__name">{r.name}</h2>
+                  {r.tag && <span class="tr-card__tag">{r.tag}</span>}
+                </div>
+                <p class="tr-card__desc">{r.desc}</p>
+                <div class="tr-card__foot">
+                  <span class="tr-card__cat">{catLabel}</span>
+                  <span class="tr-card__go">{r.affiliate ? 'Visit (affiliate) ↗' : 'Visit ↗'}</span>
+                </div>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </section>
+
+  <!-- SPOONFLOWER BOOK PROMO -->
+  <BookPromo />
+
+  <!-- EMAIL CTA -->
+  <section class="section_cta8" id="email-signup">
+    <div class="padding-global-3">
+      <div class="container-large">
+        <div class="padding-section-large-3">
+          <div class="cta8_component">
+            <div class="cta8_content">
+              <div class="max-width-large">
+                <div class="margin-bottom margin-xsmall">
+                  <div class="margin-bottom margin-xsmall">
+                    <div class="a-des-insight-title">LEARN BY EMAIL (FREE)</div>
+                  </div>
+                  <h2 class="white h2insights">Design Principles</h2>
+                </div>
+                <p class="white right">Learn by watching me apply key design principles<br />1 email per week with videos &amp; free resources</p>
+                <p class="small-white-body">Unsubscribe anytime.</p>
+              </div>
+            </div>
+            <div class="html-embed-7 w-embed w-script">
+              <script async data-uid="eb98b5a075" src="https://artfuly.ck.page/eb98b5a075/index.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</ArtfulyLayout>
+
+<style>
+  .tr-intro { background: #fff; padding: 28px 0 0; }
+  .tr-intro__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; line-height: 1.6; color: #444;
+    max-width: 760px; margin: 0 auto; text-align: center;
+  }
+  .tr-disclosure {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; color: #8a8a8a; text-align: center;
+    max-width: 760px; margin: 10px auto 0;
+  }
+
+  .tr-pills { background: #fff; padding: 22px 0 6px; position: sticky; top: 0; z-index: 40; }
+  .tr-pills-row {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    max-width: 960px; margin: 0 auto;
+  }
+  .tr-pill {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; font-weight: 600;
+    color: #048ba2; background: #fff;
+    border: 1.5px solid #b8e0e3; border-radius: 40px;
+    padding: 7px 16px; cursor: pointer; transition: all 0.15s; white-space: nowrap;
+  }
+  .tr-pill:hover { background: #e6f4f4; border-color: #3ba89c; }
+  .tr-pill--active { color: #fff; background: #048ba2; border-color: #048ba2; }
+
+  .tr-section { background: #fff; padding: 28px 0 72px; }
+  .tr-grid {
+    list-style: none; margin: 0 auto; padding: 0; max-width: 1100px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .tr-card { display: flex; }
+  .tr-card__link {
+    display: flex; flex-direction: column; gap: 10px; flex: 1;
+    text-decoration: none; color: inherit;
+    border: 1px solid #e0eded; border-radius: 8px; padding: 20px 22px;
+    transition: box-shadow 0.18s, transform 0.18s, border-color 0.18s;
+  }
+  .tr-card__link:hover { box-shadow: 0 6px 22px rgba(0,0,0,0.08); transform: translateY(-3px); border-color: #b8e0e3; }
+  .tr-card__head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .tr-card__name { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 700; color: #233030; margin: 0; line-height: 1.3; }
+  .tr-card__tag {
+    font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap;
+    color: #048ba2; background: #e6f4f4; border-radius: 20px; padding: 3px 9px;
+  }
+  .tr-card__desc { font-family: 'Montserrat', sans-serif; font-size: 13.5px; line-height: 1.55; color: #555; margin: 0; flex: 1; }
+  .tr-card__foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 2px; }
+  .tr-card__cat { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: #9aa7a7; }
+  .tr-card__go { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: #3ba89c; white-space: nowrap; }
+
+  @media screen and (max-width: 991px) { .tr-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (max-width: 600px) {
+    .tr-grid { grid-template-columns: 1fr; }
+    .tr-pills-row { justify-content: flex-start; }
+  }
+</style>
+
+<script>
+  const pills = document.querySelectorAll('.tr-pill');
+  const cards = document.querySelectorAll('.tr-card');
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const filter = pill.getAttribute('data-filter');
+      pills.forEach((p) => p.classList.toggle('tr-pill--active', p === pill));
+      cards.forEach((card) => {
+        const show = filter === 'all' || card.getAttribute('data-cat') === filter;
+        (card as HTMLElement).style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>

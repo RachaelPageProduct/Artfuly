@@ -1,5 +1,6 @@
 ---
 title: "The importance of hand-sketched wireframes"
+category: "Design Craft"
 slug: "the-importance-of-hand-sketched-wireframes"
 date: "2025-05-05"
 description: "Don't skip learning & using this crucial skill as part of the Design Thinking process..."

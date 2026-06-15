@@ -1,5 +1,6 @@
 ---
 title: "Why 'Pixel Perfect' is Absurd in Digital Design"
+category: "Design Craft"
 slug: "why-pixel-perfect-is-nonsense"
 date: "2025-01-09"
 description: "If you hear anyone saying 'Pixel Perfect' you can be sure they don't know much about digital design at all... here's why"

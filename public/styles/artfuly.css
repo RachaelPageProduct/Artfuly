@@ -581,8 +581,18 @@ h3.left {
   gap: 12px;
   align-items: center;
   text-align: center;
+  height: 100%;
+  box-sizing: border-box;
 }
-.div-block-74 img.image-37 { width: 100%; max-width: 240px; border-radius: 4px; }
+.div-block-74 {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div-block-74 img.image-37 { max-width: 100%; max-height: 160px; width: auto; height: auto; border-radius: 4px; }
+.section-lead-magnets .button-courses { margin-top: auto; }
 .heading-70 {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;

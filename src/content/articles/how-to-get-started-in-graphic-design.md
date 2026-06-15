@@ -1,5 +1,6 @@
 ---
 title: "How to get started in Graphic Design"
+category: "Careers & Hiring"
 slug: "how-to-get-started-in-graphic-design"
 date: "2024-06-06"
 description: "Graphic design is a fun field to be in and natually leads on to UX and Product Design. If you're just starting or thinking about a design career, this guide is for you. I'll cover all the key steps and tips to get you started"

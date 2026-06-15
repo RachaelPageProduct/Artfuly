@@ -1,5 +1,6 @@
 ---
 title: "Selecting colours & creating colour palettes in UX & Product Design"
+category: "Design Craft"
 slug: "colours-palettes-ux-product-design"
 date: "2024-02-14"
 description: "The mystery of how to choose colours in digital design is unravelled here by the use of some basic principles, tools & tricks"

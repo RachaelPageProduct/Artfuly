@@ -1,5 +1,6 @@
 ---
 title: "The Part of Product Design AI Still Can't Do"
+category: "AI"
 slug: "the-part-of-product-design-ai-still-cant-do"
 date: "2026-05-22"
 description: "Everyone can build an app now. Almost nobody can think through a successful product. Here's why the most invisible and undervalued design skills are suddenly the most important ones in the room."

@@ -1,5 +1,6 @@
 ---
 title: "ElevenLabs: Audio & Voice Tools for Your Creative Workflow"
+category: "AI"
 slug: "elevenlabs-for-designers"
 date: "2026-04-29"
 description: "How ElevenLabs fits into a design workflow — from AI voiceovers and music generation to accessibility and global localisation."

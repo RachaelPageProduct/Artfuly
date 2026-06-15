@@ -62,6 +62,7 @@ const articles = defineCollection({
     authorName: z.string().optional(),
     authorImage: z.string().optional(),
     introHeading: z.string().optional(),
+    category: z.string().optional(),
     tags: z.array(z.string()).default([]),
     published: z.boolean().default(false),
     featured: z.boolean().default(false),
