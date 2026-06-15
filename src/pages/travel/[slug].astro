@@ -26,6 +26,7 @@ const relatedArticles = allArticles
   title={`${d.titleTag || d.title} | Artfuly`}
   description={d.metaDescription || d.description}
   ogImage={d.heroImage}
+  ogType="article"
 >
   {d.slug === 'how-to-buy-a-property-with-cash-no-mortgage' && (
     <script type="application/ld+json" slot="head" set:html={JSON.stringify({

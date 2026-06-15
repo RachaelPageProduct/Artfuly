@@ -22,7 +22,7 @@ const relatedArticles = allArticles
   .slice(0, 3);
 ---
 
-<ArtfulyLayout title={`${d.title} | Artfuly`} description={d.description} ogImage={d.heroImage}>
+<ArtfulyLayout title={`${d.title} | Artfuly`} description={d.description} ogImage={d.heroImage} ogType="article">
   <script async data-uid="b7b7a29039" src="https://artfuly.kit.com/b7b7a29039/index.js" slot="head"></script>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
