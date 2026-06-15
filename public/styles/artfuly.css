@@ -591,7 +591,7 @@ h3.left {
   align-items: center;
   justify-content: center;
 }
-.div-block-74 img.image-37 { max-width: 100%; max-height: 160px; width: auto; height: auto; border-radius: 4px; }
+.div-block-74 img.image-37 { display: block; margin: 0 auto; max-width: 100%; max-height: 160px; width: auto; height: auto; border-radius: 4px; }
 .section-lead-magnets .button-courses { margin-top: auto; }
 .heading-70 {
   font-family: 'Montserrat', sans-serif;
@@ -599,14 +599,16 @@ h3.left {
   font-weight: 700;
   color: #233030;
   margin: 0;
-  text-align: center;
+  text-align: center !important;
+  width: 100%;
 }
 .paragraph-middle-align {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: #555;
   line-height: 1.6;
-  text-align: center;
+  text-align: center !important;
+  width: 100%;
 }
 .button-courses {
   display: inline-block;

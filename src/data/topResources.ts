@@ -38,6 +38,7 @@ export const TOOL_RESOURCES: ToolResource[] = [
   { name: 'OBS Studio', desc: 'Free screen recording for tutorials & demos.', url: 'https://obsproject.com/', cat: 'tools', tag: 'Free' },
   { name: 'Convert Case', desc: 'Quick online text case converter.', url: 'https://convertcase.net/', cat: 'tools', tag: 'Free' },
   { name: 'Claude Design', desc: "Anthropic's AI assistant — ideate, draft UX copy & generate UI.", url: 'https://claude.ai', cat: 'tools' },
+  { name: 'ElevenLabs', desc: 'AI voiceovers, music & sound effects — great for prototypes, pitches & accessibility.', url: 'https://try.elevenlabs.io/6tjrhb27ids0', cat: 'tools', affiliate: true },
 
   // ── Fonts & Type ──
   { name: 'Google Fonts', desc: 'Huge free, open-source type library.', url: 'https://artfuly.click/google-fonts', cat: 'fonts', tag: 'Free' },

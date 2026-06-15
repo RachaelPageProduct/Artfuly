@@ -73,15 +73,25 @@
   to = "/admin/:splat"
   status = 200
 
-# Favicons — must pass through before the catch-all, or /favicon.* gets rewritten to /rachael-page/favicon.* (404, no favicon)
+# Favicons — pass through before the catch-all. rachaelpage.com uses its own "RP" mark.
 [[redirects]]
   from = "https://rachaelpage.com/favicon.ico"
-  to = "/favicon.ico"
+  to = "/favicon-rp.png"
   status = 200
 
 [[redirects]]
-  from = "https://rachaelpage.com/apple-touch-icon.png"
-  to = "/apple-touch-icon.png"
+  from = "https://rachaelpage.com/favicon-rp.svg"
+  to = "/favicon-rp.svg"
+  status = 200
+
+[[redirects]]
+  from = "https://rachaelpage.com/favicon-rp.png"
+  to = "/favicon-rp.png"
+  status = 200
+
+[[redirects]]
+  from = "https://rachaelpage.com/apple-touch-icon-rp.png"
+  to = "/apple-touch-icon-rp.png"
   status = 200
 
 # Paths that exist at the site root and are linked from rachaelpage.com pages.
