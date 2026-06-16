@@ -1,5 +1,6 @@
 ---
 import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+import BookPromo from '../../components/BookPromo.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -132,6 +133,9 @@ const relatedArticles = allArticles
       <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
     </div>
   </div>
+
+  <!-- SPOONFLOWER BOOK PROMO -->
+  <BookPromo />
 
   <!-- MORE DESIGN RESOURCES -->
   <section class="section_layout250">

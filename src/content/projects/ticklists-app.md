@@ -1,7 +1,8 @@
 ---
-title: "Ticklists App"
+title: "Ticklists App (MVP)"
 slug: "ticklists-app"
 featured: True
+featuredOrder: 1
 nextProject: "terra-app"
 halfWidthImage: |-
   /images/webflow-cdn/69cb52e15e1262503966edfa_Frame 4.png

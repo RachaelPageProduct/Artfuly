@@ -7,6 +7,7 @@ const projects = defineCollection({
     title: z.string(),
     slug: z.string(),
     featured: z.boolean().default(false),
+    featuredOrder: z.number().optional(),
     nextProject: z.string().optional(),
     halfWidthImage: z.string().optional(),
     summary: z.string().optional(),

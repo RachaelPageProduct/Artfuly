@@ -2,6 +2,7 @@
 title: "McDonalds Monopoly Web-App"
 slug: "mcdonalds-monopoly-mobile-site"
 featured: True
+featuredOrder: 3
 nextProject: "terra-website"
 halfWidthImage: |-
   /images/webflow-cdn/McDonalds thumb.gif

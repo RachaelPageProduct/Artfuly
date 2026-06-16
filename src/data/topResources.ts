@@ -68,7 +68,6 @@ export const TOOL_RESOURCES: ToolResource[] = [
   { name: 'Nielsen Norman Group', desc: 'Evidence-based UX research & articles.', url: 'https://artfuly.click/nng', cat: 'learning' },
   { name: 'UX Mastery', desc: 'Community & guides for new UX designers.', url: 'https://artfuly.click/ux-mastery', cat: 'learning' },
   { name: 'UX Myths', desc: 'Common UX misconceptions, debunked.', url: 'https://artfuly.click/ux-myths', cat: 'learning', tag: 'Free' },
-  { name: 'CareerFoundry — 10% off', desc: 'Mentored UX/UI course (reader discount).', url: 'https://artfuly.click/5-off', cat: 'learning', affiliate: true },
   { name: 'The Design of Everyday Things', desc: 'Don Norman — the design classic.', url: 'https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things', cat: 'learning' },
   { name: "Don't Make Me Think", desc: 'Steve Krug — web usability essentials.', url: 'https://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited', cat: 'learning' },
   { name: 'Sprint', desc: 'Jake Knapp — solve big problems in 5 days.', url: 'https://www.goodreads.com/book/show/25814544-sprint', cat: 'learning' },

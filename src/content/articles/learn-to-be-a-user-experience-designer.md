@@ -7,7 +7,7 @@ description: "Learn to be a UX Designer and create your online folio during the 
 introHeading: "Learn to be a UX Designer and create your online folio during the course!"
 heroImage: "/images/webflow-cdn/639f5329450d4f48a14c16c3_faizur-rehman-dJpupM4LiS4-unsplash copy.jpg"
 thumbnailImage: "/images/webflow-cdn/639f4cf63eccf94b4246f72c_Mask group-1.png"
-published: true
+published: false
 featured: false
 featuredPortfolio: false
 ctaText: "Get 5% off any Career Foundry course"

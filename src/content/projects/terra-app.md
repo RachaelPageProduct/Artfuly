@@ -2,6 +2,7 @@
 title: "Terra Listens Native Apps"
 slug: "terra-app"
 featured: True
+featuredOrder: 2
 nextProject: "gmo"
 halfWidthImage: |-
   /images/webflow-cdn/68a5e7984df7a15a836e8c16_Animation full width terra app.gif

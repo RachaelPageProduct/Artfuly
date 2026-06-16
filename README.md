@@ -67,7 +67,39 @@ metaDescription:
 - [x] "Send Video Tutorial" button text on lead magnets section
 - [x] Design Resources pills — 6-category filter (Careers & Hiring · Portfolios · Tools & Software · Design Craft · AI · SEO & Marketing). `category` frontmatter on all 54 articles; page-based routes at `/design-resources/category/[slug]/`; shared `ResourcePills.astro` + `ArticleGrid.astro`; category list in `src/data/resourceCategories.ts`
 
+## Surface Pattern Design Playbook — book page (added Jun 2026)
+
+**Strategy context:** income plan = market the products Rachael already has (books, patterns, app) through the sites; NO courses, video, live teaching, paid ads, or contracting (see memory `feedback-no-video-no-courses`). Sites are the SEO + persuasion hub; transactions happen on external platforms (Amazon/Spoonflower/etc.).
+
+**Shop URL structure** (future-proof; `/shop` NOT added to nav until 3+ products):
+```
+/shop/books/[slug]      → links out to Amazon
+/shop/patterns/[slug]   → Spoonflower / Patternbank
+/shop/guides/[slug]     → Payhip/Gumroad (if ever)
+```
+
+**Book retitle:** old = "How to create Wallpaper, Mural & Fabric designs for Spoonflower"; NEW = **"The Surface Pattern Design Playbook: Create & Sell Patterns for Fabric, Wallpaper & Murals on Spoonflower & Beyond"**. Amazon ASIN **B0FB9GGD4V** (unchanged on retitle, so reviews + branded link survive).
+
+### Done
+- [x] Book sales page: `src/pages/shop/books/surface-pattern-design-playbook.astro` — full-width header banner, centred text hero, value props (Create / Sell / **Optimise with AI**), "who it's for", "what's inside", proof images, differentiator, final CTA; Book JSON-LD schema; responsive.
+- [x] Header banner image: `/images/site/3d book on table.png` (Gemini lifestyle render), `object-position: center 22%` so full title shows. NOTE: image is 881px → soft when full-width; Rachael to upscale later.
+- [x] Flat cover saved: `/images/site/spd-playbook-flat-cover.png` (used as og:image + schema image). Duplicate `SPD Playbook flat cover.png` (spaces) can be deleted.
+- [x] Proof image: `/images/patterns/pebble/mockups/Bathroom mockup 1.jpeg` (Pebble wallpaper in situ) + flamingo.
+- [x] All CTAs → `https://artfuly.click/book-spoonflower` (existing branded link; **out of Rebrandly quota this month** so reused it instead of making `/spd-playbook`).
+- [x] `BookPromo.astro` rewired: new title, new cover (`spd-playbook-flat-cover.png`), button → `/shop/books/surface-pattern-design-playbook`. Now renders on: `/design-resources` listing, `/tools`, AND every article page (`[slug].astro`, placed after Share / before "More design resources").
+
+### Still to do (this book)
+- [ ] **KDP (Rachael's login):** retitle the Title + Subtitle fields; upload the flat cover (already shows new title); then apply the keywords/categories below.
+- [ ] **Draft NOT yet done:** 7 backend keywords + 2 categories + refreshed Amazon description (next task).
+- [x] Old book article repurposed (not retired) for SEO/AEO: renamed `src/content/articles/how-to-sell-your-designs-on-spoonflower.md` (new slug `/design-resources/how-to-sell-your-designs-on-spoonflower`). Informational intent (avoids cannibalising the `/shop` buy-intent page), question H2s + answer-first copy, FAQPage JSON-LD, hero/thumb = Pebble bathroom mockup, CTA + inline link → `/shop` page. Old slug now 404 (no redirect — little SEO built up).
+- [ ] Replace placeholder Gemini 3D mockups — spine text is garbled (AI artifact); redo cleanly. Optional: standalone 3D mockup image for Pinterest/social (Canva/Smartmockups).
+- [ ] Upscale the header banner image (currently soft at full width).
+- [ ] Nothing deployed yet — batch with other changes (Netlify deploy limit).
+
 ## What's still to do
+- [ ] Change Thinkific to https://payhip.com/
+
+
 - [ ] Rebrandly — brand the remaining Top Resources links next month (free plan = 25 new links/mo; quota used up this period, resets ~20 Jun): **Claude Design**, OBS Studio, Blobbb, Convert Case, Ultimate Google Font Pairings, Colour Theory article, Patagonia Action Works, Catchafire, + 5 books (Design of Everyday Things, Don't Make Me Think, Sprint, Lean UX, Field Guide to HCD). Then repoint those URLs in `src/data/topResources.ts`.
 - [x] Top Resources tool — rebuild the old Webflow "Top UX Resources" natively as a filterable directory at root `/top-ux-resources` (preserve URL for SEO), featured as a card in `/tools`. Uses the scaffolded `resources` content collection. Curate the 62 live entries (prune 4× Adobe XD, Sketch, dead links, pirated free-PDF book links → ~45) and swap in affiliate links (see memory `reference-affiliate-links`)
 - [x] Spoonflower book promo section — on `/design-resources` + `/tools`: book cover + "client-free, commute-free, work-from-anywhere" angle, linking to **`https://artfuly.click/book-spoonflower`** (branded short link → Amazon Kindle / KDP) — NOT the Kit epub (KDP chosen to protect distribution / DRM)

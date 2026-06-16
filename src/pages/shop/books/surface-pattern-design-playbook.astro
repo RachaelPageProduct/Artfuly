@@ -1,0 +1,257 @@
+---
+import ArtfulyLayout from '../../../layouts/ArtfulyLayout.astro';
+
+// Surface Pattern Design Playbook — book sales / SEO landing page.
+// Site = the SEO + persuasion hub; the transaction happens on Amazon (same ASIN),
+// reached via the editable artfuly.click branded link.
+const AMAZON = 'https://artfuly.click/book-spoonflower';
+const COVER = '/images/site/spd-playbook-flat-cover.png';
+
+const bookSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: 'The Surface Pattern Design Playbook: Create & Sell Patterns for Fabric, Wallpaper & Murals on Spoonflower & Beyond',
+  author: { '@type': 'Person', name: 'Rachael Page' },
+  bookFormat: 'https://schema.org/EBook',
+  inLanguage: 'en',
+  url: 'https://artfuly.com/shop/books/surface-pattern-design-playbook',
+  image: 'https://artfuly.com' + COVER,
+  offers: {
+    '@type': 'Offer',
+    price: '9.99',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: AMAZON,
+  },
+};
+---
+
+<ArtfulyLayout
+  title="Surface Pattern Design Playbook — Sell Patterns on Spoonflower"
+  description="Create and sell surface pattern designs — fabric, wallpaper and murals — on Spoonflower and beyond. The only up-to-date playbook for designers who want to earn from their skills. Kindle, €9.99."
+  ogImage={'https://artfuly.com' + COVER}
+  ogType="book"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(bookSchema)} />
+  </Fragment>
+
+  <!-- FULL-WIDTH HEADER -->
+  <section class="spd-header">
+    <img class="spd-header__img" src="/images/site/3d%20book%20on%20table.png" alt="The Surface Pattern Design Playbook by Rachael Page — hardcover edition on a desk" loading="eager" />
+  </section>
+
+  <!-- HERO -->
+  <section class="spd-hero">
+    <div class="spd-wrap spd-hero__body">
+      <p class="spd-eyebrow">Earn from your design skills</p>
+      <h1 class="spd-title">The Surface Pattern Design Playbook</h1>
+      <p class="spd-subtitle">Create &amp; Sell Patterns for Fabric, Wallpaper &amp; Murals — on Spoonflower &amp; Beyond</p>
+      <p class="spd-lede">
+        Client-free, commute-free, creative work you can do from anywhere. Turn the design skills
+        you already have into a real income stream selling surface pattern designs.
+      </p>
+      <p class="spd-meta">Kindle ebook&nbsp;·&nbsp;€9.99&nbsp;·&nbsp;reflowable EPUB</p>
+      <a class="spd-cta" href={AMAZON} target="_blank" rel="noopener">Get the book on Amazon&nbsp;→</a>
+      <p class="spd-trust">For designers who already know Illustrator or Photoshop — no hand-holding.</p>
+    </div>
+  </section>
+
+  <!-- VALUE PROPS -->
+  <section class="spd-props">
+    <div class="spd-wrap spd-props__grid">
+      <div class="spd-prop">
+        <h3>Create</h3>
+        <p>Build seamless, sell-ready patterns for fabric, wallpaper and full-wall murals — with colour accuracy and file prep done right.</p>
+      </div>
+      <div class="spd-prop">
+        <h3>Sell</h3>
+        <p>Upload, price and earn on Spoonflower — then take the same designs to other print-on-demand and licensing platforms.</p>
+      </div>
+      <div class="spd-prop">
+        <h3>Optimise with AI</h3>
+        <p>Workflow options to help you spot trends, draft collection briefs and create pattern elements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="spd-section">
+    <div class="spd-wrap spd-narrow">
+      <h2 class="spd-h2">Who it's for</h2>
+      <ul class="spd-list">
+        <li>Designers with existing Illustrator or Photoshop skills who want a new income stream.</li>
+        <li>Anyone wanting client-free, boss-free, commute-free work on their own hours.</li>
+        <li>Makers already on Redbubble, Society6 or similar who want to move into fabric &amp; wallpaper.</li>
+        <li>Creatives who'd rather <em>earn</em> from surface pattern design — not just dabble in it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="spd-section spd-section--tint">
+    <div class="spd-wrap spd-narrow">
+      <h2 class="spd-h2">What's inside</h2>
+      <ul class="spd-list spd-list--check">
+        <li>Creating seamless repeats that tile perfectly across fabric and wallpaper.</li>
+        <li>Getting colour accurate so prints match what you designed on screen.</li>
+        <li>File prep and upload, step by step — the settings that actually matter.</li>
+        <li>Designing for full-wall <strong>murals</strong>, not just repeating swatches.</li>
+        <li>AI upscaling to reach print-grade resolution without losing detail.</li>
+        <li>The commercial picture: pricing, platforms and turning designs into income.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="spd-section">
+    <div class="spd-wrap spd-narrow">
+      <h2 class="spd-h2">Real designs, really selling</h2>
+      <p class="spd-body">Two of my own designs, live on Spoonflower as fabric and wallpaper:</p>
+      <figure class="spd-figure">
+        <img src="/images/patterns/pebble/mockups/Bathroom%20mockup%201.jpeg" alt="‘Pebble’ surface pattern by Rachael Page shown as wallpaper in a bathroom, behind a freestanding bath" loading="lazy" />
+        <figcaption>My ‘Pebble’ design as wallpaper — soft pastels for a calm bathroom.</figcaption>
+      </figure>
+      <figure class="spd-figure">
+        <img src="/images/webflow-cdn/6837fce12ac5704b954dc455_Flamingo slide.png" alt="Flamingo surface pattern design on fabric and wallpaper by Rachael Page" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATOR -->
+  <section class="spd-section spd-section--tint">
+    <div class="spd-wrap spd-narrow">
+      <h2 class="spd-h2">Why this playbook</h2>
+      <p class="spd-body">
+        It's the only <strong>up-to-date</strong> guide written for designers who want to <strong>earn</strong> from
+        Spoonflower — not a DIY craft book. The long-standing alternative was published back in 2016, before AI
+        upscaling, before today's mural market, and aimed at hobbyists. This is written for someone with real
+        design skills who wants to get to income, fast.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="spd-final">
+    <div class="spd-wrap spd-final__inner">
+      <h2 class="spd-final__title">Start earning from your designs</h2>
+      <p class="spd-final__meta">Kindle ebook&nbsp;·&nbsp;€9.99</p>
+      <a class="spd-cta spd-cta--light" href={AMAZON} target="_blank" rel="noopener">Get the book on Amazon&nbsp;→</a>
+    </div>
+  </section>
+</ArtfulyLayout>
+
+<style>
+  .spd-wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  .spd-narrow { max-width: 760px; }
+
+  /* FULL-WIDTH HEADER BANNER */
+  .spd-header { width: 100%; line-height: 0; background: #1b2742; }
+  .spd-header__img {
+    width: 100%; display: block;
+    height: clamp(240px, 36vw, 460px);
+    object-fit: cover; object-position: center 22%;
+  }
+
+  /* HERO */
+  .spd-hero { background: #fff; padding: 48px 0 52px; text-align: center; }
+  .spd-hero__body { max-width: 720px; margin: 0 auto; }
+
+  .spd-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: #048ba2; margin: 0 0 10px;
+  }
+  .spd-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px; font-weight: 800; line-height: 1.15; color: #233030; margin: 0 0 10px;
+  }
+  .spd-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; font-weight: 600; line-height: 1.4; color: #2f4a4a; margin: 0 0 18px;
+  }
+  .spd-lede {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; line-height: 1.65; color: #333; margin: 0 auto 16px; max-width: 54ch;
+  }
+  .spd-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; font-weight: 700; color: #048ba2; margin: 0 0 18px;
+  }
+  .spd-cta {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px; font-weight: 700;
+    color: #fff; background: #048ba2;
+    border-radius: 40px; padding: 14px 30px; text-decoration: none;
+    transition: background 0.15s;
+  }
+  .spd-cta:hover { background: #036f81; color: #fff; }
+  .spd-trust {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; color: #5a6b6b; margin: 14px 0 0;
+  }
+
+  /* VALUE PROPS */
+  .spd-props { background: #f1f9f9; padding: 48px 0; border-top: 1px solid #d6ebec; border-bottom: 1px solid #d6ebec; }
+  .spd-props__grid { display: flex; gap: 28px; }
+  .spd-prop { flex: 1; }
+  .spd-prop h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; font-weight: 800; color: #048ba2; margin: 0 0 8px;
+  }
+  .spd-prop p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14.5px; line-height: 1.6; color: #333; margin: 0;
+  }
+
+  /* SECTIONS */
+  .spd-section { background: #fff; padding: 52px 0; }
+  .spd-section--tint { background: #f7fbfb; }
+  .spd-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px; font-weight: 800; color: #233030; margin: 0 0 20px;
+  }
+  .spd-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; line-height: 1.7; color: #333; margin: 0 0 18px;
+  }
+  .spd-list {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; line-height: 1.7; color: #333;
+    margin: 0; padding: 0; list-style: none;
+  }
+  .spd-list li { position: relative; padding: 0 0 12px 28px; }
+  .spd-list li::before {
+    content: '→'; position: absolute; left: 0; top: 0; color: #048ba2; font-weight: 700;
+  }
+  .spd-list--check li::before { content: '✓'; }
+
+  /* FIGURES */
+  .spd-figure { margin: 0 0 28px; }
+  .spd-figure img { width: 100%; height: auto; display: block; border-radius: 10px; }
+  .spd-figure figcaption {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; color: #5a6b6b; margin-top: 8px; text-align: center;
+  }
+
+  /* FINAL CTA */
+  .spd-final { background: #048ba2; padding: 56px 0; text-align: center; }
+  .spd-final__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px; font-weight: 800; color: #fff; margin: 0 0 8px;
+  }
+  .spd-final__meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; font-weight: 700; color: #d7f1f3; margin: 0 0 22px;
+  }
+  .spd-cta--light { background: #fff; color: #048ba2; }
+  .spd-cta--light:hover { background: #eaf7f8; color: #036f81; }
+
+  /* RESPONSIVE */
+  @media screen and (max-width: 860px) {
+    .spd-lede { max-width: none; }
+    .spd-props__grid { flex-direction: column; gap: 22px; }
+    .spd-title { font-size: 30px; }
+  }
+</style>
