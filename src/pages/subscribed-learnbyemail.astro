@@ -1,0 +1,74 @@
+---
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout title="Subscribed! — Artfuly" description="You're subscribed to Design Principles by Email.">
+  <div class="success-page">
+    <div class="success-inner">
+      <h1>Subscribed!</h1>
+      <p class="success-body">
+        Your first '<strong>Design Principles</strong>' weekly email will arrive today
+      </p>
+      <p class="success-body">
+        if not, please <strong>check your spam</strong> (and add <strong>hi@artfuly.com</strong> to your address book)
+      </p>
+      <div class="success-buttons">
+        <a href="/design-resources" class="success-btn">To the design resources</a>
+        <a href="https://www.youtube.com/@artfulydesign/videos" target="_blank" rel="noopener" class="success-btn">Watch tutorials on youtube</a>
+      </div>
+    </div>
+  </div>
+</ArtfulyLayout>
+
+<style>
+  .success-page {
+    background-color: #048ba2;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+  .success-inner {
+    text-align: center;
+    max-width: 700px;
+  }
+  h1 {
+    font-size: clamp(2.8rem, 8.4vw, 4.9rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 2.5rem;
+    line-height: 1;
+    text-align: center !important;
+  }
+  .success-body {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 0 1.25rem;
+    text-align: center;
+  }
+  .success-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+  .success-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .success-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.7);
+  }
+</style>

@@ -1,0 +1,117 @@
+---
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout title="Unsubscribed — Artfuly" description="You've been unsubscribed from Artfuly emails.">
+  <div class="success-page">
+    <div class="success-inner">
+      <h1>Unsubscribed</h1>
+      <p class="success-lead">Accidentally done a total unsubscribe?</p>
+      <p class="success-body">
+        You won't be able to resubscribe to anything at Artfuly with the same email address,
+        so you can either sign up again with a different email, or
+      </p>
+      <a href="mailto:hi@artfuly.com" class="email-admin-btn">
+        Email admin with<br>
+        the email address you unsubscribed<br>
+        and details of what to re-subscribe to:
+      </a>
+      <ul class="resub-list">
+        <li>Learn Design by Email</li>
+        <li>Visual Design Principles Course</li>
+      </ul>
+      <div class="success-buttons">
+        <a href="/design-resources" class="success-btn">Checkout some design resources</a>
+        <a href="https://www.youtube.com/@artfulydesign/videos" target="_blank" rel="noopener" class="success-btn">Watch tutorials on youtube</a>
+        <a href="https://www.tiktok.com/@artfuly.com" target="_blank" rel="noopener" class="success-btn">Watch quick design tips on Tiktok</a>
+      </div>
+    </div>
+  </div>
+</ArtfulyLayout>
+
+<style>
+  .success-page {
+    background-color: #048ba2;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+  .success-inner {
+    text-align: center;
+    max-width: 700px;
+  }
+  h1 {
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 1.5rem;
+    line-height: 1;
+  }
+  .success-lead {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+  }
+  .success-body {
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 0 1.75rem;
+  }
+  .email-admin-btn {
+    display: inline-block;
+    padding: 1rem 1.75rem;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: var(--radius, 12px);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-decoration: none;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s, border-color 0.2s;
+    margin-bottom: 1.75rem;
+  }
+  .email-admin-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.7);
+  }
+  .resub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 2;
+  }
+  .resub-list li::before {
+    content: '→ ';
+    opacity: 0.7;
+  }
+  .success-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .success-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .success-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.7);
+  }
+</style>

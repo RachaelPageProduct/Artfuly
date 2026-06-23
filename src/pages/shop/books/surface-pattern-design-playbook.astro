@@ -139,6 +139,34 @@ const bookSchema = {
       <a class="spd-cta spd-cta--light" href={AMAZON} target="_blank" rel="noopener">Get the book on Amazon&nbsp;→</a>
     </div>
   </section>
+
+  <!-- EMAIL SIGNUP -->
+  <section class="section_cta8 spd-email-cta" id="email-signup">
+    <div class="padding-global-3">
+      <div class="container-large">
+        <div class="padding-section-large-3">
+          <div class="cta8_component">
+            <div class="cta8_content">
+              <div class="max-width-large">
+                <div class="margin-bottom margin-xsmall">
+                  <div class="margin-bottom margin-xsmall">
+                    <div class="a-des-insight-title">BOOK UPDATES (FREE)</div>
+                  </div>
+                  <h2 class="white h2insights">New Edition Alerts</h2>
+                </div>
+                <p class="white right">Get notified when I release a new edition —<br> new AI workflows, updated trend research or freshly added automation shortcuts.</p>
+                <p class="small-white-body">Only sent when the book changes. No regular emails.</p>
+              </div>
+            </div>
+            <div class="html-embed-7 w-embed w-script">
+              <script async data-uid="3e1ad604ff" src="https://artfuly.kit.com/3e1ad604ff/index.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
 </ArtfulyLayout>
 
 <style>
@@ -247,6 +275,13 @@ const bookSchema = {
   }
   .spd-cta--light { background: #fff; color: #048ba2; }
   .spd-cta--light:hover { background: #eaf7f8; color: #036f81; }
+
+  /* EMAIL SIGNUP — background image override */
+  .spd-email-cta {
+    background:
+      linear-gradient(rgba(3, 80, 100, 0.62), rgba(3, 80, 100, 0.62)),
+      url('/images/articles/spoonflower-earnings-header.png') center / cover no-repeat !important;
+  }
 
   /* RESPONSIVE */
   @media screen and (max-width: 860px) {
