@@ -10,6 +10,8 @@ const projects = defineCollection({
     featuredOrder: z.number().optional(),
     nextProject: z.string().optional(),
     halfWidthImage: z.string().optional(),
+    cardVideo: z.string().optional(),
+    cardLottie: z.string().optional(),
     summary: z.string().optional(),
     role: z.string().optional(),
     team: z.string().optional(),

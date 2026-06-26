@@ -6,6 +6,7 @@ featuredOrder: 1
 nextProject: "terra-app"
 halfWidthImage: |-
   /images/webflow-cdn/69cb52e15e1262503966edfa_Frame 4.png
+cardVideo: /images/projects/ticklists-app/ticklists-card-animation.mp4
 summary: "PWA (Progressive Web App) for shared repeating shopping trips & routines. See only the things your household or team needs to buy, in exactly the right walking order for any store. Routines show only todays outstanding tasks and can be reset and tagged to days of the week"
 role: |-
   Founder

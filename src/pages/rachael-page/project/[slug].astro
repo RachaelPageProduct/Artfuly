@@ -127,10 +127,10 @@ const buttons = [
       </div>
     </section>
   )}
-  {!d.lottieUrl && (d.slug === 'ticklists-app' || d.headerImage) && (
+  {!d.lottieUrl && (d.heroVideo || d.headerImage) && (
     <section class="r-project-header-lottie">
-      {d.slug === 'ticklists-app' ? (
-        <video src="/videos/ticklists-hero.mp4" autoplay loop muted playsinline style="width:100%;height:auto;display:block;" />
+      {d.heroVideo ? (
+        <video src={d.heroVideo} autoplay loop muted playsinline style="width:100%;height:auto;display:block;" />
       ) : (
         <img src={d.headerImage} alt={d.title} style="width:100%;height:auto;display:block;" loading="lazy" />
       )}

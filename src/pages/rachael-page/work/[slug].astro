@@ -115,7 +115,19 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
         return (
           <a href={`/rachael-page/project/${d.slug}`} class="work-card">
             <div class="work-card-image-wrap">
-              {d.halfWidthImage
+              {d.cardLottie
+                ? <div class="work-card-lottie" data-lottie-url={d.cardLottie} />
+                : d.cardVideo
+                ? <video
+                    class="work-card-video work-card-image"
+                    src={d.cardVideo}
+                    muted
+                    loop
+                    playsinline
+                    preload="none"
+                    poster={d.halfWidthImage || ''}
+                  />
+                : d.halfWidthImage
                 ? <img src={d.halfWidthImage} alt={d.title} class="work-card-image" loading="lazy" />
                 : <div class="work-card-image-placeholder" />
               }
@@ -136,6 +148,39 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
       </div>
     )}
   </section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer slot="head"></script>
+
+<script>
+  // Hover-to-play for mp4 card videos
+  document.querySelectorAll<HTMLElement>('.work-card').forEach(card => {
+    const video = card.querySelector<HTMLVideoElement>('.work-card-video');
+    if (!video) return;
+    card.addEventListener('mouseenter', () => video.play());
+    card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+  });
+
+  // Lottie autoplay for card lottie containers
+  function initLottieCards() {
+    const lottie = (window as any).lottie;
+    if (!lottie) return;
+    document.querySelectorAll<HTMLElement>('[data-lottie-url]').forEach(el => {
+      lottie.loadAnimation({
+        container: el,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: el.dataset.lottieUrl,
+      });
+    });
+  }
+  if ((window as any).lottie) {
+    initLottieCards();
+  } else {
+    document.querySelector('script[src*="lottie"]')?.addEventListener('load', initLottieCards);
+  }
+</script>
 
 </BaseLayout>
 
@@ -314,6 +359,12 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ── Lottie card ── */
+.work-card-lottie {
+  width: 100%;
+  height: 100%;
 }
 
 /* ── Empty state ── */
