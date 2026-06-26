@@ -5,7 +5,7 @@ slug: "elevenlabs-for-designers"
 date: "2026-04-29"
 description: "How ElevenLabs fits into a design workflow — from AI voiceovers and music generation to accessibility and global localisation."
 introHeading: "How ElevenLabs fits into a design workflow — from AI voiceovers and music generation to accessibility and global localisation."
-heroImage: "/images/webflow-cdn/69f1b2c9a0c403f3156b9144_Frame 256.png"
+heroImage: "/images/webflow-cdn/69f1b2c9a0c403f3156b9144_Frame-256.png"
 thumbnailImage: "/images/articles/elevenlabs-thumb.png"
 published: true
 featured: true

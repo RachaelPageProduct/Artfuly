@@ -5,7 +5,7 @@ featured: True
 featuredOrder: 3
 nextProject: "terra-website"
 halfWidthImage: |-
-  /images/webflow-cdn/McDonalds thumb.gif
+  /images/webflow-cdn/McDonalds-thumb.gif
 summary: |-
   Complex UX Design for this Mobile-first game: the first year it went mobile in Australia
 role: "UX Designer"
@@ -14,7 +14,7 @@ team: |-
 date: "1 April - 15 May 2014"
 tools: "Axure"
 headerImage: |-
-  /images/webflow-cdn/6556198dff2373b364fc5780_Mcdonalds large.png
+  /images/webflow-cdn/6556198dff2373b364fc5780_Mcdonalds-large.png
 lottieUrl: ""
 workCategories: ['responsive-websites', 'ia', 'ux-design', 'product-design']
 introduction: |-
@@ -32,7 +32,7 @@ link1: |-
   https://5vle9c.axshare.com/Home.html#path=Home.html
 button2: "Success Story on Campaign Brief"
 link2: |-
-  /images/webflow-cdn/68a5e50e641d444acd30bc79_Mcdonalds Monopoly campaign brief success article.pdf
+  /images/webflow-cdn/68a5e50e641d444acd30bc79_Mcdonalds-Monopoly-campaign-brief-success-article.pdf
 button3: "Live success story article"
 link3: |-
   https://campaignbrief.com/mcdonalds-unveils-world-first/

@@ -4,8 +4,8 @@ slug: "what-its-really-like-in-germany-for-an-immigrant-or-expat"
 date: "2025-05-14"
 description: "Germany is a misogynistic, racist, digital wasteland that doesn't deserve your time — here's why."
 introHeading: "Germany is a misogynistic, racist, digital wasteland that doesn't deserve your time — here's why."
-heroImage: "/images/webflow-cdn/6824376cd65669452679d114_Frame 244.png"
-thumbnailImage: "/images/webflow-cdn/6824376dcef1c6f1ae58d395_Frame 243.png"
+heroImage: "/images/webflow-cdn/6824376cd65669452679d114_Frame-244.png"
+thumbnailImage: "/images/webflow-cdn/6824376dcef1c6f1ae58d395_Frame-243.png"
 published: true
 ---
 

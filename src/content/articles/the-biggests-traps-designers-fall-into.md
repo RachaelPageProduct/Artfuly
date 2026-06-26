@@ -5,8 +5,8 @@ slug: "the-biggests-traps-designers-fall-into"
 date: "2025-04-16"
 description: "This short read will inform you of designer/artist traps and how to recognise and avoid them"
 introHeading: "This short read will inform you of designer/artist traps and how to recognise and avoid them"
-heroImage: "/images/webflow-cdn/67ff444d8c75d6a530ef886e_Frame 238.png"
-thumbnailImage: "/images/webflow-cdn/67ff459fd67c8571e1b895b5_Frame 237.png"
+heroImage: "/images/webflow-cdn/67ff444d8c75d6a530ef886e_Frame-238.png"
+thumbnailImage: "/images/webflow-cdn/67ff459fd67c8571e1b895b5_Frame-237.png"
 published: true
 featured: false
 featuredPortfolio: false

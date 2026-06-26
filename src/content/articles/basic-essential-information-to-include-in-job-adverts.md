@@ -5,8 +5,8 @@ slug: "basic-essential-information-to-include-in-job-adverts"
 date: "2025-05-13"
 description: "Much of the current angst surrounding job applications is completely avoidable with effective communication. Start the conversation with these essentials and avoid being inundated with applications"
 introHeading: "Much of the current angst surrounding job applications is completely avoidable with effective communication. Start the conversation with these essentials and avoid being inundated with applications"
-heroImage: "/images/webflow-cdn/6822f30bd589356f0aad7aef_Frame 242.png"
-thumbnailImage: "/images/webflow-cdn/6822f30f2a36484c6622a3e2_Frame 241.png"
+heroImage: "/images/webflow-cdn/6822f30bd589356f0aad7aef_Frame-242.png"
+thumbnailImage: "/images/webflow-cdn/6822f30f2a36484c6622a3e2_Frame-241.png"
 published: true
 featured: false
 featuredPortfolio: false

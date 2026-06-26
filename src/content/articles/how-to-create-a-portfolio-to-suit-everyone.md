@@ -5,8 +5,8 @@ slug: "how-to-create-a-portfolio-to-suit-everyone"
 date: "2025-01-09"
 description: "For designers it's an age-old problem that every man and his dog will give you conflicting advice on how your portfolio should be - here I set out the solution to be all things to all people"
 introHeading: "For designers it's an age-old problem that every man and his dog will give you conflicting advice on how your portfolio should be - here I set out the solution to be all things to all people"
-heroImage: "/images/webflow-cdn/6780d7931d8f2465fe0c2756_Frame 232.png"
-thumbnailImage: "/images/webflow-cdn/6780d791d63870701e3992e1_Frame 231.png"
+heroImage: "/images/webflow-cdn/6780d7931d8f2465fe0c2756_Frame-232.png"
+thumbnailImage: "/images/webflow-cdn/6780d791d63870701e3992e1_Frame-231.png"
 published: true
 featured: true
 featuredPortfolio: false

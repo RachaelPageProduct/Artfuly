@@ -46,7 +46,7 @@ ctaLink: "/shop/books/surface-pattern-design-playbook"
 <li><strong>Think beyond fabric</strong> — wallpaper and full-wall murals are higher-value products.</li>
 </ul>
 
-<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div><img alt="A flamingo surface pattern design shown on Spoonflower fabric and wallpaper" src="/images/webflow-cdn/6837fce12ac5704b954dc455_Flamingo slide.png" loading="lazy"></div></figure>
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div><img alt="A flamingo surface pattern design shown on Spoonflower fabric and wallpaper" src="/images/webflow-cdn/6837fce12ac5704b954dc455_Flamingo-slide.png" loading="lazy"></div></figure>
 
 <p>Want the full step-by-step — from seamless repeats and colour management to designing murals with AI-assisted workflows<a href="/shop/books/surface-pattern-design-playbook"><strong> My Book, The Surface Pattern Design Playbook</strong></a> walks you through the whole process, written for designers who already know their tools. Save months of working out how to be a pattern designer, I've gone through that whole process and written up what you need to know so you can get up to speed in days!</p>
 

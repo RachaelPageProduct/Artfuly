@@ -5,8 +5,8 @@ slug: "good-ux-isnt-measured-in-clicks"
 date: "2025-01-09"
 description: "Sometimes clients, or people who think they know about UX will claim that less clicks = good UX, but this is an oversimplification and an assumption that just doesn't stand the test of logic."
 introHeading: "Sometimes clients, or people who think they know about UX will claim that less clicks = good UX, but this is an oversimplification and an assumption that just doesn't stand the test of logic."
-heroImage: "/images/webflow-cdn/677fd7ff7be0c2afadfb9756_Frame 230.png"
-thumbnailImage: "/images/webflow-cdn/6782485a97d7089a66fdabea_Frame 229.png"
+heroImage: "/images/webflow-cdn/677fd7ff7be0c2afadfb9756_Frame-230.png"
+thumbnailImage: "/images/webflow-cdn/6782485a97d7089a66fdabea_Frame-229.png"
 published: true
 featured: false
 featuredPortfolio: false

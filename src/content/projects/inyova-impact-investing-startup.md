@@ -4,7 +4,7 @@ slug: "inyova-impact-investing-startup"
 featured: False
 nextProject: ""
 halfWidthImage: |-
-  /images/webflow-cdn/678288f06a800be58eb32093_Frame 9.png
+  /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
 summary: ""
 role: "UX Designer"
 team: |-

@@ -5,8 +5,8 @@ slug: "creative-careers-in-tech-an-experts-advice"
 date: "2024-03-25"
 description: "What it's like to have a creative tech career, qualities required and how to pick a tech career path based on your own personal traits"
 introHeading: "What it's like to have a creative tech career, qualities required and how to pick a tech career path based on your own personal traits"
-heroImage: "/images/webflow-cdn/677fb558aa1d03b90b3c874d_Frame 228.png"
-thumbnailImage: "/images/webflow-cdn/677fb5565fba5bc1df7ba7ef_Frame 227.png"
+heroImage: "/images/webflow-cdn/677fb558aa1d03b90b3c874d_Frame-228.png"
+thumbnailImage: "/images/webflow-cdn/677fb5565fba5bc1df7ba7ef_Frame-227.png"
 published: true
 featured: true
 featuredPortfolio: true

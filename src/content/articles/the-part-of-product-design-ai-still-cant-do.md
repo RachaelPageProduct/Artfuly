@@ -5,8 +5,8 @@ slug: "the-part-of-product-design-ai-still-cant-do"
 date: "2026-05-22"
 description: "Everyone can build an app now. Almost nobody can think through a successful product. Here's why the most invisible and undervalued design skills are suddenly the most important ones in the room."
 introHeading: "Everyone can build an app now. Almost nobody can think through a successful product. Here's why the most invisible and undervalued design skills are suddenly the most important ones in the room."
-heroImage: "/images/webflow-cdn/6a0fea47b9619f295936e7e9_Frame 258.png"
-thumbnailImage: "/images/webflow-cdn/6a0fea4a5fbd6ec6e98a315f_Frame 257.png"
+heroImage: "/images/webflow-cdn/6a0fea47b9619f295936e7e9_Frame-258.png"
+thumbnailImage: "/images/webflow-cdn/6a0fea4a5fbd6ec6e98a315f_Frame-257.png"
 published: true
 featured: true
 featuredPortfolio: true

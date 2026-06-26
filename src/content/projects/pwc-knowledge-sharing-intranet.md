@@ -4,7 +4,7 @@ slug: "pwc-knowledge-sharing-intranet"
 featured: False
 nextProject: "kpmg-user-research"
 halfWidthImage: |-
-  /images/webflow-cdn/678288f06a800be58eb32093_Frame 9.png
+  /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
 summary: |-
   A hub so that consultants don't re-invent the wheel every time
 role: |-
@@ -15,7 +15,7 @@ team: "PWC Client"
 date: "2022"
 tools: "Figma, Keynote"
 headerImage: |-
-  /images/webflow-cdn/655f6ece433f6721bbd98820_PWC large.png
+  /images/webflow-cdn/655f6ece433f6721bbd98820_PWC-large.png
 lottieUrl: ""
 workCategories: ['user-research-testing', 'ux-design', 'ui-design']
 introduction: |-

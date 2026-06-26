@@ -5,8 +5,8 @@ slug: "why-pixel-perfect-is-nonsense"
 date: "2025-01-09"
 description: "If you hear anyone saying 'Pixel Perfect' you can be sure they don't know much about digital design at all... here's why"
 introHeading: "If you hear anyone saying 'Pixel Perfect' you can be sure they don't know much about digital design at all... here's why"
-heroImage: "/images/webflow-cdn/677f7f1e24a81231f6b66d2e_Frame 222.png"
-thumbnailImage: "/images/webflow-cdn/677f7f1c684a31a2d6ba32bc_Frame 221.png"
+heroImage: "/images/webflow-cdn/677f7f1e24a81231f6b66d2e_Frame-222.png"
+thumbnailImage: "/images/webflow-cdn/677f7f1c684a31a2d6ba32bc_Frame-221.png"
 published: true
 featured: false
 featuredPortfolio: false

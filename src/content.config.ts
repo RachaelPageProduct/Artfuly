@@ -18,6 +18,7 @@ const projects = defineCollection({
     date: z.string().optional(),
     tools: z.string().optional(),
     headerImage: z.string().optional(),
+    heroVideo: z.string().optional(),
     lottieUrl: z.string().optional(),
     workCategories: z.array(z.string()).default([]),
     introduction: z.string().optional(),

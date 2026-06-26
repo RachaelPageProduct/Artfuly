@@ -5,8 +5,8 @@ slug: "jitter-vs-figma-to-lottie-files"
 date: "2025-01-11"
 description: "Creating animations of UI for demonstration purposes on a marketing website, or for your own portfolio is technically much easier than it used to be."
 introHeading: "Creating animations of UI for demonstration purposes on a marketing website, or for your own portfolio is technically much easier than it used to be."
-heroImage: "/images/webflow-cdn/678253dc68d7483c6b85116e_Frame 236.png"
-thumbnailImage: "/images/webflow-cdn/678253da3b156ee6bb9b163f_Frame 235.png"
+heroImage: "/images/webflow-cdn/678253dc68d7483c6b85116e_Frame-236.png"
+thumbnailImage: "/images/webflow-cdn/678253da3b156ee6bb9b163f_Frame-235.png"
 published: true
 featured: true
 featuredPortfolio: false

@@ -4,7 +4,7 @@ slug: "bob-finance-mobile-loan-form"
 featured: False
 nextProject: ""
 halfWidthImage: |-
-  /images/webflow-cdn/678288f06a800be58eb32093_Frame 9.png
+  /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
 summary: "Mobile Loan Form"
 role: "UX Designer"
 team: "Client"

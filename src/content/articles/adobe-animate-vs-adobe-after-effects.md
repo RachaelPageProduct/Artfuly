@@ -5,8 +5,8 @@ slug: "adobe-animate-vs-adobe-after-effects"
 date: "2025-01-08"
 description: "When you need to create web animations, there are many possible tools and it's important to use the right one for your requirements"
 introHeading: "When you need to create web animations, there are many possible tools and it's important to use the right one for your requirements"
-heroImage: "/images/webflow-cdn/677e9117796acd8359783266_Frame 218.png"
-thumbnailImage: "/images/webflow-cdn/677e91ea279a62088c3c0584_Frame 217.png"
+heroImage: "/images/webflow-cdn/677e9117796acd8359783266_Frame-218.png"
+thumbnailImage: "/images/webflow-cdn/677e91ea279a62088c3c0584_Frame-217.png"
 published: true
 featured: false
 featuredPortfolio: false

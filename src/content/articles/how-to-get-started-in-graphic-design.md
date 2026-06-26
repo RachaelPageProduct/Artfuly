@@ -5,8 +5,8 @@ slug: "how-to-get-started-in-graphic-design"
 date: "2024-06-06"
 description: "Graphic design is a fun field to be in and natually leads on to UX and Product Design. If you're just starting or thinking about a design career, this guide is for you. I'll cover all the key steps and tips to get you started"
 introHeading: "Graphic design is a fun field to be in and natually leads on to UX and Product Design. If you're just starting or thinking about a design career, this guide is for you. I'll cover all the key steps and tips to get you started"
-heroImage: "/images/webflow-cdn/6661de6b9d136a73ff7cd265_Mask group-1.png"
-thumbnailImage: "/images/webflow-cdn/6661de705011a5e4011b4b40_Mask group.png"
+heroImage: "/images/webflow-cdn/6661de6b9d136a73ff7cd265_Mask-group-1.png"
+thumbnailImage: "/images/webflow-cdn/6661de705011a5e4011b4b40_Mask-group.png"
 published: true
 featured: false
 featuredPortfolio: false

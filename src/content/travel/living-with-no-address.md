@@ -4,8 +4,8 @@ slug: "living-with-no-address"
 date: "2017-03-14"
 description: "Why you need an address — to register your car and other things. Many people have parents and family they can use the address of, others don't."
 introHeading: "Why you need an address — to register your car and other things. Many people have parents and family they can use the address of, others don't."
-heroImage: "/images/webflow-cdn/6984434c59ccddb1acd8de18_Water house.webp"
-thumbnailImage: "/images/webflow-cdn/6984434c59ccddb1acd8de18_Water house.webp"
+heroImage: "/images/webflow-cdn/6984434c59ccddb1acd8de18_Water-house.webp"
+thumbnailImage: "/images/webflow-cdn/6984434c59ccddb1acd8de18_Water-house.webp"
 published: true
 ---
 
