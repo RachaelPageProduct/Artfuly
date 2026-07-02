@@ -60,11 +60,9 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
       <h2 class="bcg-h2">Your 3D book cover</h2>
       <canvas id="output-canvas"></canvas>
       <div class="bcg-tip">
-        <p class="bcg-tip-label">Find this useful? Buy me a coffee ☕</p>
-        <div class="bcg-tip-buttons">
-          <a href="https://artfuly.click/EUR-tips" class="bcg-btn bcg-btn--tip" target="_blank" rel="noopener">Tip in EUR €</a>
-          <a href="https://artfuly.click/USD-tips" class="bcg-btn bcg-btn--tip" target="_blank" rel="noopener">Tip in USD $</a>
-        </div>
+        <span class="bcg-tip-label">Find this useful? Buy me a coffee ☕</span>
+        <a href="https://artfuly.click/EUR-tips" class="bcg-btn bcg-btn--tip" target="_blank" rel="noopener">Tip in EUR €</a>
+        <a href="https://artfuly.click/USD-tips" class="bcg-btn bcg-btn--tip" target="_blank" rel="noopener">Tip in USD $</a>
       </div>
 
       <div class="bcg-download-row">
@@ -162,19 +160,17 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
     margin-top: 40px;
     padding-top: 32px;
     border-top: 1px solid #dadada;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
   }
   .bcg-tip-label {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.82rem;
     color: #888;
-    margin-bottom: 14px;
-  }
-  .bcg-tip-buttons {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
+    white-space: nowrap;
   }
   .bcg-btn--tip {
     background: #F3F0F0;
@@ -261,6 +257,8 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 32px;
     margin-bottom: 10px;
   }
   .bcg-note {
@@ -268,6 +266,7 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
     font-size: 0.75rem;
     color: #888;
     margin-top: 6px;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
