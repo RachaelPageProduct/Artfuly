@@ -1,0 +1,417 @@
+---
+import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="Free 3D Book Cover Generator for Amazon Listings — Artfuly"
+  description="Turn your flat ebook cover into a professional 3D book mockup for Amazon listings — free, instant, no signup. Upload your cover and download a JPG ready to upload."
+>
+
+  <!-- HERO -->
+  <div class="articles-section-top">
+    <div class="a-container w-container">
+      <div class="a-des-insight-title" style="color:rgba(255,255,255,0.6); margin-bottom:12px; grid-area:1/1/2/5; text-align:left">FREE TOOL</div>
+      <h1 class="h1-small-white" style="grid-area:2/1/3/5; padding-left:0">3D Book Cover Generator<br>for Amazon Listings</h1>
+    </div>
+  </div>
+
+  <!-- TOOL WRAPPER -->
+  <div class="bcg-wrap">
+
+    <p class="bcg-intro">
+      Upload your flat ebook cover and get a <strong>realistic 3D spine effect</strong> in seconds —
+      ready to download as a JPG for your Amazon listing, sales page, or social media.
+      No signup, no watermark.
+    </p>
+
+    <!-- BEFORE / AFTER -->
+    <div class="bcg-example">
+      <p class="bcg-example-label">Example result</p>
+      <div class="bcg-before-after">
+        <figure>
+          <img src="/images/tools/book-cover-flat.jpg" alt="Flat ebook cover before spine effect" />
+          <figcaption>Your flat cover</figcaption>
+        </figure>
+        <div class="bcg-arrow">→</div>
+        <figure>
+          <img src="/images/tools/book-cover-3d.png" alt="3D book cover effect for Amazon" />
+          <figcaption>3D effect for Amazon</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="bcg-section">
+      <h2 class="bcg-h2">Upload your book cover</h2>
+      <div class="bcg-upload-zone" id="upload-zone">
+        <p>Drop your cover image here, or click to choose a file<br>
+          <small>JPG or PNG · any size</small>
+        </p>
+        <button class="bcg-btn bcg-btn--primary" id="choose-btn" type="button">Choose image</button>
+        <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" />
+      </div>
+    </div>
+
+    <!-- PROCESSING -->
+    <div id="processing" style="display:none">Applying spine effect…</div>
+
+    <!-- PREVIEW + DOWNLOAD -->
+    <div id="preview-section" style="display:none">
+      <h2 class="bcg-h2">Your 3D book cover</h2>
+      <canvas id="output-canvas"></canvas>
+      <div class="bcg-download-row">
+        <button class="bcg-btn bcg-btn--primary" id="download-jpg" type="button">Download JPG — for Amazon</button>
+        <button class="bcg-btn bcg-btn--secondary" id="download-png" type="button">Download PNG</button>
+      </div>
+      <p class="bcg-note">Amazon book listings require JPG. PNG is provided for other uses.</p>
+
+      <div class="bcg-tip">
+        <p class="bcg-tip-label">Find this useful? Buy me a coffee ☕</p>
+        <div class="bcg-tip-buttons">
+          <a href="https://artfuly.click/EUR-tips" class="bcg-btn bcg-btn--tip" target="_blank" rel="noopener">Tip in EUR €</a>
+          <a href="https://artfuly.click/USD-tips" class="bcg-btn bcg-btn--tip" target="_blank" rel="noopener">Tip in USD $</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HIDDEN WORK CANVAS -->
+  <canvas id="work-canvas" style="display:none"></canvas>
+
+</ArtfulyLayout>
+
+<style is:global>
+  /* ── Wrapper ── */
+  .bcg-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .bcg-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 44px;
+    max-width: 600px;
+  }
+  .bcg-intro strong { color: #048BA2; }
+
+  /* ── Section heading ── */
+  .bcg-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #233030;
+    margin-bottom: 14px;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Before / After ── */
+  .bcg-example {
+    background: #F3F0F0;
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 44px;
+    text-align: center;
+  }
+  .bcg-example-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #048BA2;
+    margin-bottom: 20px;
+  }
+  .bcg-before-after {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .bcg-before-after figure {
+    flex: 1;
+    max-width: 220px;
+    margin: 0;
+  }
+  .bcg-before-after img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  .bcg-before-after figcaption {
+    margin-top: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    color: #888;
+    font-weight: 500;
+  }
+  .bcg-arrow {
+    font-size: 28px;
+    color: #048BA2;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  /* ── Tip section ── */
+  .bcg-tip {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid #dadada;
+    text-align: center;
+  }
+  .bcg-tip-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    color: #888;
+    margin-bottom: 14px;
+  }
+  .bcg-tip-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .bcg-btn--tip {
+    background: #F3F0F0;
+    color: #233030;
+    border: 1px solid #dadada;
+    font-size: 0.82rem;
+    padding: 11px 26px;
+  }
+  .bcg-btn--tip:hover { background: #dadada; }
+
+  /* ── Upload zone ── */
+  .bcg-section { margin-bottom: 36px; }
+
+  .bcg-upload-zone {
+    border: 2px dashed #dadada;
+    border-radius: 12px;
+    padding: 48px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    background: #fff;
+  }
+  .bcg-upload-zone:hover,
+  .bcg-upload-zone.drag-over {
+    border-color: #048BA2;
+    background: #edf9f9;
+  }
+  .bcg-upload-zone p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+  .bcg-upload-zone small { color: #999; }
+  #file-input { display: none; }
+
+  /* ── Buttons ── */
+  .bcg-btn {
+    display: inline-block;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+  }
+  .bcg-btn--primary {
+    background: #048BA2;
+    color: #fff;
+  }
+  .bcg-btn--primary:hover { background: #233030; }
+  .bcg-btn--secondary {
+    background: #F3F0F0;
+    color: #233030;
+    border: 1px solid #dadada;
+  }
+  .bcg-btn--secondary:hover { background: #dadada; }
+
+  /* ── Processing ── */
+  #processing {
+    text-align: center;
+    padding: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #048BA2;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Preview ── */
+  #output-canvas {
+    display: block;
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+  .bcg-download-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .bcg-note {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 6px;
+  }
+
+  @media (max-width: 480px) {
+    .bcg-wrap { padding: 40px 16px 60px; }
+    .bcg-download-row { flex-direction: column; }
+    .bcg-btn { width: 100%; text-align: center; }
+  }
+</style>
+
+<script>
+  // ── Gaussian helper ──
+  function gauss(x, center, sigma) {
+    return Math.exp(-Math.pow(x - center, 2) / (2 * sigma * sigma));
+  }
+
+  // ── Apply spine effect to ImageData ──
+  function applySpineEffect(imageData, width, height) {
+    const src = new Uint8ClampedArray(imageData.data);
+    const dst = imageData.data;
+
+    const zoneW    = Math.floor(width * 0.10);
+    const maxShift = Math.floor(width * 0.010);
+
+    for (let x = 0; x < zoneW; x++) {
+      const t    = x / zoneW;
+      const tAbs = x / width;
+
+      const curve = Math.pow(1 - t, 2);
+      const srcX  = Math.min(x + Math.floor(maxShift * curve), width - 1);
+
+      for (let y = 0; y < height; y++) {
+        const dstIdx = (y * width + x) * 4;
+        const srcIdx = (y * width + srcX) * 4;
+
+        let r = src[srcIdx];
+        let g = src[srcIdx + 1];
+        let b = src[srcIdx + 2];
+        const a = src[srcIdx + 3];
+
+        // Edge shadow
+        const edgeShadow = gauss(tAbs, 0.000, 0.005) * 0.15;
+        r *= (1 - edgeShadow); g *= (1 - edgeShadow); b *= (1 - edgeShadow);
+
+        // First highlight
+        const h1 = gauss(tAbs, 0.018, 0.006) * 0.22;
+        r = r * (1 - h1) + 255 * h1; g = g * (1 - h1) + 255 * h1; b = b * (1 - h1) + 255 * h1;
+
+        // Shadow
+        const s1 = gauss(tAbs, 0.050, 0.009) * 0.48;
+        r *= (1 - s1); g *= (1 - s1); b *= (1 - s1);
+
+        // Second highlight
+        const h2 = gauss(tAbs, 0.068, 0.010) * 0.28;
+        r = r * (1 - h2) + 255 * h2; g = g * (1 - h2) + 255 * h2; b = b * (1 - h2) + 255 * h2;
+
+        dst[dstIdx]     = Math.min(255, Math.max(0, r));
+        dst[dstIdx + 1] = Math.min(255, Math.max(0, g));
+        dst[dstIdx + 2] = Math.min(255, Math.max(0, b));
+        dst[dstIdx + 3] = a;
+      }
+    }
+
+    // Copy non-zone pixels from original
+    for (let x = zoneW; x < width; x++) {
+      for (let y = 0; y < height; y++) {
+        const idx = (y * width + x) * 4;
+        dst[idx]     = src[idx];
+        dst[idx + 1] = src[idx + 1];
+        dst[idx + 2] = src[idx + 2];
+        dst[idx + 3] = src[idx + 3];
+      }
+    }
+  }
+
+  // ── Process image ──
+  function processImage(file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = new Image();
+      img.onload = function() {
+        document.getElementById('processing').style.display = 'block';
+        document.getElementById('preview-section').style.display = 'none';
+
+        setTimeout(() => {
+          const workCanvas = document.getElementById('work-canvas');
+          workCanvas.width  = img.width;
+          workCanvas.height = img.height;
+          const ctx = workCanvas.getContext('2d');
+          ctx.drawImage(img, 0, 0);
+
+          const imageData = ctx.getImageData(0, 0, img.width, img.height);
+          applySpineEffect(imageData, img.width, img.height);
+          ctx.putImageData(imageData, 0, 0);
+
+          const outCanvas = document.getElementById('output-canvas');
+          outCanvas.width  = img.width;
+          outCanvas.height = img.height;
+          outCanvas.getContext('2d').drawImage(workCanvas, 0, 0);
+
+          document.getElementById('processing').style.display = 'none';
+          document.getElementById('preview-section').style.display = 'block';
+        }, 50);
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // ── Downloads ──
+  document.getElementById('download-jpg').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.download = '3d-book-cover.jpg';
+    link.href = document.getElementById('output-canvas').toDataURL('image/jpeg', 0.95);
+    link.click();
+  });
+
+  document.getElementById('download-png').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.download = '3d-book-cover.png';
+    link.href = document.getElementById('output-canvas').toDataURL('image/png');
+    link.click();
+  });
+
+  // ── File input ──
+  document.getElementById('choose-btn').addEventListener('click', function() {
+    document.getElementById('file-input').click();
+  });
+  document.getElementById('file-input').addEventListener('change', function(e) {
+    if (e.target.files[0]) processImage(e.target.files[0]);
+  });
+
+  // ── Drag and drop ──
+  const zone = document.getElementById('upload-zone');
+  zone.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    zone.classList.add('drag-over');
+  });
+  zone.addEventListener('dragleave', function() {
+    zone.classList.remove('drag-over');
+  });
+  zone.addEventListener('drop', function(e) {
+    e.preventDefault();
+    zone.classList.remove('drag-over');
+    const file = e.dataTransfer.files[0];
+    if (file && file.type.startsWith('image/')) processImage(file);
+  });
+</script>
