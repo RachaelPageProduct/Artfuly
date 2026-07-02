@@ -59,12 +59,6 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
     <div id="preview-section" style="display:none">
       <h2 class="bcg-h2">Your 3D book cover</h2>
       <canvas id="output-canvas"></canvas>
-      <div class="bcg-download-row">
-        <button class="bcg-btn bcg-btn--primary" id="download-jpg" type="button">Download JPG — for Amazon</button>
-        <button class="bcg-btn bcg-btn--secondary" id="download-png" type="button">Download PNG</button>
-      </div>
-      <p class="bcg-note">Amazon book listings require JPG. PNG is provided for other uses.</p>
-
       <div class="bcg-tip">
         <p class="bcg-tip-label">Find this useful? Buy me a coffee ☕</p>
         <div class="bcg-tip-buttons">
@@ -72,6 +66,12 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
           <a href="https://artfuly.click/USD-tips" class="bcg-btn bcg-btn--tip" target="_blank" rel="noopener">Tip in USD $</a>
         </div>
       </div>
+
+      <div class="bcg-download-row">
+        <button class="bcg-btn bcg-btn--primary" id="download-jpg" type="button">Download JPG — for Amazon</button>
+        <button class="bcg-btn bcg-btn--secondary" id="download-png" type="button">Download PNG</button>
+      </div>
+      <p class="bcg-note">Amazon book listings require JPG. PNG is provided for other uses.</p>
     </div>
 
   </div>
