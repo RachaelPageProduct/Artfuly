@@ -1,0 +1,319 @@
+---
+import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="Monthly Pattern Trend Report — Auto-Generate Your Own | Artfuly"
+  description="Get the Claude prompt that auto-generates a monthly Spoonflower pattern trend report personalised to your portfolio. One purchase, runs every month. €27."
+>
+
+  <!-- HERO -->
+  <div class="articles-section-top">
+    <div class="a-container w-container">
+      <div class="a-des-insight-title" style="color:rgba(255,255,255,0.6); margin-bottom:12px; grid-area:1/1/2/5; text-align:left">FOR SPOONFLOWER DESIGNERS</div>
+      <h1 class="h1-small-white" style="grid-area:2/1/3/5; padding-left:0">Auto-Generate Your Monthly<br>Pattern Trend Report</h1>
+    </div>
+  </div>
+
+  <div class="ptp-wrap">
+
+    <p class="ptp-intro">
+      The <a href="/tools/pattern-trend-report/" class="ptp-link">June 2026 report</a> you just read was created entirely by Claude — in about 2 minutes, using a single prompt.
+      Buy the prompt once, run it every month, get a report personalised to <em>your</em> design portfolio and markets.
+    </p>
+
+    <!-- WHAT YOU GET -->
+    <section class="ptp-section">
+      <h2 class="ptp-h2">What you get</h2>
+      <ul class="ptp-list">
+        <li>
+          <span class="ptp-icon">📄</span>
+          <div>
+            <strong>The Claude prompt</strong><br>
+            The exact prompt used to generate the report — pre-configured for Spoonflower sellers. You personalise it once with your own portfolio details (your pattern types, your Spoonflower niche), then re-run it every month.
+          </div>
+        </li>
+        <li>
+          <span class="ptp-icon">📋</span>
+          <div>
+            <strong>Step-by-step setup guide</strong><br>
+            Clear instructions for non-techies. No coding. No subscriptions beyond Claude. You'll have your first report running within 15 minutes of purchase.
+          </div>
+        </li>
+        <li>
+          <span class="ptp-icon">🔄</span>
+          <div>
+            <strong>Monthly automation instructions</strong><br>
+            How to schedule it so Claude runs the report automatically on the first Tuesday of each month — you don't have to remember to do it.
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="ptp-section">
+      <h2 class="ptp-h2">How it works — 3 steps</h2>
+      <ol class="ptp-steps">
+        <li>
+          <div class="ptp-step-num">1</div>
+          <div>
+            <strong>Buy the prompt</strong><br>
+            One payment of €27. You're taken straight to the download page with everything you need.
+          </div>
+        </li>
+        <li>
+          <div class="ptp-step-num">2</div>
+          <div>
+            <strong>Personalise it once</strong><br>
+            Open the prompt in Claude, fill in your portfolio details (takes 5 minutes). The setup guide walks you through it line by line.
+          </div>
+        </li>
+        <li>
+          <div class="ptp-step-num">3</div>
+          <div>
+            <strong>Run it every month</strong><br>
+            Paste the prompt into Claude and get a full trend report in 2–3 minutes. Or set up the automation and it runs itself.
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- WHAT YOU NEED -->
+    <section class="ptp-section ptp-requirements">
+      <h2 class="ptp-h2">What you need</h2>
+      <p class="ptp-req-note">That's it. No other tools, subscriptions, or technical setup required.</p>
+      <div class="ptp-req-grid">
+        <div class="ptp-req-item">
+          <span class="ptp-req-icon">✓</span>
+          <div>
+            <strong>A Claude account</strong><br>
+            <span>Free tier works, but Claude Pro (~$20/month) gives faster results and longer reports. You may already have it.</span>
+          </div>
+        </div>
+        <div class="ptp-req-item">
+          <span class="ptp-req-icon">✓</span>
+          <div>
+            <strong>A browser</strong><br>
+            <span>Claude runs in your browser at claude.ai — nothing to install.</span>
+          </div>
+        </div>
+        <div class="ptp-req-item">
+          <span class="ptp-req-icon">✓</span>
+          <div>
+            <strong>Your portfolio info</strong><br>
+            <span>A short description of your Spoonflower niche (e.g. "William Morris, botanical wallpaper, coastal patterns"). That's what makes the report yours.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAMPLE -->
+    <section class="ptp-section ptp-sample-box">
+      <p class="ptp-sample-label">See the output first</p>
+      <p>Read the full <a href="/tools/pattern-trend-report/" class="ptp-link">June 2026 sample report →</a><br>
+      That's exactly what your monthly report will look like — with your portfolio, your markets, your opportunities.</p>
+    </section>
+
+    <!-- PAYMENT -->
+    <section class="ptp-buy" id="buy">
+      <div class="ptp-price-tag">€27 <span>one-time payment</span></div>
+      <p class="ptp-buy-desc">Instant access. No subscription. Works every month.</p>
+      <!-- REPLACE the href below with your Stripe Payment Link URL -->
+      <!-- In Stripe: Products → Payment Links → set redirect to https://artfuly.com/tools/pattern-trend-download/ -->
+      <a href="STRIPE_PAYMENT_LINK_URL" class="ptp-buy-btn">Buy now — €27 →</a>
+      <p class="ptp-buy-note">Secure payment via Stripe. You'll be taken to your download immediately after payment.</p>
+    </section>
+
+  </div>
+
+</ArtfulyLayout>
+
+<style is:global>
+  .ptp-wrap {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  .ptp-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 52px;
+    max-width: 640px;
+  }
+  .ptp-link { color: #048BA2; text-decoration: underline; }
+  .ptp-link:hover { color: #233030; }
+
+  .ptp-section { margin-bottom: 52px; }
+
+  .ptp-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #233030;
+    margin-bottom: 24px;
+    letter-spacing: 0.01em;
+  }
+
+  /* What you get list */
+  .ptp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .ptp-list li {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.65;
+  }
+  .ptp-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+  .ptp-list strong { color: #233030; display: block; margin-bottom: 4px; font-size: 0.95rem; }
+
+  /* Steps */
+  .ptp-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ptp-steps li {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.65;
+  }
+  .ptp-step-num {
+    width: 36px;
+    height: 36px;
+    background: #048BA2;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .ptp-steps strong { color: #233030; display: block; margin-bottom: 4px; font-size: 0.95rem; }
+
+  /* Requirements */
+  .ptp-requirements { background: #F3F0F0; border-radius: 12px; padding: 32px; }
+  .ptp-req-note {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  .ptp-req-grid { display: flex; flex-direction: column; gap: 16px; }
+  .ptp-req-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  .ptp-req-icon {
+    color: #048BA2;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .ptp-req-item strong { color: #233030; }
+  .ptp-req-item span { font-size: 0.84rem; }
+
+  /* Sample box */
+  .ptp-sample-box {
+    background: #edf9f9;
+    border: 1px solid #C5E6E7;
+    border-radius: 10px;
+    padding: 28px 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.65;
+  }
+  .ptp-sample-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #048BA2;
+    margin-bottom: 10px;
+  }
+
+  /* Buy section */
+  .ptp-buy {
+    text-align: center;
+    padding: 48px 32px;
+    background: #233030;
+    border-radius: 14px;
+  }
+  .ptp-price-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+  .ptp-price-tag span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.55);
+    display: block;
+    margin-top: 6px;
+  }
+  .ptp-buy-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 28px;
+  }
+  .ptp-buy-btn {
+    display: inline-block;
+    background: #EE7C7B;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    padding: 18px 48px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .ptp-buy-btn:hover { background: #d96b6a; transform: translateY(-2px); }
+  .ptp-buy-note {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 14px;
+  }
+
+  @media (max-width: 480px) {
+    .ptp-wrap { padding: 40px 16px 60px; }
+    .ptp-requirements { padding: 24px 20px; }
+    .ptp-buy { padding: 36px 20px; }
+    .ptp-price-tag { font-size: 2.2rem; }
+  }
+</style>

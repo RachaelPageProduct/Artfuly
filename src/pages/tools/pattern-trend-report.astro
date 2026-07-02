@@ -1,0 +1,519 @@
+---
+import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="Spoonflower Pattern & Colour Trend Report — June 2026 | Artfuly"
+  description="Monthly surface design trend intelligence for Spoonflower sellers — interior design, colour forecasts, SS27 trade show analysis and actionable design opportunities."
+>
+
+<style is:global>
+  /* ── Report reset (scoped to .trend-report-wrap) ── */
+  .trend-report-wrap *, .trend-report-wrap *::before, .trend-report-wrap *::after { box-sizing: border-box; }
+  .trend-report-wrap { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1d1d1d; font-size: 15px; line-height: 1.6; }
+  .report-header { background: #2a4a3a; color: #f5f0e8; padding: 48px 40px 36px; }
+  .report-header .eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #a8c4b0; margin-bottom: 10px; }
+  .report-header h1 { font-family: Georgia,'Times New Roman',serif; font-size: 34px; font-weight: normal; line-height: 1.2; color: #f5f0e8; margin-bottom: 12px; }
+  .report-header .subtitle { color: #c8d8cc; font-size: 15px; max-width: 620px; }
+  .report-meta { display: flex; gap: 32px; margin-top: 24px; flex-wrap: wrap; }
+  .report-meta-item { font-size: 12px; color: #a8c4b0; }
+  .report-meta-item strong { color: #f5f0e8; display: block; font-size: 14px; }
+  .r-container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+  .r-section { padding: 48px 0 16px; }
+  .part-header { padding: 28px 40px; border-left: 6px solid; }
+  .part-header-a { background: #e8f0ec; border-color: #2a4a3a; }
+  .part-header-b { background: #e8e8f0; border-color: #3d3d52; }
+  .part-header h2 { font-family: Georgia,serif; font-size: 22px; font-weight: normal; margin-bottom: 4px; }
+  .part-header-a h2 { color: #2a4a3a; }
+  .part-header-b h2 { color: #3d3d52; }
+  .part-header p { font-size: 13px; color: #4a4a4a; max-width: 700px; }
+  .part-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; font-weight: 600; }
+  .part-header-a .part-label { color: #2a4a3a; }
+  .part-header-b .part-label { color: #3d3d52; }
+  .section-title { font-family: Georgia,serif; font-size: 19px; font-weight: normal; margin-bottom: 4px; padding-bottom: 10px; border-bottom: 1px solid #e8e2da; }
+  .section-title-a { color: #2a4a3a; }
+  .section-title-b { color: #3d3d52; }
+  .section-title-c { color: #1d1d1d; }
+  .section-subtitle { font-size: 13px; color: #5a5a5a; margin-bottom: 28px; }
+  .r-card { background: #ffffff; border: 1px solid #e8e2da; border-radius: 4px; overflow: hidden; }
+  .trend-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 20px; margin-bottom: 32px; }
+  .trend-card .pattern-tile { width: 100%; height: 200px; overflow: hidden; position: relative; }
+  .trend-card .pattern-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .trend-card .card-body { padding: 16px; }
+  .badge { display: inline-block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; padding: 3px 8px; border-radius: 2px; margin-bottom: 8px; }
+  .badge-wallpaper { background: #d4e6dc; color: #2a4a3a; }
+  .badge-home-fabric { background: #dde8e0; color: #1e3a2e; }
+  .badge-apparel { background: #dcdce8; color: #3d3d52; }
+  .trend-card h3 { font-family: Georgia,serif; font-size: 15px; font-weight: normal; margin-bottom: 6px; color: #1d1d1d; }
+  .trend-card p { font-size: 12.5px; color: #3a3a3a; line-height: 1.55; }
+  .trend-card .source { font-size: 11px; color: #888; margin-top: 8px; }
+  .spoonflower-credit { font-size: 10px; color: #aaa; margin-top: 4px; font-style: italic; }
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 20px; margin-bottom: 24px; }
+  .palette-card { padding: 20px; }
+  .palette-swatches { display: flex; gap: 8px; margin-bottom: 14px; }
+  .swatch { flex: 1; height: 48px; border-radius: 3px; border: 1px solid rgba(0,0,0,0.07); }
+  .palette-card h3 { font-family: Georgia,serif; font-size: 15px; font-weight: normal; margin-bottom: 6px; }
+  .palette-card p { font-size: 12.5px; color: #3a3a3a; line-height: 1.5; }
+  .palette-card .usage-note { font-size: 11.5px; color: #666; margin-top: 8px; padding-top: 8px; border-top: 1px solid #f0ece6; }
+  .palette-card .usage-note strong { color: #2a4a3a; }
+  .palette-images { display: flex; gap: 12px; margin-top: 16px; }
+  .palette-images img { flex: 1; height: 100px; object-fit: cover; border-radius: 3px; border: 1px solid #e8e2da; }
+  .opportunity-grid { display: grid; gap: 20px; margin-bottom: 28px; }
+  .opportunity-card { display: grid; grid-template-columns: 220px 1fr; min-height: 180px; }
+  .opportunity-tile { width: 100%; height: 100%; min-height: 180px; overflow: hidden; }
+  .opportunity-tile img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 180px; }
+  .opportunity-body { padding: 24px; }
+  .priority-badge { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; padding: 3px 9px; border-radius: 2px; margin-bottom: 12px; display: inline-block; }
+  .priority-high { background: #c5e0d0; color: #1a3528; }
+  .priority-medium { background: #e0ddc5; color: #352e1a; }
+  .opportunity-body h3 { font-family: Georgia,serif; font-size: 17px; font-weight: normal; margin-bottom: 8px; }
+  .opportunity-body p { font-size: 13px; color: #3a3a3a; line-height: 1.6; margin-bottom: 14px; }
+  .action-box { background: #f3f0eb; border-left: 3px solid #2a4a3a; padding: 10px 14px; font-size: 12px; color: #1d1d1d; border-radius: 0 3px 3px 0; }
+  .action-box strong { color: #2a4a3a; }
+  .top-priority { background: #e8f5ec; border: 2px solid #4a9a6a; border-radius: 4px; padding: 28px 32px; margin-bottom: 40px; display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
+  .top-priority-icon { width: 52px; height: 52px; background: #2a4a3a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; color: #f5f0e8; flex-shrink: 0; }
+  .top-priority h3 { font-family: Georgia,serif; font-size: 18px; font-weight: normal; color: #1a3528; margin-bottom: 6px; }
+  .top-priority .eyebrow { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #4a9a6a; font-weight: 700; margin-bottom: 4px; }
+  .top-priority p { font-size: 13.5px; color: #2a3a30; line-height: 1.6; }
+  .sources-section { background: #f0ece6; padding: 32px 40px; margin-top: 40px; }
+  .sources-section h3 { font-family: Georgia,serif; font-size: 15px; font-weight: normal; margin-bottom: 16px; color: #2a4a3a; }
+  .sources-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 8px 24px; }
+  .sources-grid a { font-size: 12px; color: #2a4a3a; text-decoration: none; border-bottom: 1px solid #c8bfb0; }
+  .report-footer { background: #2a4a3a; color: #a8c4b0; text-align: center; padding: 20px; font-size: 12px; letter-spacing: 0.5px; }
+  .r-divider { height: 1px; background: #e8e2da; margin: 32px 0; }
+  .tile-snake { background-color: #e8d8b8; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cellipse cx='25' cy='25' rx='18' ry='12' fill='%23a89870' stroke='%23887858' stroke-width='1'/%3E%3Cellipse cx='60' cy='15' rx='14' ry='9' fill='%23b8a878' stroke='%23887858' stroke-width='1'/%3E%3Cellipse cx='80' cy='40' rx='16' ry='10' fill='%23a89870' stroke='%23887858' stroke-width='1'/%3E%3Cellipse cx='40' cy='55' rx='18' ry='11' fill='%23b8a878' stroke='%23987868' stroke-width='1'/%3E%3Cellipse cx='75' cy='70' rx='15' ry='9' fill='%23a89870' stroke='%23887858' stroke-width='1'/%3E%3Cellipse cx='20' cy='80' rx='14' ry='8' fill='%23c0b080' stroke='%23887858' stroke-width='1'/%3E%3Cellipse cx='55' cy='88' rx='17' ry='10' fill='%23b0a068' stroke='%23887858' stroke-width='1'/%3E%3C/svg%3E"); }
+  .tile-70s { background-color: #d4783a; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ccircle cx='60' cy='60' r='55' fill='none' stroke='%23f0d060' stroke-width='8'/%3E%3Ccircle cx='60' cy='60' r='40' fill='none' stroke='%23f0d060' stroke-width='4'/%3E%3Ccircle cx='60' cy='60' r='22' fill='%23e86030'/%3E%3Crect x='0' y='54' width='120' height='12' fill='%23f0d060' opacity='0.5'/%3E%3Crect x='54' y='0' width='12' height='120' fill='%23f0d060' opacity='0.5'/%3E%3C/svg%3E"); }
+  .tile-polkadot { background-color: #f5f0e8; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='15' cy='15' r='8' fill='%233d3d52'/%3E%3Ccircle cx='45' cy='15' r='8' fill='%233d3d52'/%3E%3Ccircle cx='15' cy='45' r='8' fill='%233d3d52'/%3E%3Ccircle cx='45' cy='45' r='8' fill='%233d3d52'/%3E%3C/svg%3E"); background-size: 60px 60px; }
+
+  /* ── Bottom CTA ── */
+  .ptr-cta {
+    background: #233030;
+    padding: 72px 32px;
+    text-align: center;
+  }
+  .ptr-cta-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #a8c4b0;
+    margin-bottom: 18px;
+  }
+  .ptr-cta h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #f5f0e8;
+    line-height: 1.3;
+    max-width: 680px;
+    margin: 0 auto 16px;
+  }
+  .ptr-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #c8d8cc;
+    max-width: 560px;
+    margin: 0 auto 36px;
+    line-height: 1.7;
+  }
+  .ptr-cta-btn {
+    display: inline-block;
+    background: #EE7C7B;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    padding: 18px 44px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .ptr-cta-btn:hover { background: #d96b6a; transform: translateY(-2px); }
+
+  @media (max-width: 700px) {
+    .opportunity-card { grid-template-columns: 1fr; }
+    .opportunity-tile { height: 200px; }
+    .report-header { padding: 32px 20px 28px; }
+    .r-container { padding: 0 16px; }
+    .trend-grid { grid-template-columns: 1fr 1fr; }
+    .ptr-cta { padding: 48px 20px; }
+  }
+</style>
+
+<div class="trend-report-wrap">
+
+  <div class="report-header">
+    <div class="eyebrow">Monthly Surface Design Intelligence &nbsp;·&nbsp; Sample Report</div>
+    <h1>Pattern &amp; Colour Trend Report<br>June 2026</h1>
+    <p class="subtitle">Interior design–first analysis for Spoonflower sellers specialising in wallpaper, botanical prints, William Morris heritage, coastal and geometric patterns.</p>
+    <div class="report-meta">
+      <div class="report-meta-item"><strong>June 2026</strong>Issue Date</div>
+      <div class="report-meta-item"><strong>Interior Design</strong>Primary Focus</div>
+      <div class="report-meta-item"><strong>Fashion Apparel</strong>Secondary</div>
+      <div class="report-meta-item"><strong>Spoonflower + Patternbank</strong>Market</div>
+    </div>
+  </div>
+
+  <!-- PART A -->
+  <div class="part-header part-header-a">
+    <div class="r-container">
+      <div class="part-label">Part A — Primary Market</div>
+      <h2>Interior Design — Wallpaper &amp; Home Fabric</h2>
+      <p>Colour forecasts, pattern directions and Spoonflower collection intelligence for home décor, wallpaper and soft furnishings.</p>
+    </div>
+  </div>
+
+  <div class="r-container">
+    <div class="r-section">
+      <h2 class="section-title section-title-a">A1 — Interior Pattern Trends</h2>
+      <p class="section-subtitle">Leading wallpaper and home fabric directions for 2026, ranked by market momentum. Images from Spoonflower best-sellers.</p>
+      <div class="trend-grid">
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile">
+            <img src="https://img.spoonflower.com/c/14292941/p/f/m/c8dpuRMrGRO6idVGTwalY7PZZQhXszQYpMFzMnjVxS0VyidS1g4PFIw/Wonderful%20poisonous%20lily%20of%20the%20valley%20green%20-%20L.jpg" alt="Botanical wallpaper – lily of the valley, Spoonflower best-seller" />
+          </div>
+          <div class="card-body">
+            <span class="badge badge-wallpaper">Wallpaper</span>
+            <h3>Botanical Maximalism</h3>
+            <p>Oversized flora covering full rooms — biophilic design at scale. Vibrant emerald, moss and mustard dominate. Spoonflower's "Hot House Tropical" (newly launched) and "Cottagecore" collections are leading.</p>
+            <div class="source">Tecnografica, Archiproducts, Spoonflower 2026</div>
+            <div class="spoonflower-credit">Image: Spoonflower best-seller, art nouveau wallpaper</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile">
+            <img src="https://img.spoonflower.com/c/15293344/p/f/m/EoManMpEat-zaOEv34vH5dGAWTgsxKt3vVnxf2B0MC6SX7_E4KHAG5c/scallop%20fans%20lion%20gold%20mustard%20raisin%20black%20art%20deco%20geometric.jpg" alt="Art Deco geometric wallpaper – scallop fans gold, Spoonflower best-seller" />
+          </div>
+          <div class="card-body">
+            <span class="badge badge-wallpaper">Wallpaper</span>
+            <h3>Art Deco Geometric</h3>
+            <p>The single best-selling wallpaper style by volume in 2026. Clean geometric grids, scallop fans, structured symmetry. Gold on dark grounds leads. Spoonflower's "Art Deco" collection is active and trending strongly.</p>
+            <div class="source">Applied Coverings, Spoonflower Art Deco collection</div>
+            <div class="spoonflower-credit">Image: Spoonflower best-seller, art deco wallpaper</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile">
+            <img src="https://img.spoonflower.com/c/18381034/p/f/m/QPLJz86dvfO7_orZlBqtfNzJV_lWkCl8DlzpG_5C-LkNVvzCunFE6Y8/ACORN%20IN%20SAND%20%26%20LEAF%20(Traditional%20Arts%20%26%20Crafts)%20-%20WILLIAM%20MORRIS.jpg" alt="William Morris Acorn in Sand wallpaper, Spoonflower best-seller" />
+          </div>
+          <div class="card-body">
+            <span class="badge badge-home-fabric">Home Fabric</span>
+            <h3>Heritage Craft Revival</h3>
+            <p>A cultural shift toward craftsmanship drives demand for Arts &amp; Crafts patterning. William Morris acanthus, dense botanical repeats and organic flat-colour forms are strong Spoonflower sellers. "Craft Revival" and "Traditional" collections directly reflect this moment.</p>
+            <div class="source">Spoonflower Craft Revival, Wallpaper* 2026</div>
+            <div class="spoonflower-credit">Image: William Morris Acorn in Sand, Spoonflower best-seller</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile">
+            <img src="https://img.spoonflower.com/c/17742132/p/f/m/VeaISRlBClPNf8A6uMQ0oN_z5HubQw67YPXxsGEv8Fj-e4V-Q2nzw1k/Boho%20Jungle%20Light%20Baby%20Blue%20White%20-%20modern%20coastal%20-%20seaweed%20plants%20large.jpg" alt="Coastal botanical – seaweed and sea plants wallpaper, Spoonflower best-seller" />
+          </div>
+          <div class="card-body">
+            <span class="badge badge-wallpaper">Wallpaper</span>
+            <h3>Coastal Botanical</h3>
+            <p>Soft aqua and seafoam palettes meet tropical botanical forms — sea grasses, palm fronds, sea plants and coastal florals. Spoonflower's "Riviera" and "Nautical" collections are trending. Light and airy — strong for bathrooms and bedrooms.</p>
+            <div class="source">Spoonflower Riviera &amp; Nautical, Walls Republic 2026</div>
+            <div class="spoonflower-credit">Image: Boho Jungle coastal, Spoonflower best-seller</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile">
+            <img src="https://img.spoonflower.com/c/15277579/p/f/m/uFkXPDCclHgKtl1Os7I_-4ofOO5JylUOSLi9LXL2ZiNvbTspxQrdaRmewQ/scallop%20fans%20-%20creamy%20white%20and%20marble%20blue%20-%20art%20deco%20coastal%20geometric.jpg" alt="Art Deco coastal geometric – scallop fans cream and blue, Spoonflower" />
+          </div>
+          <div class="card-body">
+            <span class="badge badge-wallpaper">Wallpaper</span>
+            <h3>Tactile Texture &amp; Grasscloth</h3>
+            <p>Texture is the defining new luxury for 2026. Grasscloth-look wallpapers, linen-effect prints and woven-fabric simulations are major trends. Spoonflower now stocks a dedicated Grasscloth Wallpaper product type. Warm wheat and caramel neutrals lead.</p>
+            <div class="source">Spoonflower Grasscloth product, Applied Coverings 2026</div>
+            <div class="spoonflower-credit">Image: Spoonflower best-seller, art deco geometric</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="r-section">
+      <h2 class="section-title section-title-a">A2 — Interior Colour Palettes 2026</h2>
+      <p class="section-subtitle">Key colour directions for wallpaper and home fabric — interiors only. These differ significantly from fashion palettes.</p>
+      <div class="palette-grid">
+
+        <div class="r-card palette-card">
+          <div class="palette-swatches">
+            <div class="swatch" style="background:#2a4a3a;"></div>
+            <div class="swatch" style="background:#4a7a50;"></div>
+            <div class="swatch" style="background:#7aaa72;"></div>
+            <div class="swatch" style="background:#a8c890;"></div>
+            <div class="swatch" style="background:#d8e8c8;"></div>
+          </div>
+          <h3>Heritage Greens</h3>
+          <p>An expanded green spectrum from deep forest to soft celadon. Mid-tone greens remain the most requested wallpaper ground colour. Works beautifully with William Morris acanthus and dense botanical repeats.</p>
+          <div class="usage-note"><strong>Best for:</strong> Wallpaper (deep forest grounds), curtain fabric (sage/celadon), upholstery (moss, olive)</div>
+          <div class="palette-images">
+            <img src="https://img.spoonflower.com/c/13214693/p/f/m/B17NK-NIVxJVuehRiIOjdL0Po1uLDzjkFzoAlH8lcITyx9KcsKkX/WILLOW%20BOUGH%20IN%20VINTAGE%20ORIGINAL%20(Historic%20Arts%20%26%20Crafts)%20-%20WILLIAM%20MORRIS.jpg" alt="Willow Bough William Morris green" />
+            <img src="https://img.spoonflower.com/c/14046021/p/f/m/ueK8Z9QXd-HbzUJTJ7DklLfHFZ6-bNkCfbD-kXuvomO30mkE_uLK/Elegant%20Art%20Deco%20bats%20and%20flowers%20-Emerald%20green%20gold%20black%20and%20pink%20-jumbo.jpg" alt="Art Deco emerald green gold" />
+          </div>
+        </div>
+
+        <div class="r-card palette-card">
+          <div class="palette-swatches">
+            <div class="swatch" style="background:#8a3a22;"></div>
+            <div class="swatch" style="background:#c06040;"></div>
+            <div class="swatch" style="background:#d8906a;"></div>
+            <div class="swatch" style="background:#e8b898;"></div>
+            <div class="swatch" style="background:#f5dcc8;"></div>
+          </div>
+          <h3>Terracotta &amp; Mediterranean Clay</h3>
+          <p>Sun-baked terracotta and clay tones are dominant as interiors lean into warmth and Mediterranean escapism. Sherwin-Williams Colour of Year "Universal Khaki" validates mid-tone tan. Creates spaces that feel grounded and welcoming.</p>
+          <div class="usage-note"><strong>Best for:</strong> Wallpaper (feature walls), cushion fabric (all shades), table linens (clay + sand)</div>
+          <div class="palette-images">
+            <img src="https://img.spoonflower.com/c/17742127/p/f/m/iXBKihdoj9reTqvOvr1zm5Mu5hUBMEBb1_RHofjDnHfhDhsDuQh4fyM/Boho%20Jungle%20Evergreen%20Green%20and%20Clay%20-%20woods%20and%20forest%20-%20cottagecore%20Large.jpg" alt="Boho Jungle green and clay" />
+            <img src="https://img.spoonflower.com/c/18381034/p/f/m/QPLJz86dvfO7_orZlBqtfNzJV_lWkCl8DlzpG_5C-LkNVvzCunFE6Y8/ACORN%20IN%20SAND%20%26%20LEAF%20(Traditional%20Arts%20%26%20Crafts)%20-%20WILLIAM%20MORRIS.jpg" alt="William Morris Acorn in Sand" />
+          </div>
+        </div>
+
+        <div class="r-card palette-card">
+          <div class="palette-swatches">
+            <div class="swatch" style="background:#f5f2ec;"></div>
+            <div class="swatch" style="background:#e8d8c0;"></div>
+            <div class="swatch" style="background:#c8b090;"></div>
+            <div class="swatch" style="background:#a8906a;"></div>
+            <div class="swatch" style="background:#805838;"></div>
+          </div>
+          <h3>Cloud Dancer &amp; Warm Neutrals</h3>
+          <p>Pantone Colour of the Year 2026 is Cloud Dancer (11-4201) — a refined off-white with subtle warmth, signalling a shift toward calm and intentional living. Layered with linens, wheat and caramel, drives the "quiet craft" interior aesthetic.</p>
+          <div class="usage-note"><strong>Best for:</strong> Wallpaper grounds, bedding (linen/wheat), grasscloth-look wallpapers, upholstery</div>
+          <div class="palette-images">
+            <img src="https://img.spoonflower.com/c/15606289/p/f/m/lB-2cXRFJYzP__qiCtnA23P0itstqdB3r69Bah7LXzb-eM5MF9b06SU/ACORN%20IN%20VINTAGE%20ORIGINAL%20BLUE%20(Traditional%20Arts%20%26%20Crafts)%20-%20WILLIAM%20MORRIS.jpg" alt="William Morris Acorn vintage blue" />
+            <img src="https://img.spoonflower.com/c/14348545/p/f/m/4zfSHwr8v4XPSwKK7y7-0wm1w4siyMud9zOqRooBnxl9tfjqBDaT/WILLOW%20BOUGH%20IN%20VINTAGE%20ORIGINAL%20BLUE%20(Historic%20Arts%20%26%20Crafts)%20-%20W.%20MORRIS.jpg" alt="Willow Bough vintage blue William Morris" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="r-divider"></div>
+  </div>
+
+  <!-- PART B -->
+  <div class="part-header part-header-b">
+    <div class="r-container">
+      <div class="part-label">Part B — Forward-Looking: SS27 Forecasts</div>
+      <h2>Première Vision SS27 — Print &amp; Pattern Forecasts</h2>
+      <p>Spring/Summer 2027 trade show intelligence from Patternbank's Première Vision report. These are the trends designers need to be working on <em>now</em> — 12–18 months ahead of retail.</p>
+    </div>
+  </div>
+
+  <div class="r-container">
+    <div class="r-section">
+      <h2 class="section-title section-title-b">B1 — SS27 Trend Directions (Première Vision)</h2>
+      <p class="section-subtitle">Six forward-looking print directions for Spring/Summer 2027 from Patternbank's Première Vision trade show report. Images © Patternbank.</p>
+      <div class="trend-grid">
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile"><img src="https://production-cdn2.patternbank.com/uploads/media/sources/000/009/324/1770816064/original/Premiere-Vision_SEASON-REPORT-SS-27_Trend-Dream-State.jpg?1770816064" alt="Dreamy Floral SS27, Patternbank Première Vision" /></div>
+          <div class="card-body">
+            <span class="badge badge-apparel">SS27 Forecast</span>
+            <h3>Dreamy Floral</h3>
+            <p>Soft, ethereal florals with a dreamlike quality — blurred edges, pastel haze, romantic mood. A softer direction than maximalist botanicals. Strong crossover into home fabric: cushions, bedding and curtains in this palette will be very commercial.</p>
+            <div class="source">Patternbank × Première Vision SS27</div>
+            <div class="spoonflower-credit">Image © Patternbank / Première Vision SS27</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile"><img src="https://production-cdn1.patternbank.com/uploads/media/sources/000/009/325/1770816076/original/Premiere-Vision_SEASON-REPORT-SS-27_Trend-Art-Garden.jpg?1770816076" alt="Art Garden SS27, Patternbank Première Vision" /></div>
+          <div class="card-body">
+            <span class="badge badge-apparel">SS27 Forecast</span>
+            <h3>Art Garden</h3>
+            <p>Botanical gardens rendered with an artistic, craft-inspired hand — a direct bridge between fashion and the interiors Arts &amp; Crafts revival. Strong Patternbank submission opportunity in both apparel and home.</p>
+            <div class="source">Patternbank × Première Vision SS27</div>
+            <div class="spoonflower-credit">Image © Patternbank / Première Vision SS27</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile"><img src="https://production-cdn.patternbank.com/uploads/media/sources/000/009/326/1770816086/original/Premiere-Vision_SEASON-REPORT-SS-27_Trend-Geo-Impact.jpg?1770816086" alt="Geo Impact SS27, Patternbank Première Vision" /></div>
+          <div class="card-body">
+            <span class="badge badge-apparel">SS27 Forecast</span>
+            <h3>Geo Impact</h3>
+            <p>Bold, graphic geometric prints with strong visual impact — structured, high-contrast and architectural. The SS27 version is expected to be more saturated and graphic than the 2026 Art Deco direction.</p>
+            <div class="source">Patternbank × Première Vision SS27</div>
+            <div class="spoonflower-credit">Image © Patternbank / Première Vision SS27</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile"><img src="https://production-cdn.patternbank.com/uploads/media/sources/000/009/327/1770816095/original/Premiere-Vision_SEASON-REPORT-SS-27_Trend-Travel-Journal.jpg?1770816095" alt="Travel Journal SS27, Patternbank Première Vision" /></div>
+          <div class="card-body">
+            <span class="badge badge-apparel">SS27 Forecast</span>
+            <h3>Travel Journal</h3>
+            <p>Eclectic, mixed-media prints inspired by travel sketchbooks — maps, stamps, handwritten notes, botanical sketches layered together. Crossover into home for table linens and stationery-adjacent home products.</p>
+            <div class="source">Patternbank × Première Vision SS27</div>
+            <div class="spoonflower-credit">Image © Patternbank / Première Vision SS27</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile"><img src="https://production-cdn2.patternbank.com/uploads/media/sources/000/009/328/1770816105/original/Premiere-Vision_SEASON-REPORT-SS-27_Trend-Stranger-Things.jpg?1770816105" alt="Strange Forms SS27, Patternbank Première Vision" /></div>
+          <div class="card-body">
+            <span class="badge badge-apparel">SS27 Forecast</span>
+            <h3>Strange Forms</h3>
+            <p>Surreal, abstract and biomorphic shapes — unexpected motifs, distorted natural forms, dreamlike compositions. More avant-garde and relevant for Patternbank licensing submissions targeting progressive fashion clients.</p>
+            <div class="source">Patternbank × Première Vision SS27</div>
+            <div class="spoonflower-credit">Image © Patternbank / Première Vision SS27</div>
+          </div>
+        </div>
+
+        <div class="r-card trend-card">
+          <div class="pattern-tile"><img src="https://production-cdn1.patternbank.com/uploads/media/sources/000/009/329/1770816113/original/Premiere-Vision_SEASON-REPORT-SS-27_Trend-Sweet-Motif.jpg?1770816113" alt="Sweet Motifs SS27, Patternbank Première Vision" /></div>
+          <div class="card-body">
+            <span class="badge badge-apparel">SS27 Forecast</span>
+            <h3>Sweet Motifs</h3>
+            <p>Charming, playful decorative motifs — small-scale repeating elements with an artisanal, handmade quality. Strong crossover potential for cushion fabric, tea towels and gift wrap on Spoonflower.</p>
+            <div class="source">Patternbank × Première Vision SS27</div>
+            <div class="spoonflower-credit">Image © Patternbank / Première Vision SS27</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="r-section">
+      <h2 class="section-title section-title-b">B2 — SS27 Colour Directions</h2>
+      <p class="section-subtitle">Forward-looking colour for SS27 — trade show intelligence from Première Vision.</p>
+      <div class="palette-grid">
+
+        <div class="r-card palette-card">
+          <div class="palette-swatches">
+            <div class="swatch" style="background:#d4783a;"></div>
+            <div class="swatch" style="background:#e8b830;"></div>
+            <div class="swatch" style="background:#c84828;"></div>
+            <div class="swatch" style="background:#3a3a52;"></div>
+            <div class="swatch" style="background:#f5f0e8;"></div>
+          </div>
+          <h3>Bold Expressives (Apparel)</h3>
+          <p>High-energy fashion palette for SS27 — rust, saffron, tomato red balanced by indigo. These saturation levels work in apparel and accessories rather than wallpaper.</p>
+          <div class="usage-note"><strong>Best for:</strong> Apparel fabric, accessories, statement dress fabric only</div>
+          <div class="palette-images">
+            <img src="https://production-cdn.patternbank.com/uploads/media/sources/000/009/126/1761062346/original/Stripe-Variation-Spring-Summer-26-SS26-2026-trends-pattern--trend-forecast-print-surface-pattern-textiles-seasonal-TREND-1a.jpg?1761062346" alt="Stripe Variations SS26, Patternbank" />
+            <img src="https://production-cdn1.patternbank.com/uploads/media/sources/000/009/127/1761062355/original/Stripe-Variation-Spring-Summer-26-SS26-2026-trends-pattern--trend-forecast-print-surface-pattern-textiles-seasonal-TREND-1b.jpg?1761062355" alt="Stripe Variations SS26 detail, Patternbank" />
+          </div>
+        </div>
+
+        <div class="r-card palette-card">
+          <div class="palette-swatches">
+            <div class="swatch" style="background:#e8d8b8;"></div>
+            <div class="swatch" style="background:#a89870;"></div>
+            <div class="swatch" style="background:#786850;"></div>
+            <div class="swatch" style="background:#3d3d3d;"></div>
+            <div class="swatch" style="background:#c0b080;"></div>
+          </div>
+          <h3>Refined Neutrals (Fashion)</h3>
+          <p>Plaid and pinstripe directions call for restrained, layered neutrals in fashion tailoring — pencil suits, shirting and tailored separates.</p>
+          <div class="usage-note"><strong>Best for:</strong> Bottom-weight apparel, shirting, tailored pieces</div>
+          <div class="palette-images">
+            <img src="https://production-cdn1.patternbank.com/uploads/media/sources/000/009/004/1759928110/original/Kronthaler-Westwood-S26-018.jpg?1759928110" alt="Kronthaler for Westwood SS26, Patternbank" />
+            <img src="https://production-cdn1.patternbank.com/uploads/media/sources/000/009/003/1759928087/original/6-Erdem-S26-025.jpg?1759928087" alt="Erdem SS26, Patternbank" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="r-divider"></div>
+  </div>
+
+  <!-- PART C -->
+  <div class="r-container">
+    <div class="r-section">
+      <h2 class="section-title section-title-c">Part C — Design Opportunities</h2>
+      <p class="section-subtitle">Connecting June 2026 trends to William Morris, botanical, coastal and geometric portfolios. All three are interior-first priorities.</p>
+
+      <div class="opportunity-grid">
+
+        <div class="r-card opportunity-card">
+          <div class="opportunity-tile">
+            <img src="https://img.spoonflower.com/c/13214693/p/f/m/B17NK-NIVxJVuehRiIOjdL0Po1uLDzjkFzoAlH8lcITyx9KcsKkX/WILLOW%20BOUGH%20IN%20VINTAGE%20ORIGINAL%20(Historic%20Arts%20%26%20Crafts)%20-%20WILLIAM%20MORRIS.jpg" alt="William Morris Willow Bough" />
+          </div>
+          <div class="opportunity-body">
+            <span class="priority-badge priority-high">High Priority — Interior</span>
+            <h3>William Morris × Terracotta: Heritage Heat</h3>
+            <p>The biggest convergence this month: Heritage Craft Revival and the Mediterranean clay colour story are perfectly aligned. A William Morris-style acanthus or dense botanical repeat in a terracotta/dusty-clay palette sits at the intersection of two top-performing trends. Most existing Morris wallpapers on Spoonflower remain in jewel-toned Victorian greens or reds — a warm terracotta recolour is underserved and commercially timely.</p>
+            <div class="action-box"><strong>Action:</strong> Recolour a Morris-style botanical in terracotta (#c06040), dusty clay (#d8906a) and warm sage (#7aaa72) on a deep earth ground. Submit as wallpaper. Tags: william-morris, terracotta, botanical, heritage, craft-revival, 2026-trends.</div>
+          </div>
+        </div>
+
+        <div class="r-card opportunity-card">
+          <div class="opportunity-tile">
+            <img src="https://img.spoonflower.com/c/14046021/p/f/m/ueK8Z9QXd-HbzUJTJ7DklLfHFZ6-bNkCfbD-kXuvomO30mkE_uLK/Elegant%20Art%20Deco%20bats%20and%20flowers%20-Emerald%20green%20gold%20black%20and%20pink%20-jumbo.jpg" alt="Art Deco emerald green and gold wallpaper" />
+          </div>
+          <div class="opportunity-body">
+            <span class="priority-badge priority-high">High Priority — Interior</span>
+            <h3>Art Deco Geometric: The Best-Selling Wallpaper Style</h3>
+            <p>Art Deco is confirmed as the top-selling wallpaper style by volume in 2026 on Spoonflower. The strongest opportunity is a hybrid — Art Nouveau organic curves contained within Art Deco geometric frameworks. This "organic geometry" aligns existing strengths with the market's strongest demand. Deep teal + gold on near-black leads.</p>
+            <div class="action-box"><strong>Action:</strong> Create an Art Deco geometric wallpaper. Version 1: gold (#c8a840) on deep teal (#1a1a2e). Version 2: warm taupe geometry on Cloud Dancer (#f5f2ec). Tags: art-deco, geometric, gold, wallpaper, 2026-trends.</div>
+          </div>
+        </div>
+
+        <div class="r-card opportunity-card">
+          <div class="opportunity-tile">
+            <img src="https://img.spoonflower.com/c/17742127/p/f/m/iXBKihdoj9reTqvOvr1zm5Mu5hUBMEBb1_RHofjDnHfhDhsDuQh4fyM/Boho%20Jungle%20Evergreen%20Green%20and%20Clay%20-%20woods%20and%20forest%20-%20cottagecore%20Large.jpg" alt="Coastal botanical" />
+          </div>
+          <div class="opportunity-body">
+            <span class="priority-badge priority-medium">Medium Priority — Interior</span>
+            <h3>Coastal Botanical: Spoonflower Riviera Moment</h3>
+            <p>The Riviera and Nautical collections are actively trending on Spoonflower, and "Hot House Tropical" is newly launched. The opportunity is to layer botanical accuracy (sea plants, coastal flora, seagrasses) into the soft aqua and seafoam palette that dominates. Lower competition than pure tropical prints.</p>
+            <div class="action-box"><strong>Action:</strong> Develop a coastal botanical wallpaper in seafoam (#88c0c8), deep teal (#3a6a7a) and warm sand (#e8d0a8). Tags: coastal, botanical, riviera, nautical, sea-plants, wallpaper.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="top-priority">
+        <div class="top-priority-icon">★</div>
+        <div>
+          <div class="eyebrow">Top Priority Design — June 2026</div>
+          <h3>William Morris Botanical in Terracotta × Deep Forest — Wallpaper</h3>
+          <p>The most commercially immediate opportunity this month is a Morris-style dense botanical repeat recoloured in terracotta, clay and warm sage, targeting Spoonflower's "Traditional" and "Craft Revival" collections as wallpaper. Art Deco is the top seller by volume, but a Morris design in the terracotta palette fills a real gap — underserved on Spoonflower, directly aligned to botanical portfolio strengths, and timed precisely with the Heritage Craft Revival surge and Mediterranean warmth colour direction.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sources-section">
+    <div class="r-container">
+      <h3>Sources &amp; References — June 2026</h3>
+      <div class="sources-grid">
+        <a href="https://www.tecnografica.net/en/news/5579/wallpaper-2026-the-5-trends-that-are-redefining-contemporary-interior-design" target="_blank" rel="noopener">Tecnografica — Wallpaper Trends 2026</a>
+        <a href="https://appliedcoverings.com/blogs/news/wallpaper-trends-2026" target="_blank" rel="noopener">Applied Coverings — 12 Styles Defining 2026</a>
+        <a href="https://www.archiproducts.com/en/news/wallpaper-trends_107528" target="_blank" rel="noopener">Archiproducts — Wallpaper Trends 2026</a>
+        <a href="https://www.pantone.com/products/trend-books/pantone-view-home-interiors-2026-book" target="_blank" rel="noopener">Pantone — Home + Interiors 2026</a>
+        <a href="https://www.wallpaper.com/design-interiors/colour-trends-2026" target="_blank" rel="noopener">Wallpaper* — Colour Trends 2026</a>
+        <a href="https://patternbank.com/trends/premiere-vision-SS-27-print-trends" target="_blank" rel="noopener">Patternbank × Première Vision — SS27 Print Trends</a>
+        <a href="https://www.spoonflower.com/en/inspiration/collections" target="_blank" rel="noopener">Spoonflower — Collections 2026</a>
+        <a href="https://summerskyestudio.com/blogs/wallpaper-decor-ideas/wallpaper-trends-2026" target="_blank" rel="noopener">SummerSkye Studio — Wallpaper Trends 2026</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-footer">
+    Sample report · Auto-generated on the first Tuesday of each month &nbsp;·&nbsp; June 2026 Issue
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="ptr-cta">
+    <div class="ptr-cta-eyebrow">Automate your research</div>
+    <h2>Want a report like this auto-generated for your portfolio every month?</h2>
+    <p>Get the Claude prompt + step-by-step setup guide. One purchase, runs forever — personalised to your specific patterns, markets and design style.</p>
+    <a href="/tools/pattern-trend-prompt/" class="ptr-cta-btn">Get the monthly trend prompt — €27 →</a>
+  </div>
+
+</div>
+
+</ArtfulyLayout>

@@ -1,0 +1,313 @@
+---
+import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+---
+
+<ArtfulyLayout
+  title="Your Pattern Trend Prompt — Download | Artfuly"
+  description="Thank you for your purchase. Download your pattern trend prompt and setup guide below."
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, nofollow" />
+  </Fragment>
+
+  <div class="ptd-wrap">
+
+    <div class="ptd-thanks">
+      <div class="ptd-thanks-icon">✓</div>
+      <h1 class="ptd-h1">Thank you for your purchase!</h1>
+      <p>Everything you need is below. Bookmark this page — you can return to it any time.</p>
+    </div>
+
+    <!-- STEP 1: THE PROMPT -->
+    <section class="ptd-section">
+      <div class="ptd-step-label">Step 1</div>
+      <h2 class="ptd-h2">Your Claude prompt</h2>
+      <p class="ptd-p">Copy the prompt below. Then go to <a href="https://claude.ai" target="_blank" rel="noopener" class="ptd-link">claude.ai</a>, start a new conversation, and paste it in. The prompt will ask you to fill in your portfolio details — just answer its questions and it will generate your first report.</p>
+
+      <div class="ptd-prompt-box">
+        <div class="ptd-prompt-header">
+          <span>Claude Prompt — Monthly Pattern Trend Report</span>
+          <button class="ptd-copy-btn" id="copy-btn" type="button">Copy prompt</button>
+        </div>
+        <pre class="ptd-prompt-text" id="prompt-text">You are a surface design trend analyst specialising in Spoonflower and Patternbank. Generate a monthly Pattern & Colour Trend Report for a Spoonflower designer with the following portfolio:
+
+DESIGNER PORTFOLIO (fill in your details):
+- Pattern specialisms: [e.g. William Morris botanical, coastal prints, geometric wallpaper]
+- Primary market: [e.g. wallpaper, home fabric, apparel]
+- Spoonflower shop focus: [e.g. UK interiors, Scandinavian aesthetic, maximalist]
+- Patterns currently selling best: [list your top 3–5 designs]
+
+Generate a report with these sections:
+
+PART A — Current Interior Trends (primary market)
+- A1: Top 5 pattern trends for wallpaper and home fabric this month, with Spoonflower collection references
+- A2: Key colour palettes for interiors this month (not fashion), with hex codes and "best for" notes
+
+PART B — Forward-Looking: Next Season Trade Show Forecasts
+- B1: 4–6 upcoming trend directions from Patternbank/Première Vision trade reports (18 months ahead)
+- B2: Colour directions for the forward season
+
+PART C — Personalised Opportunities
+- 3 specific design opportunities for MY portfolio (based on the details I gave above)
+- For each: name the trend, explain the opportunity, give a specific action with suggested colour palette and Spoonflower tags
+- Close with a single "Top Priority Design This Month" callout
+
+Format the report clearly with headings, sub-headings and action boxes. Use real sources (Patternbank, Spoonflower collections, Pantone, trade press). Include a sources list at the end.
+
+Today's date is: [insert current month and year]</pre>
+      </div>
+    </section>
+
+    <!-- STEP 2: PERSONALISE -->
+    <section class="ptd-section">
+      <div class="ptd-step-label">Step 2</div>
+      <h2 class="ptd-h2">Personalise it (takes 5 minutes)</h2>
+      <p class="ptd-p">Before you paste the prompt into Claude, replace the text in square brackets with your own details:</p>
+      <ul class="ptd-checklist">
+        <li><span>▸</span> <strong>Pattern specialisms</strong> — e.g. "William Morris botanical, coastal sea plants, Art Deco geometric"</li>
+        <li><span>▸</span> <strong>Primary market</strong> — wallpaper, home fabric, apparel, or a mix</li>
+        <li><span>▸</span> <strong>Shop focus</strong> — your aesthetic or target buyer (e.g. "UK interiors, maximalist, heritage style")</li>
+        <li><span>▸</span> <strong>Best-selling patterns</strong> — list your top sellers by name or description</li>
+        <li><span>▸</span> <strong>Today's date</strong> — always fill this in so Claude pulls the most current trend data</li>
+      </ul>
+      <div class="ptd-tip">
+        <strong>Tip:</strong> Save your personalised version in a document so you don't have to re-fill it every month — just update the date and re-paste.
+      </div>
+    </section>
+
+    <!-- STEP 3: RUN IT -->
+    <section class="ptd-section">
+      <div class="ptd-step-label">Step 3</div>
+      <h2 class="ptd-h2">Run it every month</h2>
+      <p class="ptd-p">Paste your personalised prompt into Claude at the start of each month (or use the automation below). Claude will research current trade shows, Spoonflower collections and colour authorities and return a full report in 2–3 minutes.</p>
+      <p class="ptd-p"><strong>Which Claude plan do you need?</strong> The free plan works for shorter reports. Claude Pro (~$20/month) gives longer, more detailed reports with richer sourcing — recommended if you're using Claude regularly anyway.</p>
+    </section>
+
+    <!-- STEP 4: AUTOMATE -->
+    <section class="ptd-section ptd-automate">
+      <div class="ptd-step-label">Optional — Step 4</div>
+      <h2 class="ptd-h2">Automate it: run on the first Tuesday of each month</h2>
+      <p class="ptd-p">If you have Claude Code (the desktop app or IDE extension), you can set up a scheduled task to run the prompt automatically:</p>
+      <ol class="ptd-auto-steps">
+        <li>Open Claude Code and go to <strong>Settings → Scheduled Tasks</strong> (or use the <code>/schedule</code> command)</li>
+        <li>Create a new scheduled task with your personalised prompt</li>
+        <li>Set the schedule to <strong>first Tuesday of each month</strong></li>
+        <li>Claude will run the prompt, generate the report, and save it to a file or send it to you</li>
+      </ol>
+      <p class="ptd-p ptd-automate-note">Don't have Claude Code? No problem — just run the prompt manually at the start of each month. It takes 2 minutes.</p>
+    </section>
+
+    <!-- SUPPORT -->
+    <div class="ptd-support">
+      <p>Questions? Email <a href="mailto:artfulydesign@gmail.com" class="ptd-link">artfulydesign@gmail.com</a> and I'll help you get set up.</p>
+    </div>
+
+  </div>
+
+</ArtfulyLayout>
+
+<style is:global>
+  .ptd-wrap {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  /* Thanks header */
+  .ptd-thanks {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 32px;
+    background: #edf9f9;
+    border-radius: 14px;
+    border: 1px solid #C5E6E7;
+  }
+  .ptd-thanks-icon {
+    width: 56px;
+    height: 56px;
+    background: #048BA2;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-weight: 700;
+  }
+  .ptd-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #233030;
+    margin-bottom: 10px;
+  }
+  .ptd-thanks p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  /* Section */
+  .ptd-section { margin-bottom: 52px; }
+  .ptd-step-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #048BA2;
+    margin-bottom: 8px;
+  }
+  .ptd-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #233030;
+    margin-bottom: 16px;
+  }
+  .ptd-p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 640px;
+  }
+  .ptd-link { color: #048BA2; text-decoration: underline; }
+  .ptd-link:hover { color: #233030; }
+
+  /* Prompt box */
+  .ptd-prompt-box {
+    background: #f8f6f3;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  .ptd-prompt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    background: #233030;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .ptd-copy-btn {
+    background: #048BA2;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+  .ptd-copy-btn:hover { background: #037a8e; }
+  .ptd-copy-btn.copied { background: #4a9a6a; }
+  .ptd-prompt-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: #2a3a30;
+    padding: 24px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+  }
+
+  /* Checklist */
+  .ptd-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ptd-checklist li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    color: #444;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    line-height: 1.55;
+  }
+  .ptd-checklist li span { color: #048BA2; font-weight: 700; flex-shrink: 0; }
+  .ptd-checklist strong { color: #233030; }
+
+  /* Tip */
+  .ptd-tip {
+    background: #edf9f9;
+    border-left: 3px solid #048BA2;
+    padding: 12px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.84rem;
+    color: #333;
+    margin-top: 20px;
+    border-radius: 0 6px 6px 0;
+    line-height: 1.6;
+  }
+
+  /* Automate */
+  .ptd-automate { background: #F3F0F0; border-radius: 12px; padding: 32px; }
+  .ptd-auto-steps {
+    margin: 16px 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ptd-auto-steps li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  .ptd-auto-steps strong { color: #233030; }
+  .ptd-auto-steps code {
+    background: #233030;
+    color: #C5E6E7;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 0.82rem;
+  }
+  .ptd-automate-note { color: #666; font-size: 0.84rem !important; }
+
+  /* Support */
+  .ptd-support {
+    text-align: center;
+    padding: 28px;
+    border-top: 1px solid #dadada;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #888;
+  }
+
+  @media (max-width: 480px) {
+    .ptd-wrap { padding: 32px 16px 60px; }
+    .ptd-automate { padding: 24px 18px; }
+  }
+</style>
+
+<script>
+  document.getElementById('copy-btn').addEventListener('click', function() {
+    const text = document.getElementById('prompt-text').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      this.textContent = 'Copied!';
+      this.classList.add('copied');
+      setTimeout(() => {
+        this.textContent = 'Copy prompt';
+        this.classList.remove('copied');
+      }, 2000);
+    });
+  });
+</script>
