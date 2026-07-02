@@ -52,7 +52,7 @@ If your redesign helps a client earn an extra £50,000 a year, charging £2,000 
 
 ## The real problem: the psychology of underpricing
 
-After 30 years in design, the most common mistake I see isn't charging too much — it's charging too little. Underpricing:
+After 20+ years in design, the most common mistake I see isn't charging too much — it's charging too little. Underpricing:
 
 - signals low quality (clients genuinely trust higher prices more),
 - attracts the most demanding, lowest-budget clients,
