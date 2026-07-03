@@ -18,9 +18,15 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
   <div class="ptp-wrap">
 
     <p class="ptp-intro">
-      The <a href="/tools/pattern-trend-report/" class="ptp-link">June 2026 report</a> you just read was created entirely by Claude — in about 2 minutes, using a single prompt.
+      This <a href="/tools/pattern-trend-report/" class="ptp-link">June 2026 report</a> was created entirely by Claude — in about 2 minutes, using a single prompt.
       Buy the prompt once, run it every month, get a report personalised to <em>your</em> design portfolio and markets.
     </p>
+
+    <!-- SAMPLE IMAGE -->
+    <a href="/tools/pattern-trend-report/" class="ptp-sample-img-link">
+      <img src="/images/tools/Example top of pattern trend report.png" alt="Example Pattern & Colour Trend Report — June 2026" class="ptp-sample-img" />
+      <span class="ptp-sample-img-caption">View the full sample report →</span>
+    </a>
 
     <!-- WHAT YOU GET -->
     <section class="ptp-section">
@@ -44,7 +50,7 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
           <span class="ptp-icon">🔄</span>
           <div>
             <strong>Monthly automation instructions</strong><br>
-            How to schedule it so Claude runs the report automatically on the first Tuesday of each month — you don't have to remember to do it.
+            How to schedule it so Claude runs the report automatically on any day of each month or week — you don't have to remember to do it.
           </div>
         </li>
       </ul>
@@ -71,8 +77,8 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
         <li>
           <div class="ptp-step-num">3</div>
           <div>
-            <strong>Run it every month</strong><br>
-            Paste the prompt into Claude and get a full trend report in 2–3 minutes. Or set up the automation and it runs itself.
+            <strong>Automatic report anytime</strong><br>
+            Paste the prompt into Claude and get a full trend report in 2–3 minutes. Or set up the automation and it runs when you hit 'Run' or to any schedule like weekly or monthly.
           </div>
         </li>
       </ol>
@@ -120,7 +126,7 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
       <p class="ptp-buy-desc">Instant access. No subscription. Works every month.</p>
       <!-- REPLACE the href below with your Stripe Payment Link URL -->
       <!-- In Stripe: Products → Payment Links → set redirect to https://artfuly.com/tools/pattern-trend-download/ -->
-      <a href="STRIPE_PAYMENT_LINK_URL" class="ptp-buy-btn">Buy now — €27 →</a>
+      <a href="https://buy.stripe.com/00weVecPfg5U9TBacWdEs0g" class="ptp-buy-btn">Buy now — €27 →</a>
       <p class="ptp-buy-note">Secure payment via Stripe. You'll be taken to your download immediately after payment.</p>
     </section>
 
@@ -144,6 +150,30 @@ import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
   }
   .ptp-link { color: #048BA2; text-decoration: underline; }
   .ptp-link:hover { color: #233030; }
+
+  .ptp-sample-img-link {
+    display: block;
+    margin-bottom: 52px;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .ptp-sample-img-link:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.18); transform: translateY(-2px); }
+  .ptp-sample-img { width: 100%; display: block; }
+  .ptp-sample-img-caption {
+    display: block;
+    background: #2a4a3a;
+    color: #a8c4b0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: center;
+    padding: 10px;
+  }
+  .ptp-sample-img-link:hover .ptp-sample-img-caption { color: #f5f0e8; }
 
   .ptp-section { margin-bottom: 52px; }
 
