@@ -1,0 +1,353 @@
+---
+import ArtfulyLayout from '../../../../layouts/ArtfulyLayout.astro';
+import { playbookResources, freeDownloads } from '../../../../data/playbookResources';
+
+const lastUpdated = 'July 2026';
+---
+
+<ArtfulyLayout
+  title="Surface Pattern Design Playbook — Links & Resources | Artfuly"
+  description="Every link, tool, template and download mentioned in the Surface Pattern Design Playbook — organised by chapter and kept up to date."
+>
+
+  <!-- HERO -->
+  <div class="articles-section-top">
+    <div class="a-container w-container">
+      <div class="a-des-insight-title" style="color:rgba(255,255,255,0.6); margin-bottom:12px; grid-area:1/1/2/5; text-align:left">BOOK COMPANION</div>
+      <h1 class="h1-small-white" style="grid-area:2/1/3/5; padding-left:0">Surface Pattern Design Playbook<br>Links &amp; Resources</h1>
+    </div>
+  </div>
+
+  <div class="pb-wrap">
+
+    <div class="pb-intro-row">
+      <p class="pb-intro">Everything that goes with the book, kept up to date — so the links never go stale.</p>
+      <p class="pb-updated">Last updated: {lastUpdated}</p>
+    </div>
+
+    <!-- EMAIL SIGN-UP -->
+    <section class="pb-signup" id="updates">
+      <div class="pb-signup-inner">
+        <div class="pb-signup-text">
+          <div class="pb-eyebrow">Free updates &amp; extras</div>
+          <h2 class="pb-signup-h2">Get notified when new resources are added</h2>
+          <p>New links, templates and free extras added as the book is updated. Drop your email below and I'll let you know.</p>
+        </div>
+        <!-- TODO: replace with Kit form embed -->
+        <form class="pb-form" onsubmit="return false;">
+          <input type="text" placeholder="First name" class="pb-input" />
+          <input type="email" placeholder="Email address" class="pb-input" required />
+          <button type="submit" class="pb-btn pb-btn--primary">Get the resources &amp; updates</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FREE DOWNLOADS -->
+    <section class="pb-section" id="free-downloads">
+      <div class="pb-section-header pb-section-header--free">
+        <div class="pb-eyebrow">Free extras</div>
+        <h2 class="pb-section-h2">Downloads &amp; files</h2>
+        <p class="pb-section-desc">Free files that go with the book — open them alongside the relevant chapter.</p>
+      </div>
+      <ul class="pb-resource-list">
+        {freeDownloads.map(r => (
+          <li class="pb-resource-item">
+            <div class="pb-resource-body">
+              <strong class="pb-resource-name">{r.name}</strong>
+              <span class="pb-resource-desc">{r.description}</span>
+            </div>
+            {r.url === 'link-coming-soon'
+              ? <span class="pb-coming-soon">Coming soon</span>
+              : <a href={r.url} class="pb-link-btn" target="_blank" rel="noopener">Download →</a>
+            }
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- JUMP NAV -->
+    <nav class="pb-jumpnav" aria-label="Jump to chapter">
+      <div class="pb-eyebrow" style="margin-bottom:12px">Jump to chapter</div>
+      <ul class="pb-jumpnav-list">
+        {playbookResources.map(ch => (
+          <li><a href={`#${ch.id}`} class="pb-jumpnav-link">{ch.title.split('—')[0].trim()}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- CHAPTER SECTIONS -->
+    {playbookResources.map(ch => (
+      <section class="pb-section" id={ch.id}>
+        <div class="pb-section-header">
+          <h2 class="pb-section-h2">{ch.title}</h2>
+        </div>
+        <ul class="pb-resource-list">
+          {ch.resources.map(r => (
+            <li class="pb-resource-item">
+              <div class="pb-resource-body">
+                <strong class="pb-resource-name">{r.name}</strong>
+                <span class="pb-resource-desc">{r.description}</span>
+              </div>
+              {r.url === 'link-coming-soon'
+                ? <span class="pb-coming-soon">Coming soon</span>
+                : <a href={r.url} class="pb-link-btn" target="_blank" rel="noopener">Open →</a>
+              }
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <!-- FOOTER CTA -->
+    <div class="pb-footer-cta">
+      <p>
+        <a href="link-coming-soon" class="pb-footer-link" target="_blank" rel="noopener">Find the book on Amazon →</a>
+      </p>
+      <p class="pb-review-note">Enjoying the book? A short review on Amazon makes a huge difference — thank you.</p>
+    </div>
+
+  </div>
+
+</ArtfulyLayout>
+
+<style is:global>
+  .pb-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 52px 24px 80px;
+  }
+
+  .pb-intro-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 44px;
+    flex-wrap: wrap;
+  }
+  .pb-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .pb-updated {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: #999;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .pb-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #048BA2;
+    margin-bottom: 6px;
+  }
+
+  /* Sign-up */
+  .pb-signup {
+    background: #233030;
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 52px;
+  }
+  .pb-signup-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .pb-signup-text .pb-eyebrow { color: #C5E6E7; }
+  .pb-signup-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+  .pb-signup-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+    margin: 0;
+  }
+  .pb-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .pb-input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    padding: 12px 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .pb-input::placeholder { color: rgba(255,255,255,0.4); }
+  .pb-input:focus { border-color: #048BA2; }
+  .pb-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 13px 24px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .pb-btn--primary { background: #EE7C7B; color: #fff; }
+  .pb-btn--primary:hover { background: #d96b6a; }
+
+  /* Jump nav */
+  .pb-jumpnav {
+    background: #F3F0F0;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 52px;
+  }
+  .pb-jumpnav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .pb-jumpnav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #048BA2;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .pb-jumpnav-link:hover { color: #233030; text-decoration: underline; }
+
+  /* Sections */
+  .pb-section {
+    margin-bottom: 52px;
+    scroll-margin-top: 80px;
+  }
+  .pb-section-header {
+    border-left: 4px solid #048BA2;
+    padding-left: 16px;
+    margin-bottom: 20px;
+  }
+  .pb-section-header--free { border-color: #EE7C7B; }
+  .pb-section-header--free .pb-eyebrow { color: #EE7C7B; }
+  .pb-section-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #233030;
+    margin: 0 0 4px;
+  }
+  .pb-section-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.83rem;
+    color: #666;
+    margin: 0;
+  }
+
+  /* Resource list */
+  .pb-resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .pb-resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e8e2da;
+  }
+  .pb-resource-item:first-child { border-top: 1px solid #e8e2da; }
+  .pb-resource-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+  }
+  .pb-resource-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1d1d1d;
+  }
+  .pb-resource-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.55;
+  }
+  .pb-link-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #048BA2;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 7px 18px;
+    border: 1.5px solid #048BA2;
+    border-radius: 20px;
+    transition: background 0.15s, color 0.15s;
+    flex-shrink: 0;
+  }
+  .pb-link-btn:hover { background: #048BA2; color: #fff; }
+  .pb-coming-soon {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: #bbb;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-style: italic;
+  }
+
+  /* Footer CTA */
+  .pb-footer-cta {
+    text-align: center;
+    padding: 40px 0 0;
+    border-top: 1px solid #e8e2da;
+    margin-top: 20px;
+  }
+  .pb-footer-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #048BA2;
+    text-decoration: none;
+  }
+  .pb-footer-link:hover { color: #233030; text-decoration: underline; }
+  .pb-review-note {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .pb-signup { padding: 28px 20px; }
+    .pb-signup-inner { grid-template-columns: 1fr; gap: 28px; }
+    .pb-resource-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .pb-jumpnav-list { gap: 8px 12px; }
+    .pb-intro-row { flex-direction: column; gap: 6px; }
+  }
+</style>
