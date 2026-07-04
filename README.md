@@ -1,5 +1,6 @@
 # Artfuly.com — Astro Rebuild Notes
 
+
 > ⚠️ **DEPLOY CADENCE — IMPORTANT:** The site is hosted on **Netlify**. Deploy **once or twice per WEEK maximum** to avoid running out of Netlify build credits. **Batch changes** and test locally first; never deploy on every small edit.
 
 > _To-do list reviewed 2026-06-18 against the actual source — checkboxes reconciled with what's really in the codebase._
@@ -9,7 +10,7 @@ Migrated artfuly.com from Webflow to an Astro static site. **Now LIVE on Netlify
 
 ## Dev server
 ```
-cd "CLAUDE ACCESS FILES/Artfuly & Folio Site"
+cd "0. CLAUDE/Artfuly & Folio Site"
 npm run dev
 # → http://localhost:4321
 ```
