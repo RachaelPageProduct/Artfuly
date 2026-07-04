@@ -166,7 +166,38 @@ const bookSchema = {
       </div>
     </div>
   </section>
+
+  <!-- TREND REPORT PROMO -->
+  <section class="spd-trend-cta">
+    <div class="padding-global-3">
+      <div class="container-large">
+        <div class="padding-section-large-3">
+          <div class="cta8_component">
+            <div class="cta8_content">
+              <div class="max-width-large">
+                <div class="margin-bottom margin-xsmall">
+                  <div class="margin-bottom margin-xsmall">
+                    <div class="a-des-insight-title">AUTOMATED REPORT</div>
+                  </div>
+                  <h2 class="white h2insights">Regular Pattern Trend Report</h2>
+                </div>
+                <p class="white right">See this sample report personalised for a specific designer — AI-generated on demand. Interior pattern directions, colour forecasts, trade show analysis and personalised design&nbsp;opportunities.</p>
+                <p class="small-white-body" style="margin-top:20px">
+                  <a href="/tools/pattern-trend-report/" class="spd-trend-btn">View the sample report →</a>
+                </p>
+              </div>
+            </div>
+            <div class="spd-trend-img-wrap">
+              <a href="/tools/pattern-trend-report/">
+                <img src="/images/tools/Example top of pattern trend report.png" alt="Monthly Pattern & Colour Trend Report sample" class="spd-trend-img" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
 </ArtfulyLayout>
 
 <style>
@@ -275,6 +306,37 @@ const bookSchema = {
   }
   .spd-cta--light { background: #fff; color: #048ba2; }
   .spd-cta--light:hover { background: #eaf7f8; color: #036f81; }
+
+  /* TREND REPORT PROMO */
+  .spd-trend-cta {
+    background:
+      linear-gradient(rgba(2, 55, 70, 0.78), rgba(2, 55, 70, 0.78)),
+      url('/images/tools/Trend%20report%20palettes.png') center / cover no-repeat;
+  }
+  .spd-trend-img-wrap {
+    flex: 0 0 280px;
+    display: flex;
+    align-items: center;
+  }
+  .spd-trend-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    display: block;
+  }
+  .spd-trend-btn {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    background: #EE7C7B;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .spd-trend-btn:hover { background: #d96b6a; color: #fff; }
 
   /* EMAIL SIGNUP — background image override */
   .spd-email-cta {
