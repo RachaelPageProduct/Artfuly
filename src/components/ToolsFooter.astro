@@ -1,0 +1,156 @@
+---
+import BookPromo from './BookPromo.astro';
+
+interface Props {
+  currentSlug?: string;
+}
+
+const { currentSlug } = Astro.props;
+
+const allTools = [
+  {
+    slug: 'pattern-trend-report',
+    title: 'Monthly Spoonflower Pattern Trend Report',
+    description: 'AI-generated monthly trend intelligence for Spoonflower designers.',
+    img: '/images/tools/pattern-trend-report.svg',
+    cta: 'View sample report →',
+  },
+  {
+    slug: '3d-book-cover-generator',
+    title: '3D Book Cover Generator for Amazon',
+    description: 'Turn your flat ebook cover into a professional 3D book mockup — free, instant.',
+    img: '/images/tools/book-cover-3d.png',
+    cta: 'Generate your cover →',
+  },
+  {
+    slug: 'ai-art-styles',
+    title: 'Art Styles for AI Prompts',
+    description: '130 art styles grouped by movement — copy style names for Midjourney, DALL·E, Firefly.',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/500px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg',
+    cta: 'Open tool →',
+  },
+  {
+    slug: 'ticklists',
+    title: 'Ticklists — Routines & Lists',
+    description: 'Permanent lists that sort themselves by section, with real-time household sharing.',
+    img: '/images/tools/ticklists-tool-card.png',
+    cta: 'Visit Ticklists →',
+  },
+  {
+    slug: 'pattern-trend-prompt',
+    title: 'Auto-Generate Your Monthly Pattern Trend Report',
+    description: 'Buy the Claude prompt once and generate a personalised trend report every month.',
+    img: '/images/tools/pattern-trend-report.svg',
+    cta: 'Get the prompt →',
+  },
+];
+
+const moreTools = allTools.filter(t => t.slug !== currentSlug).slice(0, 3);
+---
+
+<!-- SHARE -->
+<div class="section-46">
+  <div class="container-1214 w-container">
+    <div class="paragraph-grey">Share this on:</div>
+    <div class="sharethis-inline-share-buttons"></div>
+  </div>
+</div>
+
+<!-- SPOONFLOWER BOOK PROMO -->
+<BookPromo />
+
+<!-- MORE TOOLS -->
+<section class="section_layout250">
+  <div class="padding-global-4">
+    <div class="container-large-2">
+      <div class="padding-section-large-4">
+        <div class="layout250_component">
+          <div class="margin-bottom margin-xxlarge">
+            <div class="max-width-large-2">
+              <h3 class="heading-76">More tools</h3>
+            </div>
+          </div>
+          <div class="w-layout-grid layout250_list">
+            {moreTools.map(t => (
+              <a href={`/tools/${t.slug}/`} class="w-inline-block layout250_card">
+                <div>
+                  <img loading="lazy" alt={t.title} src={t.img} class="layout250_image" />
+                  <div class="margin-bottom margin-xsmall">
+                    <h3 class="left">{t.title}</h3>
+                    <div class="layout250_item">
+                      <p class="left">{t.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CTA -->
+<section class="section_cta8" id="email-signup">
+  <div class="padding-global-3">
+    <div class="container-large">
+      <div class="padding-section-large-3">
+        <div class="cta8_component">
+          <div class="cta8_content">
+            <div class="max-width-large">
+              <div class="margin-bottom margin-xsmall">
+                <div class="margin-bottom margin-xsmall">
+                  <div class="a-des-insight-title">WEEKLY EMAIL (FREE)</div>
+                </div>
+                <h2 class="white h2insights">The Design Edge</h2>
+              </div>
+              <p class="white right">Keep your design skills up to date with videos,<br />AI workflows, tutorials, ways to earn $$$ and free resources</p>
+              <p class="small-white-body">Unsubscribe anytime.</p>
+            </div>
+          </div>
+          <div class="html-embed-7 w-embed w-script">
+            <script async data-uid="eb98b5a075" src="https://artfuly.ck.page/eb98b5a075/index.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES, FREE RESOURCES & VIDEO TUTORIALS -->
+<section class="section-lead-magnets">
+  <div class="a-3col-container w-container">
+    <h3 class="heading-59-copy _70">Courses, Free Resources &amp; Video Tutorials</h3>
+  </div>
+  <div class="w-container">
+    <div class="div-block-73">
+      <div class="div-block-84">
+        <div class="div-block-74">
+          <img src="/images/webflow-cdn/63f12acf69cfc0384d38cae8_Mask-group-4.png" loading="lazy" width="300" alt="" class="image-37" />
+        </div>
+        <h4 class="heading-70">Visual Design<br />Principles Course</h4>
+        <div class="paragraph-middle-align">Learn to use Typography, Colour, Layout, Hierarchy, and Alignment to create stunning designs</div>
+        <div class="paragraph-middle-align"><strong>7 days free then $45/month</strong></div>
+        <a href="https://artfuly.click/course" target="_blank" class="button-courses w-button">View the course</a>
+      </div>
+      <div class="div-block-83">
+        <div class="div-block-74">
+          <img src="/images/webflow-cdn/63f12aaa49b46c02c6a5feba_Mask-group.png" loading="lazy" width="300" alt="" class="image-37" />
+        </div>
+        <h4 class="heading-70">Top 50+<br />UX &amp; UI Resources</h4>
+        <div class="paragraph-middle-align">Free images, icons, fonts, Illustrations, the best tutorials, books &amp; more!</div>
+        <div class="paragraph-middle-align"><strong>Filterable list</strong></div>
+        <a href="/top-ux-resources/" class="button-courses w-button">Get Resources</a>
+      </div>
+      <div class="div-block-85">
+        <div class="div-block-74">
+          <img src="/images/webflow-cdn/6590467bcc289cdec005f86c_terra-leadmag.png" loading="lazy" width="300" alt="" class="image-37" />
+        </div>
+        <h4 class="heading-70">Embed a clickable prototype into any page</h4>
+        <div class="paragraph-middle-align">Step-by-step guide to embedding a Figma prototype or any interactive element into a web page</div>
+        <a href="https://artfuly.click/embed" target="_blank" rel="noopener" class="button-courses w-button">See Video Tutorial</a>
+      </div>
+    </div>
+  </div>
+</section>
