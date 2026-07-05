@@ -1,0 +1,214 @@
+---
+import ArtfulyLayout from '../layouts/ArtfulyLayout.astro';
+import BookPromo from '../components/BookPromo.astro';
+---
+
+<ArtfulyLayout
+  title="Build Instead of Apply — Artfuly"
+  description="5 tiny projects that get you hired — while everyone else is stuck in the application queue."
+>
+  <!-- Keep this lead-magnet page out of search -->
+  <meta slot="head" name="robots" content="noindex, nofollow" />
+
+  <!-- HERO — same structure as /design-resources, dark teal override -->
+  <div class="articles-section-top bia-hero-override">
+    <div class="a-container w-container">
+      <div class="a-des-insight-title" style="color:rgba(255,255,255,0.6); margin-bottom:12px; grid-area:1/1/2/5; text-align:left">A FREE GUIDE FROM THE DESIGN EDGE</div>
+      <h1 class="h1-small-white" style="grid-area:2/1/3/5; padding-left:0">Build Instead&nbsp;of&nbsp;Apply</h1>
+      <p class="bia-sub" style="grid-area:3/1/4/5">Build real things, prove you're AI-native, and show a portfolio that gets&nbsp;you&nbsp;noticed.</p>
+    </div>
+  </div>
+
+  <main class="bia">
+
+    <!-- INTRO -->
+    <section class="bia-intro">
+      <p>
+        The first rung has been removed. Entry-level postings fell 25% last year, and
+        the average opening gets hundreds of applicants. Firing more CVs into that void
+        isn't a&nbsp;plan.
+      </p>
+      <p>
+        The designers getting hired fastest do something different: they build small,
+        real, <em>shipped</em> things. It proves you can make products, not just mockups —
+        and it rebuilds the confidence the application treadmill drains. Here are five you
+        can start this week. Pick one. Ship it. Then tell&nbsp;people.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <ol class="bia-list">
+      <li class="bia-card">
+        <span class="bia-num">1</span>
+        <div class="bia-card__body">
+          <h2>Ship one tiny live&nbsp;tool.</h2>
+          <p>
+            Build a small, genuinely useful thing — a calculator, a generator, a
+            converter — with AI (Claude, Framer, any no-code) and put it <em>live</em>.
+            I made a <a href="/tools/3d-book-cover-generator/" target="_blank" rel="noopener" class="prose-link">3D book-cover generator</a> in half an&nbsp;afternoon.
+          </p>
+          <p class="bia-why"><strong>Why it works:</strong> it's the clearest signal you can take an idea to a working&nbsp;product.</p>
+          <p class="bia-ship"><strong>Ship it:</strong> a real URL, in your&nbsp;bio.</p>
+        </div>
+      </li>
+
+      <li class="bia-card">
+        <span class="bia-num">2</span>
+        <div class="bia-card__body">
+          <h2>Redesign something real that nobody asked&nbsp;you&nbsp;to.</h2>
+          <p>
+            Take an app or site that annoys you, redesign one screen or flow, and write up
+            the problem → your decision → the&nbsp;result.
+          </p>
+          <p class="bia-why"><strong>Why it works:</strong> it shows product thinking and rationale — what actually gets hired, not&nbsp;prettiness.</p>
+          <p class="bia-ship"><strong>Ship it:</strong> a one-page case&nbsp;study.</p>
+        </div>
+      </li>
+
+      <li class="bia-card">
+        <span class="bia-num">3</span>
+        <div class="bia-card__body">
+          <h2>Rebuild your portfolio with AI — in&nbsp;public.</h2>
+          <p>
+            Use AI tools to build and ship your folio fast, and document the process as you go.
+            I recently <a href="/rachael-page/" class="prose-link">rebuilt my own design folio</a> with Claude — start to finish.
+          </p>
+          <p class="bia-why"><strong>Why it works:</strong> it doubles as your portfolio <em>and</em> proof you're&nbsp;AI-native.</p>
+          <p class="bia-ship"><strong>Ship it:</strong> the live folio + a short "how I built this"&nbsp;post.</p>
+        </div>
+      </li>
+
+      <li class="bia-card">
+        <span class="bia-num">4</span>
+        <div class="bia-card__body">
+          <h2>Make and sell one real product from your design&nbsp;skills.</h2>
+          <p>
+            Turn your design ability into a thing that exists in the world — a surface
+            pattern on a notebook, phone case or fabric, via print-on-demand (<a href="/rachael-page/creative/surface-pattern-design/shoreline-drift/" target="_blank" rel="noopener" class="prose-link">as shown in my pattern&nbsp;folio</a>).
+          </p>
+          <p class="bia-why"><strong>Why it works:</strong> it proves you can finish — idea to purchasable product — and it's the seed of income that doesn't depend on getting hired at&nbsp;all.</p>
+          <p class="bia-ship"><strong>Ship it:</strong> one product,&nbsp;listed.</p>
+        </div>
+      </li>
+    </ol>
+
+    <!-- BOOK TIE-IN (Project 4) -->
+    <p class="bia-bridge">↓ Serious about Project&nbsp;4? This is the exact playbook for turning your patterns into real&nbsp;income.</p>
+    <BookPromo />
+
+    <!-- PROJECT 5 -->
+    <ol class="bia-list" start="5">
+      <li class="bia-card">
+        <span class="bia-num">5</span>
+        <div class="bia-card__body">
+          <h2>Solve one real person's problem, for&nbsp;free.</h2>
+          <p>
+            Find a small business or creator and fix one design problem — a menu, a landing
+            section, a&nbsp;logo.
+          </p>
+          <p class="bia-why"><strong>Why it works:</strong> you get a real brief, a real testimonial and a portfolio piece with a human&nbsp;story.</p>
+          <p class="bia-ship"><strong>Ship it:</strong> the finished work + a testimonial from them to&nbsp;publicise.</p>
+        </div>
+      </li>
+    </ol>
+
+    <!-- THE POINT -->
+    <section class="bia-point">
+      <p>
+        <strong>The point:</strong> five applications get you nothing. One shipped thing
+        gets you a conversation. Do the smallest one on this list&nbsp;this&nbsp;week.
+      </p>
+    </section>
+
+    <!-- SIGN-OFF -->
+    <section class="bia-signoff">
+      <p class="bia-signoff__name">— Rachael</p>
+      <p>I send one focused thing like this each week in <strong>The Design Edge</strong> — sign up&nbsp;below.</p>
+    </section>
+  </main>
+
+  <!-- EMAIL CTA — same coral section used across tools/articles -->
+  <section class="section_cta8" id="email-signup">
+    <div class="padding-global-3">
+      <div class="container-large">
+        <div class="padding-section-large-3">
+          <div class="cta8_component">
+            <div class="cta8_content">
+              <div class="max-width-large">
+                <div class="margin-bottom margin-xsmall">
+                  <div class="margin-bottom margin-xsmall">
+                    <div class="a-des-insight-title">WEEKLY EMAIL (FREE)</div>
+                  </div>
+                  <h2 class="white h2insights">The Design&nbsp;Edge</h2>
+                </div>
+                <p class="white right">One focused design insight each week — AI workflows, tutorials, ways to earn from your&nbsp;skills.</p>
+                <p class="small-white-body">Unsubscribe anytime.</p>
+              </div>
+            </div>
+            <div class="html-embed-7 w-embed w-script">
+              <script async data-uid="eb98b5a075" src="https://artfuly.ck.page/eb98b5a075/index.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ArtfulyLayout>
+
+<style>
+  .bia-hero-override { background: #048BA2 !important; }
+  .bia-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.55;
+    color: rgba(255,255,255,0.85); font-weight: 500; margin: 14px 0 0; max-width: 80ch; white-space: nowrap;
+  }
+
+  .bia {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 22px 80px;
+    font-family: 'Montserrat', sans-serif;
+    color: #1d1d1d;
+  }
+  .bia-intro { margin: 0 auto 40px; }
+  .bia-intro p { font-size: 1.05rem; line-height: 1.7; color: #1d1d1d; margin: 0 0 16px; }
+
+  .bia-list { list-style: none; margin: 0 0 28px; padding: 0; }
+  .bia-card {
+    display: flex; gap: 20px; align-items: flex-start;
+    background: #f1f9f9; border: 1px solid #d6ebec; border-radius: 12px;
+    padding: 26px 28px; margin: 0 0 20px;
+  }
+  .bia-num {
+    flex: 0 0 44px; height: 44px; width: 44px;
+    display: flex; align-items: center; justify-content: center;
+    background: #048ba2; color: #fff; font-weight: 800; font-size: 1.25rem;
+    border-radius: 50%;
+  }
+  .bia-card__body { flex: 1; min-width: 0; }
+  .bia-card__body h2 {
+    font-size: 1.3rem; font-weight: 800; line-height: 1.3; color: #233030; margin: 2px 0 12px;
+  }
+  .bia-card__body p { font-size: 1rem; line-height: 1.65; color: #1d1d1d; margin: 0 0 10px; }
+  .bia-why, .bia-ship { font-size: 0.95rem !important; }
+  .bia-why strong, .bia-ship strong { color: #048ba2; }
+
+  .bia-point {
+    background: #233030; border-radius: 12px; padding: 28px 32px; margin: 8px 0 44px;
+  }
+  .bia-point p { font-size: 1.15rem; line-height: 1.6; color: #fff; margin: 0; }
+  .bia-point strong { color: #fff; }
+
+  .bia-signoff {
+    border-top: 1px solid #d6ebec; padding-top: 32px; margin-top: 8px;
+  }
+  .bia-signoff__name { font-weight: 800; color: #233030; font-size: 1.1rem; margin: 0 0 6px; }
+  .bia-signoff p { font-size: 1.02rem; line-height: 1.6; color: #1d1d1d; margin: 0; }
+  .bia-signoff strong { color: #048ba2; }
+
+  @media screen and (max-width: 640px) {
+    .bia-card { flex-direction: row; padding: 22px 20px; gap: 14px; }
+    .bia-num { flex-basis: 38px; width: 38px; height: 38px; font-size: 1.1rem; }
+    .bia-point { padding: 24px 22px; }
+  }
+</style>

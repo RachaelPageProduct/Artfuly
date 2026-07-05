@@ -3,6 +3,18 @@
    Fills gaps not covered by webflow.css
    =================================================== */
 
+/* Inline prose link — use on all inline body text links site-wide.
+   Inherits font-size and weight from parent; overrides webflow.css defaults (18px/500/no-underline). */
+.prose-link {
+  font-size: inherit !important;
+  font-weight: 700 !important;
+  font-family: inherit !important;
+  color: #048ba2 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+.prose-link:hover { color: #036f81 !important; }
+
 /* Nav link size — matches rachaelpage.com nav */
 .navbar { font-size: 14px; font-weight: 300; }
 

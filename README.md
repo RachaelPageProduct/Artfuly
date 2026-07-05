@@ -128,6 +128,9 @@ metaDescription:
 - [ ] Onboarding / explainer content pages (if any)
 - [x] Deployed — LIVE on Netlify at artfuly.com and rachaelpage.com (see deploy-cadence note at top of file)
 
+## ⚠️ COLOUR RULE — NEVER USE AS BACKGROUNDS: `#233030` (charcoal) or `#0D3340` (deep dark)
+These colours are **text/headings ONLY**. Dark section backgrounds must use `#048BA2` (brand teal). This has caused repeated errors — do not forget it.
+
 ## Known CSS gotchas
 - `.nav-menu-3` has `justify-content: space-between` from webflow.css → override with `justify-content: flex-start !important` inside the overlay
 - `.w-nav` is `position: fixed; width: 0` → overlay must use `width: 100vw` not `width: 100%`
