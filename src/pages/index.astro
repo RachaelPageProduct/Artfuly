@@ -23,7 +23,9 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
     <div class="tutor-hero__inner w-container">
       <div class="tutor-hero__text">
         <div class="tutor-hero__avatar tutor-reveal" style="--delay:0ms">
-          <img src="/images/site/rachael-small.png" alt="Rachael Page" loading="eager" />
+          <div class="tutor-hero__avatar-frame">
+            <img src="/images/site/rachael-small.png" alt="Rachael Page" loading="eager" />
+          </div>
         </div>
         <div class="tutor-hero__label tutor-reveal" style="--delay:80ms">1:1 TUTOR / MENTOR: Rachael Page</div>
         <h1 class="tutor-hero__h1">
@@ -249,7 +251,7 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
         </div>
         <div class="tutor-meet__photo tutor-slide-up" style="--delay:120ms">
           <div class="tutor-meet__circle">
-            <img src="/images/site/rachael-headshot.png" alt="Rachael Page" loading="lazy" />
+            <img src="/images/site/rachael-small.png" alt="Rachael Page" loading="lazy" />
           </div>
         </div>
       </div>
@@ -404,15 +406,21 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
 .tutor-hero__avatar {
   margin-bottom: 28px;
 }
-.tutor-hero__avatar img {
+.tutor-hero__avatar-frame {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center 10%;
+  overflow: hidden;
   border: 3px solid rgba(255,255,255,0.4);
-  display: block;
   animation: heroPhotoIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s both;
+}
+.tutor-hero__avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transform: scale(1.18) translateY(-7%);
 }
 @keyframes heroPhotoIn {
   from { opacity: 0; transform: scale(0.88); }
@@ -737,6 +745,7 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
   object-fit: cover;
   object-position: top center;
   display: block;
+  transform: scale(1.18) translateY(-7%);
   filter: grayscale(10%);
   transition: filter 0.3s;
 }
