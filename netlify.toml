@@ -107,11 +107,14 @@
   status = 200
 
 # Internal links use /rachael-page/... paths (correct for artfuly.com).
-# On rachaelpage.com, strip the prefix so the URL stays clean.
+# On rachaelpage.com, serve these directly to avoid double-prefixing.
+# (Must be status 200, not 301 — a 301 here bounces against the catch-all
+# rewrite below and creates an infinite redirect loop with every /work/* and
+# /project/* page on rachaelpage.com.)
 [[redirects]]
   from = "https://rachaelpage.com/rachael-page/*"
-  to = "https://rachaelpage.com/:splat"
-  status = 301
+  to = "/rachael-page/:splat"
+  status = 200
   force = true
 
 # Rewrite: rachaelpage.com/* → serves /rachael-page/* content
