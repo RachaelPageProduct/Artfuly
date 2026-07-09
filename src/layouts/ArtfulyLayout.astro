@@ -6,6 +6,7 @@ interface Props {
   ogType?: string;
 }
 const { title, description = 'Artfuly — Design education by Rachael Page', ogImage, ogType = 'website' } = Astro.props;
+const canonicalURL = `https://artfuly.com${Astro.url.pathname}`;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,7 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
+  <link rel="canonical" href={canonicalURL} />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="256x256" href="/apple-touch-icon.png" />
   {description && <meta name="description" content={description} />}
@@ -69,7 +71,7 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
         <img src="/images/site/63089402c3ac2fd2d3c1f4d8_Artfuly-2022-round-logo.png" loading="lazy" width="Auto" height="Auto" alt="Artfuly logo" class="image-33" />
       </a>
       <nav role="navigation" class="nav-menu-3 w-nav-menu">
-        <a href="/private-tutor-mentor" class="navbar w-nav-link">1:1 Tutor / Mentor</a>
+        <a href="/" class="navbar w-nav-link">1:1 Tutor / Mentor</a>
         <a href="/design-resources" class="navbar w-nav-link">Resources</a>
         <a href="/tools" class="navbar w-nav-link">Tools</a>
         <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="navbar w-nav-link">Design Courses ↗</a>
@@ -83,7 +85,7 @@ const { title, description = 'Artfuly — Design education by Rachael Page', ogI
     <!-- Mobile overlay — direct child of w-nav so it can be full-width -->
     <div id="artfuly-nav-overlay">
       <nav role="navigation" class="nav-menu-3 w-nav-menu" id="artfuly-nav-overlay-menu">
-        <a href="/private-tutor-mentor" class="navbar w-nav-link">1:1 Tutor / Mentor</a>
+        <a href="/" class="navbar w-nav-link">1:1 Tutor / Mentor</a>
         <a href="/design-resources" class="navbar w-nav-link">Resources</a>
         <a href="/tools" class="navbar w-nav-link">Tools</a>
         <a href="https://artfuly.thinkific.com/collections" target="_blank" rel="noopener" class="navbar w-nav-link">Design Courses ↗</a>

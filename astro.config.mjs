@@ -2,8 +2,15 @@
 import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()]
+  site: 'https://artfuly.com',
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) => !/\/(unsubscribed|subscribed-|success)/.test(page),
+    }),
+  ]
 });

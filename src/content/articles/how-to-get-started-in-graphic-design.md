@@ -11,7 +11,7 @@ published: true
 featured: false
 featuredPortfolio: false
 ctaText: "Visual Design Principles Course"
-ctaLink: "https://courses.artfuly.com/courses/design-principles"
+ctaLink: "https://artfuly.thinkific.com/courses/design-principles"
 titleTag: "Graphic Design in 2024 is actually called Visual Design"
 ---
 

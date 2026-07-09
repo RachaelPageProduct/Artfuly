@@ -24,6 +24,7 @@ const relatedArticles = allArticles
 ---
 
 <ArtfulyLayout title={`${d.title} | Artfuly`} description={d.description} ogImage={d.heroImage} ogType="article">
+  {!d.published && <meta slot="head" name="robots" content="noindex, nofollow" />}
   <script async data-uid="b7b7a29039" src="https://artfuly.kit.com/b7b7a29039/index.js" slot="head"></script>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",

@@ -11,7 +11,7 @@ published: true
 featured: false
 featuredPortfolio: false
 ctaText: "Visual Design Principles Course"
-ctaLink: "https://courses.artfuly.com/courses/design-principles"
+ctaLink: "https://artfuly.thinkific.com/courses/design-principles"
 titleTag: "How to choose colors"
 metaDescription: "Whether you have one colour already and need to find which colour goes best with it, or starting from zero, or need to create a whole harmonious colour palette, this quick article & video explains it all"
 ---

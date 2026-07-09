@@ -11,7 +11,7 @@ published: true
 featured: false
 featuredPortfolio: false
 ctaText: "Digital Product Design Course"
-ctaLink: "https://courses.artfuly.com/courses/Digital-Product-Design"
+ctaLink: "https://artfuly.thinkific.com/courses/Digital-Product-Design"
 titleTag: "The Ultimate Guide to Writing User Stories for UX and Product Designers"
 metaDescription: "A user story is a simple statement that can be used at various points in the design thinking process"
 ---

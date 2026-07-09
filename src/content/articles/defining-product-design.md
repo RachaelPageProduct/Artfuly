@@ -11,7 +11,7 @@ published: true
 featured: false
 featuredPortfolio: false
 ctaText: "Start with the Digital Product Design course"
-ctaLink: "https://courses.artfuly.com/courses/Digital-Product-Design"
+ctaLink: "https://artfuly.thinkific.com/courses/Digital-Product-Design"
 titleTag: "What is Product Design?"
 metaDescription: "Product Design, or digital product design covers UX design, UI design, Product Design and a few other things. Read this in-depth article to find out more..."
 ---

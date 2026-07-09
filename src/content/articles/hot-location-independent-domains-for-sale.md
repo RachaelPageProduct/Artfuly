@@ -13,7 +13,7 @@ featuredPortfolio: false
 ctaText: "Enquire now"
 ctaLink: "mailto:info@waveweb.design"
 titleTag: "Digital nomad & location independent domains for sale"
-metaDescription: "away.expert and elsewhere.work are for sale, make an offer here"
+metaDescription: "elsewhere.work is for sale, make an offer here"
 ---
 
-<h1>These domains are for sale:</h1><h2><a href="http://elsewhere.work">elsewhere.work</a><br><a href="http://away.expert">away.expert </a></h2><p></p><p>Email info@waveweb.design if you're interested in purchasing</p>
+<h1>This domain is for sale:</h1><h2><a href="http://elsewhere.work">elsewhere.work</a></h2><p></p><p>Email info@waveweb.design if you're interested in purchasing</p>

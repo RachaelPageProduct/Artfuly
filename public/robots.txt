@@ -4,4 +4,4 @@ Allow: /
 # Secret download pages — not for indexing
 Disallow: /tools/pattern-trend-download/
 
-Sitemap: https://artfuly.com/sitemap.xml
+Sitemap: https://artfuly.com/sitemap-index.xml

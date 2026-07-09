@@ -11,7 +11,7 @@ published: false
 featured: true
 featuredPortfolio: false
 ctaText: "Enrol to preview the Visual Design course"
-ctaLink: "https://artfuly.thinkific.com/courses/design-fundamentals"
+ctaLink: "https://artfuly.thinkific.com/courses/design-principles"
 titleTag: "What a UX or Product Designer earns"
 metaDescription: "€650 euros per day, so in an average month with 20 days, thats 13,000 euros which is equivalent to 3500 US dollars per week or over 5,5000 AUD in Australia"
 ---
