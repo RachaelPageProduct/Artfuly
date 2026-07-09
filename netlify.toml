@@ -94,6 +94,18 @@
   to = "/apple-touch-icon-rp.png"
   status = 200
 
+# rachaelpage.com is canonical for /rachael-page/* content — needs its own
+# robots.txt and sitemap.xml, carved out before the catch-all below.
+[[redirects]]
+  from = "https://rachaelpage.com/robots.txt"
+  to = "/robots-rachaelpage.txt"
+  status = 200
+
+[[redirects]]
+  from = "https://rachaelpage.com/sitemap.xml"
+  to = "/rachaelpage-sitemap.xml"
+  status = 200
+
 # Paths that exist at the site root and are linked from rachaelpage.com pages.
 # Must come BEFORE the catch-all below, otherwise they'd be rewritten to /rachael-page/...
 [[redirects]]

@@ -10,7 +10,8 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      filter: (page) => !/\/(unsubscribed|subscribed-|success)/.test(page),
+      // rachael-page/* is canonical on rachaelpage.com, not artfuly.com — see rachaelpage-sitemap.xml.ts
+      filter: (page) => !/\/(unsubscribed|subscribed-|success|rachael-page)/.test(page),
     }),
   ]
 });

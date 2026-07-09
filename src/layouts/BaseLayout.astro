@@ -5,7 +5,12 @@ interface Props {
   description?: string;
 }
 const { title, description = 'Rachael Page — Product Designer' } = Astro.props;
-const canonicalURL = `https://artfuly.com${Astro.url.pathname}`;
+// /rachael-page/* is canonical on rachaelpage.com (personal brand/portfolio — see project-artfuly-canonical-domain memory).
+// Other BaseLayout pages (e.g. meeting.astro, shared at the site root on both domains) stay canonical on artfuly.com.
+const isRachaelPagePath = Astro.url.pathname.startsWith('/rachael-page');
+const canonicalURL = isRachaelPagePath
+  ? `https://rachaelpage.com${Astro.url.pathname.replace(/^\/rachael-page/, '') || '/'}`
+  : `https://artfuly.com${Astro.url.pathname}`;
 ---
 <!DOCTYPE html>
 <html lang="en">
