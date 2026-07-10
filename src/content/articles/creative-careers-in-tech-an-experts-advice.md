@@ -10,8 +10,8 @@ thumbnailImage: "/images/webflow-cdn/677fb5565fba5bc1df7ba7ef_Frame-227.png"
 published: true
 featured: true
 featuredPortfolio: true
-ctaText: "Join the Designers Community"
-ctaLink: "https://artfuly.click/design-community"
+ctaText: "Learn Digital Product Design"
+ctaLink: "https://artfuly.thinkific.com/courses/Digital-Product-Design"
 titleTag: "Creative Careers in Tech: An Expert’s Advice"
 metaDescription: "What it's like to have a creative tech career, qualities required and how to pick a tech career path based on your own personal traits"
 ---
