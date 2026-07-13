@@ -29,7 +29,7 @@ const canonicalURL = `https://artfuly.com${Astro.url.pathname}`;
   <link rel="stylesheet" href="/styles/webflow.css" />
   <link rel="stylesheet" href="/styles/artfuly.css" />
   <slot name="head" />
-  <script type="application/ld+json">{JSON.stringify({
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Rachael Page",
@@ -40,7 +40,7 @@ const canonicalURL = `https://artfuly.com${Astro.url.pathname}`;
       "https://www.linkedin.com/in/rachaelpage",
       "https://www.amazon.com/author/rachael-page"
     ]
-  })}</script>
+  })} />
   <style></style>
 
   <!-- ShareThis -->

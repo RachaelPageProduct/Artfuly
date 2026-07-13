@@ -26,7 +26,7 @@ const gridProjects = featuredProjects.slice(1);
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-rp.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon-rp.png" />
   <meta name="description" content="Product designer with 20+ years experience at tech startups and ad agencies. Currently building apps with AI." />
-  <script type="application/ld+json">{JSON.stringify({
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Rachael Page",
@@ -46,7 +46,7 @@ const gridProjects = featuredProjects.slice(1);
       "https://artfuly.com"
     ],
     "knowsAbout": ["Product Design", "UX Design", "UI Design", "User Research", "Design Education", "Progressive Web Apps"]
-  })}</script>
+  })} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet" />
