@@ -10,8 +10,8 @@ thumbnailImage: "/images/articles/how-to-replace-webflow-folio-with-claude-thumb
 published: true
 featured: true
 featuredPortfolio: false
-ctaText: "Learn Digital Product Design"
-ctaLink: "https://artfuly.thinkific.com/courses/Digital-Product-Design"
+ctaText: "Need help?"
+ctaLink: "https://artfuly.com/booking"
 titleTag: "How to replace a Webflow folio with Claude"
 metaDescription: "A practical walkthrough of replacing a Webflow portfolio with a Claude Code rebuild — export every page with nocodeexport, document the design system, then let Claude reconstruct it page by page."
 ---
