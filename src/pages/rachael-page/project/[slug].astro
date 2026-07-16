@@ -67,9 +67,9 @@ const buttons = [
   <link rel="stylesheet" href="/styles/webflow.css" slot="head" />
   {d.slug === 'ticklists-app' && (
     <Fragment slot="head" set:html={`<style>
-      .w-richtext figure.w-richtext-figure-type-image:not(:has(img[src*="Spreadsheet"])):not(:has(img[src*="wireframe"])) { display: block !important; max-width: 25% !important; margin-left: auto !important; margin-right: auto !important; }
-      .w-richtext figure.w-richtext-figure-type-image:not(:has(img[src*="Spreadsheet"])):not(:has(img[src*="wireframe"])) > div { display: block !important; max-width: 100%; }
-      .w-richtext figure.w-richtext-figure-type-image:not(:has(img[src*="Spreadsheet"])):not(:has(img[src*="wireframe"])) img { width: 100% !important; height: auto !important; }
+      .w-richtext figure.w-richtext-figure-type-image:not(:has(img[src*="Spreadsheet"])):not(:has(img[src*="wireframe"])):not(:has(img[src*="design-directions"])) { display: block !important; max-width: 25% !important; margin-left: auto !important; margin-right: auto !important; }
+      .w-richtext figure.w-richtext-figure-type-image:not(:has(img[src*="Spreadsheet"])):not(:has(img[src*="wireframe"])):not(:has(img[src*="design-directions"])) > div { display: block !important; max-width: 100%; }
+      .w-richtext figure.w-richtext-figure-type-image:not(:has(img[src*="Spreadsheet"])):not(:has(img[src*="wireframe"])):not(:has(img[src*="design-directions"])) img { width: 100% !important; height: auto !important; }
     </style>`} />
   )}
 
