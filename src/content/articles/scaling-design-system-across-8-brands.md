@@ -1,5 +1,5 @@
 ---
-title: "Scaling a Design System Across 8+ Brands: What Actually Breaks"
+title: "Scaling a Design System Across 8+ Brands"
 category: "Design Craft"
 slug: "scaling-design-system-across-8-brands"
 date: "2026-07-09"
