@@ -105,6 +105,15 @@ const buttons = [
     </section>
   )}
 
+  <!-- IMPACT (moved up: proof line goes right after ownership block, before the intro/disclaimer/personas wall) -->
+  {d.impact && (
+    <section class="r-showcase-section">
+      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
+        <div><h3>Impact</h3><p>{d.impact}</p></div>
+      </div>
+    </section>
+  )}
+
   <!-- LOTTIE / HEADER IMAGE -->
   {d.lottieUrl && (
     <section class="r-project-header-lottie">
@@ -175,15 +184,6 @@ const buttons = [
     <section class="section-77">
       <div class="w-layout-blockcontainer r-showcase-container w-container">
         <div class="div-block-153" set:html={d.toolVideoEmbed} />
-      </div>
-    </section>
-  )}
-
-  <!-- IMPACT -->
-  {d.impact && (
-    <section class="r-showcase-section">
-      <div class="w-layout-blockcontainer container-940-pad-20lr w-container">
-        <div><p>{d.impact}</p></div>
       </div>
     </section>
   )}
