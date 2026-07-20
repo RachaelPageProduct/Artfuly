@@ -158,7 +158,7 @@ const buttons = [
             <div class="w-dyn-items" role="list">
               {d.workCategories.map((cat: string) => (
                 <div role="listitem" class="collection-item-12 w-dyn-item">
-                  <a href={`/rachael-page/work/${catUrl[cat] || cat}`} class="r-work-category-pill w-button">
+                  <a href={`/rachael-page/work/${catUrl[cat] || cat}/`} class="r-work-category-pill w-button">
                     {catLabels[cat] || cat.replace(/-/g,' ').replace(/\b\w/g,(c:string)=>c.toUpperCase())}
                   </a>
                 </div>
@@ -248,7 +248,7 @@ const buttons = [
   <!-- NEXT PROJECT + BROWSE CATEGORIES -->
   <section class="next-project-strip">
     {d.nextProject && (
-      <a href={`/rachael-page/project/${d.nextProject}`} class="next-project-link">
+      <a href={`/rachael-page/project/${d.nextProject}/`} class="next-project-link">
         <span class="next-project-label">Next project</span>
         <span class="next-project-title">{nextProjectTitle} →</span>
       </a>
@@ -257,7 +257,7 @@ const buttons = [
       <span class="browse-label">…or select a category</span>
       <div class="browse-pills">
         {browseCategories.map(cat => (
-          <a href={`/rachael-page/work/${cat.slug}`} class="browse-pill">{cat.label}</a>
+          <a href={`/rachael-page/work/${cat.slug}/`} class="browse-pill">{cat.label}</a>
         ))}
       </div>
     </div>

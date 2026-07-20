@@ -99,7 +99,7 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
     <div class="work-filter-inner">
       {categories.map(cat => (
         <a
-          href={`/rachael-page/work/${cat.slug}`}
+          href={`/rachael-page/work/${cat.slug}/`}
           class={`filter-pill ${cat.slug === slug ? 'filter-pill--active' : ''}`}
         >{cat.label}</a>
       ))}
@@ -113,7 +113,7 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
         const d = p.data;
         const cats: string[] = (d.workCategories ?? []).slice(0, 3);
         return (
-          <a href={`/rachael-page/project/${d.slug}`} class="work-card">
+          <a href={`/rachael-page/project/${d.slug}/`} class="work-card">
             <div class="work-card-image-wrap">
               {d.cardLottie
                 ? <div class="work-card-lottie" data-lottie-url={d.cardLottie} />
@@ -144,7 +144,7 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
     {projects.length === 0 && (
       <div class="work-empty">
         <p>No case studies yet in this category.</p>
-        <a href="/rachael-page/work/all">View all work &rarr;</a>
+        <a href="/rachael-page/work/all/">View all work &rarr;</a>
       </div>
     )}
   </section>

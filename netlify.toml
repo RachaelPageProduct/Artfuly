@@ -18,6 +18,14 @@
   to = "/rachael-page/work/graphic-design"
   status = 301
 
+# Retired category, no replacement — a redirect to other work would misleadingly
+# associate it with unrelated projects, so mark permanently gone instead
+[[redirects]]
+  from = "/work/teaching-design"
+  to = "/"
+  status = 410
+  force = true
+
 # Old Webflow artfuly.com /work/* paths → new /rachael-page/work/* locations
 [[redirects]]
   from = "/work/*"
@@ -66,6 +74,11 @@
 [[redirects]]
   from = "https://rachaelpage.com/images/*"
   to = "/images/:splat"
+  status = 200
+
+[[redirects]]
+  from = "https://rachaelpage.com/videos/*"
+  to = "/videos/:splat"
   status = 200
 
 [[redirects]]
