@@ -2,18 +2,24 @@
 import SPDCollectionNav from '../../../../components/SPDCollectionNav.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
+// Names confirmed against the live Spoonflower listings (spoonflower.com/profiles/artfuly) —
+// this pattern is listed there as "Organic Confetti Camouflage".
 const colourways = [
-  { name: 'Artboard 3', file: 'Artboard 3.png' },
-  { name: 'Artboard 4', file: 'Artboard 4 2.png' },
+  { name: 'Pastel', file: 'Artboard 1.png' },
+  { name: 'Pinks & Cyan', file: 'Artboard 2.png' },
+  { name: 'Indigo & Yellow', file: 'Artboard 3.png' },
+  { name: 'Lilacs', file: 'Artboard 4.png' },
+  { name: 'Greens', file: 'Artboard 5.png' },
+  { name: 'Earthy', file: 'Artboard 6.png' },
 ];
 
 const mockups = [
-  { file: 'mockups/Bathroom mockup 1.jpeg',  caption: 'Wallpaper — Bathroom' },
-  { file: 'mockups/Bedroom mockup 1.jpeg',   caption: 'Wallpaper — Bedroom' },
-  { file: 'mockups/Dining room mockup 1.jpeg', caption: 'Wallpaper — Dining room' },
-  { file: 'mockups/Grasscloth roll.jpeg',    caption: 'Grasscloth wallpaper — roll' },
-  { file: 'mockups/Grasscloth wall.jpeg',    caption: 'Grasscloth wallpaper — wall' },
-  { file: 'mockups/Mockup cushion 1.jpeg',   caption: 'Fabric — Cushion' },
+  { file: 'mockups/HERO Bathroom mockup 1.jpeg',              caption: 'Wallpaper — Bathroom' },
+  { file: 'mockups/Bedroom mockup 1.jpeg',                     caption: 'Wallpaper — Bedroom' },
+  { file: 'mockups/Restaurant mockup 1.jpeg',                  caption: 'Wallpaper — Dining room' },
+  { file: 'mockups/Grasscloth roll - Light Pastel colourway.jpeg', caption: 'Grasscloth wallpaper — roll' },
+  { file: 'mockups/Grasscloth wallpaper.jpeg',                 caption: 'Grasscloth wallpaper — wall' },
+  { file: 'mockups/Cushion - in Light Pastel.jpeg',            caption: 'Fabric — Cushion' },
 ];
 ---
 
@@ -28,7 +34,7 @@ const mockups = [
         Scattered organic shapes with an artisanal, handmade quality. Designed for grasscloth and smooth wallpaper — a quiet, textural pattern that works in any room.
       </p>
       <div class="spd-meta">
-        <span>2 colourways</span>
+        <span>5 colourways</span>
         <span>Allover repeat</span>
         <span>Wallpaper · Fabric · Home Accessories</span>
       </div>
@@ -37,7 +43,7 @@ const mockups = [
       </a>
     </div>
     <div class="spd-hero-image">
-      <img src="/images/patterns/pebble/mockups/Bathroom mockup 1.jpeg" alt="Pebble — wallpaper in bathroom context" />
+      <img src="/images/patterns/pebble/mockups/HERO Bathroom mockup 1.jpeg" alt="Pebble — wallpaper in bathroom context" />
     </div>
   </section>
 

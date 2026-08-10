@@ -1,0 +1,94 @@
+---
+import SPDCollectionNav from '../../../../components/SPDCollectionNav.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const colourways = [
+  { name: 'Pink, Blue, Purple, Teal', file: 'Herabrium florals 6.png' },
+];
+
+const mockups = [
+  { file: 'mockups/01-lumbar-pillow-studio.jpeg',        caption: 'Fabric — Lumbar pillow, studio' },
+  { file: 'mockups/02-fabric.jpeg',                      caption: 'Fabric — Swatch' },
+  { file: 'mockups/03-chair.jpeg',                       caption: 'Fabric — Upholstered chair' },
+  { file: 'mockups/04-curtain.jpeg',                     caption: 'Fabric — Curtains, in room' },
+  { file: 'mockups/05-curtain-closeup.jpeg',             caption: 'Fabric — Curtains, closeup' },
+  { file: 'mockups/06-fabric-closeup.jpeg',              caption: 'Fabric — Macro closeup' },
+  { file: 'mockups/09-sheet-set-2.jpeg',                 caption: 'Bedding — Sheet set, folded' },
+  { file: 'mockups/08-bedding.jpeg',                     caption: 'Bedding — On the bed' },
+  { file: 'mockups/07-sheet-set.jpeg',                   caption: 'Bedding — Sheet set, detail' },
+  { file: 'mockups/10-napkins-large.jpeg',               caption: 'Table linen — Napkins, folded corner' },
+  { file: 'mockups/11-napkins.jpeg',                     caption: 'Table linen — Napkins, detail' },
+  { file: 'mockups/12-napkins-folded.jpeg',              caption: 'Table linen — Napkins, folded with fork' },
+  { file: 'mockups/13-table-runner.jpeg',                caption: 'Table linen — Table runner' },
+  { file: 'mockups/14-table-runner-napkins.jpeg',        caption: 'Table linen — Runner & napkins, set table' },
+  { file: 'mockups/15-napkins-with-cutlery.jpeg',        caption: 'Table linen — Napkins with cutlery' },
+  { file: 'mockups/16-wallpaper-grasscloth-closeup.jpeg', caption: 'Wallpaper — Grasscloth roll, closeup' },
+  { file: 'mockups/18-wallpaper.jpeg',                   caption: 'Wallpaper — Bedroom, closeup' },
+  { file: 'mockups/17-wallpaper-bedroom-closeup.jpeg',   caption: 'Wallpaper — Room corner' },
+];
+---
+
+<BaseLayout title="Antique Botanical Garden — Surface Pattern Collection by Rachael Page" description="A vintage herbarium-inspired botanical pattern with pressed florals, delicate stems and old-world charm. Available for wallpaper, fabric and home accessories licensing.">
+
+  <!-- COLLECTION HERO -->
+  <section class="spd-hero">
+    <div class="spd-hero-text">
+      <p class="spd-collection-label">Surface Pattern Collection</p>
+      <h1 class="spd-collection-name">Antique Botanical Garden</h1>
+      <p class="spd-collection-desc">
+        A vintage herbarium-inspired botanical pattern with pressed florals, delicate stems &amp; old-world charm — drawn in the spirit of a 19th-century field&nbsp;journal.
+      </p>
+      <div class="spd-meta">
+        <span>1 colourway</span>
+        <span>Basic repeat</span>
+        <span>Wallpaper · Fabric · Home Accessories</span>
+      </div>
+      <a href="mailto:artfulydesign@gmail.com?subject=Licensing%20enquiry%20—%20Antique%20Botanical%20Garden" class="spd-cta">
+        Enquire about licensing
+      </a>
+    </div>
+    <div class="spd-hero-image">
+      <img src="/images/patterns/antique-botanical-garden/mockups/01-lumbar-pillow.jpeg" alt="Antique Botanical Garden — botanical fabric on lumbar pillow" />
+    </div>
+  </section>
+
+  <!-- COLOURWAYS GRID -->
+  <section class="spd-colourways">
+    <div class="spd-colourways-inner">
+      <h2 class="spd-section-label">Colourways</h2>
+      <div class="spd-grid">
+        {colourways.map(c => (
+          <div class="spd-swatch">
+            <img src={`/images/patterns/antique-botanical-garden/${c.file}`} alt={`Antique Botanical Garden — ${c.name}`} loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCKUPS / IN CONTEXT -->
+  <section class="spd-mockups">
+    <div class="spd-mockups-inner">
+      <h2 class="spd-section-label">In Context</h2>
+      <div class="spd-mockups-grid">
+        {mockups.map(m => (
+          <figure class="spd-mockup-item">
+            <img src={`/images/patterns/antique-botanical-garden/${m.file}`} alt={m.caption} loading="lazy" />
+            <figcaption>{m.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION NAV -->
+  <SPDCollectionNav nextSlug="good-dogs" nextName="Good Dogs" />
+
+  <!-- LICENSING CTA -->
+  <section class="spd-licensing">
+    <div class="spd-licensing-inner">
+      <h2 class="spd-licensing-title">Interested in licensing this collection?</h2>
+    </div>
+  </section>
+
+</BaseLayout>
