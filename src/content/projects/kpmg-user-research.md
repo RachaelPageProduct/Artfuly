@@ -5,7 +5,7 @@ featured: False
 nextProject: "pwc-knowledge-sharing-intranet"
 halfWidthImage: |-
   /images/webflow-cdn/6554bd23cdb6260ed5bc8300_KPMG-small.png
-summary: "New European markets"
+summary: "Led user research for KPMG's expansion into new European markets."
 role: "UX Researcher"
 team: "KPMG Client"
 date: "2021"

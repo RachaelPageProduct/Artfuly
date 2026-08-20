@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/6554be172fafbea50adecb4d_terra-html-email-small.png
-summary: "Updated brand and content after the app launch"
+summary: "Concepted, designed and built Terra's Black Friday email campaign, including Klaviyo discount setup."
 role: |-
   Graphic Designer
   HTML Email Creator

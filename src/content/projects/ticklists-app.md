@@ -7,7 +7,7 @@ nextProject: "terra-app"
 halfWidthImage: |-
   /images/webflow-cdn/69cb52e15e1262503966edfa_Frame-4.png
 cardVideo: /images/projects/ticklists-app/ticklists-card-animation.mp4
-summary: "Solo-designed and shipped a PWA that sorts a shared shopping list into the right order for any store and syncs live with the household."
+summary: "Solo-designed and shipped a PWA that sorts shopping lists by store, synced live with the household."
 role: |-
   Founder
   Product Designer

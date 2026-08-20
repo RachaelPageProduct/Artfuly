@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: "Re-design the product selection experience for a multi-national packaging company"
+summary: "Redesigned Amcor's product-selection UX in 4 weeks, surfacing a database fix needed for search to work."
 role: |-
   UX Researcher
   UX Designer

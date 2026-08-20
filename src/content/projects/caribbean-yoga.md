@@ -5,7 +5,7 @@ featured: False
 nextProject: "art-augmented-reality"
 halfWidthImage: |-
   /images/webflow-cdn/6554be3197b8d5541df51471_Caribbean-yoga-small.png
-summary: "A magazine resort feel and automated booking flow"
+summary: "Designed and built a resort-style booking site for a Caribbean yoga retreat, automating bookings."
 role: |-
   UX Designer
   UI Designer

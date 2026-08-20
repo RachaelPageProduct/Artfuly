@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/projects/terra-adverts/678288f06a800be58eb32093_Frame-9.png
-summary: "Visual design using Midjourney images for Ads"
+summary: "Used Midjourney to create Terra's ad imagery faster and better than stock photography, cutting costs."
 role: "Visual Designer"
 team: "Copywriter"
 date: "17th December 2024"

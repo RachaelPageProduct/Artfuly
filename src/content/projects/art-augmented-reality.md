@@ -5,7 +5,7 @@ featured: False
 nextProject: "berlin-hifi-store-brands-page"
 halfWidthImage: |-
   /images/webflow-cdn/655f6f8c8c6c1bd6fcf69778_art-augmented-reality-small.png
-summary: "Projecting artworks onto any wall to encourage sales"
+summary: "Designed a no-app AR tool for shoppers to view art on their wall from mobile, to sell with confidence."
 role: |-
   Startup Owner
   Product Designer

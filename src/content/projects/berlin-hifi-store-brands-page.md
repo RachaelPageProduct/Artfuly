@@ -5,7 +5,7 @@ featured: False
 nextProject: "mcdonalds-monopoly-mobile-site"
 halfWidthImage: |-
   /images/webflow-cdn/6554c6f308ee3b85a5203980_Hifi-brand-page-small.png
-summary: "SEO research lead to a brand page UI design"
+summary: "Used SEO research to design a new brand page UI for a Berlin HiFi store, targeting real search terms."
 role: |-
   UX Designer
   UI Designer

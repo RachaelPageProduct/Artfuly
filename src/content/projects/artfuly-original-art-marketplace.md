@@ -5,8 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/6990a406eb933ccf4a480784_Artfuly-Launch-2013-768x512.jpg
-summary: |-
-  In 2012 I launched my own startup: A place for fine artists to sell original art
+summary: "Bootstrapped a global art marketplace 8 years: my concept, self-funded, hired and ran the dev team."
 role: |-
   Founder
   Senior UX Designer

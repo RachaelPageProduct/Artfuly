@@ -5,7 +5,7 @@ featured: False
 nextProject: "mcdonalds-monopoly-mobile-site"
 halfWidthImage: |-
   /images/webflow-cdn/68a5e1b1043765756347c467_Showreel-Grid-Mobile-[remix]-2.gif
-summary: "Research & UX for the lead generation experience for $760 Million AUD per year"
+summary: "Led UX research and design for Sydney Uni's $760M/year course-search experience, still live 9 years on."
 role: |-
   UX Researcher
   Business Analyst

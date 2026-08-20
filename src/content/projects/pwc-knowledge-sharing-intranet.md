@@ -5,8 +5,7 @@ featured: False
 nextProject: "kpmg-user-research"
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: |-
-  A hub so that consultants don't re-invent the wheel every time
+summary: "Designed a knowledge-sharing intranet for PWC so consultants stop reinventing the wheel on repeat work."
 role: |-
   UX Researcher
   UX Designer

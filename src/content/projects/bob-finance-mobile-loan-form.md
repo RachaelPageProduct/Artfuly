@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: "Mobile Loan Form"
+summary: "Recommended a new UX for Bob Finance's loan form, leading with the outcome instead of form-filling."
 role: "UX Designer"
 team: "Client"
 date: "2017"

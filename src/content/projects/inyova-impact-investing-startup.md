@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: ""
+summary: "Designed the UX for Inyova, an impact-investing startup, alongside their visual designer and developer."
 role: "UX Designer"
 team: |-
   Client

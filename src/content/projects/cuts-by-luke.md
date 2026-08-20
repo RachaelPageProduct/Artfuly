@@ -5,7 +5,7 @@ featured: False
 nextProject: "terra-website"
 halfWidthImage: |-
   /images/webflow-cdn/68b714a0c8cb46db5488502f_Thumb-Cutsby-Luke-2.gif
-summary: "Full digital strategy, Webflow site, booking setup and marketing for a mobile hairdresser launching in London"
+summary: "Delivered a hairdresser's full digital launch: strategy, booking, Webflow site, marketing, in a week."
 role: |-
   Strategy
   Hosting & Email Setup

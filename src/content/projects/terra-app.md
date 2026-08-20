@@ -6,7 +6,7 @@ featuredOrder: 2
 nextProject: "gmo"
 halfWidthImage: |-
   /images/webflow-cdn/68a5e7984df7a15a836e8c16_Animation-full-width-terra-app.gif
-summary: "Coached the founder through designing Terra Listens' first app draft and brand in Figma, then took over as product lead, shipping new features and managing the roadmap and dev team through launch."
+summary: "Coached the founder's first app draft and brand, then led design, hired and ran the dev team to launch."
 role: |-
   Principal Product Designer
   Product Manager
