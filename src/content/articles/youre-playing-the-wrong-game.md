@@ -1,5 +1,5 @@
 ---
-title: "You're Playing the Wrong Game"
+title: "The Employment Playbook Has Been Re-Written (Or Become Obsolete)"
 slug: "youre-playing-the-wrong-game"
 date: "2026-08-20"
 description: "Job seekers who keep running the old employment playbook are playing a game whose rules have already changed. Here's what's happening in the design job market, and why leverage, not talent, is what separates who's finding traction."
@@ -12,7 +12,7 @@ tags: ["career", "job market", "AI", "design jobs"]
 published: true
 featured: false
 featuredPortfolio: false
-titleTag: "You're Playing the Wrong Game | Artfuly"
+titleTag: "The Employment Playbook Has Been Re-Written (Or Become Obsolete) | Artfuly"
 metaDescription: "The old job-hunting playbook doesn't work anymore. Here's what's really happening in the design job market, and why leverage matters more than talent right now."
 ---
 
