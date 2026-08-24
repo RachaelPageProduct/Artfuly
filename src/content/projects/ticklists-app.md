@@ -21,7 +21,7 @@ tools: |-
   Firebase + Spark
 headerImage: |-
   /images/webflow-cdn/69cb51f9c67be32766c031ad_Frame-3.png
-lottieUrl: ""
+lottieUrl: "/lotties/ticklists-animation.json"
 heroVideo: "/videos/ticklists-hero.mp4"
 workCategories: ['apps', 'development', 'ia', 'marketing', 'product-design', 'responsive-websites', 'strategy', 'ui-design', 'user-research-testing', 'ux-design']
 introduction: |-
