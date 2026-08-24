@@ -6,8 +6,7 @@ featuredOrder: 3
 nextProject: "terra-website"
 halfWidthImage: |-
   /images/webflow-cdn/McDonalds-thumb.gif
-summary: |-
-  Complex UX Design for this Mobile-first game: the first year it went mobile in Australia
+summary: "Wireframed the UX for McDonald's first mobile Monopoly promotion, simplifying a complex prize system."
 role: "UX Designer"
 team: |-
   Client: Creata, McDonalds' Australian agency in 2014

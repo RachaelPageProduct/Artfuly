@@ -5,7 +5,7 @@ featured: False
 nextProject: "sydney-university"
 halfWidthImage: |-
   /images/webflow-cdn/68a6ecf6b14dba94e91354d7_Comp-1_3.gif
-summary: "EU Corporations try to quietly dissapear GMO labelling"
+summary: "Wrote, designed and animated a pro bono WhatsApp video for a petition, 5k to 86k signatures in 10 days."
 role: |-
   Copywriter
   Visual Design

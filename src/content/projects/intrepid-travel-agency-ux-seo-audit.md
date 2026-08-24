@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: "UX & SEO Audit"
+summary: "Delivered a UX and SEO audit for Intrepid Travel Agency, flagging fixes to lift traffic and conversion."
 role: "Researcher"
 team: "Client Manager"
 date: "2017"

@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: ""
+summary: "Defined UX strategy for a 'smart mall' app and site: wayfinding, personalisation, gamified rewards."
 role: "UX Designer"
 team: "Client Manager"
 date: "April 2015 - May 2015"

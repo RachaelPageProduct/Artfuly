@@ -8,7 +8,7 @@ halfWidthImage: |-
   /images/webflow-cdn/69cb52e15e1262503966edfa_Frame-4.png
 cardVideo: /images/projects/ticklists-app/ticklists-card-animation.mp4
 cardLottie: /lotties/ticklists-card-thumb.json
-summary: "Founded and designed a PWA that reorders a shopping list to match any store's layout, kept in sync live across every household member."
+summary: "Solo-designed and shipped a PWA app that reorders a shopping list to match any store's layout, kept in sync live across every household member."
 role: |-
   Founder
   Product Designer

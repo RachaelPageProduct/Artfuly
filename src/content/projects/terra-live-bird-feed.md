@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/66ab87f2950dd7a5b91b6344_half.png
-summary: "A responsive page to display a live feed via API"
+summary: "Designed and managed the build of Terra's live-stream demo page, delivered in under a week."
 role: |-
   UX Designer
   Product Manager

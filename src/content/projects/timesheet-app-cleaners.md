@@ -5,7 +5,7 @@ featured: False
 nextProject: "pwc-knowledge-sharing-intranet"
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: "Efficient Workflow Responsive Web-app"
+summary: "Self-initiated a multi-company cleaner timesheet app solo, after a client skipped real research."
 role: "UX Designer"
 team: "N/A"
 date: "2020"

@@ -3,8 +3,8 @@ title: "How to Sell Your Designs on Spoonflower (2026 Guide)"
 category: "Careers & Hiring"
 slug: "how-to-sell-your-designs-on-spoonflower"
 date: "2026-06-16"
-heroImage: "/images/patterns/pebble/mockups/Bathroom%20mockup%201.jpeg"
-thumbnailImage: "/images/patterns/pebble/mockups/Bathroom%20mockup%201.jpeg"
+heroImage: "/images/patterns/pebble/mockups/HERO%20Bathroom%20mockup%201.jpeg"
+thumbnailImage: "/images/patterns/pebble/mockups/HERO%20Bathroom%20mockup%201.jpeg"
 published: true
 featured: false
 featuredPortfolio: false

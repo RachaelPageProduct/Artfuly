@@ -82,6 +82,11 @@
   status = 200
 
 [[redirects]]
+  from = "https://rachaelpage.com/lotties/*"
+  to = "/lotties/:splat"
+  status = 200
+
+[[redirects]]
   from = "https://rachaelpage.com/admin/*"
   to = "/admin/:splat"
   status = 200

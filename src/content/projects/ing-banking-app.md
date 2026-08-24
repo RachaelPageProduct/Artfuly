@@ -5,7 +5,7 @@ featured: False
 nextProject: ""
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: "A new app for a credit card banking product"
+summary: "Designed the UX for a new ING credit-card banking app, from personas through to delivered wireframes."
 role: "UX Designer"
 team: |-
   Visual Designer
