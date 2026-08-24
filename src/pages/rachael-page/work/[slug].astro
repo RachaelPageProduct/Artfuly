@@ -77,7 +77,12 @@ const projects = allProjects
     const cats: string[] = p.data.workCategories ?? [];
     return cats.some((c: string) => (catMap[c] ?? c) === slug);
   })
-  .sort((a: any, b: any) => a.data.title.localeCompare(b.data.title));
+  .sort((a: any, b: any) => {
+    const aOrder = a.data.featured && a.data.featuredOrder != null ? a.data.featuredOrder : Infinity;
+    const bOrder = b.data.featured && b.data.featuredOrder != null ? b.data.featuredOrder : Infinity;
+    if (aOrder !== bOrder) return aOrder - bOrder;
+    return a.data.title.localeCompare(b.data.title);
+  });
 
 const pageCategory = categories.find(c => c.slug === slug);
 const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g, (c:string) => c.toUpperCase());
