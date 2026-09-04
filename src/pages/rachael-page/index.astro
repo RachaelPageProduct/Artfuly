@@ -146,6 +146,15 @@ const gridProjects = featuredProjects.slice(1);
     .r-testimonials .section_testimonial17 { margin-top: 0 !important; padding-top: 0 !important; }
     .r-testimonials .padding-global { padding-top: 0 !important; }
     .r-testimonials .padding-section-large { padding-top: 0 !important; }
+
+    /* ── Featured Work: category pills full-width, left-aligned below the heading ──
+       Was confined to the narrower right-hand grid column, wrapping into a
+       centred staircase. Move it to its own full-width row instead. */
+    #w-node-cca200d3-678b-da16-0978-7045f78f897c-f78f8976 {
+      grid-area: 2 / 1 / 3 / -1;
+      justify-self: stretch;
+    }
+    .collection-list-10 { justify-content: flex-start; }
   </style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNHJCFV2NH"></script>
