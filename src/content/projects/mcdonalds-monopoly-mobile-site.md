@@ -5,7 +5,7 @@ featured: True
 featuredOrder: 3
 nextProject: "terra-website"
 halfWidthImage: |-
-  /images/webflow-cdn/McDonalds-thumb.gif
+  /images/projects/mcdonalds-monopoly-web-app/Mcdonalds_thumb2.gif
 summary: "Wireframed the UX for McDonald's first mobile Monopoly promotion, simplifying a complex prize system."
 role: "UX Designer"
 team: |-
