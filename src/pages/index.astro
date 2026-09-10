@@ -279,7 +279,7 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
         <a href="https://ticklists.com" target="_blank" rel="noopener" class="tutor-btn tutor-btn--coral" style="display:inline-block;margin-top:8px;">Try Ticklists free →</a>
       </div>
       <div class="tutor-ticklists__video tutor-slide-up" style="--delay:150ms">
-        <img src="/images/projects/ticklists-app/my-lists.png" alt="Ticklists My Lists home screen showing Daily Routine, Deskwork, Food and Van Packing List cards" style="width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,0.18);" loading="lazy" />
+        <div class="hp-hero-lottie" data-lottie-src="/lotties/ticklists-animation-artfuly.json" style="width:100%;"></div>
       </div>
     </div>
     </div>
@@ -754,7 +754,7 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
 }
 .tutor-ticklists__inner {
   display: grid;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 3fr 5fr;
   gap: 64px;
   align-items: center;
 }
@@ -863,4 +863,19 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.tutor-slide-up').forEach(el => observer.observe(el));
+
+  // Ticklists hero Lottie animation
+  document.querySelectorAll<HTMLElement>('.hp-hero-lottie').forEach(el => {
+    const src = el.dataset.lottieSrc;
+    if (!src) return;
+    const init = () => {
+      if (typeof (window as any).lottie !== 'undefined') {
+        (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: true, path: src });
+      } else {
+        setTimeout(init, 100);
+      }
+    };
+    init();
+  });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
