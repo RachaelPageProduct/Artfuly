@@ -279,28 +279,11 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
         <a href="https://ticklists.com" target="_blank" rel="noopener" class="tutor-btn tutor-btn--coral" style="display:inline-block;margin-top:8px;">Try Ticklists free →</a>
       </div>
       <div class="tutor-ticklists__video tutor-slide-up" style="--delay:150ms">
-        <video id="ticklists-hero-video" autoplay loop muted playsinline style="width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,0.18);"></video>
+        <img src="/images/projects/ticklists-app/my-lists.png" alt="Ticklists My Lists home screen showing Daily Routine, Deskwork, Food and Van Packing List cards" style="width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,0.18);" loading="lazy" />
       </div>
     </div>
     </div>
   </section>
-
-  <script>
-    (function(){
-      var video = document.getElementById('ticklists-hero-video');
-      if (!video) return;
-      var src = 'https://vz-b91d07c1-def.b-cdn.net/62572680-9750-4895-9924-bdb4a198028c/playlist.m3u8';
-      if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-        var hls = new Hls({ autoStartLoad: true, startLevel: -1 });
-        hls.loadSource(src);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, function() { video.play(); });
-      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = src;
-        video.play();
-      }
-    })();
-  </script>
 
   <!-- TOP DESIGN RESOURCES — featured: true = "Featured on Artfuly?" in CMS -->
   <div class="section-50">
@@ -339,7 +322,6 @@ const featuredArticles = (await getCollection('articles', ({ data }) => data.fea
   </section>
 
   <!-- EMAIL CTA -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" slot="head"></script>
   <script async data-uid="eb98b5a075" src="https://artfuly.ck.page/eb98b5a075/index.js" slot="head"></script>
   <section class="section_cta8" id="email-signup">
     <div class="padding-global-3">

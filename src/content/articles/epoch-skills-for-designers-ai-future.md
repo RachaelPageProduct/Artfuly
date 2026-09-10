@@ -1,6 +1,7 @@
 ---
 title: "EPOCH: The 5 Skills Designers Need to Get Hired in the Future"
-category: "AI"
+category: "Careers & Hiring"
+tags: ["AI"]
 slug: "epoch-skills-for-designers-ai-future"
 date: "2026-07-17"
 description: "AI is replicating expertise faster than anyone expected. Here's the real research on what that means long-term — and the five human capabilities (EPOCH) that are becoming more valuable, not less, plus how to actually build and prove you have them."
