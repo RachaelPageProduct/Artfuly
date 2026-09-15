@@ -36,6 +36,15 @@ const tools = [
     external: false,
   },
   {
+    slug: 'spaced-revision-tool',
+    title: 'Spaced Revision Tool',
+    description: 'A spaced-repetition study app that turns any exam\'s question bank into a personalised revision tool — built first for a real German sailing licence exam, now expanding to more courses.',
+    img: '/images/tools/spaced-revision-tool-card.png',
+    lottie: '/lotties/love2learn-animation.json',
+    cta: 'Try it free →',
+    external: false,
+  },
+  {
     href: '/top-ux-resources',
     title: 'Top UX & UI Resources',
     description: '40+ hand-picked tools, fonts, images, colour pickers, inspiration and learning resources for designers — filterable by category.',
@@ -66,7 +75,9 @@ const tools = [
         {tools.map(t => (
           <li class="dr-listing-card">
             <a href={t.href ?? `/tools/${t.slug}/`} class="dr-listing-card__link">
-              <img src={t.img} alt={t.title} class="dr-listing-card__img" loading="lazy" />
+              {t.lottie
+                ? <div class="dr-listing-card__img tools-lottie" data-lottie-src={t.lottie}></div>
+                : <img src={t.img} alt={t.title} class="dr-listing-card__img" loading="lazy" />}
               <div class="dr-listing-card__body">
                 <h2 class="dr-listing-card__title">{t.title}</h2>
                 <p class="dr-listing-card__desc">{t.description}</p>
@@ -110,6 +121,22 @@ const tools = [
   </section>
 
 </ArtfulyLayout>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
+<script>
+  document.querySelectorAll<HTMLElement>('.tools-lottie').forEach(el => {
+    const src = el.dataset.lottieSrc;
+    if (!src) return;
+    const init = () => {
+      if (typeof (window as any).lottie !== 'undefined') {
+        (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: true, path: src });
+      } else {
+        setTimeout(init, 100);
+      }
+    };
+    init();
+  });
+</script>
 
 <style>
   .dr-listing-section {

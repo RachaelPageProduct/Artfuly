@@ -1,7 +1,8 @@
 ---
 title: "Sydney University Web-App"
 slug: "sydney-university"
-featured: False
+featured: True
+featuredOrder: 5
 nextProject: "mcdonalds-monopoly-mobile-site"
 halfWidthImage: |-
   /images/webflow-cdn/68a5e1b1043765756347c467_Showreel-Grid-Mobile-[remix]-2.gif

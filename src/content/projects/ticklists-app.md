@@ -3,7 +3,7 @@ title: "Ticklists App"
 slug: "ticklists-app"
 featured: True
 featuredOrder: 1
-nextProject: "terra-app"
+nextProject: "love2learn-app"
 halfWidthImage: |-
   /images/webflow-cdn/69cb52e15e1262503966edfa_Frame-4.png
 cardVideo: /images/projects/ticklists-app/ticklists-card-animation.mp4

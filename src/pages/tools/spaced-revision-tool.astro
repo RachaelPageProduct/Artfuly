@@ -1,0 +1,117 @@
+---
+import ArtfulyLayout from '../../layouts/ArtfulyLayout.astro';
+import ToolsFooter from '../../components/ToolsFooter.astro';
+---
+
+<ArtfulyLayout
+  title="Spaced Revision Tool — Turn Any Exam Into a Study App · Artfuly Tools"
+  description="A free spaced-repetition study app that turns any exam's question bank into a personalised revision tool. Built first for a real German sailing licence exam, now expanding to more courses."
+>
+
+  <!-- HERO -->
+  <div class="articles-section-top">
+    <div class="a-container w-container">
+      <div class="a-des-insight-title" style="color:rgba(255,255,255,0.6); margin-bottom:12px; grid-area:1/1/2/5; text-align:left">FREE TOOL</div>
+      <h1 class="h1-small-white" style="grid-area:2/1/3/5; padding-left:0">Spaced Revision Tool</h1>
+    </div>
+  </div>
+
+  <!-- HERO ANIMATION -->
+  <div class="tools-lottie-hero" data-lottie-src="/lotties/love2learn-animation.json"></div>
+
+  <!-- BODY -->
+  <div style="padding: 3rem 0 2rem;">
+    <div class="a-4col-grid-container w-container">
+
+      <div style="grid-area:1/1/2/5">
+        <h2 class="h2-small-blue-blog">Revise from your own exam, not someone else's generic deck.</h2>
+      </div>
+
+      <div class="w-richtext" style="grid-area:2/1/3/5; align-self:start">
+
+        <p>I built this after my partner did an inland sailing course in German and I did a windsurfing course in English, and we both found the same gap: what the course covered wasn't quite what the exam actually asked.</p>
+
+        <h3>Built around your actual exam, not a blank deck</h3>
+        <p>Feed in a real exam's question bank once, and every question is tracked individually from there. Nothing generic, nothing you have to assemble yourself first.</p>
+
+        <h3>Spaced repetition that adapts as you go</h3>
+        <p>The app runs a Leitner spaced-repetition system: get a question right and it moves further out before it resurfaces, get it wrong and it comes straight back for another attempt. Time goes toward the questions you actually don't know yet, not the ones you've already mastered.</p>
+
+        <h3>One app, multiple courses</h3>
+        <p>Started with a single 300-question German sailing licence exam. A second course, an international windsurfing licence, is already live on the same platform, each tracked completely independently.</p>
+
+        <h3>Who it's for</h3>
+        <ul>
+          <li>Anyone revising for a specific licensed or certified exam</li>
+          <li>People who've found a real gap between what a course teaches and what the exam asks</li>
+          <li>Anyone tired of building their own flashcard deck before they can even start revising</li>
+        </ul>
+
+        <p>Spaced Revision Tool is a Progressive Web App, install it from your browser on any device, no app store needed. Free to use while it's in early access.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="article-cta-section">
+    <a href="https://love2learn.web.app" target="_blank" rel="noopener" class="tutor-btn tutor-btn--coral article-cta-btn">
+      Try it free →
+    </a>
+  </div>
+
+  <!-- EMAIL SIGNUP -->
+  <section class="section_cta8" id="email-signup">
+    <div class="padding-global-3">
+      <div class="container-large">
+        <div class="padding-section-large-3">
+          <div class="cta8_component">
+            <div class="cta8_content">
+              <div class="max-width-large">
+                <div class="margin-bottom margin-xsmall">
+                  <div class="margin-bottom margin-xsmall">
+                    <div class="a-des-insight-title">WEEKLY EMAIL (FREE)</div>
+                  </div>
+                  <h2 class="white h2insights">The Design Edge</h2>
+                </div>
+                <p class="white right">Keep your design skills up to date with videos,<br />AI workflows, tutorials, ways to earn $$$ and free resources.<br /><a href="https://artfuly.kit.com/posts" target="_blank" rel="noopener noreferrer" style="font-size: inherit; font-weight: 700; text-decoration: underline; color: inherit;">See past email newsletters.</a></p>
+                <p class="small-white-body">Unsubscribe anytime.</p>
+              </div>
+            </div>
+            <div class="html-embed-7 w-embed w-script">
+              <script async data-uid="eb98b5a075" src="https://artfuly.ck.page/eb98b5a075/index.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ToolsFooter currentSlug="spaced-revision-tool" />
+
+</ArtfulyLayout>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
+<script>
+  document.querySelectorAll<HTMLElement>('.tools-lottie-hero').forEach(el => {
+    const src = el.dataset.lottieSrc;
+    if (!src) return;
+    const init = () => {
+      if (typeof (window as any).lottie !== 'undefined') {
+        (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: true, path: src });
+      } else {
+        setTimeout(init, 100);
+      }
+    };
+    init();
+  });
+</script>
+
+<style>
+  .tools-lottie-hero {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+</style>
