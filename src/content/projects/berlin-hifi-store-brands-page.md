@@ -2,7 +2,8 @@
 title: "Berlin HiFi Store Brands Page"
 slug: "berlin-hifi-store-brands-page"
 featured: False
-nextProject: "mcdonalds-monopoly-mobile-site"
+featuredOrder: 22
+nextProject: "surface-pattern-design"
 halfWidthImage: |-
   /images/webflow-cdn/6554c6f308ee3b85a5203980_Hifi-brand-page-small.png
 summary: "Used SEO research to design a new brand page UI for a Berlin HiFi store, targeting real search terms."

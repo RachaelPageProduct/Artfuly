@@ -2,19 +2,21 @@
 title: "Timesheet App for Cleaners"
 slug: "timesheet-app-cleaners"
 featured: False
-nextProject: "pwc-knowledge-sharing-intranet"
+featuredOrder: 20
+nextProject: "gmo"
 halfWidthImage: |-
-  /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: "Self-initiated a multi-company cleaner timesheet app solo, after a client skipped real research."
+  /images/webflow-cdn/680219e62febd7da21bd7ec1_Timesheet-figma-file-preview.png
+summary: "Self-initiated and designed a full multi-company cleaner timesheet app, after a client skipped the research needed to solve it properly."
 role: "UX Designer"
 team: "N/A"
 date: "2020"
 tools: "Figma"
-headerImage: ""
+headerImage: |-
+  /images/webflow-cdn/680219e62febd7da21bd7ec1_Timesheet-figma-file-preview.png
 lottieUrl: ""
 workCategories: ['apps', 'ux-design']
 introduction: |-
-  <p id="">After doing a short contract for a company creating a cleaning app, I was frustrated that the <strong id="">client didn't understand the value of proper user research in order to define the user needs and a suitable concept</strong>. </p><p id="">So I after the project ended, I did my own research and designed something better based on the experience of the cleaners and those drowning in the administration of the job allocation.</p><p id="">My self-directed brief was basically: Cleaning companies need a way to auto-offer jobs to compatible cleaners, and for cleaners to efficiently accept jobs, track time and view payments.</p>
+  <h3>Impact</h3><p id="">Delivered a complete, research-backed UX solution for multi-company cleaner scheduling, covering the full flow from job offer through time tracking to payment, as a clickable prototype ready to hand to developers.</p><h2>Background</h2><p id="">After doing a short contract for a company creating a cleaning app, I was frustrated that the <strong id="">client didn't understand the value of proper user research in order to define the user needs and a suitable concept</strong>. </p><p id="">So I after the project ended, I did my own research and designed something better based on the experience of the cleaners and those drowning in the administration of the job allocation.</p><p id="">My self-directed brief was basically: Cleaning companies need a way to auto-offer jobs to compatible cleaners, and for cleaners to efficiently accept jobs, track time and view payments.</p>
 impact: ""
 designTalkthrough: ""
 prototypeEmbed: ""

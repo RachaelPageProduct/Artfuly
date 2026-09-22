@@ -2,7 +2,8 @@
 title: "VEDA Big Data SaaS"
 slug: "veda-big-data-saas"
 featured: False
-nextProject: ""
+featuredOrder: 17
+nextProject: "cuts-by-luke"
 halfWidthImage: |-
   /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
 summary: "Defined the self-serve data UI for Veda's SaaS platform; first of 5 services reached active dev."

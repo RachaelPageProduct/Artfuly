@@ -2,6 +2,7 @@
 title: "KPMG User Research"
 slug: "kpmg-user-research"
 featured: False
+featuredOrder: 10
 nextProject: "pwc-knowledge-sharing-intranet"
 halfWidthImage: |-
   /images/webflow-cdn/6554bd23cdb6260ed5bc8300_KPMG-small.png

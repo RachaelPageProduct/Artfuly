@@ -2,7 +2,8 @@
 title: "Art Augmented Reality"
 slug: "art-augmented-reality"
 featured: False
-nextProject: "berlin-hifi-store-brands-page"
+featuredOrder: 15
+nextProject: "futuristic-mall"
 halfWidthImage: |-
   /images/webflow-cdn/655f6f8c8c6c1bd6fcf69778_art-augmented-reality-small.png
 summary: "Designed a no-app AR tool for shoppers to view art on their wall from mobile, to sell with confidence."
@@ -22,7 +23,7 @@ impact: ""
 designTalkthrough: ""
 prototypeEmbed: ""
 projectInDetail: |-
-  <h2 id="">The Experience</h2><p id="">Once the user is inside the room view, they can swipe left to see more artworks within their current selection, which here is 'Original art under €3000'</p><p id="">This is the power of this design - allowing users to search an art database for any colour(s), widths, heights, prices and any other keywords simultaneously to 'curate' a personal selection of art which they can then view on their own wall at home, true to size.</p><p id="">[The swiping has not been added to this prototype yet, only the 'View in your room' experience]</p><p>‍</p>
+  <figure id="" class="w-richtext-figure-type-video w-richtext-align-fullwidth" style="max-width:800px" data-rt-type="video" data-rt-align="fullwidth" data-rt-max-width="800px"><div id=""><video controls playsinline preload="metadata" style="width:100%;height:auto;display:block;" src="/videos/art-augmented-reality-demo.mp4"></video></div><figcaption id="">A recording of the 'View in your room' AR prototype: point your phone at a wall to see the artwork at true size, right from the browser, no app download needed</figcaption></figure><h2 id="">The Experience</h2><p id="">Once the user is inside the room view, they can swipe left to see more artworks within their current selection, which here is 'Original art under €3000'</p><p id="">This is the power of this design - allowing users to search an art database for any colour(s), widths, heights, prices and any other keywords simultaneously to 'curate' a personal selection of art which they can then view on their own wall at home, true to size.</p><p id="">[The swiping has not been added to this prototype yet, only the 'View in your room' experience]</p><p>‍</p>
 designHighlights: ""
 videoWalkthrough: ""
 toolVideoEmbed: ""

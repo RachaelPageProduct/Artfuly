@@ -2,7 +2,8 @@
 title: "Artfuly.com Original Art Marketplace"
 slug: "artfuly-original-art-marketplace"
 featured: False
-nextProject: ""
+featuredOrder: 14
+nextProject: "art-augmented-reality"
 halfWidthImage: |-
   /images/webflow-cdn/6990a406eb933ccf4a480784_Artfuly-Launch-2013-768x512.jpg
 summary: "Bootstrapped a global art marketplace 8 years: my concept, self-funded, hired and ran the dev team."

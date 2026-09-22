@@ -78,8 +78,8 @@ const projects = allProjects
     return cats.some((c: string) => (catMap[c] ?? c) === slug);
   })
   .sort((a: any, b: any) => {
-    const aOrder = a.data.featured && a.data.featuredOrder != null ? a.data.featuredOrder : Infinity;
-    const bOrder = b.data.featured && b.data.featuredOrder != null ? b.data.featuredOrder : Infinity;
+    const aOrder = a.data.featuredOrder ?? Infinity;
+    const bOrder = b.data.featuredOrder ?? Infinity;
     if (aOrder !== bOrder) return aOrder - bOrder;
     return a.data.title.localeCompare(b.data.title);
   });
@@ -166,18 +166,22 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
     card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
   });
 
-  // Lottie autoplay for card lottie containers
+  // Hover-to-play for lottie card thumbnails (loaded paused, played on hover, matches video cards)
   function initLottieCards() {
     const lottie = (window as any).lottie;
     if (!lottie) return;
     document.querySelectorAll<HTMLElement>('[data-lottie-url]').forEach(el => {
-      lottie.loadAnimation({
+      const anim = lottie.loadAnimation({
         container: el,
         renderer: 'svg',
         loop: true,
-        autoplay: true,
+        autoplay: false,
         path: el.dataset.lottieUrl,
       });
+      const card = el.closest<HTMLElement>('.work-card');
+      if (!card) return;
+      card.addEventListener('mouseenter', () => anim.play());
+      card.addEventListener('mouseleave', () => anim.stop());
     });
   }
   if ((window as any).lottie) {
@@ -299,6 +303,7 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
 .work-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+  opacity: 1;
 }
 .work-card-image-wrap {
   width: 100%;

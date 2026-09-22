@@ -2,7 +2,8 @@
 title: "Cuts By Luke — Digital Strategy & Webflow Build"
 slug: "cuts-by-luke"
 featured: False
-nextProject: "terra-website"
+featuredOrder: 18
+nextProject: "caribbean-yoga"
 halfWidthImage: |-
   /images/webflow-cdn/68b714a0c8cb46db5488502f_Thumb-Cutsby-Luke-2.gif
 summary: "Delivered a hairdresser's full digital launch: strategy, booking, Webflow site, marketing, in a week."

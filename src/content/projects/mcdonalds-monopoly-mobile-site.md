@@ -3,9 +3,11 @@ title: "McDonalds Monopoly Web-App"
 slug: "mcdonalds-monopoly-mobile-site"
 featured: True
 featuredOrder: 4
-nextProject: "terra-website"
+nextProject: "sydney-university"
 halfWidthImage: |-
   /images/projects/mcdonalds-monopoly-web-app/Mcdonalds_thumb2.gif
+cardLottie: |-
+  /lotties/mcdonalds-monopoly-animation.json
 summary: "Wireframed the UX for McDonald's first mobile Monopoly promotion, simplifying a complex prize system."
 role: "UX Designer"
 team: |-

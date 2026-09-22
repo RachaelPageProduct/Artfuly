@@ -2,20 +2,22 @@
 title: "Terra Adverts"
 slug: "terra-adverts"
 featured: False
-nextProject: ""
+featuredOrder: 9
+nextProject: "kpmg-user-research"
 halfWidthImage: |-
-  /images/projects/terra-adverts/678288f06a800be58eb32093_Frame-9.png
+  /images/projects/terra-adverts/676547b1bffb59bef6bf27ed_676546eccf617fef71059212_Frame-2015.png
 summary: "Used Midjourney to create Terra's ad imagery faster and better than stock photography, cutting costs."
 role: "Visual Designer"
 team: "Copywriter"
 date: "17th December 2024"
 tools: "Midjourney, Figma"
-headerImage: ""
+headerImage: |-
+  /images/projects/terra-adverts/676547b1bffb59bef6bf27ed_676546eccf617fef71059212_Frame-2015.png
 lottieUrl: ""
 workCategories: ['conversion-funnels', 'graphic-design']
 introduction: |-
-  <p id="">Using Midjourney AI image creation reduces the time to create ads and removes image purchasing costs.</p>
-impact: "Creating Midjourney prompts to quickly & efficiently create images for ads"
+  <h3>Impact</h3><p id="">Replaced stock photography with Midjourney-generated imagery for Terra's ad campaigns, cutting both the image costs and the time to produce each ad, while getting a more on-brand result.</p>
+impact: ""
 designTalkthrough: ""
 prototypeEmbed: ""
 projectInDetail: |-

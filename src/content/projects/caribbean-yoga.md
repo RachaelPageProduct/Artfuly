@@ -2,7 +2,8 @@
 title: "Caribbean Yoga Responsive Site"
 slug: "caribbean-yoga"
 featured: False
-nextProject: "art-augmented-reality"
+featuredOrder: 19
+nextProject: "timesheet-app-cleaners"
 halfWidthImage: |-
   /images/webflow-cdn/6554be3197b8d5541df51471_Caribbean-yoga-small.png
 summary: "Designed and built a resort-style booking site for a Caribbean yoga retreat, automating bookings."

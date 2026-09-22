@@ -2,7 +2,8 @@
 title: "Surface Pattern Design"
 slug: "surface-pattern-design"
 featured: False
-nextProject: ""
+featuredOrder: 23
+nextProject: "ticklists-app"
 halfWidthImage: |-
   /images/webflow-cdn/68344a0ecbe2a49dc0197925_Frame-245.png
 summary: "Taught myself surface pattern design in 3 days, shipped to Spoonflower, wrote a handbook now on Amazon."

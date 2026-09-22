@@ -2,34 +2,38 @@
 title: "Amcor Products"
 slug: "amcor-products"
 featured: False
-nextProject: ""
+featuredOrder: 12
+nextProject: "ing-banking-app"
 halfWidthImage: |-
-  /images/webflow-cdn/678288f06a800be58eb32093_Frame-9.png
-summary: "Redesigned Amcor's product-selection UX in 4 weeks, surfacing a database fix needed for search to work."
+  /images/projects/amcor-products/amcor-new-search-landing.jpg
+summary: "Redesigned Amcor's product section in 4 weeks, cutting the section's bounce rate by 99% and doubling product search use within a year."
 role: |-
   UX Researcher
   UX Designer
-team: "Head of Digital"
-date: "2016"
-tools: "Axure, Photoshop"
-headerImage: ""
+  Visual Designer
+team: "Global Head of Digital"
+date: "Nov - Dec 2016"
+tools: "Axure, Photoshop, Google Analytics, Hotjar"
+headerImage: |-
+  /images/projects/amcor-products/amcor-new-search-landing.jpg
 lottieUrl: ""
-workCategories: ['strategy', 'ux-design']
+workCategories: ['strategy', 'user-research-testing', 'ux-design', 'ia']
 introduction: |-
-  <p id="">Amcor supplies packacking to major brands like coca cola and everything you see on supermarket shelves. The product pages in the website needed to be redesigned to convert. I carried out research with sales people to understand the process a packaging specialist goes through to order bulk packaging, created personas and designed wireframes of the experience. During the project it was discovered that updates to the product database were required and then the website would allow a good product search experience with the product pages I designed. This was a 4 week project. </p>
+  <h3 id="">Impact</h3><p id="">Redesigned Amcor's product section for the global packaging manufacturer in a 4-week engagement, cutting the section's bounce rate by 99% (39.48% down to 0.26%, per Google Analytics) and doubling product search usage within a year of launch.</p><h2 id="">Background</h2><p id="">Amcor is a global B2B packaging manufacturer supplying brands like Coca-Cola and Nestle. Their products section on amcor.com was barely functional: an oversized carousel dominated the page with nothing else to do on it at a standard laptop screen size, key product names were unreadable over the background image, and the search that did exist ran on an out-of-date, incomplete product database rather than a real one. A Sydney contact recommended me to Amcor's Global Head of Digital, and I was brought in for 4 weeks to fix it.</p>
 impact: ""
 designTalkthrough: ""
 prototypeEmbed: ""
-projectInDetail: ""
-designHighlights: ""
+projectInDetail: |-
+  <h2 id="">The Brief</h2><p id="">I wrote the brief myself: the products section had usability issues and wasn't serving Amcor's audience well in helping them find the product information they needed, wasn't transparent to users about how Amcor served its clients, and wasn't supporting Amcor's own internal business processes either.</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div id=""><img id="" alt="The old amcor.com products page, dominated by an oversized carousel with unreadable text" src="/images/projects/amcor-products/amcor-before-old-products-page.jpg" width="auto" height="auto" loading="lazy"></div><figcaption id="">The old amcor.com/products page: an oversized carousel with no other functionality visible at standard laptop screen size, and product names unreadable over the background image</figcaption></figure><h2 id="">Approach</h2><p id="">I originally scoped a proper 3-month process: stakeholder interviews and an internal process review, a full round of user research and testing with 10 users, wireframing across 5 page templates, then a UX review of the visual design and build. But the business needed it done in one month to fit their existing digital sprint schedule, so I compressed it to Business &amp; User Research, Personas, and Wireframing, with one further week added later for Visual Design. I made the case internally that as much research as possible still mattered, and set things up so the next round of site improvements would carry on the research I couldn't fit in.</p><h2 id="">User Research</h2><p id="">With 4 weeks total, I interviewed Amcor stakeholders in Zurich and the US by teleconference, wrote a usability review, a competitor review and a Google Analytics review, and worked with the Australian team to set up Hotjar for heatmaps and session recordings of the current site. I also commissioned a short user survey, 3 responses across each of 3 persona types, covering what packaging buyers actually need to choose a solution and what frustrates them most about existing packaging sites.</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div id=""><img id="" alt="Survey results ranking the information buyers need to choose a packaging solution" src="/images/projects/amcor-products/amcor-user-survey-chart.png" width="auto" height="auto" loading="lazy"></div><figcaption id="">One of the survey questions: how buyers rank the information they need to choose a packaging solution</figcaption></figure><p id="">The research surfaced Buyer, Technical and Marketing personas, and the same frustrations kept coming up: not enough technical data, poor product imagery, difficulty finding the right filters, and no way to compare sustainability at a glance. It also surfaced a bigger problem underneath all of it: there was no real product database behind the site. About 346 products were held as CMS fields in Kentico, not in a proper database, so before search or the product pages could actually work well, the underlying data needed structuring, which I scoped alongside the UX work for the business to build after handover.</p><h2 id="">The Redesign</h2><p id="">The new products landing page let a buyer search by product or keyword, then optionally narrow by packaging form, material, feature, property or process, matching the filters each persona told me they actually wanted.</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div id=""><img id="" alt="Redesigned search results page with the Amcor sustainability star badge on selected products" src="/images/projects/amcor-products/amcor-search-results-sustainability-star.jpg" width="auto" height="auto" loading="lazy"></div><figcaption id="">The redesigned search results, with the 'Amcor sustainability star' I devised with Amcor's Sustainability Director so buyers could spot the most sustainable option at a glance, particularly in the 'Alternatives &amp; Similar' carousel on the product detail page</figcaption></figure><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div id=""><img id="" alt="Redesigned product detail page wireframe split into Marketing and Technical Specifications tabs" src="/images/projects/amcor-products/amcor-product-detail-wireframe.jpg" width="auto" height="auto" loading="lazy"></div><figcaption id="">The redesigned product detail page, split into Marketing &amp; Innovation and Technical Specifications tabs so each persona could find what mattered to them, with sustainability data and an enquiry list built in</figcaption></figure><p id="">The site detects the user's location to set their continent in search results and their country as the default in the enquiry form. Draft visual designs were handed over and further polished by Amcor's build team before launch.</p>
+designHighlights: |-
+  <h2 id="">Results</h2><p id="">Comparing Google Analytics for the products section from October 2016, before launch, to October 2017, a year after:</p><ul id=""><li id="">Bounce rate dropped from 39.48% to 0.26%, a 99.34% reduction</li><li id="">Product search usage doubled</li><li id="">Average time on page increased while page views dropped slightly, suggesting people were reaching the right product page faster and actually reading it once they got there</li></ul><h3 id="">Live Site</h3><p id="">Screenshots of the finished, live amcor.com/products after launch:</p><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div id=""><img id="" alt="Live amcor.com products landing page after launch" src="/images/projects/amcor-products/amcor-live-landing-page.png" width="auto" height="auto" loading="lazy"></div><figcaption id="">The live top-level products page</figcaption></figure><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div id=""><img id="" alt="Live amcor.com search results page after launch" src="/images/projects/amcor-products/amcor-live-search-results.png" width="auto" height="auto" loading="lazy"></div><figcaption id="">The live search results page</figcaption></figure><figure id="" class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth"><div id=""><img id="" alt="Live amcor.com product detail page after launch" src="/images/projects/amcor-products/amcor-live-product-detail.png" width="auto" height="auto" loading="lazy"></div><figcaption id="">The live product detail page</figcaption></figure>
 videoWalkthrough: ""
 toolVideoEmbed: ""
-button1: "UX Process"
+button1: "Live Site"
 link1: |-
-  https://iamadigitaldesigner.wixsite.com/pageportfolio/amcor
-button2: "Live Site"
-link2: |-
   https://www.amcor.com/products
+button2: ""
+link2: ""
 button3: ""
 link3: ""
 button4: ""

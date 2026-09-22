@@ -2,7 +2,8 @@
 title: "Terra Listens Conversion Website"
 slug: "terra-website"
 featured: False
-nextProject: "timesheet-app-cleaners"
+featuredOrder: 6
+nextProject: "terra-html-emails"
 halfWidthImage: |-
   /images/webflow-cdn/655f65379623a3f15a2623c0_Terra-website-small-for-HP.png
 summary: "Redesigned Terra's website for SEO, rewriting copy, IA and funnels to match the new app brand."

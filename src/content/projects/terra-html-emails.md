@@ -2,7 +2,8 @@
 title: "Terra HTML Emails"
 slug: "terra-html-emails"
 featured: False
-nextProject: ""
+featuredOrder: 7
+nextProject: "terra-live-bird-feed"
 halfWidthImage: |-
   /images/webflow-cdn/6554be172fafbea50adecb4d_terra-html-email-small.png
 summary: "Concepted, designed and built Terra's Black Friday email campaign, including Klaviyo discount setup."

@@ -2,7 +2,8 @@
 title: "Terra Live Web Stream Design"
 slug: "terra-live-bird-feed"
 featured: False
-nextProject: ""
+featuredOrder: 8
+nextProject: "terra-adverts"
 halfWidthImage: |-
   /images/webflow-cdn/66ab87f2950dd7a5b91b6344_half.png
 summary: "Designed and managed the build of Terra's live-stream demo page, delivered in under a week."
