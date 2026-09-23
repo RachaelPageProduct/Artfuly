@@ -25,13 +25,11 @@ All folio animations are now MP4, not Lottie (Ticklists, Love2Learn, McDonald's,
 
 Not a folio project, but same issue: **artfuly.com's own homepage hero** still uses `/lotties/ticklists-animation-artfuly.json` (6MB Lottie) — worth replacing too if this becomes a general sweep.
 
-## Bunny.net video hosting — GMO 403s
+## Bunny.net video hosting — GMO 403s — fixed 2026-09-23
 
-### 2026-09-23
+Both video embeds on the **GMO** project page (`gmo.md`, "Viral WhatsApp GMO Animation") were rendering a literal "403" inside the player — confirmed on localhost AND live production.
 
-Both video embeds on the **GMO** project page (`gmo.md`, "Viral WhatsApp GMO Animation") render a literal "403" inside the player itself — confirmed on localhost AND on live production (`rachaelpage.com/rachael-page/project/gmo/`). This is a Bunny.net-side hosting/access problem (library `411197`), not a website code bug — nothing to fix in the Astro site itself.
-
-Still checking scope: whether this is isolated to the 2 GMO video IDs or affects the whole Bunny.net library (would also hit `terra-website.md`'s and `terra-app.md`'s embeds, same library). Was mid-check on `terra-website` when this got paused — pick that back up, then report back with the actual cause (e.g. expired/suspended Bunny.net account, pull-zone/token-auth issue, deleted video) so it can be fixed at the Bunny.net dashboard level, not here.
+**Root cause found and fixed:** it was never a Bunny.net account/library problem (library `411197` is healthy — confirmed by loading `terra-website.md`'s and `terra-app.md`'s videos from the same library directly, both fine). The 2 GMO videos were the only ones routed through a `cdn.embedly.com` oEmbed proxy wrapper (leftover from the original Webflow rich-text paste), and embedly's proxy itself was returning the 403 — the underlying Bunny.net video played perfectly when hit directly. Fixed by swapping both GMO iframes from the embedly wrapper to a direct `iframe.mediadelivery.net/embed/...` src (same pattern already used on Terra Website/Terra App), keeping the existing Webflow padding-bottom aspect-ratio wrapper. Verified working on localhost — no more 403, real player loads. Not yet pushed/deployed (see next Netlify batch).
 
 ## Broken links / redirect loops
 
