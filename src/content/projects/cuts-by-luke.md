@@ -5,7 +5,9 @@ featured: False
 featuredOrder: 18
 nextProject: "caribbean-yoga"
 halfWidthImage: |-
-  /images/webflow-cdn/68b714a0c8cb46db5488502f_Thumb-Cutsby-Luke-2.gif
+  /images/projects/cuts-by-luke/cuts-by-luke-end-frame.jpg
+cardVideo: |-
+  /videos/cuts-by-luke.mp4
 summary: "Delivered a hairdresser's full digital launch: strategy, booking, Webflow site, marketing, in a week."
 role: |-
   Strategy

@@ -163,7 +163,7 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
     const video = card.querySelector<HTMLVideoElement>('.work-card-video');
     if (!video) return;
     card.addEventListener('mouseenter', () => video.play());
-    card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+    card.addEventListener('mouseleave', () => { video.pause(); video.load(); });
   });
 
   // Hover-to-play for lottie card thumbnails (loaded paused, played on hover, matches video cards)
@@ -177,6 +177,7 @@ const pageTitle = pageCategory?.label ?? slug.replace(/-/g,' ').replace(/\b\w/g,
         loop: true,
         autoplay: false,
         path: el.dataset.lottieUrl,
+        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' },
       });
       const card = el.closest<HTMLElement>('.work-card');
       if (!card) return;

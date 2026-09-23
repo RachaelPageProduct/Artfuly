@@ -3,7 +3,7 @@ title: "Art Augmented Reality"
 slug: "art-augmented-reality"
 featured: False
 featuredOrder: 15
-nextProject: "futuristic-mall"
+nextProject: "cuts-by-luke"
 halfWidthImage: |-
   /images/webflow-cdn/655f6f8c8c6c1bd6fcf69778_art-augmented-reality-small.png
 summary: "Designed a no-app AR tool for shoppers to view art on their wall from mobile, to sell with confidence."

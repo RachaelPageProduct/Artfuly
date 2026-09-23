@@ -6,6 +6,8 @@ featuredOrder: 21
 nextProject: "berlin-hifi-store-brands-page"
 halfWidthImage: |-
   /images/webflow-cdn/68a6ecf6b14dba94e91354d7_Comp-1_3.gif
+cardVideo: |-
+  /videos/gmo-thumb.mp4
 summary: "Wrote, designed and animated a pro bono WhatsApp video for a petition, 5k to 86k signatures in 10 days."
 role: |-
   Copywriter

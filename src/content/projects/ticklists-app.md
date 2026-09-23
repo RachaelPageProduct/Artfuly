@@ -5,9 +5,8 @@ featured: True
 featuredOrder: 1
 nextProject: "love2learn-app"
 halfWidthImage: |-
-  /images/webflow-cdn/69cb52e15e1262503966edfa_Frame-4.png
-cardVideo: /images/projects/ticklists-app/ticklists-card-animation.mp4
-cardLottie: /lotties/ticklists-card-thumb.json
+  /images/projects/ticklists-app/ticklists-app-end-frame.jpg
+cardVideo: /videos/ticklists-app.mp4
 summary: "Solo-designed and shipped a PWA app that reorders a shopping list to match any store's layout, kept in sync live across every household member."
 role: |-
   Founder
@@ -22,8 +21,8 @@ tools: |-
   Firebase + Spark
 headerImage: |-
   /images/webflow-cdn/69cb51f9c67be32766c031ad_Frame-3.png
-lottieUrl: "/lotties/ticklists-animation.json"
-heroVideo: "/videos/ticklists-hero.mp4"
+lottieUrl: ""
+heroVideo: "/videos/ticklists-app.mp4"
 workCategories: ['apps', 'development', 'ia', 'marketing', 'product-design', 'strategy', 'ui-design', 'user-research-testing', 'ux-design']
 introduction: |-
   <p>Live at <a href="https://ticklists.app/" target="_blank"><strong>Ticklists.app</strong></a>. Find out who it's for and how it works at <a href="https://ticklists.com" target="_blank"><strong>Ticklists.com</strong></a>.</p><h3>Impact</h3><p>Since launch, running my own household's weekly shop through Ticklists has cut planning time from 30 minutes to 5, an 83% reduction, and cut time spent shopping in-store by 20% on average.</p><h3>The problem</h3><p>I ran our household food shop from a shared Google spreadsheet for years, because every dedicated list app I tried was worse. None of them solved the one thing that actually mattered: putting the list in the same order as the store I was walking round. Every list came out in whatever order I'd typed the items in, so I was walking back and forth across the same aisles every week, and retyping the same items every time because nothing was ever saved.</p><p>Ticklists solves this with sections that can be dragged into any order, per store. Set the order once for a store's layout, and every list for that store comes out sorted to match it from then on, whichever household member is doing the shop.</p><div class="tl-block"><div class="tl-row"><img alt="Ticklists Food list showing Aldi Dalston selected as the active store, sorted into that store's Beverages section" src="/images/projects/ticklists-app/hero-aldi-dalston.png" loading="lazy"><img alt="The same Ticklists Food list showing Kaufland Fuerstenwalde selected instead, now sorted into that store's Cans and Jars section" src="/images/projects/ticklists-app/hero-kaufland-furstenwalde.png" loading="lazy"></div><p class="tl-caption">The same Food list, sorted differently for two different stores, Aldi Dalston on the left and Kaufland Fuerstenwalde on the right. Switch store and the list re-sorts to match that store's aisle layout, nothing retyped.</p></div>

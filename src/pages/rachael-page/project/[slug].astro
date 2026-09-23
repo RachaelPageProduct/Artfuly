@@ -255,7 +255,7 @@ const buttons = [
     {d.nextProject && (
       <a href={`/rachael-page/project/${d.nextProject}/`} class="next-project-link">
         <span class="next-project-label">Next project</span>
-        <span class="next-project-title">{nextProjectTitle} →</span>
+        <span class="next-project-title">{nextProjectTitle}&nbsp;→</span>
       </a>
     )}
     <div class="browse-categories">
@@ -267,6 +267,75 @@ const buttons = [
       </div>
     </div>
   </section>
+
+  {(
+    <script>
+      // Approved 23 Sep 2026, applies to every project page: "Get in Touch" moved above
+      // "Next project", light teal background, everything left-aligned to match "Links
+      // & More Info", trialled on Ticklists first.
+      const nextStrip = document.querySelector('.next-project-strip');
+      const contact = document.getElementById('contact');
+      if (nextStrip && contact) {
+        nextStrip.parentNode.insertBefore(contact, nextStrip);
+        contact.style.backgroundColor = '#CEEAEB';
+        contact.style.textAlign = 'left';
+
+        // Put heading, button group, and LinkedIn icon on one row on desktop,
+        // wrapping only when narrow. The 3 buttons stay together as one unit.
+        const heading = contact.querySelector('h2');
+        const actions = contact.querySelector('.contact-actions');
+        const linkedin = contact.querySelector('.contact-linkedin');
+        if (heading && actions && linkedin) {
+          const row = document.createElement('div');
+          row.style.display = 'flex';
+          row.style.alignItems = 'center';
+          row.style.flexWrap = 'wrap';
+          row.style.gap = '1.5rem';
+          heading.style.margin = '0';
+          actions.style.marginBottom = '0';
+          actions.style.justifyContent = 'flex-start';
+          linkedin.style.marginTop = '0';
+          contact.insertBefore(row, heading);
+          row.append(heading, actions, linkedin);
+
+          // Fix: inline-block buttons/icon leave a phantom baseline gap, so their
+          // bounding box measures as centered but the visible text/icon sits high
+          // within it. Flex-center the content of each one directly.
+          Array.from(actions.children).forEach(btn => {
+            btn.style.display = 'inline-flex';
+            btn.style.alignItems = 'center';
+            btn.style.justifyContent = 'center';
+          });
+          linkedin.style.display = 'inline-flex';
+          linkedin.style.alignItems = 'center';
+          linkedin.style.justifyContent = 'center';
+
+          // Left-align everything below "Links & More Info" to the same left edge as
+          // its "L" — that section uses .w-layout-blockcontainer.container-940-pad-20lr
+          // (a centered 940px-max box with 20px inner padding), so reuse the exact same
+          // class here instead of guessing a padding value, matching at any screen width.
+          contact.style.paddingLeft = '0';
+          contact.style.paddingRight = '0';
+          // Note: deliberately NOT including "w-container" — its Webflow clearfix
+          // ::after (display:table) becomes a real flex item and throws off `gap`,
+          // pushing the first child right by exactly the gap value. Confirmed by
+          // testing gap:0/100px and watching the offset track it exactly.
+          row.className = 'w-layout-blockcontainer container-940-pad-20lr';
+
+          const browseCategories = nextStrip.querySelector('.browse-categories');
+          const nextLink = nextStrip.querySelector('.next-project-link');
+          if (browseCategories && nextLink) {
+            nextStrip.style.paddingLeft = '0';
+            nextStrip.style.paddingRight = '0';
+            const nextWrap = document.createElement('div');
+            nextWrap.className = 'w-layout-blockcontainer container-940-pad-20lr';
+            nextStrip.insertBefore(nextWrap, nextLink);
+            nextWrap.append(nextLink, browseCategories);
+          }
+        }
+      }
+    </script>
+  )}
 
 </BaseLayout>
 

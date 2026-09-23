@@ -3,9 +3,9 @@ title: "Amcor Products"
 slug: "amcor-products"
 featured: False
 featuredOrder: 12
-nextProject: "ing-banking-app"
+nextProject: "artfuly-original-art-marketplace"
 halfWidthImage: |-
-  /images/projects/amcor-products/amcor-new-search-landing.jpg
+  /images/projects/amcor-products/amcor-live-site-hero-2026.webp
 summary: "Redesigned Amcor's product section in 4 weeks, cutting the section's bounce rate by 99% and doubling product search use within a year."
 role: |-
   UX Researcher
@@ -15,7 +15,7 @@ team: "Global Head of Digital"
 date: "Nov - Dec 2016"
 tools: "Axure, Photoshop, Google Analytics, Hotjar"
 headerImage: |-
-  /images/projects/amcor-products/amcor-new-search-landing.jpg
+  /images/projects/amcor-products/amcor-live-site-hero-2026.webp
 lottieUrl: ""
 workCategories: ['strategy', 'user-research-testing', 'ux-design', 'ia']
 introduction: |-

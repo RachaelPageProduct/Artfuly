@@ -5,10 +5,12 @@ featured: True
 featuredOrder: 2
 nextProject: "terra-app"
 halfWidthImage: |-
-  /images/projects/love2learn-app/review-correct.png
-cardLottie: |-
-  /lotties/love2learn-animation.json
-lottieUrl: "/lotties/love2learn-animation.json"
+  /images/projects/love2learn-app/love2learn-app-end-frame.jpg
+cardVideo: |-
+  /videos/love2learn-app.mp4
+lottieUrl: ""
+heroVideo: |-
+  /videos/love2learn-app.mp4
 summary: "Briefed, designed and built a full spaced-repetition revision app with a real exam course, in under 2 hours."
 role: |-
   Founder

@@ -262,7 +262,7 @@ const gridProjects = featuredProjects.slice(1);
       if (!src) return;
       const init = () => {
         if (typeof (window as any).lottie !== 'undefined') {
-          (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: true, path: src });
+          (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: true, path: src, rendererSettings: { preserveAspectRatio: 'xMidYMid slice' } });
         } else {
           setTimeout(init, 100);
         }
@@ -275,7 +275,7 @@ const gridProjects = featuredProjects.slice(1);
       const video = card.querySelector<HTMLVideoElement>('.hp-grid-video');
       if (!video) return;
       card.addEventListener('mouseenter', () => video.play());
-      card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+      card.addEventListener('mouseleave', () => { video.pause(); video.load(); });
     });
 
     // Hover-to-play for grid card lotties (loaded paused, played on hover, matches video cards)
@@ -285,7 +285,7 @@ const gridProjects = featuredProjects.slice(1);
       const card = el.closest<HTMLElement>('.link-block-12');
       const init = () => {
         if (typeof (window as any).lottie !== 'undefined') {
-          const anim = (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: false, path: src });
+          const anim = (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: false, path: src, rendererSettings: { preserveAspectRatio: 'xMidYMid slice' } });
           if (!card) return;
           card.addEventListener('mouseenter', () => anim.play());
           card.addEventListener('mouseleave', () => anim.stop());
@@ -321,6 +321,20 @@ const gridProjects = featuredProjects.slice(1);
   <style>
     /* Kill the global a:hover fade on Featured Work cards, keep the built-in image zoom/lift only */
     .link-block-12:hover { opacity: 1; }
+
+    /* Force every grid card thumbnail (img, video, lottie) to the same box, regardless of the
+       source file's own dimensions. Videos/images are replaced elements and render at their own
+       intrinsic size unless width/height are set explicitly, which previously only happened for
+       the Lottie branch (inline style="width:100%") — video thumbnails had no such rule, so a
+       cardVideo would render at its native pixel size and blow out the whole card. */
+    .r-work-image-feature,
+    .r-work-image {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+    }
   </style>
 
 </body>

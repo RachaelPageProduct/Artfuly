@@ -5,9 +5,9 @@ featured: True
 featuredOrder: 3
 nextProject: "mcdonalds-monopoly-mobile-site"
 halfWidthImage: |-
-  /images/webflow-cdn/68a5e7984df7a15a836e8c16_Animation-full-width-terra-app.gif
-cardLottie: |-
-  /lotties/terra-app-animation.json
+  /images/projects/terra-app/terra-app-end-frame.jpg
+cardVideo: |-
+  /videos/terra-app.mp4
 summary: "Coached the founder's first app draft and brand, then led design, hired and ran the dev team to launch."
 role: |-
   Principal Product Designer
@@ -19,8 +19,9 @@ team: |-
 date: "2022-2024"
 tools: "Figma, Figjam, Video Calls, Slack, Vysor, Testflight"
 headerImage: ""
-lottieUrl: |-
-  /lotties/terra-app-animation.json
+lottieUrl: ""
+heroVideo: |-
+  /videos/terra-app.mp4
 workCategories: ['apps', 'ia', 'marketing', 'strategy', 'teaching-design', 'ui-design', 'ux-design', 'product-design']
 introduction: |-
   <h3 id="">Impact</h3><p id="">The investors in the Terra Listens project have received their Terra Stations, can connect up the station to wifi using the native apps and bluetooth. They can now stream nature and birdsong from their backyards, whilst seeing live bird identifications.</p><h2 id="">Background</h2><p id="">Terra is a smart garden microphone system paired with companion apps that let bird-lovers stream, identify, and track bird activity 24/7 — both in their own backyard and at curated birding hotspots around the world. </p><p id="">The Terra Project had been successfully funded in a kickstarter. </p><p id="">The concept was an outdoor physical device called 'The Terra Station', that picks up sound streams and bird tags with an app to listen, setup and control the experience. </p><p id="">Whilst the physical Terra device (later named the 'Terra Station') was being developed, the scope and design and build of the app needed to happen too.</p><p id="">‍</p><h3 id="">The Live Terra Map</h3><p id="">The map below is a recording of the live bird identifications map, which is available on the Terra Listens website. This is possible since the product sendout in Q3 of 2024, now that many Terra devices are capturing sound data. I've included it here because it allows you to visualise the power of the data being collected and how it can be used to understand bird populations via accurate identifications by sound.</p><figure id="" class="w-richtext-figure-type-video w-richtext-align-fullwidth" style="padding-bottom:75%" data-rt-type="video" data-rt-align="fullwidth" data-rt-max-width="" data-rt-max-height="75%" data-rt-dimensions="640:480" data-page-url="https://youtu.be/7_75b24PEUk"><div id=""><iframe src="https://www.youtube.com/embed/7_75b24PEUk" title="The Terra Listens Map" scrolling="no" frameborder="0" allowfullscreen="true"></iframe></div></figure><p id="">‍</p><h2 id="">Goals</h2><p id="">Initially, the CEO of the Terra startup approached me to teach him how to use the design thinking process and figma to create an MVP app.</p><p id="">I taught him how to do user research, prototyping, user testing and creating a unique brand, using Typography, Colour, Hierarchy, Layout and Grids to finish up with a viable app.</p><p id="">After the first iteration, I took over as Principal Product Designer and took the app through many more iterations and feature updates - both designing and product managing the developers which I also helped to source. </p><p id="">This lead to a successful product launch in Q3 of 2024, and the Terra Listens business is now scaling and continuing with user research and product improvements.</p><p id=""> </p>
