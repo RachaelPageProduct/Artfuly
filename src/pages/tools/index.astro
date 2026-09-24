@@ -39,8 +39,8 @@ const tools = [
     slug: 'spaced-revision-tool',
     title: 'Spaced Revision Tool',
     description: 'A spaced-repetition study app that turns any exam\'s question bank into a personalised revision tool — built first for a real German sailing licence exam, now expanding to more courses.',
-    img: '/images/tools/spaced-revision-tool-card.png',
-    lottie: '/lotties/love2learn-animation.json',
+    img: '/images/projects/love2learn-app/love2learn-app-end-frame.jpg',
+    cardVideo: '/videos/love2learn-app.mp4',
     cta: 'Try it free →',
     external: false,
   },
@@ -75,8 +75,8 @@ const tools = [
         {tools.map(t => (
           <li class="dr-listing-card">
             <a href={t.href ?? `/tools/${t.slug}/`} class="dr-listing-card__link">
-              {t.lottie
-                ? <div class="dr-listing-card__img tools-lottie" data-lottie-src={t.lottie}></div>
+              {t.cardVideo
+                ? <video class="dr-listing-card__img tools-video" src={t.cardVideo} muted loop playsinline preload="none" poster={t.img} />
                 : <img src={t.img} alt={t.title} class="dr-listing-card__img" loading="lazy" />}
               <div class="dr-listing-card__body">
                 <h2 class="dr-listing-card__title">{t.title}</h2>
@@ -122,20 +122,17 @@ const tools = [
 
 </ArtfulyLayout>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
 <script>
-  document.querySelectorAll<HTMLElement>('.tools-lottie').forEach(el => {
-    const src = el.dataset.lottieSrc;
-    if (!src) return;
-    const init = () => {
-      if (typeof (window as any).lottie !== 'undefined') {
-        (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: true, path: src });
-      } else {
-        setTimeout(init, 100);
-      }
-    };
-    init();
-  });
+  // Hover-to-play, same pattern as the homepage's project grid cards
+  // (.hp-grid-video in rachael-page/index.astro) — animate on mouseover
+  // only, not autoplay, so a page full of cards isn't all animating (and
+  // downloading) at once.
+  document.querySelectorAll<HTMLElement>('.dr-listing-card__link').forEach(card => {
+    const video = card.querySelector<HTMLVideoElement>('.tools-video')
+    if (!video) return
+    card.addEventListener('mouseenter', () => video.play())
+    card.addEventListener('mouseleave', () => { video.pause(); video.load() })
+  })
 </script>
 
 <style>

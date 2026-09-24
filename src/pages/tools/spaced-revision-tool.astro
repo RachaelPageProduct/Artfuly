@@ -17,7 +17,15 @@ import ToolsFooter from '../../components/ToolsFooter.astro';
   </div>
 
   <!-- HERO ANIMATION -->
-  <div class="tools-lottie-hero" data-lottie-src="/lotties/love2learn-animation.json"></div>
+  <video
+    class="tools-lottie-hero tools-hero-video"
+    src="/videos/love2learn-app.mp4"
+    poster="/images/projects/love2learn-app/love2learn-app-end-frame.jpg"
+    muted
+    loop
+    playsinline
+    preload="none"
+  ></video>
 
   <!-- BODY -->
   <div style="padding: 3rem 0 2rem;">
@@ -91,27 +99,27 @@ import ToolsFooter from '../../components/ToolsFooter.astro';
 
 </ArtfulyLayout>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
 <script>
-  document.querySelectorAll<HTMLElement>('.tools-lottie-hero').forEach(el => {
-    const src = el.dataset.lottieSrc;
-    if (!src) return;
-    const init = () => {
-      if (typeof (window as any).lottie !== 'undefined') {
-        (window as any).lottie.loadAnimation({ container: el, renderer: 'svg', loop: true, autoplay: true, path: src });
-      } else {
-        setTimeout(init, 100);
-      }
-    };
-    init();
-  });
+  // Mouseover-only, same as the tools listing card — not autoplay.
+  document.querySelectorAll<HTMLVideoElement>('.tools-hero-video').forEach(video => {
+    video.addEventListener('mouseenter', () => video.play())
+    video.addEventListener('mouseleave', () => { video.pause(); video.load() })
+  })
 </script>
 
 <style>
   .tools-lottie-hero {
+    /* Full width, same treatment as the ticklists tool page's hero banner
+       and the folio project-page hero video — not a centred, capped-width
+       box. display:block is required here: a <video> defaults to inline
+       (unlike the <div> this replaced), so margin:0 auto silently did
+       nothing before. aspect-ratio matches the source video's real 16:10
+       (1152x720) so the box holds its shape immediately on page load
+       instead of collapsing to the browser's blank 150px placeholder
+       height while preload="none" leaves the real dimensions unknown. */
+    display: block;
     width: 100%;
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 0 10px;
+    aspect-ratio: 1152 / 720;
+    object-fit: cover;
   }
 </style>
