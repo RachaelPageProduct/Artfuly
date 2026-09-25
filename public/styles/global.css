@@ -888,7 +888,7 @@ body > .site-nav-wrapper + * { padding-top: 35px; }
 }
 .spd-mockup-item img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1;
   object-fit: cover;
   border-radius: 2px;
   display: block;

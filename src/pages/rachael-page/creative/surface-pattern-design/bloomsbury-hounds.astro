@@ -3,22 +3,22 @@ import SPDCollectionNav from '../../../../components/SPDCollectionNav.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
 const colourways = [
-  { name: 'Artboard 4',  file: 'Artboard 4.png'  },
-  { name: 'Artboard 5',  file: 'Artboard 5.png'  },
-  { name: 'Artboard 6',  file: 'Artboard 6.png'  },
-  { name: 'Artboard 7',  file: 'Artboard 7.png'  },
-  { name: 'Artboard 8',  file: 'Artboard 8.png'  },
-  { name: 'Artboard 9',  file: 'Artboard 9.png'  },
+  { name: 'Italian Royal Blue',  file: 'Artboard 4.png'  },
+  { name: 'Italian Green',  file: 'Artboard 5.png'  },
+  { name: 'Italian Red',  file: 'Artboard 6.png'  },
+  { name: 'Pink on Pink',  file: 'Artboard 7.png'  },
+  { name: 'Small Silver on Italian Royal Blue',  file: 'Artboard 8.png'  },
+  { name: 'Tiny Silver on Italian Royal Blue',  file: 'Artboard 9.png'  },
 ];
 
 const mockups = [
-  { file: 'Mockups/Italian Green.jpeg',              caption: 'Wallpaper — Italian Green colourway' },
-  { file: 'Mockups/Italian red.jpeg',                caption: 'Wallpaper — Italian Red colourway' },
-  { file: 'Mockups/Mcokup silver whole wall.jpeg',   caption: 'Wallpaper — Silver metallic colourway' },
-  { file: 'Mockups/Mockup closeup roll.jpeg',        caption: 'Wallpaper roll close-up' },
-  { file: 'Mockups/Pink on Pink silver metalic.jpeg', caption: 'Wallpaper — Pink on pink, silver metallic' },
-  { file: 'Mockups/Small pattern blue.jpeg',         caption: 'Small pattern — Blue colourway' },
-  { file: 'Mockups/Tiny pattern blue.jpeg',          caption: 'Tiny pattern — Blue colourway' },
+  { file: 'Mockups/Italian Green.jpeg',              caption: 'Italian Green living room wallpaper' },
+  { file: 'Mockups/Italian red.jpeg',                caption: 'Italian Red living room wallpaper' },
+  { file: 'Mockups/Mcokup silver whole wall.jpeg',   caption: 'Italian Royal Blue living room wallpaper' },
+  { file: 'Mockups/Mockup closeup roll.jpeg',        caption: 'Italian Royal Blue wallpaper closeup' },
+  { file: 'Mockups/Pink on Pink silver metalic.jpeg', caption: 'Pink on Pink living room wallpaper' },
+  { file: 'Mockups/Small pattern blue.jpeg',         caption: 'Small Silver on Italian Royal Blue cushion' },
+  { file: 'Mockups/Tiny pattern blue.jpeg',          caption: 'Tiny Silver on Italian Royal Blue office wallpaper' },
 ];
 ---
 
@@ -33,7 +33,7 @@ const mockups = [
         Heritage damask reimagined for the modern pet lover. Bloomsbury Hounds turns the classic fleur-de-lis silhouette into a paw print.
       </p>
       <div class="spd-meta">
-        <span>7 colourways</span>
+        <span>6 colourways</span>
         <span>Straight repeat</span>
         <span>Wallpaper · Fabric · Home Accessories</span>
       </div>
@@ -49,11 +49,12 @@ const mockups = [
   <!-- COLOURWAYS GRID -->
   <section class="spd-colourways">
     <div class="spd-colourways-inner">
-      <h2 class="spd-section-label">Colourways</h2>
+      <h2 class="spd-section-label">Patterns, scales &amp; colourways</h2>
       <div class="spd-grid">
         {colourways.map(c => (
           <div class="spd-swatch">
             <img src={`/images/patterns/bloomsbury-hounds/${c.file}`} alt={`Bloomsbury Hounds — ${c.name}`} loading="lazy" />
+            <p class="spd-swatch-name">{c.name}</p>
           </div>
         ))}
       </div>

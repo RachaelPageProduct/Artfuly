@@ -5,18 +5,18 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 const colourways = [
   { name: 'Teal on White',      file: 'Classy_Geometrics_-_Teal_on_white.jpg' },
   { name: 'Teal on Teal',       file: 'Classy_Geometrics_-_Teal_on_Teal.jpg' },
-  { name: 'Blue on Grey',       file: 'Classy_Geometrics_-_Blue_on_Grey.jpg' },
+  { name: 'Teal on Grey',       file: 'Classy_Geometrics_-_Blue_on_Grey.jpg' },
   { name: 'Lilac',              file: 'Classy_Geometrics_-_Lilac.jpg' },
   { name: 'Diagonal — Blue on White', file: 'Classy_Geometrics_Diagonal_-_Blue_on_White.jpg' },
 ];
 
 const mockups = [
-  { file: 'mockups/chair mockup.jpeg', caption: 'Upholstery fabric in teal' },
-  { file: 'mockups/Pillow.jpeg',                  caption: 'Cushion fabric in teal' },
-  { file: 'mockups/Lilac roll.jpeg',              caption: 'Wallpaper roll in lilac' },
-  { file: 'mockups/Bedding.jpeg',                 caption: 'Bedding fabric in teal' },
-  { file: 'mockups/curtain.jpeg',                 caption: 'Curtain fabric in teal' },
-  { file: 'mockups/21415562 (1).jpeg',            caption: 'Quality fabric closeup' },
+  { file: 'mockups/chair mockup.jpeg', caption: 'Teal on Teal armchair' },
+  { file: 'mockups/Pillow.jpeg',                  caption: 'Teal on White cushion' },
+  { file: 'mockups/Lilac roll.jpeg',              caption: 'Lilac wallpaper closeup' },
+  { file: 'mockups/Bedding.jpeg',                 caption: 'Teal on Teal bedding' },
+  { file: 'mockups/curtain.jpeg',                 caption: 'Teal on Teal curtains' },
+  { file: 'mockups/21415562 (1).jpeg',            caption: 'Lilac fabric closeup' },
 ];
 ---
 
@@ -47,11 +47,12 @@ const mockups = [
   <!-- COLOURWAYS GRID -->
   <section class="spd-colourways">
     <div class="spd-colourways-inner">
-      <h2 class="spd-section-label">Colourways</h2>
+      <h2 class="spd-section-label">Patterns, scales &amp; colourways</h2>
       <div class="spd-grid">
         {colourways.map(c => (
           <div class="spd-swatch">
             <img src={`/images/patterns/labyrinth/${c.file}`} alt={`Labyrinth — ${c.name}`} loading="lazy" />
+            <p class="spd-swatch-name">{c.name}</p>
           </div>
         ))}
       </div>

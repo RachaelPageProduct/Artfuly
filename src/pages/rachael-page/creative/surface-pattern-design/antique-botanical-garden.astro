@@ -3,28 +3,28 @@ import SPDCollectionNav from '../../../../components/SPDCollectionNav.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
 const colourways = [
-  { name: 'Pink, Blue, Purple, Teal', file: 'Herabrium florals 6.png' },
+  { name: 'Cool Tones', file: 'Herabrium florals 6.png' },
 ];
 
 const mockups = [
-  { file: 'mockups/01-lumbar-pillow-studio.jpeg',        caption: 'Fabric — Lumbar pillow, studio' },
-  { file: 'mockups/02-fabric.jpeg',                      caption: 'Fabric — Swatch' },
-  { file: 'mockups/03-chair.jpeg',                       caption: 'Fabric — Upholstered chair' },
-  { file: 'mockups/04-curtain.jpeg',                     caption: 'Fabric — Curtains, in room' },
-  { file: 'mockups/05-curtain-closeup.jpeg',             caption: 'Fabric — Curtains, closeup' },
-  { file: 'mockups/06-fabric-closeup.jpeg',              caption: 'Fabric — Macro closeup' },
-  { file: 'mockups/09-sheet-set-2.jpeg',                 caption: 'Bedding — Sheet set, folded' },
-  { file: 'mockups/08-bedding.jpeg',                     caption: 'Bedding — On the bed' },
-  { file: 'mockups/07-sheet-set.jpeg',                   caption: 'Bedding — Sheet set, detail' },
-  { file: 'mockups/10-napkins-large.jpeg',               caption: 'Table linen — Napkins, folded corner' },
-  { file: 'mockups/11-napkins.jpeg',                     caption: 'Table linen — Napkins, detail' },
-  { file: 'mockups/12-napkins-folded.jpeg',              caption: 'Table linen — Napkins, folded with fork' },
-  { file: 'mockups/13-table-runner.jpeg',                caption: 'Table linen — Table runner' },
-  { file: 'mockups/14-table-runner-napkins.jpeg',        caption: 'Table linen — Runner & napkins, set table' },
-  { file: 'mockups/15-napkins-with-cutlery.jpeg',        caption: 'Table linen — Napkins with cutlery' },
-  { file: 'mockups/16-wallpaper-grasscloth-closeup.jpeg', caption: 'Wallpaper — Grasscloth roll, closeup' },
-  { file: 'mockups/18-wallpaper.jpeg',                   caption: 'Wallpaper — Bedroom, closeup' },
-  { file: 'mockups/17-wallpaper-bedroom-closeup.jpeg',   caption: 'Wallpaper — Room corner' },
+  { file: 'mockups/01-lumbar-pillow-studio.jpeg',        caption: 'Cool Tones lumbar pillow' },
+  { file: 'mockups/02-fabric.jpeg',                      caption: 'Cool Tones fabric' },
+  { file: 'mockups/03-chair.jpeg',                       caption: 'Cool Tones armchair' },
+  { file: 'mockups/04-curtain.jpeg',                     caption: 'Cool Tones living room curtains' },
+  { file: 'mockups/05-curtain-closeup.jpeg',             caption: 'Cool Tones curtains closeup' },
+  { file: 'mockups/06-fabric-closeup.jpeg',              caption: 'Cool Tones fabric closeup' },
+  { file: 'mockups/09-sheet-set-2.jpeg',                 caption: 'Cool Tones sheet set' },
+  { file: 'mockups/08-bedding.jpeg',                     caption: 'Cool Tones bedding closeup' },
+  { file: 'mockups/07-sheet-set.jpeg',                   caption: 'Cool Tones bedroom sheet set' },
+  { file: 'mockups/10-napkins-large.jpeg',               caption: 'Cool Tones napkins' },
+  { file: 'mockups/11-napkins.jpeg',                     caption: 'Cool Tones napkins' },
+  { file: 'mockups/12-napkins-folded.jpeg',              caption: 'Cool Tones napkins with fork' },
+  { file: 'mockups/13-table-runner.jpeg',                caption: 'Cool Tones dining room table runner' },
+  { file: 'mockups/14-table-runner-napkins.jpeg',        caption: 'Cool Tones table runner & napkins' },
+  { file: 'mockups/15-napkins-with-cutlery.jpeg',        caption: 'Cool Tones napkins with cutlery' },
+  { file: 'mockups/16-wallpaper-grasscloth-closeup.jpeg', caption: 'Cool Tones grasscloth wallpaper closeup' },
+  { file: 'mockups/18-wallpaper.jpeg',                   caption: 'Cool Tones bedroom wallpaper' },
+  { file: 'mockups/17-wallpaper-bedroom-closeup.jpeg',   caption: 'Cool Tones kitchen wallpaper closeup' },
 ];
 ---
 
@@ -55,11 +55,12 @@ const mockups = [
   <!-- COLOURWAYS GRID -->
   <section class="spd-colourways">
     <div class="spd-colourways-inner">
-      <h2 class="spd-section-label">Colourways</h2>
+      <h2 class="spd-section-label">Patterns, scales &amp; colourways</h2>
       <div class="spd-grid">
         {colourways.map(c => (
           <div class="spd-swatch">
             <img src={`/images/patterns/antique-botanical-garden/${c.file}`} alt={`Antique Botanical Garden — ${c.name}`} loading="lazy" />
+            <p class="spd-swatch-name">{c.name}</p>
           </div>
         ))}
       </div>
@@ -82,7 +83,7 @@ const mockups = [
   </section>
 
   <!-- COLLECTION NAV -->
-  <SPDCollectionNav nextSlug="good-dogs" nextName="Good Dogs" />
+  <SPDCollectionNav nextSlug="hydrangea-haven" nextName="Hydrangea Haven" />
 
   <!-- LICENSING CTA -->
   <section class="spd-licensing">

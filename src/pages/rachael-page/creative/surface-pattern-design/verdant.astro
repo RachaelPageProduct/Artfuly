@@ -3,23 +3,23 @@ import SPDCollectionNav from '../../../../components/SPDCollectionNav.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 
 const colourways = [
-  { name: 'Artboard 4', file: 'Artboard 4.png' },
-  { name: 'Artboard 5', file: 'Artboard 5.png' },
-  { name: 'Artboard 6', file: 'Artboard 6.png' },
-  { name: 'Artboard 3 (variant)', file: 'Artboard 3 copy 2.png' },
-  { name: 'Colourway 5', file: '22236461.jpeg' },
+  { name: 'Purple', file: 'Artboard 4.png' },
+  { name: 'Indigo', file: 'Artboard 5.png' },
+  { name: 'Teal', file: 'Artboard 6.png' },
+  { name: 'Green', file: 'Artboard 3 copy 2.png' },
+  { name: 'Indigo, large scale', file: '22236461.jpeg' },
 ];
 
 const mockups = [
-  { file: 'mockups/Fabric - Indigo.jpeg',             caption: 'In context — colourway 1' },
-  { file: 'mockups/Wallpaper roll - indigo.jpeg',      caption: 'In context — colourway 1, detail' },
-  { file: 'mockups/Fabric - Teal green.jpeg',          caption: 'In context — colourway 2' },
-  { file: 'mockups/Duvet cover - Teal green.jpeg',     caption: 'In context — colourway 2, view 2' },
-  { file: 'mockups/Bedding - Teal green.jpeg',         caption: 'In context — colourway 2, view 3' },
-  { file: 'mockups/Sheets - Teal green.jpeg',          caption: 'In context — colourway 2, view 4' },
-  { file: 'mockups/Kitchen corner wallpaper.jpeg',     caption: 'In context — colourway 2, view 5' },
-  { file: 'mockups/Bathroom wallpaper.jpeg',           caption: 'In context — colourway 2, view 6' },
-  { file: 'mockups/Wallpaper closeup - Teal green.jpeg', caption: 'In context — colourway 2, view 7' },
+  { file: 'mockups/Fabric - Indigo.jpeg',             caption: 'Indigo fabric' },
+  { file: 'mockups/Wallpaper roll - indigo.jpeg',      caption: 'Indigo wallpaper roll' },
+  { file: 'mockups/Fabric - Teal green.jpeg',          caption: 'Teal fabric' },
+  { file: 'mockups/Duvet cover - Teal green.jpeg',     caption: 'Teal bedroom duvet cover' },
+  { file: 'mockups/Bedding - Teal green.jpeg',         caption: 'Teal bedding' },
+  { file: 'mockups/Sheets - Teal green.jpeg',          caption: 'Teal bedroom sheet set' },
+  { file: 'mockups/Kitchen corner wallpaper.jpeg',     caption: 'Teal kitchen wallpaper' },
+  { file: 'mockups/Bathroom wallpaper.jpeg',           caption: 'Green bathroom wallpaper' },
+  { file: 'mockups/Wallpaper closeup - Teal green.jpeg', caption: 'Teal wallpaper closeup' },
 ];
 ---
 
@@ -50,11 +50,12 @@ const mockups = [
   <!-- COLOURWAYS GRID -->
   <section class="spd-colourways">
     <div class="spd-colourways-inner">
-      <h2 class="spd-section-label">Colourways</h2>
+      <h2 class="spd-section-label">Patterns, scales &amp; colourways</h2>
       <div class="spd-grid">
         {colourways.map(c => (
           <div class="spd-swatch">
             <img src={`/images/patterns/verdant/${c.file}`} alt={`Verdant — ${c.name}`} loading="lazy" />
+            <p class="spd-swatch-name">{c.name}</p>
           </div>
         ))}
       </div>
