@@ -123,42 +123,56 @@ const canonicalURL = `https://artfuly.com${Astro.url.pathname}`;
     </div>
   </div>
 
-  <!-- FOOTER — wave SVG overlaps prefooter via negative margin -->
-  <div class="section-11">
-    <a href="/" class="w-inline-block">
-      <img src="/images/site/63089402c3ac2fd2d3c1f4d8_Artfuly-2022-round-logo.png" loading="lazy" alt="Artfuly logo" class="image-11" />
+  <!-- FOOTER — angled dark-teal band; round logo rolls in along the slope -->
+  <footer class="af-footer" id="af-footer">
+    <svg class="af-footer__slope" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,0 1440,140 0,140" fill="#048BA2" />
+      <line x1="0" y1="0" x2="1440" y2="140" stroke="#84CACC" stroke-width="3" vector-effect="non-scaling-stroke" />
+    </svg>
+    <a href="/" class="af-footer__logo" aria-label="Artfuly home">
+      <img src="/images/site/63089402c3ac2fd2d3c1f4d8_Artfuly-2022-round-logo.png" loading="lazy" alt="Artfuly logo" width="200" height="200" />
     </a>
-  </div>
-  <div class="section-12">
-    <div class="section-12__left">
-      <a href="/about/" class="footer-links">About</a>
-      <a href="mailto:hi@artfuly.com?subject=Website%20enquiry" class="footer-links">Send an Email</a>
-    </div>
-    <div class="section-12__center">
-      <div class="section-12__icons">
-        <a href="https://www.youtube.com/@artfulydesign" target="_blank" rel="noopener" class="w-inline-block">
-          <img src="/images/site/65f2a9639a01f0c2245fe869_Youtube_icon.svg" loading="lazy" alt="Follow Artfuly on Youtube" class="image-12" />
+    <div class="af-footer__body">
+      <div class="af-footer__col af-footer__col--left">
+        <a href="/about/" class="af-footer__link">About</a>
+        <a href="mailto:hi@artfuly.com?subject=Website%20enquiry" class="af-footer__link">Send an&nbsp;Email</a>
+      </div>
+      <div class="af-footer__icons">
+        <a href="https://www.youtube.com/@artfulydesign" target="_blank" rel="noopener">
+          <img src="/images/site/65f2a9639a01f0c2245fe869_Youtube_icon.svg" loading="lazy" alt="Follow Artfuly on YouTube" />
         </a>
-        <a href="https://www.linkedin.com/company/artfuly" target="_blank" rel="noopener" class="w-inline-block">
-          <img src="/images/site/65f2a8f59e6211e5ba585742_linkedin_icon.svg" loading="lazy" alt="Follow Artfuly on LinkedIn" class="image-12" />
+        <a href="https://www.linkedin.com/company/artfuly" target="_blank" rel="noopener">
+          <img src="/images/site/65f2a8f59e6211e5ba585742_linkedin_icon.svg" loading="lazy" alt="Follow Artfuly on LinkedIn" />
         </a>
-        <a href="https://artfuly.click/events" target="_blank" rel="noopener" class="w-inline-block">
-          <img src="/images/site/65f2a99f82a99319fee83be1_Eventbrite_icon.svg" loading="lazy" alt="Artfuly on Eventbrite" class="image-12" />
+        <a href="https://artfuly.click/events" target="_blank" rel="noopener">
+          <img src="/images/site/65f2a99f82a99319fee83be1_Eventbrite_icon.svg" loading="lazy" alt="Artfuly on Eventbrite" />
         </a>
       </div>
-    </div>
-    <div class="section-12__right">
-      <a href="/privacy/" class="footer-links">Privacy</a>
-      <a href="/impressum/" class="footer-links">Impressum</a>
-    </div>
-  </div>
-  <div class="section-14">
-    <div class="container-1216 w-container">
-      <div class="div-block-151">
-        <div class="copyright-footer">© Artfuly 2026</div>
+      <div class="af-footer__col af-footer__col--right">
+        <a href="/privacy/" class="af-footer__link">Privacy</a>
+        <a href="/impressum/" class="af-footer__link">Impressum</a>
       </div>
     </div>
-  </div>
+    <div class="af-footer__base-wrap">
+      <div class="af-footer__base">© Artfuly 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    // Roll the footer logo in when the footer scrolls into view
+    (() => {
+      const footer = document.getElementById('af-footer');
+      if (!footer || !('IntersectionObserver' in window)) return;
+      footer.classList.add('af-footer--armed');
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some(e => e.isIntersecting)) {
+          footer.classList.add('is-in');
+          io.disconnect();
+        }
+      }, { threshold: 0.35 });
+      io.observe(footer);
+    })();
+  </script>
 
   <script>
     // If #email-signup doesn't exist on this page, redirect to homepage section
